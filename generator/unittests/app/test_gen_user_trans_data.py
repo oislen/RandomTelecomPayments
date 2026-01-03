@@ -45,12 +45,12 @@ fpath_unittest_transaction_data = '.' + cons.fpath_unittest_transaction_data.spl
 
 # generate random users
 user_obj = User(
-    n_user_ids=programmeparams.n_users, 
-    start_date=programmeparams.registration_start_date, 
-    end_date=programmeparams.registration_end_date, 
-    fpath_firstnames=fpath_firstnames, 
-    fpath_lastnames=fpath_lastnames, 
-    fpath_countrieseurope=fpath_countrieseurope, 
+    n_user_ids=programmeparams.n_users,
+    start_date=programmeparams.registration_start_date,
+    end_date=programmeparams.registration_end_date,
+    fpath_firstnames=fpath_firstnames,
+    fpath_lastnames=fpath_lastnames,
+    fpath_countrieseurope=fpath_countrieseurope,
     fpath_domain_email=fpath_domain_email
     )
 
