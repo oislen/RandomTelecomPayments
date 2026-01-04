@@ -1,4 +1,6 @@
 import numpy as np
+import pandas as pd
+from typing import Dict
 import random
 from beartype import beartype
 
@@ -16,22 +18,25 @@ import cons
 
 @beartype
 def gen_random_telecom_data(
-    n_users=1,
-    random_seed=None,
-    registration_start_date=cons.default_registration_start_date,
-    registration_end_date=cons.default_registration_end_date,
-    transaction_start_date=cons.default_transaction_start_date,
-    transaction_end_date=cons.default_transaction_end_date
-    ):
+    n_users:int=1,
+    random_seed:int=None,
+    n_applications:int=20000,
+    registration_start_date:str=cons.default_registration_start_date,
+    registration_end_date:str=cons.default_registration_end_date,
+    transaction_start_date:str=cons.default_transaction_start_date,
+    transaction_end_date:str=cons.default_transaction_end_date,
+    ) -> Dict[str, pd.DataFrame]:
     """
     Generates random telecommunications data.
-
+    
     Parameters
     ----------
-    n_users : float
+    n_users : int
         The number of users to generate random telecom payments data for, default is 1.
     random_seed : int
         A set random seed for reproducible results, default is None.
+    n_applications : int
+        The number of applications to generate, default is 20000.
     registration_start_date : str
         The user registration start date, default is cons.default_registration_start_date.
     registration_end_date : str
@@ -40,28 +45,28 @@ def gen_random_telecom_data(
         The user transaction start date, default is cons.default_transaction_start_date.
     transaction_end_date : str
         The user transaction end date, default is cons.default_transaction_end_date.
-
+    
     Returns
     -------
-    pandas.DataFrame
+    Dict[str, pandas.DataFrame]
         A random telecommunication payments dataset.
     """
-
+    
     # initalise programme parameters
     programmeparams = ProgrammeParams(
-        n_users=n_users, 
+        n_users=n_users,
         random_seed=random_seed,
-        n_applications=20000,
-        registration_start_date=registration_start_date, 
+        n_applications=n_applications,
+        registration_start_date=registration_start_date,
         registration_end_date=registration_end_date,
         transaction_start_date=transaction_start_date,
         transaction_end_date=transaction_end_date
         )
-
+    
     # set random seed
     random.seed(programmeparams.random_seed)
     np.random.seed(seed=programmeparams.random_seed)
-
+    
     # generate random users
     user_obj = User(
         n_user_ids=programmeparams.n_users,
@@ -72,20 +77,20 @@ def gen_random_telecom_data(
         fpath_countrieseurope=cons.fpath_countrieseurope,
         fpath_domain_email=cons.fpath_domain_email
         )
-
+    
     # generate random entity counts for each user
     random_entity_counts = gen_random_entity_counts(
         user_obj=user_obj,
         transaction_timescale=programmeparams.transaction_timescale
         )
-
+    
     # generate random entity values
     device_obj = Device(n_device_hashes=random_entity_counts['n_devices'].sum())
     card_obj = Card(n_card_hashes=random_entity_counts['n_cards'].sum())
     ip_obj = Ip(n_ip_hashes=random_entity_counts['n_ips'].sum())
     transaction_obj = Transaction(n_transaction_hashes=random_entity_counts['n_transactions'].sum(), start_date=programmeparams.transaction_start_date, end_date=programmeparams.transaction_end_date)
     application_obj = Application(n_application_hashes=programmeparams.n_applications)
-
+    
     # generate user level data
     user_data = gen_user_data(
         random_entity_counts=random_entity_counts,
@@ -96,7 +101,7 @@ def gen_random_telecom_data(
         transaction_obj=transaction_obj,
         application_obj=application_obj,
     )
-
+    
     # generate transaction level data
     trans_data = gen_trans_data(
         user_data=user_data,
@@ -108,5 +113,5 @@ def gen_random_telecom_data(
         application_obj=application_obj,
         fpath_countrycrimeindex=cons.fpath_countrycrimeindex
     )
-
+    
     return {"user_data":user_data, "trans_data":trans_data}
