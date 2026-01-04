@@ -64,7 +64,7 @@ def gen_trans_data(
     trans_data['ip_hash'] = trans_data['ip_hash'].apply(lambda x: np.random.choice(x, size = 1)[0] if isinstance(x, list) and x != [] else np.nan)
     trans_data['application_hash'] = trans_data['application_hash'].apply(lambda x: np.random.choice(x, size = 1)[0] if isinstance(x, list) and x != [] else np.nan)
     # add null values card hashes
-    trans_null_mask = np.random.uniform(size=len(trans_data.shape[0])) <= cons.data_model_null_rates['card']
+    trans_null_mask = np.random.uniform(size=trans_data.shape[0]) <= cons.data_model_null_rates['card']
     trans_data.loc[trans_null_mask, 'card_hash'] = np.nan
     # add shared hashed entities between users
     trans_data['ip_hash'] = trans_data['ip_hash'].apply(lambda x: ip_obj.ip_shared_idhash_map_dict[x] if x in ip_obj.ip_shared_idhash_map_dict.keys() else x)

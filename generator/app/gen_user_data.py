@@ -68,7 +68,7 @@ def gen_user_data(
     total_application_hashes = user_data['n_applications'].sum()
     split_indices = user_data['n_applications'].cumsum()[:-1].values
     application_hashes = np.random.choice(a = list(application_obj.application_hashes_props_dict.keys()), p=list(application_obj.application_hashes_props_dict.values()), replace=True, size=total_application_hashes)
-    user_data['application_hash'] = pd.Series(np.split(application_hashes, split_indices))
+    user_data['application_hash'] = pd.Series(np.split(application_hashes, split_indices)).apply(lambda x: x.tolist())
     # drop excess columns
     user_data = user_data.drop(columns = ['n_devices', 'n_cards', 'n_ips', 'n_applications', 'n_transactions'])
     # create a hash value for the dataset (to distinguish between different iterations)
