@@ -43,8 +43,9 @@ class Application:
         self.power = cons.data_model_poisson_params["application"]["power"]
         self.payment_channels = cons.data_model_payment_channels
         self.application_hashes_cnts_dict = gen_idhash_cnt_dict(idhash_type="hash", n=self.n_application_hashes, lam=self.lam)
-        self.application_hashes_props_dict = cnt2prop_dict(self.application_hashes_cnts_dict)
-        self.application_hashes_payment_channel_dict = self.gen_transaction_payment_channel(list(self.application_hashes_cnts_dict.keys()), self.payment_channels)
+        self.application_hashes = list(self.application_hashes_cnts_dict.keys())
+        self.application_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.application_hashes_cnts_dict)
+        self.application_hashes_payment_channel_dict = self.gen_transaction_payment_channel(application_hashes=self.application_hashes, payment_channels=self.payment_channels)
     
     @beartype
     def gen_transaction_payment_channel(

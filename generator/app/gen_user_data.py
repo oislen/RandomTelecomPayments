@@ -59,10 +59,10 @@ def gen_user_data(
     zero_pad = (userid_date_country_code.str.len() - 11).abs().apply(lambda x: '0'*x)
     user_data['userid'] = userid_date_country_code + zero_pad + user_data['uid'].astype(str).str[-5:]
     # add hash data lists
-    user_data['device_hash'] = gen_obj_idhash_series(idhashes_props_dict=device_obj.device_hashes_props_dict, n_counts_series=user_data['n_devices'])
-    user_data['card_hash'] = gen_obj_idhash_series(idhashes_props_dict=card_obj.card_hashes_props_dict, n_counts_series=user_data['n_cards'])
-    user_data['ip_hash'] = gen_obj_idhash_series(idhashes_props_dict=ip_obj.ip_hashes_props_dict, n_counts_series=user_data['n_ips'])
-    user_data['transaction_hash'] = gen_obj_idhash_series(idhashes_props_dict=transaction_obj.transaction_hashes_props_dict, n_counts_series=user_data['n_transactions'])
+    user_data['device_hash'] = gen_obj_idhash_series(idhashes=device_obj.device_hashes, n_counts_series=user_data['n_devices'])
+    user_data['card_hash'] = gen_obj_idhash_series(idhashes=card_obj.card_hashes, n_counts_series=user_data['n_cards'])
+    user_data['ip_hash'] = gen_obj_idhash_series(idhashes=ip_obj.ip_hashes, n_counts_series=user_data['n_ips'])
+    user_data['transaction_hash'] = gen_obj_idhash_series(idhashes=transaction_obj.transaction_hashes, n_counts_series=user_data['n_transactions'])
     # generate application hashes per user
     #user_data['application_hash'] = user_data['n_applications'].apply(lambda x: list(np.random.choice(a = list(application_obj.application_hashes_props_dict.keys()), p = list(application_obj.application_hashes_props_dict.values()), replace = True, size = x)))
     total_application_hashes = user_data['n_applications'].sum()

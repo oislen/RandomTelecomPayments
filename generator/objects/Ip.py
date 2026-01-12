@@ -51,6 +51,7 @@ class Ip:
         self.power = cons.data_model_poisson_params["ip"]["power"]
         self.prop_shared_ip_hashes = cons.data_model_shared_entities_dict["ip"]
         self.ip_hashes_cnts_dict = gen_idhash_cnt_dict(idhash_type="hash", n=self.n_ip_hashes, lam=self.lam, power=self.power)
-        self.ip_hashes_props_dict = cnt2prop_dict(self.ip_hashes_cnts_dict)
-        self.ip_hashes_country_code_dict = gen_country_codes_dict(self.ip_hashes_cnts_dict, self.fpath_countrieseurope)
-        self.ip_shared_idhash_map_dict = gen_shared_idhashes(self.ip_hashes_cnts_dict, self.prop_shared_ip_hashes)
+        self.ip_hashes = list(self.ip_hashes_cnts_dict.keys())
+        self.ip_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.ip_hashes_cnts_dict)
+        self.ip_hashes_country_code_dict = gen_country_codes_dict(idhashes_cnts_dict=self.ip_hashes_cnts_dict, fpath_countrieseurope=self.fpath_countrieseurope)
+        self.ip_shared_idhash_map_dict = gen_shared_idhashes(idhashes_cnts_dict=self.ip_hashes_cnts_dict, prop_shared_idhashes=self.prop_shared_ip_hashes)

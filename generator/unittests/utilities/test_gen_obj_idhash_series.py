@@ -37,7 +37,7 @@ random_entity_counts = gen_random_entity_counts(user_obj=user_object)
 device_obj = Device(n_device_hashes=random_entity_counts['n_devices'].sum(), fpath_smartphones=fpath_smartphones)
 #  generate user data and device hashes
 user_data = random_entity_counts.copy()
-obs_obj_idhash_series = gen_obj_idhash_series(idhashes_props_dict=device_obj.device_hashes_props_dict, n_counts_series=user_data['n_devices'])
+obs_obj_idhash_series = gen_obj_idhash_series(idhashes=device_obj.device_hashes, n_counts_series=user_data['n_devices'])
 exp_obj_idhash_series = pd.Series([['2e23f63807f6170a'], ['b8816ed926bf9f83', 'b010fdb44fa68822'], ['ff23757073a07357'], ['3d2fd828c1fd1152']])
 
 class Test_gen_idhash_cnt_dict(unittest.TestCase):

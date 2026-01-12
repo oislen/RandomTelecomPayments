@@ -2,19 +2,20 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 from beartype import beartype
+from typing import Dict, Union
 
 @beartype
 def gen_dates_dict(
-    idhashes_cnts_dict:dict,
+    idhashes_cnts_dict:Dict[str, Union[str, int, np.int64]],
     start_date:str,
-    end_date:str
-    ) -> dict:
+    end_date:str,
+    ) -> Dict[str, Union[pd.Timestamp, np.datetime64]]:
     """
     Generates a dictionary of random dates for an input dictionary of idhashes counts.
 
     Parameters
     ----------
-    idhashes_cnts_dict : dict
+    idhashes_cnts_dict : Dict[str, Union[str, np.int64]]
         A dictionary of idhashes counts.
     start_date : str
         The start date ("%Y-%m-%d") to generate random dates from.
@@ -23,11 +24,11 @@ def gen_dates_dict(
 
     Returns
     -------
-    dict
+    Dict[str, Union[pd.Timestamp,int, np.datetime64]]
         A dictionary of idhashes dates.
     """
     # generate a range of dates between the given input start and end dates
-    dates = pd.date_range(start=datetime.strptime(start_date, "%Y-%m-%d"), end=datetime.strptime(end_date, "%Y-%m-%d") - pd.Timedelta(days=1), freq="d",)
+    dates = pd.date_range(start=datetime.strptime(start_date, "%Y-%m-%d"), end=datetime.strptime(end_date, "%Y-%m-%d"), freq="d", inclusive="both",)
     # extract out the idhashes from idhashes counts dictionary
     idhashes_list = list(idhashes_cnts_dict.keys())
     # randomly sample dates for each of the idhashes

@@ -4,7 +4,7 @@ from beartype import beartype
 
 @beartype
 def gen_shared_idhashes(
-    idhash_cnt_dict:dict,
+    idhashes_cnts_dict:dict,
     prop_shared_idhashes:float
     ) -> dict:
     """
@@ -23,11 +23,11 @@ def gen_shared_idhashes(
         A dictionary of shared idhashes proportion.
     """
     # calculate the total number of idhashes
-    n_idhashes = len(idhash_cnt_dict)
+    n_idhashes = len(idhashes_cnts_dict)
     # randomly sample the idhashes based on the total proportion of shared idhashes
     shared_idhashes_list = list(
         np.random.choice(
-            a=list(idhash_cnt_dict.keys()),
+            a=list(idhashes_cnts_dict.keys()),
             size=int(np.round(n_idhashes * prop_shared_idhashes)),
             replace=False
         )

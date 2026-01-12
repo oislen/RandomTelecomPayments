@@ -15,7 +15,7 @@ np.random.seed(cons.unittest_seed)
 
 obs_prop_shared_idhashes=cons.data_model_shared_entities_dict["ip"]
 obs_hash_cnt_dict = gen_idhash_cnt_dict(idhash_type="hash", n=4, lam=1, nbytes=16)
-obs_shared_idhashes = gen_shared_idhashes(idhash_cnt_dict=obs_hash_cnt_dict, prop_shared_idhashes=obs_prop_shared_idhashes)
+obs_shared_idhashes = gen_shared_idhashes(idhashes_cnts_dict=obs_hash_cnt_dict, prop_shared_idhashes=obs_prop_shared_idhashes)
 exp_shared_idhashes = {}
 
 class Test_gen_shared_idhashes(unittest.TestCase):

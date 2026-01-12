@@ -51,10 +51,11 @@ class Device:
         self.power = cons.data_model_poisson_params["device"]["power"]
         self.prop_shared_device_hashes = cons.data_model_shared_entities_dict["device"]
         self.device_hashes_cnts_dict = gen_idhash_cnt_dict(idhash_type="hash", n=self.n_device_hashes, lam=self.lam, power=self.power)
-        self.device_hashes_props_dict = cnt2prop_dict(self.device_hashes_cnts_dict)
-        self.device_hashes_type_dict = self.gen_device_types(list(self.device_hashes_cnts_dict.keys()), self.fpath_smartphones)
-        self.device_shared_idhash_map_dict = gen_shared_idhashes(self.device_hashes_cnts_dict, self.prop_shared_device_hashes)
-    
+        self.device_hashes = list(self.device_hashes_cnts_dict.keys())
+        self.device_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.device_hashes_cnts_dict)
+        self.device_hashes_type_dict = self.gen_device_types(device_hashes=self.device_hashes, fpath_smartphones=self.fpath_smartphones)
+        self.device_shared_idhash_map_dict = gen_shared_idhashes(idhashes_cnts_dict=self.device_hashes_cnts_dict, prop_shared_idhashes=self.prop_shared_device_hashes)
+
     @beartype
     def gen_device_types(
         self,

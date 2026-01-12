@@ -61,10 +61,11 @@ class Transaction:
         self.power = cons.data_model_poisson_params["transaction"]["power"]
         self.transaction_status = cons.data_model_transaction_status
         self.transaction_hashes_cnts_dict = gen_idhash_cnt_dict(idhash_type="hash", n=self.n_transaction_hashes, lam=self.lam, power=self.power)
-        self.transaction_hashes_props_dict = cnt2prop_dict(self.transaction_hashes_cnts_dict)
-        self.transaction_hashes_dates_dict = gen_dates_dict(self.transaction_hashes_cnts_dict,start_date=self.start_date,end_date=self.end_date,)
-        self.transaction_hashes_status_dict = self.gen_transaction_status(list(self.transaction_hashes_cnts_dict.keys()), self.transaction_status)
-        self.transaction_hashes_amounts_dict = self.gen_transaction_amounts(list(self.transaction_hashes_cnts_dict.keys()))
+        self.transaction_hashes = list(self.transaction_hashes_cnts_dict.keys())
+        self.transaction_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.transaction_hashes_cnts_dict)
+        self.transaction_hashes_dates_dict = gen_dates_dict(idhashes_cnts_dict=self.transaction_hashes_cnts_dict,start_date=self.start_date,end_date=self.end_date,)
+        self.transaction_hashes_status_dict = self.gen_transaction_status(transaction_hashes=self.transaction_hashes, transaction_status=self.transaction_status)
+        self.transaction_hashes_amounts_dict = self.gen_transaction_amounts(transaction_hashes=self.transaction_hashes, loc=0, scale=2)
     
     @beartype
     def gen_transaction_status(
@@ -104,8 +105,8 @@ class Transaction:
     def gen_transaction_amounts(
         self,
         transaction_hashes:List[str],
-        loc:float=0,
-        scale:float=2,
+        loc:Union[int, float]=0,
+        scale:Union[int, float]=2,
         ) -> Dict[str, float]:
         """
         Generates a dictionary of random transaction hash amounts.
