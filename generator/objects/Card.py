@@ -59,7 +59,7 @@ class Card:
         self.card_hashes = list(self.card_hashes_cnts_dict.keys())
         self.card_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.card_hashes_cnts_dict)
         self.card_hashes_type_dict = self.gen_card_type(card_hashes=self.card_hashes, card_types_dict=self.card_types_dict)
-        self.card_hashes_country_code_dict = gen_country_codes_dict(idhashes_cnts_dict=self.card_hashes_cnts_dict, fpath_countrieseurope=self.fpath_countrieseurope)
+        self.card_hashes_country_code_dict = gen_country_codes_dict(idhashes=self.card_hashes, fpath_countrieseurope=self.fpath_countrieseurope)
         self.card_shared_idhash_map_dict = gen_shared_idhashes(idhashes_cnts_dict=self.card_hashes_cnts_dict, prop_shared_idhashes=self.prop_shared_card_hashes)
     
     @beartype

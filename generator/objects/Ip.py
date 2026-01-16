@@ -53,5 +53,5 @@ class Ip:
         self.ip_hashes_cnts_dict = gen_idhash_cnt_dict(idhash_type="hash", n=self.n_ip_hashes, lam=self.lam, power=self.power)
         self.ip_hashes = list(self.ip_hashes_cnts_dict.keys())
         self.ip_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.ip_hashes_cnts_dict)
-        self.ip_hashes_country_code_dict = gen_country_codes_dict(idhashes_cnts_dict=self.ip_hashes_cnts_dict, fpath_countrieseurope=self.fpath_countrieseurope)
+        self.ip_hashes_country_code_dict = gen_country_codes_dict(idhashes=self.ip_hashes, fpath_countrieseurope=self.fpath_countrieseurope)
         self.ip_shared_idhash_map_dict = gen_shared_idhashes(idhashes_cnts_dict=self.ip_hashes_cnts_dict, prop_shared_idhashes=self.prop_shared_ip_hashes)

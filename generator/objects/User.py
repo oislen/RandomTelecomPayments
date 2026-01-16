@@ -81,11 +81,11 @@ class User:
         self.user_ids_cnts_dict = gen_idhash_cnt_dict(idhash_type="id", n=self.n_user_ids, lam=self.lam, power=self.power)
         self.user_ids = list(self.user_ids_cnts_dict.keys())
         self.user_ids_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.user_ids_cnts_dict)
-        self.user_ids_country_code_dict = gen_country_codes_dict(idhashes_cnts_dict=self.user_ids_cnts_dict, fpath_countrieseurope=self.fpath_countrieseurope)
+        self.user_ids_country_code_dict = gen_country_codes_dict(idhashes=self.user_ids, fpath_countrieseurope=self.fpath_countrieseurope)
         self.user_ids_firstname_dict = self.gen_user_firstname(fpath_firstnames=self.fpath_firstnames)
         self.user_ids_lastname_dict = self.gen_user_lastname(fpath_lastnames=self.fpath_lastnames)
         self.user_ids_email_domain_dict = self.gen_user_email_domain(fpath_domain_email=self.fpath_domain_email)
-        self.user_ids_dates_dict = gen_dates_dict(idhashes_cnts_dict=self.user_ids_cnts_dict, start_date=self.start_date, end_date=self.end_date)
+        self.user_ids_dates_dict = gen_dates_dict(idhashes=self.user_ids, start_date=self.start_date, end_date=self.end_date)
     
     @beartype
     def gen_user_firstname(

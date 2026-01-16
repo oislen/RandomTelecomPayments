@@ -5,20 +5,20 @@ import os
 import numpy as np
 import pandas as pd
 from beartype import beartype
-from typing import Dict, Union
+from typing import Dict, Union, List
 
 @beartype
 def gen_country_codes_dict(
-    idhashes_cnts_dict:Dict[str, Union[int, np.int64]],
+    idhashes:List[str],
     fpath_countrieseurope:str=cons.fpath_countrieseurope,
     ) -> Dict[str, Union[int, np.int64]]:
     """
-    Generates a dictionary of randomLy sampled country codes for an input dictionary of idhashes counts.
+    Generates a dictionary of randomLy sampled country codes for an input list of idhashes.
     
     Parameters
     ----------
-    idhashes_cnts_dict : Dict[str, Union[int, np.int64]]
-        A dictionary of idhashes counts.
+    idhashes : List[str]
+        A list of idhashes.
     fpath_countrieseurope : str
         The file path to the european countries reference file, default is cons.fpath_countrieseurope.
     
@@ -46,8 +46,6 @@ def gen_country_codes_dict(
     european_populations_cnt_dict = european_populations_cnt_data.set_index("ISO numeric")["population"].to_dict()
     # convert dictionary of population counts to dictionary of population proportions
     european_populations_props_dict = cnt2prop_dict(european_populations_cnt_dict)
-    # extract out idhashes from idhashes counts dictionary
-    idhashes_list = list(idhashes_cnts_dict.keys())
     # check population proportions sum to 1.0
     if np.isclose(sum(european_populations_props_dict.values()), 1.0) == False:
         raise ValueError("Population proportions do not sum to 1.0")
@@ -57,9 +55,9 @@ def gen_country_codes_dict(
             a=list(european_populations_props_dict.keys()),
             p=list(european_populations_props_dict.values()),
             replace=True,
-            size=len(idhashes_list),
+            size=len(idhashes),
         )
     )
     # return a dictionary of idhashes and country codes
-    idhashes_country_codes = dict(zip(idhashes_list, country_codes_list))
+    idhashes_country_codes = dict(zip(idhashes, country_codes_list))
     return idhashes_country_codes

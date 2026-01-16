@@ -10,16 +10,16 @@ from utilities.gen_country_codes_dict import gen_country_codes_dict
 
 np.random.seed(cons.unittest_seed)
 
-cnt_data = {"a": 1, "b": 2, "c": 3, "d": 4}
+idhashes = ["a", "b", "c", "d"]
 exp_prop_dict = {"a": 276, "b": 756, "c": 642, "d": 826}
 fpath_countrieseurope = '.' + cons.fpath_countrieseurope.split(cons.fpath_repo_dir)[1]
-obs_prop_dict = gen_country_codes_dict(cnt_data, fpath_countrieseurope=fpath_countrieseurope)
+obs_prop_dict = gen_country_codes_dict(idhashes=idhashes, fpath_countrieseurope=fpath_countrieseurope)
 
 class Test_gen_country_codes_dict(unittest.TestCase):
     """"""
 
     def setUp(self):
-        self.cnt_data = cnt_data
+        self.idhashes = idhashes
         self.obs_prop_dict = obs_prop_dict
         self.exp_prop_dict = exp_prop_dict
 

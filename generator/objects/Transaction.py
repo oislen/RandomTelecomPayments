@@ -63,7 +63,7 @@ class Transaction:
         self.transaction_hashes_cnts_dict = gen_idhash_cnt_dict(idhash_type="hash", n=self.n_transaction_hashes, lam=self.lam, power=self.power)
         self.transaction_hashes = list(self.transaction_hashes_cnts_dict.keys())
         self.transaction_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.transaction_hashes_cnts_dict)
-        self.transaction_hashes_dates_dict = gen_dates_dict(idhashes_cnts_dict=self.transaction_hashes_cnts_dict,start_date=self.start_date,end_date=self.end_date,)
+        self.transaction_hashes_dates_dict = gen_dates_dict(idhashes=self.transaction_hashes,start_date=self.start_date,end_date=self.end_date,)
         self.transaction_hashes_status_dict = self.gen_transaction_status(transaction_hashes=self.transaction_hashes, transaction_status=self.transaction_status)
         self.transaction_hashes_amounts_dict = self.gen_transaction_amounts(transaction_hashes=self.transaction_hashes, loc=0, scale=2)
     

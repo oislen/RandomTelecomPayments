@@ -25,6 +25,13 @@ def align_country_codes(
     -------
     pandas.Series
         A pandas series containing only the aligned country codes; registration, ip and card.
+    
+    Examples
+    --------
+    ```
+    series = pd.Series({'registration_country_code_alpha': 353.0, 'ip_country_code_alpha': 42.0, 'card_country_code_alpha': 42.0})
+    align_country_codes(series=series, proba_comm_ip=0.05, proba_comm_card=0.01,)
+    ```
     """
     # generate random value between 0 and 1
     random_unif = random.uniform(0, 1)

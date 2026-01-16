@@ -74,3 +74,6 @@ data_model_rejection_codes_connection = {'E900:ConnectionTimeout':0.45, 'E901:Su
 data_model_rejection_codes_user = {'E900:ConnectionTimeout':0.05, 'E901:SuspectedFraud':0.1, 'E902:AuthenicationFailure':0.1, 'E903:UserCancelled':0.45, 'E904:InsufficientFunds':0.3}
 data_model_rejection_codes_funds = {'E900:ConnectionTimeout':0.1, 'E901:SuspectedFraud':0.1, 'E902:AuthenicationFailure':0.1, 'E903:UserCancelled':0.25, 'E904:InsufficientFunds':0.45}
 data_model_rejection_codes_authentication = {'E900:ConnectionTimeout':0.25, 'E901:SuspectedFraud':0.05, 'E902:AuthenicationFailure':0.45, 'E903:UserCancelled':0.15, 'E904:InsufficientFunds':0.1}
+
+# set lists of generator object types
+object_types = ["device","card","ip","transaction","application"]

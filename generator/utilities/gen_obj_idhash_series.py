@@ -21,6 +21,14 @@ def gen_obj_idhash_series(
     -------
     pd.Series
         A Series of lists containing entity idhashes  for each user.
+    
+    Examples
+    --------
+    ```
+    idhashes = ['2e23f63807f6170a', 'b8816ed926bf9f83', 'b010fdb44fa68822']
+    n_counts_series = pd.Series(data=[2, 1, 2], index=range(3), name='n_entities')
+    gen_obj_idhash_series(idhashes=idhashes, n_counts_series=n_counts_series)
+    ```
     """
     # create an exploded series for idhashes within the entity object
     obj_idhash_series = pd.Series(data=idhashes, index=n_counts_series.index.repeat(n_counts_series.values).to_list())
