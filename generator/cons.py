@@ -17,9 +17,9 @@ fpath_randomtelecomusersdata = os.path.join(subdir_data,'RandomTelecomUsers.parq
 fpath_arch_randomtelecomdata = os.path.join(subdir_data, 'arch', 'RandomTelecomPayments.csv')
 fpath_temp_llama_firstnames = os.path.join(subdir_data, 'temp', 'llama_firstnames_{country}.csv')
 fpath_temp_llama_lastnames = os.path.join(subdir_data, 'temp', 'llama_lastnames_{country}.csv')
-fpath_domain_email = os.path.join(subdir_data, 'ref', 'email-domains.csv')
+fpath_email_domain = os.path.join(subdir_data, 'ref', 'email-domains.csv')
 fpath_countrycrimeindex = os.path.join(subdir_data, 'ref', 'country_crime_index.csv')
-fpath_countrieseurope = os.path.join(subdir_data, 'ref', 'Countries-Europe.csv')
+fpath_countries_europe = os.path.join(subdir_data, 'ref', 'Countries-Europe.csv')
 fpath_firstnames = os.path.join(subdir_data, 'ref', 'first-names.txt')
 fpath_lastnames = os.path.join(subdir_data, 'ref', 'last-names.txt')
 fpath_llama_firstnames = os.path.join(subdir_data, 'ref', 'llama_firstnames.csv')
@@ -74,3 +74,6 @@ data_model_rejection_codes_connection = {'E900:ConnectionTimeout':0.45, 'E901:Su
 data_model_rejection_codes_user = {'E900:ConnectionTimeout':0.05, 'E901:SuspectedFraud':0.1, 'E902:AuthenicationFailure':0.1, 'E903:UserCancelled':0.45, 'E904:InsufficientFunds':0.3}
 data_model_rejection_codes_funds = {'E900:ConnectionTimeout':0.1, 'E901:SuspectedFraud':0.1, 'E902:AuthenicationFailure':0.1, 'E903:UserCancelled':0.25, 'E904:InsufficientFunds':0.45}
 data_model_rejection_codes_authentication = {'E900:ConnectionTimeout':0.25, 'E901:SuspectedFraud':0.05, 'E902:AuthenicationFailure':0.45, 'E903:UserCancelled':0.15, 'E904:InsufficientFunds':0.1}
+
+# set lists of generator object types
+object_types = ["device","card","ip","transaction","application"]

@@ -42,8 +42,8 @@ exp_lam = cons.data_model_poisson_params["card"]["lambda"]
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
 
-fpath_countrieseurope = '.' + cons.fpath_countrieseurope.split(cons.fpath_repo_dir)[1]
-card_object = Card(n_card_hashes=exp_n_card_hashes, fpath_countrieseurope=fpath_countrieseurope)
+fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+card_object = Card(n_card_hashes=exp_n_card_hashes, fpath_countries_europe=fpath_countries_europe)
 
 obs_card_hashes_cnts_dict = card_object.card_hashes_cnts_dict
 obs_card_types_dict = card_object.card_types_dict

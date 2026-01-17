@@ -22,7 +22,7 @@ if __name__ == '__main__':
     input_params_dict = commandline_interface()
 
     # run input error handling
-    res = input_error_handling(input_params_dict)
+    input_error_handling(input_params_dict)
 
     logging.info(f'Input Parameters: {input_params_dict}')
 
@@ -35,6 +35,7 @@ if __name__ == '__main__':
             (
                 input_params_dict['n_users'],
                 None if input_params_dict['use_random_seed'] == 0 else itr,
+                20000,
                 input_params_dict['registration_start_date'],
                 input_params_dict['registration_end_date'],
                 input_params_dict['transaction_start_date'],

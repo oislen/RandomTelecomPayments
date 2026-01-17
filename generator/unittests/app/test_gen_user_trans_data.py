@@ -36,8 +36,8 @@ np.random.seed(seed=programmeparams.random_seed)
 # create relative file paths
 fpath_firstnames = '.' + cons.fpath_llama_firstnames.split(cons.fpath_repo_dir)[1]
 fpath_lastnames = '.' + cons.fpath_llama_lastnames.split(cons.fpath_repo_dir)[1]
-fpath_countrieseurope = '.' + cons.fpath_countrieseurope.split(cons.fpath_repo_dir)[1]
-fpath_domain_email = '.' + cons.fpath_domain_email.split(cons.fpath_repo_dir)[1]
+fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+fpath_email_domain = '.' + cons.fpath_email_domain.split(cons.fpath_repo_dir)[1]
 fpath_smartphones = '.' + cons.fpath_smartphones.split(cons.fpath_repo_dir)[1]
 fpath_countrycrimeindex = '.' + cons.fpath_countrycrimeindex.split(cons.fpath_repo_dir)[1]
 fpath_unittest_user_data = '.' + cons.fpath_unittest_user_data.split(cons.fpath_repo_dir)[1]
@@ -45,13 +45,13 @@ fpath_unittest_transaction_data = '.' + cons.fpath_unittest_transaction_data.spl
 
 # generate random users
 user_obj = User(
-    n_user_ids=programmeparams.n_users, 
-    start_date=programmeparams.registration_start_date, 
-    end_date=programmeparams.registration_end_date, 
-    fpath_firstnames=fpath_firstnames, 
-    fpath_lastnames=fpath_lastnames, 
-    fpath_countrieseurope=fpath_countrieseurope, 
-    fpath_domain_email=fpath_domain_email
+    n_user_ids=programmeparams.n_users,
+    start_date=programmeparams.registration_start_date,
+    end_date=programmeparams.registration_end_date,
+    fpath_firstnames=fpath_firstnames,
+    fpath_lastnames=fpath_lastnames,
+    fpath_countries_europe=fpath_countries_europe,
+    fpath_email_domain=fpath_email_domain
     )
 
 # generate random entity counts for each user
@@ -59,8 +59,8 @@ random_entity_counts = gen_random_entity_counts(user_obj)
 
 # generate random entity values
 device_obj = Device(n_device_hashes=random_entity_counts['n_devices'].sum(), fpath_smartphones=fpath_smartphones)
-card_obj = Card(n_card_hashes=random_entity_counts['n_cards'].sum(), fpath_countrieseurope=fpath_countrieseurope)
-ip_obj = Ip(n_ip_hashes=random_entity_counts['n_ips'].sum(), fpath_countrieseurope=fpath_countrieseurope)
+card_obj = Card(n_card_hashes=random_entity_counts['n_cards'].sum(), fpath_countries_europe=fpath_countries_europe)
+ip_obj = Ip(n_ip_hashes=random_entity_counts['n_ips'].sum(), fpath_countries_europe=fpath_countries_europe)
 transaction_obj = Transaction(n_transaction_hashes=random_entity_counts['n_transactions'].sum(), start_date=programmeparams.transaction_start_date, end_date=programmeparams.transaction_end_date)
 application_obj = Application(n_application_hashes=programmeparams.n_applications)
 

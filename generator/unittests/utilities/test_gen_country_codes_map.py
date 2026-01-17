@@ -18,10 +18,10 @@ exp_country_codes_map = {
     292: 'GI', 492: 'MC', 336: 'VA'
     }
 
-fpath_countrieseurope = '.' + cons.fpath_countrieseurope.split(cons.fpath_repo_dir)[1]
-obs_country_codes_map = gen_country_codes_map(fpath_countrieseurope=fpath_countrieseurope)
+fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+obs_country_codes_map = gen_country_codes_map(fpath_countries_europe=fpath_countries_europe)
 
-class Test_gen_country_codes_dict(unittest.TestCase):
+class Test_gen_country_codes_map(unittest.TestCase):
     """"""
 
     def setUp(self):

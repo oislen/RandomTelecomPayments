@@ -5,17 +5,18 @@ from beartype import beartype
 @beartype
 def remove_duplicate_idhashes(
     user_data:pd.DataFrame,
-    idhash_col:str
+    idhash_col:str,
     ):
-    """Removes duplicate idhashes from a given idhash column.
-
+    """
+    Removes duplicate idhashes from a given idhash column.
+    
     Parameters
     ----------
     user_data : pandas.DataFrame
         The user level telecom payments data.
     idhash_col : str
         The column with duplicate idhashes to be removed.
-
+    
     Returns
     -------
     pandas.DataFrame
@@ -30,5 +31,5 @@ def remove_duplicate_idhashes(
     # overwrite series with empty lists
     tmp_data[idhash_col] = np.nan
     tmp_data[idhash_col] = tmp_deduplicate_series
-    tmp_data[idhash_col] = tmp_data[idhash_col].apply(lambda x: x if x == x else [])
+    tmp_data[idhash_col] = tmp_data[idhash_col].apply(lambda x: x if pd.notnull(x) else [])
     return tmp_data
