@@ -1,28 +1,37 @@
 import pandas as pd
 from beartype import beartype
+from typing import List
 
 @beartype
 def gen_obj_idhash_series(
-    idhashes_props_dict:dict,
-    n_counts_series:pd.Series
+    idhashes:List[str],
+    n_counts_series:pd.Series,
     ) -> pd.Series:
     """
-    Generates a series of entity idhash lists using the entity counts per user Series and idhashes proportions dictionary.
-
+    Generates a series of entity idhash lists using the entity counts per user Series and idhashes list.
+    
     Parameters
     ----------
-    idhashes_props_dict : dict
-        The idhash proportions dictionary.
+    idhashes : List[str]
+        The idhashes list.
     n_counts_series : pd.Series
         The entity counts for each uid as Series.
-
+    
     Returns
     -------
     pd.Series
         A Series of lists containing entity idhashes  for each user.
+    
+    Examples
+    --------
+    ```
+    idhashes = ['2e23f63807f6170a', 'b8816ed926bf9f83', 'b010fdb44fa68822']
+    n_counts_series = pd.Series(data=[2, 1, 2], index=range(3), name='n_entities')
+    gen_obj_idhash_series(idhashes=idhashes, n_counts_series=n_counts_series)
+    ```
     """
     # create an exploded series for idhashes within the entity object
-    obj_idhash_series = pd.Series(data=idhashes_props_dict.keys(), index=n_counts_series.apply(lambda x: range(x)).explode().index)
+    obj_idhash_series = pd.Series(data=idhashes, index=n_counts_series.index.repeat(n_counts_series.values).to_list())
     # group by uid index and collate idhashes as lists
-    obj_idhash_agg = obj_idhash_series.groupby(level=0).apply(lambda series: series.to_list())
+    obj_idhash_agg = obj_idhash_series.groupby(level=0).apply(list)
     return obj_idhash_agg

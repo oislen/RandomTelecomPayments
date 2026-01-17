@@ -10,21 +10,21 @@ from utilities.gen_dates_dict import gen_dates_dict
 
 np.random.seed(cons.unittest_seed)
 
-cnt_data = {"a": 1, "b": 2, "c": 3, "d": 4}
+idhashes = ["a", "b", "c", "d"]
 exp_prop_dict = {
     "a": np.datetime64("2020-04-12T00:00:00.000000000"),
     "b": np.datetime64("2021-03-11T00:00:00.000000000"),
     "c": np.datetime64("2020-09-27T00:00:00.000000000"),
     "d": np.datetime64("2020-04-16T00:00:00.000000000"),
 }
-obs_prop_dict = gen_dates_dict(cnt_data, start_date="2020-01-01", end_date="2021-12-31")
+obs_prop_dict = gen_dates_dict(idhashes, start_date="2020-01-01", end_date="2021-12-31")
 
 
 class Test_gen_dates_dict(unittest.TestCase):
     """"""
 
     def setUp(self):
-        self.cnt_data = cnt_data
+        self.idhashes = idhashes
         self.obs_prop_dict = obs_prop_dict
         self.exp_prop_dict = exp_prop_dict
 

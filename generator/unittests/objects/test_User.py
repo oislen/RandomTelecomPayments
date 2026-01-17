@@ -10,46 +10,46 @@ import cons
 from objects.User import User
 
 exp_user_ids_cnts_dict = {
-    "6374692674377254": 420,
-    "1751409580926382": 318,
-    "4264861381989413": 244,
-    "6720317315593519": 387,
+    "6374692674377254": 20,
+    "1751409580926382": 29,
+    "4264861381989413": 19,
+    "6720317315593519": 26,
 }
 exp_user_ids_props_dict = {
-    "6374692674377254": 0.30679327976625276,
-    "1751409580926382": 0.2322863403944485,
-    "4264861381989413": 0.17823228634039445,
-    "6720317315593519": 0.28268809349890434,
+    "6374692674377254": 0.2127659574468085,
+    "1751409580926382": 0.30851063829787234,
+    "4264861381989413": 0.20212765957446807,
+    "6720317315593519": 0.2765957446808511,
 }
 exp_user_ids_firstname_dict = {
-    "6374692674377254": "ernst",
-    "1751409580926382": "mykhaylo",
-    "4264861381989413": "hugo",
-    "6720317315593519": "alexandra",
+    "6374692674377254": "simone",
+    "1751409580926382": "francesca",
+    "4264861381989413": "igor",
+    "6720317315593519": "beckett",
 }
 exp_user_ids_lastname_dict = {
-    "6374692674377254": "buchmann",
-    "1751409580926382": "lyashenko",
-    "4264861381989413": "diaz",
-    "6720317315593519": "mariana",
+    "6374692674377254": "de filippo",
+    "1751409580926382": "gagliardi",
+    "4264861381989413": "lupu",
+    "6720317315593519": "leslie",
 }
 exp_user_ids_country_code_dict = {
-    "6374692674377254": 276,
-    "1751409580926382": 804,
-    "4264861381989413": 724,
-    "6720317315593519": 642,
+    "6374692674377254": 380,
+    "1751409580926382": 380,
+    "4264861381989413": 498,
+    "6720317315593519": 826,
 }
 exp_user_ids_email_domain_dict = {
-    "6374692674377254": "gmail.com",
+    "6374692674377254": "yahoo.com",
     "1751409580926382": "yahoo.com",
-    "4264861381989413": "aol.com",
-    "6720317315593519": "hotmail.com",
+    "4264861381989413": "yahoo.com",
+    "6720317315593519": "gmail.com",
 }
 exp_user_ids_dates_dict = {
-    "6374692674377254": np.datetime64("2020-06-20T00:00:00.000000000"),
-    "1751409580926382": np.datetime64("2020-12-25T00:00:00.000000000"),
-    "4264861381989413": np.datetime64("2020-08-01T00:00:00.000000000"),
-    "6720317315593519": np.datetime64("2020-02-04T00:00:00.000000000"),
+    "6374692674377254": np.datetime64("2020-03-21T00:00:00.000000000"),
+    "1751409580926382": np.datetime64("2020-06-11T00:00:00.000000000"),
+    "4264861381989413": np.datetime64("2020-10-15T00:00:00.000000000"),
+    "6720317315593519": np.datetime64("2020-09-17T00:00:00.000000000"),
 }
 exp_start_date = cons.unittest_registration_start_date
 exp_end_date = cons.unittest_registration_end_date
@@ -61,9 +61,9 @@ np.random.seed(cons.unittest_seed)
 
 fpath_firstnames = '.' + cons.fpath_llama_firstnames.split(cons.fpath_repo_dir)[1]
 fpath_lastnames = '.' + cons.fpath_llama_lastnames.split(cons.fpath_repo_dir)[1]
-fpath_countrieseurope = '.' + cons.fpath_countrieseurope.split(cons.fpath_repo_dir)[1]
-fpath_domain_email = '.' + cons.fpath_domain_email.split(cons.fpath_repo_dir)[1]
-user_object = User(n_user_ids=exp_n_user_ids, start_date=exp_start_date, end_date=exp_end_date, fpath_firstnames=fpath_firstnames, fpath_lastnames=fpath_lastnames, fpath_countrieseurope=fpath_countrieseurope, fpath_domain_email=fpath_domain_email)
+fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+fpath_email_domain = '.' + cons.fpath_email_domain.split(cons.fpath_repo_dir)[1]
+user_object = User(n_user_ids=exp_n_user_ids, start_date=exp_start_date, end_date=exp_end_date, fpath_firstnames=fpath_firstnames, fpath_lastnames=fpath_lastnames, fpath_countries_europe=fpath_countries_europe, fpath_email_domain=fpath_email_domain)
 
 obs_user_ids_cnts_dict = user_object.user_ids_cnts_dict
 obs_user_ids_props_dict = user_object.user_ids_props_dict

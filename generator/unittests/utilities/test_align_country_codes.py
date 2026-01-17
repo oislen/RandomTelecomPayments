@@ -45,7 +45,7 @@ exp_data_df = pd.DataFrame.from_records(
         },
         {
             "registration_country_code_alpha": 353,
-            "ip_country_code_alpha": 353.0,
+            "ip_country_code_alpha": 42.0,
             "card_country_code_alpha": np.nan,
         },
         {
@@ -62,7 +62,7 @@ exp_data_df = pd.DataFrame.from_records(
 )
 obs_data_df = input_data_df.apply(
     lambda series: align_country_codes(
-        series, proba_comm_ip=0.95, proba_comm_card=0.99
+        series, proba_comm_ip=0.05, proba_comm_card=0.01
     ),
     axis=1,
 )
