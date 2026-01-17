@@ -29,3 +29,6 @@ def input_error_handling(
     # check if the number of iterations is greater than or equal to 1
     if not ((input_params_dict["n_itr"] >= 1) and (isinstance(input_params_dict["n_itr"], int))):
         raise ValueError(f"Invalid n_itr parameter value {input_params_dict['n_itr']}; must be an integer >= 1.")
+    # check if the number of applications is positive
+    if not ((input_params_dict["n_applications"] >= 1) and (isinstance(input_params_dict["n_applications"], int))):
+        raise ValueError(f"Invalid n_applications parameter value {input_params_dict['n_applications']}; must be a integer >= 1.")

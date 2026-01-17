@@ -43,6 +43,7 @@ date_today = datetime.datetime.today()
 default_n_users = 100
 default_use_random_seed = 0
 default_n_itr = 1
+default_n_applications = 20000
 default_registration_start_date = (date_today - datetime.timedelta(days=731)).strftime(date_date_strftime)
 default_registration_end_date = (date_today - datetime.timedelta(days=366)).strftime(date_date_strftime)
 default_transaction_start_date = (date_today - datetime.timedelta(days=365)).strftime(date_date_strftime)
