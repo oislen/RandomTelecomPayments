@@ -36,7 +36,7 @@ class Bedrock():
         model_id:str="meta.llama3-8b-instruct-v1:0",
         ):
         self.client = session.client("bedrock-runtime", region_name=model_region)
-        self.model_id = model_id
+        self.model_id = model_id,
     
     @beartype
     def prompt(

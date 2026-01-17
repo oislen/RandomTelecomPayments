@@ -5,7 +5,7 @@ from typing import List
 @beartype
 def gen_obj_idhash_series(
     idhashes:List[str],
-    n_counts_series:pd.Series
+    n_counts_series:pd.Series,
     ) -> pd.Series:
     """
     Generates a series of entity idhash lists using the entity counts per user Series and idhashes list.

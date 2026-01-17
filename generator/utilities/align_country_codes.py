@@ -7,7 +7,7 @@ from beartype import beartype
 def align_country_codes(
     series:pd.Series,
     proba_comm_ip:float=0.05,
-    proba_comm_card:float=0.01
+    proba_comm_card:float=0.01,
     ) -> pd.Series:
     """
     Aligns inconsistent registration, ip and card country codes to have mostly common values; with a random chance of inconsistencies.

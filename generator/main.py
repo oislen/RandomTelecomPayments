@@ -22,7 +22,7 @@ if __name__ == '__main__':
     input_params_dict = commandline_interface()
 
     # run input error handling
-    res = input_error_handling(input_params_dict)
+    input_error_handling(input_params_dict)
 
     logging.info(f'Input Parameters: {input_params_dict}')
 

@@ -1,5 +1,6 @@
-import pandas as pd
 import cons
+
+import pandas as pd
 from beartype import beartype
 from typing import Dict
 

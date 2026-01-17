@@ -6,7 +6,7 @@ from typing import Union
 def gen_random_poisson_power(
     lam:Union[int,float],
     size:Union[int,np.int64],
-    power:int
+    power:int,
     ) -> np.ndarray:
     """
     Generates data from a polynomial random poisson variable to a given power.

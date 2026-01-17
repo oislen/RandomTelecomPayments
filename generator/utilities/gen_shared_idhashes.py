@@ -6,7 +6,7 @@ from typing import Dict, Union, List
 @beartype
 def gen_shared_idhashes(
     idhashes:List[str],
-    prop_shared_idhashes:float
+    prop_shared_idhashes:float,
     ) -> Dict[str, str]:
     """
     Generates a dictionary of shared idhashes proportions
