@@ -4,7 +4,7 @@ from typing import Dict
 @beartype
 def input_error_handling(
     input_params_dict:Dict[str, object],
-    ) -> int:
+    ):
     """
     Runs error handling on the input params dictionary.
     
@@ -12,11 +12,6 @@ def input_error_handling(
     ----------
     input_params_dict : Dict[str, object]
         A dictionary of input parameters.
-    
-    Returns
-    -------
-    int
-        Returns 0 for successful completion, otherwise returns value errors depending on failed input parameter check.
     
     Examples
     --------

@@ -35,6 +35,7 @@ if __name__ == '__main__':
             (
                 input_params_dict['n_users'],
                 None if input_params_dict['use_random_seed'] == 0 else itr,
+                20000,
                 input_params_dict['registration_start_date'],
                 input_params_dict['registration_end_date'],
                 input_params_dict['transaction_start_date'],
