@@ -54,7 +54,7 @@ class Device:
         self.device_hashes = list(self.device_hashes_cnts_dict.keys())
         self.device_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.device_hashes_cnts_dict)
         self.device_hashes_type_dict = self.gen_device_types(device_hashes=self.device_hashes, fpath_smartphones=self.fpath_smartphones)
-        self.device_shared_idhash_map_dict = gen_shared_idhashes(idhashes_cnts_dict=self.device_hashes_cnts_dict, prop_shared_idhashes=self.prop_shared_device_hashes)
+        self.device_shared_idhash_map_dict = gen_shared_idhashes(idhashes=self.device_hashes, prop_shared_idhashes=self.prop_shared_device_hashes)
 
     @beartype
     def gen_device_types(

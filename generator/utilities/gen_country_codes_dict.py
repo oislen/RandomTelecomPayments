@@ -10,7 +10,7 @@ from typing import Dict, Union, List
 @beartype
 def gen_country_codes_dict(
     idhashes:List[str],
-    fpath_countrieseurope:str=cons.fpath_countrieseurope,
+    fpath_countries_europe:str=cons.fpath_countries_europe,
     ) -> Dict[str, Union[int, np.int64]]:
     """
     Generates a dictionary of randomLy sampled country codes for an input list of idhashes.
@@ -19,8 +19,8 @@ def gen_country_codes_dict(
     ----------
     idhashes : List[str]
         A list of idhashes.
-    fpath_countrieseurope : str
-        The file path to the european countries reference file, default is cons.fpath_countrieseurope.
+    fpath_countries_europe : str
+        The file path to the european countries reference file, default is cons.fpath_countries_europe.
     
     Returns
     -------
@@ -33,15 +33,15 @@ def gen_country_codes_dict(
     import cons
     idhashes_cnts_dict:{'abcd1234': 5, 'defg4567': 3, 'ghij7891': 7}
     gen_country_codes_dict(idhashes_cnts_dict=idhashes_cnts_dict,
-        fpath_countrieseurope=cons.fpath_countrieseurope,
+        fpath_countries_europe=cons.fpath_countries_europe,
         )
     ```
     """
     # check file path exists
-    if os.path.exists(fpath_countrieseurope) == False:
-        raise FileNotFoundError(f"File not found: {fpath_countrieseurope}")
+    if os.path.exists(fpath_countries_europe) == False:
+        raise FileNotFoundError(f"File not found: {fpath_countries_europe}")
     # load population data of european countries
-    european_populations_cnt_data = pd.read_csv(filepath_or_buffer=fpath_countrieseurope, usecols=["ISO numeric", "population"],)
+    european_populations_cnt_data = pd.read_csv(filepath_or_buffer=fpath_countries_europe, usecols=["ISO numeric", "population"],)
     # convert to a dictionary of ISO country codes with population counts
     european_populations_cnt_dict = european_populations_cnt_data.set_index("ISO numeric")["population"].to_dict()
     # convert dictionary of population counts to dictionary of population proportions

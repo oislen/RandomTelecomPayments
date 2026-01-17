@@ -139,7 +139,7 @@ if __name__ == "__main__":
     bedrock = Bedrock(session=session, model_region="us-east-1", model_id="meta.llama3-70b-instruct-v1:0")
     
     # load countries, firstnames and surnames files
-    countrieseurope = pd.read_csv(cons.fpath_countrieseurope, usecols=['name', 'ISO numeric'])
+    countrieseurope = pd.read_csv(cons.fpath_countries_europe, usecols=['name', 'ISO numeric'])
     orig_firstnames = pd.read_csv(cons.fpath_firstnames)
     orig_surnames = pd.read_csv(cons.fpath_lastnames)
     

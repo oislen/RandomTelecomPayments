@@ -19,8 +19,8 @@ class User:
         end_date:str,
         fpath_firstnames:str=cons.fpath_firstnames,
         fpath_lastnames:str=cons.fpath_lastnames,
-        fpath_countrieseurope:str=cons.fpath_countrieseurope,
-        fpath_domain_email:str=cons.fpath_domain_email,
+        fpath_countries_europe:str=cons.fpath_countries_europe,
+        fpath_email_domain :str=cons.fpath_email_domain ,
         ):
         """
         The randomly generated user data model object
@@ -37,10 +37,10 @@ class User:
             The full file path to the first names reference data, default is cons.fpath_firstnames.
         fpath_lastnames : str
             The full file path to the last names reference data, default is cons.fpath_lastnames.
-        fpath_countrieseurope : str
-            The full file path to the europe countries reference data, default is cons.fpath_countrieseurope.
-        fpath_domain_email : str
-            The full file path to the email domain reference data, default is cons.fpath_domain_email.
+        fpath_countries_europe : str
+            The full file path to the europe countries reference data, default is cons.fpath_countries_europe.
+        fpath_email_domain : str
+            The full file path to the email domain reference data, default is cons.fpath_email_domain .
         
         Attributes
         ----------
@@ -74,17 +74,17 @@ class User:
         self.end_date = end_date
         self.fpath_firstnames = fpath_firstnames
         self.fpath_lastnames = fpath_lastnames
-        self.fpath_countrieseurope = fpath_countrieseurope
-        self.fpath_domain_email = fpath_domain_email
+        self.fpath_countries_europe = fpath_countries_europe
+        self.fpath_email_domain = fpath_email_domain 
         self.lam = cons.data_model_poisson_params["user"]["lambda"]
         self.power = cons.data_model_poisson_params["user"]["power"]
         self.user_ids_cnts_dict = gen_idhash_cnt_dict(idhash_type="id", n=self.n_user_ids, lam=self.lam, power=self.power)
         self.user_ids = list(self.user_ids_cnts_dict.keys())
         self.user_ids_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.user_ids_cnts_dict)
-        self.user_ids_country_code_dict = gen_country_codes_dict(idhashes=self.user_ids, fpath_countrieseurope=self.fpath_countrieseurope)
+        self.user_ids_country_code_dict = gen_country_codes_dict(idhashes=self.user_ids, fpath_countries_europe=self.fpath_countries_europe)
         self.user_ids_firstname_dict = self.gen_user_firstname(fpath_firstnames=self.fpath_firstnames)
         self.user_ids_lastname_dict = self.gen_user_lastname(fpath_lastnames=self.fpath_lastnames)
-        self.user_ids_email_domain_dict = self.gen_user_email_domain(fpath_domain_email=self.fpath_domain_email)
+        self.user_ids_email_domain_dict = self.gen_user_email_domain(fpath_email_domain=self.fpath_email_domain)
         self.user_ids_dates_dict = gen_dates_dict(idhashes=self.user_ids, start_date=self.start_date, end_date=self.end_date)
     
     @beartype
@@ -150,14 +150,14 @@ class User:
     @beartype
     def gen_user_email_domain(
         self,
-        fpath_domain_email:str,
+        fpath_email_domain:str,
         ) -> Dict[str, str]:
         """
         Generates a dictionary of random user id email domains
         
         Parameters
         ----------
-        fpath_domain_email : str
+        fpath_email_domain : str
             The file path to the email domains reference file
         
         Returns
@@ -166,7 +166,7 @@ class User:
             A dictionary of user id email domains
         """
         # load domain names data
-        email_domain_data = pd.read_csv(fpath_domain_email, index_col=0)
+        email_domain_data = pd.read_csv(fpath_email_domain, index_col=0)
         # calculate the proportion of email domains
         email_domain_data["proportion"] = email_domain_data["proportion"].divide(email_domain_data["proportion"].sum())
         # convert email domain proportions to a dictionary

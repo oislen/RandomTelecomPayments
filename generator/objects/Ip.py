@@ -14,7 +14,7 @@ class Ip:
     def __init__(
         self,
         n_ip_hashes:Union[int,np.int64],
-        fpath_countrieseurope:str=cons.fpath_countrieseurope,
+        fpath_countries_europe:str=cons.fpath_countries_europe,
         ):
         """
         The randomly generated ip data model object.
@@ -23,8 +23,8 @@ class Ip:
         ----------
         n_ip_hashes : int
             The number of ip hashes to generate.
-        fpath_countrieseurope : str
-            The file path to the european countries reference file, default is cons.fpath_countrieseurope.
+        fpath_countries_europe : str
+            The file path to the european countries reference file, default is cons.fpath_countries_europe.
         
         Attributes
         ----------
@@ -46,12 +46,12 @@ class Ip:
             The shared ip hash mapping dictionary.
         """
         self.n_ip_hashes = n_ip_hashes
-        self.fpath_countrieseurope = fpath_countrieseurope
+        self.fpath_countries_europe = fpath_countries_europe
         self.lam = cons.data_model_poisson_params["ip"]["lambda"]
         self.power = cons.data_model_poisson_params["ip"]["power"]
         self.prop_shared_ip_hashes = cons.data_model_shared_entities_dict["ip"]
         self.ip_hashes_cnts_dict = gen_idhash_cnt_dict(idhash_type="hash", n=self.n_ip_hashes, lam=self.lam, power=self.power)
         self.ip_hashes = list(self.ip_hashes_cnts_dict.keys())
         self.ip_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.ip_hashes_cnts_dict)
-        self.ip_hashes_country_code_dict = gen_country_codes_dict(idhashes=self.ip_hashes, fpath_countrieseurope=self.fpath_countrieseurope)
-        self.ip_shared_idhash_map_dict = gen_shared_idhashes(idhashes_cnts_dict=self.ip_hashes_cnts_dict, prop_shared_idhashes=self.prop_shared_ip_hashes)
+        self.ip_hashes_country_code_dict = gen_country_codes_dict(idhashes=self.ip_hashes, fpath_countries_europe=self.fpath_countries_europe)
+        self.ip_shared_idhash_map_dict = gen_shared_idhashes(idhashes=self.ip_hashes, prop_shared_idhashes=self.prop_shared_ip_hashes)

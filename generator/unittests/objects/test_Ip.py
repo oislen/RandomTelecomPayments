@@ -35,8 +35,8 @@ exp_lam = cons.data_model_poisson_params["ip"]["lambda"]
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
 
-fpath_countrieseurope = '.' + cons.fpath_countrieseurope.split(cons.fpath_repo_dir)[1]
-ip_object = Ip(n_ip_hashes=exp_n_ip_hashes, fpath_countrieseurope=fpath_countrieseurope)
+fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+ip_object = Ip(n_ip_hashes=exp_n_ip_hashes, fpath_countries_europe=fpath_countries_europe)
 
 obs_ip_hashes_cnts_dict = ip_object.ip_hashes_cnts_dict
 obs_ip_hashes_props_dict = ip_object.ip_hashes_props_dict

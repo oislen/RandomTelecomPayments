@@ -14,7 +14,7 @@ class Card:
     def __init__(
         self,
         n_card_hashes:Union[int,np.int64],
-        fpath_countrieseurope:str=cons.fpath_countrieseurope,
+        fpath_countries_europe:str=cons.fpath_countries_europe,
         ):
         """
         The randomly generated card data model object.
@@ -23,8 +23,8 @@ class Card:
         ----------
         n_card_hashes : int
             The number of card hashes to generate.
-        fpath_countrieseurope : str
-            The file path to the european countries reference file, default is cons.fpath_countrieseurope.
+        fpath_countries_europe : str
+            The file path to the european countries reference file, default is cons.fpath_countries_europe.
         
         Attributes
         ----------
@@ -50,7 +50,7 @@ class Card:
             The card shared idhash mapping dictionary.
         """
         self.n_card_hashes = n_card_hashes
-        self.fpath_countrieseurope = fpath_countrieseurope
+        self.fpath_countries_europe = fpath_countries_europe
         self.card_types_dict = cons.data_model_card_types_dict
         self.lam = cons.data_model_poisson_params["card"]["lambda"]
         self.power = cons.data_model_poisson_params["card"]["power"]
@@ -59,8 +59,8 @@ class Card:
         self.card_hashes = list(self.card_hashes_cnts_dict.keys())
         self.card_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.card_hashes_cnts_dict)
         self.card_hashes_type_dict = self.gen_card_type(card_hashes=self.card_hashes, card_types_dict=self.card_types_dict)
-        self.card_hashes_country_code_dict = gen_country_codes_dict(idhashes=self.card_hashes, fpath_countrieseurope=self.fpath_countrieseurope)
-        self.card_shared_idhash_map_dict = gen_shared_idhashes(idhashes_cnts_dict=self.card_hashes_cnts_dict, prop_shared_idhashes=self.prop_shared_card_hashes)
+        self.card_hashes_country_code_dict = gen_country_codes_dict(idhashes=self.card_hashes, fpath_countries_europe=self.fpath_countries_europe)
+        self.card_shared_idhash_map_dict = gen_shared_idhashes(idhashes=self.card_hashes, prop_shared_idhashes=self.prop_shared_card_hashes)
     
     @beartype
     def gen_card_type(
