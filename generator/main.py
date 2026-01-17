@@ -35,7 +35,7 @@ if __name__ == '__main__':
             (
                 input_params_dict['n_users'],
                 None if input_params_dict['use_random_seed'] == 0 else itr,
-                20000,
+                input_params_dict['n_applications'],
                 input_params_dict['registration_start_date'],
                 input_params_dict['registration_end_date'],
                 input_params_dict['transaction_start_date'],
@@ -49,6 +49,7 @@ if __name__ == '__main__':
             gen_random_telecom_data(
                 n_users=input_params_dict['n_users'],
                 random_seed=input_params_dict['use_random_seed'],
+                n_applications=input_params_dict['n_applications'],
                 registration_start_date=input_params_dict['registration_start_date'],
                 registration_end_date=input_params_dict['registration_end_date'],
                 transaction_start_date=input_params_dict['transaction_start_date'],

@@ -1,20 +1,29 @@
-name: Unittest Dev
+name: Development Workflow
 
 on:
   pull_request:
-    branches: [ "dev" ]
-  push:
-    branches: [ "dev" ]
+    branches: [ dev, main ]
 
 jobs:
-  build:
 
+  trivy-fs-scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run Trivy vulnerability scanner in fs mode
+      uses: aquasecurity/trivy-action@master
+      with:
+        scan-type: 'fs'
+        scan-ref: '.'
+        exit-code: '1'
+
+  python-unittests:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         python-version: ["3.12"]
-
     steps:
     - uses: actions/checkout@v4
     - name: Set environment variable
