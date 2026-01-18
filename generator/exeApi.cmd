@@ -1,0 +1,1 @@
+call fastapi dev api.py
