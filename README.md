@@ -2,9 +2,9 @@
 
 ## Overview
 
-Randomly simulated data is particularly useful when it's real world counterpart is hard access due to complexity, privacy and security reasons. Moreover, randomly simulated data has additional benefits including reproducibility, scalability and controllability. 
+Randomly simulated data is particularly useful when it's real world counterpart is hard access due to complexity, privacy and security reasons. Moreover, randomly simulated data has additional benefits including reproducibility, scalability and controllability.
 
-This application aims to simulate telecommunication payments using random number generation. It includes typical transaction level relationships and behaviours amongst the user, device, ip, and card entities. It can be used in place of real world telecommunication payments for prototyping solutions and as an education tool. 
+This application aims to simulate telecommunication payments using random number generation. It includes typical transaction level relationships and behaviours amongst the user, device, ip, and card entities. It can be used in place of real world telecommunication payments for prototyping solutions and as an education tool.
 
 The data generation algorithm works by first generating user level telecom payments data. Afterwards, the user level data is exploded to transaction level, and any inconsistencies within the data model are removed. Finally, the transaction status and error codes are generated using underlying features within the transaction level data.
 
@@ -16,7 +16,7 @@ A stable master version of the Random Telecom Payments data can be found on Kagg
 
 ## Data Model
 
-The underlying data model present in the simulated telecommunication payments is displayed below. 
+The underlying data model present in the simulated telecommunication payments is displayed below.
 
 ![Entity Relationship Diagram](doc/entity_relationship_diagram.jpg)
 
@@ -69,7 +69,7 @@ docker run --name rtp oislen/randomtelecompayments:latest --n_users 1000 --use_r
 The generated Random Telecom Payments data can then be extract from the docker image using the following command:
 
 ```
-docker cp rtp:/home/ubuntu/RandomTelecomPayments/data/RandomTelecomPayments.csv %userprofile%\Downloads\RandomTelecomPayments.csv
+docker cp rtp:/home/user/RandomTelecomPayments/data/RandomTelecomPayments.csv %userprofile%\Downloads\RandomTelecomPayments.csv
 ```
 
 ### Application Parameters
