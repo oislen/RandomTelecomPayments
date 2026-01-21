@@ -114,4 +114,8 @@ def gen_random_telecom_data(
         fpath_countrycrimeindex=cons.fpath_countrycrimeindex
     )
     
+    # map np.nans to None for JSON serialisation
+    user_data = user_data.where(pd.notnull(user_data), None)
+    trans_data = trans_data.where(pd.notnull(trans_data), None)
+    
     return {"user_data":user_data, "trans_data":trans_data}
