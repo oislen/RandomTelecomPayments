@@ -26,27 +26,16 @@ For a more detailed account of each column in the dataset see the data dictionar
 
 ## Running the Application (Windows)
 
-### Anaconda
+### Application Parameters
 
-Create a local conda environment for the Random Telecom Payments app using [anaconda](https://www.anaconda.com/):
-
-```
-conda create --name RandomTelecomPayments python=3.12 --yes
-conda activate RandomTelecomPayments
-pip install -r requirements.txt
-```
-
-Execute the Random Telecom Payments app to generate data for 2000 users using the following command and the local conda environment:
-
-```
-python generator\\main.py --n_users 1000 --use_random_seed 1 --n_itr 2
-```
-
-View the generated Random Telecom Payments data using the following command:
-
-```
-type data\\RandomTelecomPayments.csv | more
-```
+* **n_users** - integer, the number of users to generate Random Telecom Payments data for, default is 100.
+* **use_random_seed** - integer, whether to run the Random Telecom Payments data generation with or without a random seed set for reproducible results; must be 0 or 1.
+* **n_itr** - integer, the number of Random Telecom Payments data batches to generate; must be at least 1. The python multiprocessing library is used to run each in parallel across all available cores.
+* **n_applications** - integer, the number of applications to generate, default is 20000
+* **registration_start_date** - string, the start date for user registrations, default is two years ago from today.
+* **registration_end_date** - string, the end date for user registrations, default is one year ago from today.
+* **transaction_start_date** - string, the start date for user transactions, default is one year ago from today.
+* **transaction_end_date** - string, the end date for user transactions, default is today.
 
 ### Docker
 
@@ -60,6 +49,8 @@ The docker image can be pulled from dockerhub using the following command:
 docker pull oislen/randomtelecompayments:latest
 ```
 
+#### Command Line Interface
+
 The Random Telecom Payments app can then be executed to generate data for 2000 users using the following command and the docker image:
 
 ```
@@ -72,12 +63,17 @@ The generated Random Telecom Payments data can then be extract from the docker i
 docker cp rtp:/home/user/RandomTelecomPayments/data/RandomTelecomPayments.csv %userprofile%\Downloads\RandomTelecomPayments.csv
 ```
 
-### Application Parameters
+#### FastApi Interface
 
-* **n_users** - integer, the number of users to generate Random Telecom Payments data for, default is 100.
-* **use_random_seed** - integer, whether to run the Random Telecom Payments data generation with or without a random seed set for reproducible results; must be 0 or 1.
-* **n_itr** - integer, the number of Random Telecom Payments data batches to generate; must be at least 1. The python multiprocessing library is used to run each in parallel across all available cores.
-* **registration_start_date** - string, the start date for user registrations, default is two years ago from today.
-* **registration_end_date** - string, the end date for user registrations, default is one year ago from today.
-* **transaction_start_date** - string, the start date for user transactions, default is one year ago from today.
-* **transaction_end_date** - string, the end date for user transactions, default is today.
+Alternatively, a FastApi interface has been configured within the docker image to allow for interaction with the Random Telecom Payments app via REST API calls. The FastApi interface can be accessed by publishing port 8000 when running the docker image as follows:
+
+```
+docker run --name rtp --publish 8000:8000 --entrypoint fastapi --rm oislen/randomtelecompayments:latest run generator/api.py
+```
+
+Once the web endpoint is running, navigate to localhost:8000/docs in your preferred browser to access the FastApi interface documentation and test the available API calls.
+
+* http://localhost:8000/docs
+
+
+![FastApi Endpoint](doc/fastapi_endpoint.jpg)
