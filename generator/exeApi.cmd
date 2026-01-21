@@ -1,1 +1,1 @@
-call fastapi dev api.py
+call fastapi run api.py
