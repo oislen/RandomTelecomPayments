@@ -25,4 +25,5 @@ RUN python -m pip install -v -r /home/${user}/RandomTelecomPayments/requirements
 # set working directory for random telecom payments app
 WORKDIR /home/${user}/RandomTelecomPayments
 
+EXPOSE 8000
 ENTRYPOINT  ["python", "generator/main.py"]

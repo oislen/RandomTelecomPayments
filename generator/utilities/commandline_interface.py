@@ -49,7 +49,7 @@ def commandline_interface() -> Dict[str, object]:
     parser.add_argument("--transaction_start_date", action="store", dest="transaction_start_date", type=str, default=cons.default_transaction_start_date, help="String, the start date for transactions",)
     parser.add_argument("--transaction_end_date", action="store", dest="transaction_end_date", type=str, default=cons.default_transaction_end_date, help="String, the end date for transactions",)
     # create an output dictionary to hold the results
-    input_params_dict = {}
+    input_params_dict = cons.default_input_params_dict.copy()
     # extract input arguments
     args = parser.parse_args()
     # map input arguments into output dictionary
