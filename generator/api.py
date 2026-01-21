@@ -20,7 +20,7 @@ app = FastAPI(
     openapi_tags=tags_metadata,
 )
 
-@app.get("/api")
+@app.get("/api", tags=["Random Telecom Payments Data Generator"])
 async def get_api(
     n_users: Annotated[int, Query(title="Number of Users", description="The number of users")] = cons.default_n_users,
     use_random_seed : Annotated[int, Query(title="Use Random Seed", description="The random seed to use", ge=0, le=1)] = cons.default_use_random_seed,
@@ -30,7 +30,6 @@ async def get_api(
     registration_end_date : Annotated[str, Query(title="Registration End Date", description="The registration end date in YYYY-MM-DD format")] = cons.default_registration_end_date,
     transaction_start_date : Annotated[str, Query(title="Transaction Start Date", description="The transaction start date in YYYY-MM-DD format")] = cons.default_transaction_start_date,
     transaction_end_date : Annotated[str, Query(title="Transaction End Date", description="The transaction end date in YYYY-MM-DD format")] = cons.default_transaction_end_date,
-    #tags: list[str] = ["Random Telecom Payments Data Generator"]
     ):
     """
     Generate random telecom payments data based on user-defined parameters.
@@ -77,10 +76,9 @@ async def get_api(
     response = json.dumps(trans_data_dict, cls=JsonEncoder)
     return response
 
-@app.post("/api")
+@app.post("/api", tags=["Random Telecom Payments Data Generator"])
 async def post_api(
-    body: Dict[str, object] = {},
-    #tags: list[str] = ["Random Telecom Payments Data Generator"]
+    body: Dict[str, object] = {}
     ):
     """
     Generate random telecom payments data based on user-defined parameters.
