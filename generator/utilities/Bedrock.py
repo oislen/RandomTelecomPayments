@@ -1,5 +1,5 @@
 import json
-import boto3
+from typing import Dict, List
 from beartype import beartype
 
 class Bedrock():
@@ -10,7 +10,7 @@ class Bedrock():
     
     Parameters
     ----------
-    session : boto3.Session
+    bedrock_runtime : boto3.Session
         A Boto3 session object configured with appropriate AWS credentials.
     model_region: str
         The AWS region where the Bedrock model is hosted.
@@ -31,16 +31,14 @@ class Bedrock():
     @beartype
     def __init__(
         self,
-        session:boto3.Session,
-        model_region="us-east-1",
-        model_id:str="meta.llama3-8b-instruct-v1:0",
+        bedrock_runtime,
         ):
-        self.client = session.client("bedrock-runtime", region_name=model_region)
-        self.model_id = model_id,
-    
+        self.bedrock_runtime = bedrock_runtime
+
     @beartype
     def prompt(
         self,
+        model_id:str,
         user_prompt:str,
         system_prompt:str="",
         top_p:float=0.5,
@@ -89,32 +87,51 @@ class Bedrock():
         # call bedrock model
         try:
             # Invoke the model with the request.
-            response = self.client.invoke_model(modelId=self.model_id, body=request)
+            response = self.bedrock_runtime.invoke_model(modelId=model_id, body=request)
         except Exception as e:
-            raise Exception(f"ERROR: Can't invoke '{self.model_id}'. Reason: {e}")
+            raise Exception(f"ERROR: Can't invoke '{model_id}'. Reason: {e}")
         # Decode and extract the response
         model_response = json.loads(response["body"].read())
         response_text = model_response["generation"]
         return response_text
+    
+    @beartype
+    def converse(
+        self,
+        modelId:str,
+        messages:List,
+        system:List,
+        inference_config:Dict={"maxTokens":512, "temperature":0.5, "topP":0.5,},
+        tools_config:Dict=None
+        ):
+        """
+        Invoke the Bedrock model with the provided messages and configurations.
 
-system_prompt = """# Task
+        Parameters
+        ----------
+        messages : Dict
+            A list of message objects representing the conversation history.
+        system : Dict
+            A system message object providing context or instructions for the model.
+        inference_config : Dict
+            Configuration settings for inference parameters.
+        tools_config : Dict
+            Configuration settings for any tools to be used during inference.
 
-You are a name generator for people from different countries in Europe. Your task is to generate an arbitrary N number of distinct and varied first names and last names for people from a given European country of origin.
-
-# Requirements
-
-- Generate typical names for both male and female people.
-- The names do not need to be traditional to the target European country.
-- Do not repeat any first names or last names more than once. Each individual first name must be unique and each individual last name must be unique.
-- You should return the first names and last names using a valid JSON object tagged as <answer></answer>.
-- The valid JSON object should be of the following structure; {"firstnames":["first name 1","first name 2",...,"first name N"], "lastnames":["last name 1","last name 2",...,"last name N"]}
-
-# Examples
-
-- Generate 2 first names and 2 last names for people from the country "Germany" -> <answer>{"firstnames":["Max","Hannah"], "lastnames":["Müller","Schmidt"]}</answer>
-- Generate 4 first names and 4 last names for people from the country "United Kingdom" -> <answer>{"firstnames":["George","Richard","Katie","Mary"], "lastnames":["Smith","Taylor","Jones","Brown"]}</answer>
-- Generate 3 first names and 3 last names for people from the country "France" -> <answer>{"firstnames":["Lola","Mathieu","Léa"], "lastnames":["Benoît","Pierre","Lefort"]}</answer>
-- Generate 5 first names and 5 last names for people from the country "Spain" -> <answer>{"firstnames":["Juan","Cristina","Javier","Julia","Isabel"], "lastnames":["Garcia","Martinez","Rodriguez","Lopez","Gomez"]}</answer>
-- Generate 6 first names and 6 last names for people from the country "Sweden" -> <answer>{"firstnames":["Tova","Alva","Casper","Märta","Axel","Elsa"], "lastnames":["Andersson","Johansson","Lundberg","Svensson","Pettersson","Nilsson"]}</answer>"""
-
-prompt = 'Generate {n_user_names} first names and {n_user_names} last names for people from the country "{country}"'
+        Returns
+        -------
+        Dict:
+            The response from the Bedrock Claude model.
+        
+        References
+        ----------
+        https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-runtime/client/converse.html
+        """
+        payload = {"modelId": modelId, "messages": messages, "system": system}
+        if inference_config:
+            payload["inferenceConfig"] = inference_config
+        if tools_config:
+            payload["toolsConfig"] = tools_config
+        # call converse api
+        response = self.bedrock_runtime.converse(**payload)
+        return response

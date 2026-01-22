@@ -1,6 +1,9 @@
+# python generator/batch/gen_user_names_file.py
+
 import os
 import json
 import boto3
+from botocore.config import Config
 import sys
 import time
 import logging
@@ -11,10 +14,47 @@ import numpy as np
 sys.path.append("E:\\GitHub\\RandomTelecomPayments\\generator")
 
 import cons
-from utilities.Bedrock import Bedrock, prompt, system_prompt
+from utilities.Bedrock import Bedrock
+
+system_prompt = """# Task
+
+You are a name generator for people from different countries in Europe. Your task is to generate an arbitrary N number of distinct and varied first names and last names for people from a given European country of origin.
+
+# Requirements
+
+- Generate typical names for both male and female people.
+- The names do not need to be traditional to the target European country.
+- Do not repeat any first names or last names more than once. Each individual first name must be unique and each individual last name must be unique.
+- You should return the first names and last names using a valid JSON object tagged as <answer></answer>.
+- The valid JSON object should be of the following structure; {"firstnames":["first name 1","first name 2",...,"first name N"], "lastnames":["last name 1","last name 2",...,"last name N"]}
+
+# Examples
+
+- Generate 2 first names and 2 last names for people from the country "Germany" -> <answer>{"firstnames":["Max","Hannah"], "lastnames":["Müller","Schmidt"]}</answer>
+- Generate 4 first names and 4 last names for people from the country "United Kingdom" -> <answer>{"firstnames":["George","Richard","Katie","Mary"], "lastnames":["Smith","Taylor","Jones","Brown"]}</answer>
+- Generate 3 first names and 3 last names for people from the country "France" -> <answer>{"firstnames":["Lola","Mathieu","Léa"], "lastnames":["Benoît","Pierre","Lefort"]}</answer>
+- Generate 5 first names and 5 last names for people from the country "Spain" -> <answer>{"firstnames":["Juan","Cristina","Javier","Julia","Isabel"], "lastnames":["Garcia","Martinez","Rodriguez","Lopez","Gomez"]}</answer>
+- Generate 6 first names and 6 last names for people from the country "Sweden" -> <answer>{"firstnames":["Tova","Alva","Casper","Märta","Axel","Elsa"], "lastnames":["Andersson","Johansson","Lundberg","Svensson","Pettersson","Nilsson"]}</answer>
+"""
+
+prompt = 'Generate {n_user_names} first names and {n_user_names} last names for people from the country "{country}"'
+
+bedrock_config = {
+    "inferenceConfig":{
+        "maxTokens":8192,
+        "temperature":0.5,
+        "topP":0.5,
+    },
+    "system":[
+        {
+            "text":system_prompt
+        }
+    ]
+}
 
 def invoke_bedrock(
     model:Bedrock,
+    model_id:str,
     n_user_names:int,
     country:str,
     countrieseurope:pd.DataFrame,
@@ -62,8 +102,10 @@ def invoke_bedrock(
     logging.info("Calling Bedrock ...")
     # call bedrock model
     formatted_prompt = prompt.format(n_user_names=n_user_names, country=country)
-    logging.info(formatted_prompt)
-    model_response = model.prompt(user_prompt=formatted_prompt, system_prompt=system_prompt, max_gen_len=2048)
+    messages = [{"role":"user", "content":[{"text":formatted_prompt}]}]
+    logging.info(messages)
+    model_response = model.prompt(model_id=model_id, user_prompt=formatted_prompt, system_prompt=system_prompt, max_gen_len=2048)
+    #model_response = model.converse(modelId=model_id, messages=messages, system=bedrock_config['system'], inference_config=bedrock_config['inferenceConfig'])
     # split out answer
     text = model_response.split("<answer>")[1].split("</answer>")[0]
     # parse json
@@ -117,54 +159,32 @@ def invoke_bedrock(
         logging.info(f"Wrote {fpath_temp_llama_lastnames} ...")
     return (tmp_firstname_country_data, tmp_lastname_country_data)
 
-if __name__ == "__main__":
-    
-    # set up logging
-    lgr = logging.getLogger()
-    lgr.setLevel(logging.INFO)
-    
-    # load aws config
-    with open(cons.fpath_aws_session_token, "r") as j:
-        aws_config = json.loads(j.read())
-    
-    # connect to aws boto3
-    session = boto3.Session(
-        aws_access_key_id=aws_config['Credentials']["AccessKeyId"],
-        aws_secret_access_key=aws_config['Credentials']["SecretAccessKey"],
-        aws_session_token=aws_config['Credentials']["SessionToken"],
-        region_name="us-east-1"
-    )
-    
-    # create bedrock instance
-    bedrock = Bedrock(session=session, model_region="us-east-1", model_id="meta.llama3-70b-instruct-v1:0")
+def main(bedrock, model_id, run_bedrock=False):
+    """
+    Docstring for main
+    """
     
     # load countries, firstnames and surnames files
     countrieseurope = pd.read_csv(cons.fpath_countries_europe, usecols=['name', 'ISO numeric'])
     orig_firstnames = pd.read_csv(cons.fpath_firstnames)
     orig_surnames = pd.read_csv(cons.fpath_lastnames)
-    
     # determine file size
     orig_filesize = int((orig_firstnames.shape[0] + orig_surnames.shape[0])/2)
     n_countries = countrieseurope.shape[0]
-    n_user_names = min(50, int(orig_filesize / n_countries))
-    
+    n_user_names = min(2, int(orig_filesize / n_countries))
     # generate user names
-    firstname_country_data = []
-    lastname_country_data = []
-    error_countries = []
-    # switch to toggle bedrock calls
-    run_bedrock = False
-    
+    firstname_country_data, lastname_country_data, error_countries = [], [], []
     # set countries list
-    countries_list = countrieseurope['name'].to_list()
-    #countries_list = ['Cyprus']
+    #countries_list = countrieseurope['name'].to_list()
+    countries_list = ['Cyprus']
     
+    # iterate over countries list
     for country in countries_list:
         logging.info(f"{country} ...")
         try:
             if run_bedrock:
                 # call bedrock model and generate user names data
-                tmp_firstname_country_data, tmp_lastname_country_data = invoke_bedrock(model=bedrock, n_user_names=n_user_names, country=country)
+                tmp_firstname_country_data, tmp_lastname_country_data = invoke_bedrock(model=bedrock, model_id=model_id, n_user_names=n_user_names, country=country, countrieseurope=countrieseurope)
                 logging.info("Waiting ...")
                 # wait 20 seconds before retrying
                 time.sleep(20)
@@ -206,3 +226,31 @@ if __name__ == "__main__":
         output_lastname_country_df.to_csv(cons.fpath_llama_lastnames, index=False, encoding="latin1")
     else:
         logging.info("WARNING Insufficient last name data generated.")
+
+lgr = logging.getLogger()
+lgr.setLevel(logging.INFO)
+
+if __name__ == "__main__":
+    # set aws region
+    aws_region = "us-east-1"
+    model_id="us.meta.llama3-1-70b-instruct-v1:0"
+    # load aws config
+    with open(cons.fpath_aws_session_token, "r") as j:
+        aws_config = json.loads(j.read())
+    # connect to aws boto3
+    session = boto3.Session(
+        aws_access_key_id=aws_config['Credentials']["AccessKeyId"],
+        aws_secret_access_key=aws_config['Credentials']["SecretAccessKey"],
+        aws_session_token=aws_config['Credentials']["SessionToken"],
+        region_name=aws_region
+    )
+    bedrock_runtime = session.client(
+        service_name="bedrock-runtime",
+        region_name=aws_region,
+        config=Config(retries={"max_attempts":1, "mode": "adaptive"})
+        )
+    # create bedrock instance
+    bedrock = Bedrock(bedrock_runtime=bedrock_runtime)
+    # execute main programme
+    main(bedrock=bedrock, run_bedrock=True, model_id=model_id)
+
