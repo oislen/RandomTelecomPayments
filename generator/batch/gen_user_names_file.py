@@ -10,34 +10,52 @@ import logging
 import unidecode
 import pandas as pd
 import numpy as np
+from typing import Dict
 
 sys.path.append("E:\\GitHub\\RandomTelecomPayments\\generator")
 
 import cons
 from utilities.Bedrock import Bedrock
 
-system_prompt = """# Task
+system_name_prompt = """# Task
 
-You are a name generator for people from different countries in Europe. Your task is to generate an arbitrary N number of distinct and varied first names and last names for people from a given European country of origin.
+You are a name generator for people from different countries in Europe.
+Your task is to generate an arbitrary N number of distinct and varied first names, or last names, for people from a given European country of origin.
 
 # Requirements
 
 - Generate typical names for both male and female people.
 - The names do not need to be traditional to the target European country.
-- Do not repeat any first names or last names more than once. Each individual first name must be unique and each individual last name must be unique.
+- Do not repeat any first names or last names more than once.
+- Each individual first name must be unique and each individual last name must be unique.
 - You should return the first names and last names using a valid JSON object tagged as <answer></answer>.
-- The valid JSON object should be of the following structure; {"firstnames":["first name 1","first name 2",...,"first name N"], "lastnames":["last name 1","last name 2",...,"last name N"]}
+- The valid JSON object should be of the following structures; `["name 1","name 2",...,"name N"]`.
 
 # Examples
 
-- Generate 2 first names and 2 last names for people from the country "Germany" -> <answer>{"firstnames":["Max","Hannah"], "lastnames":["Müller","Schmidt"]}</answer>
-- Generate 4 first names and 4 last names for people from the country "United Kingdom" -> <answer>{"firstnames":["George","Richard","Katie","Mary"], "lastnames":["Smith","Taylor","Jones","Brown"]}</answer>
-- Generate 3 first names and 3 last names for people from the country "France" -> <answer>{"firstnames":["Lola","Mathieu","Léa"], "lastnames":["Benoît","Pierre","Lefort"]}</answer>
-- Generate 5 first names and 5 last names for people from the country "Spain" -> <answer>{"firstnames":["Juan","Cristina","Javier","Julia","Isabel"], "lastnames":["Garcia","Martinez","Rodriguez","Lopez","Gomez"]}</answer>
-- Generate 6 first names and 6 last names for people from the country "Sweden" -> <answer>{"firstnames":["Tova","Alva","Casper","Märta","Axel","Elsa"], "lastnames":["Andersson","Johansson","Lundberg","Svensson","Pettersson","Nilsson"]}</answer>
+## First Names
+
+- Generate 2 first names for people from the country "Germany" -> <answer>["Max","Hannah"]</answer>
+- Generate 4 first names for people from the country "United Kingdom" -> <answer>["George","Richard","Katie","Mary"]</answer>
+- Generate 3 first names for people from the country "France" -> <answer>["Lola","Mathieu","Léa"]</answer>
+- Generate 5 first names for people from the country "Spain" -> <answer>["Juan","Cristina","Javier","Julia","Isabel"]</answer>
+- Generate 6 first names for people from the country "Sweden" -> <answer>["Tova","Alva","Casper","Märta","Axel","Elsa"]</answer>
+
+## Last Names
+
+- Generate 2 last names for people from the country "Germany" -> <answer>["Müller","Schmidt"]</answer>
+- Generate 4 last names for people from the country "United Kingdom" -> <answer>["Smith","Taylor","Jones","Brown"]</answer>
+- Generate 3 last names for people from the country "France" -> <answer>["Benoît","Pierre","Lefort"]</answer>
+- Generate 5 last names for people from the country "Spain" -> <answer>["Garcia","Martinez","Rodriguez","Lopez","Gomez"]</answer>
+- Generate 6 last names for people from the country "Sweden" -> <answer>["Andersson","Johansson","Lundberg","Svensson","Pettersson","Nilsson"]</answer>
 """
 
-prompt = 'Generate {n_user_names} first names and {n_user_names} last names for people from the country "{country}"'
+system_email_prompt = """
+"""
+
+firstname_prompt = 'Generate {n_data_points} first names for people from the country "{country}"'
+surname_prompt = 'Generate {n_data_points} last names for people from the country "{country}"'
+email_domain_prompt = 'Generate {n_data_points} popular email domains names for people from the country "{country}"'
 
 bedrock_config = {
     "inferenceConfig":{
@@ -47,7 +65,7 @@ bedrock_config = {
     },
     "system":[
         {
-            "text":system_prompt
+            "text":system_name_prompt
         }
     ]
 }
@@ -55,9 +73,13 @@ bedrock_config = {
 def invoke_bedrock(
     model:Bedrock,
     model_id:str,
-    n_user_names:int,
+    data_point:str,
+    n_data_points:int,
     country:str,
     countrieseurope:pd.DataFrame,
+    prompt:str,
+    system_prompt:str,
+    country_fpath:str,
     ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Invokes the Bedrock model to generate user names for a specified country.
@@ -71,8 +93,8 @@ def invoke_bedrock(
     ----------
     model : Bedrock
         The Bedrock model instance used to generate names.
-    n_user_names : int
-        The number of user names to generate.
+    n_data_points : int
+        The number of data points to generate
     country : str
         The country for which to generate names.
     countrieseurope : pd.DataFrame
@@ -101,131 +123,100 @@ def invoke_bedrock(
     """
     logging.info("Calling Bedrock ...")
     # call bedrock model
-    formatted_prompt = prompt.format(n_user_names=n_user_names, country=country)
+    formatted_prompt = prompt.format(n_data_points=n_data_points, country=country)
     messages = [{"role":"user", "content":[{"text":formatted_prompt}]}]
     logging.info(messages)
-    model_response = model.prompt(model_id=model_id, user_prompt=formatted_prompt, system_prompt=system_prompt, max_gen_len=2048)
-    #model_response = model.converse(modelId=model_id, messages=messages, system=bedrock_config['system'], inference_config=bedrock_config['inferenceConfig'])
+    #model_response = model.prompt(model_id=model_id, user_prompt=formatted_prompt, system_prompt=system_prompt, max_gen_len=2048)
+    model_response = model.converse(modelId=model_id, messages=messages, system=bedrock_config['system'], inference_config=bedrock_config['inferenceConfig'])
     # split out answer
     text = model_response.split("<answer>")[1].split("</answer>")[0]
     # parse json
     try:
-        record_set = json.loads(text)
+        gen_data_list = json.loads(text)
     except json.JSONDecodeError as e:
         raise Exception(f"Error parsing JSON: {e}")
     logging.info("Processing results ...")
     # generate pandas dataframe
-    user_firstname_data = pd.Series(record_set["firstnames"], name="firstnames").to_frame().drop_duplicates(subset=["firstnames"])
-    user_lastname_data = pd.Series(record_set["lastnames"], name="lastnames").to_frame().drop_duplicates(subset=["lastnames"])
-    # add country
-    user_firstname_data['country'] = country
-    user_lastname_data['country'] = country
-    # join on country codes
-    llama_firstname_country_data = user_firstname_data.merge(right=countrieseurope, left_on='country', right_on='name', how='inner').drop(columns=['name'])
-    llama_lastname_country_data = user_lastname_data.merge(right=countrieseurope, left_on='country', right_on='name', how='inner').drop(columns=['name'])
-    # print shapes
-    logging.info(f"llama_firstname_country_data.shape: {llama_firstname_country_data.shape}")
-    logging.info(f"llama_lastname_country_data.shape: {llama_lastname_country_data.shape}")
-    # format output file paths
-    fpath_temp_llama_firstnames = cons.fpath_temp_llama_firstnames.format(country=country.lower())
-    fpath_temp_llama_lastnames = cons.fpath_temp_llama_lastnames.format(country=country.lower())
-    # check against previous iterations
-    tmp_firstname_country_data = pd.DataFrame()
-    tmp_lastname_country_data = pd.DataFrame()
-    if os.path.exists(fpath_temp_llama_firstnames):
-        tmp_firstname_country_data = pd.read_csv(fpath_temp_llama_firstnames, encoding="latin1")
-    if os.path.exists(fpath_temp_llama_lastnames):
-        tmp_lastname_country_data = pd.read_csv(fpath_temp_llama_lastnames, encoding="latin1")
-    # concatenate results
-    tmp_firstname_country_data = pd.concat(objs=[tmp_firstname_country_data, llama_firstname_country_data], axis=0, ignore_index=True)
-    tmp_lastname_country_data = pd.concat(objs=[tmp_lastname_country_data, llama_lastname_country_data], axis=0, ignore_index=True)
+    gen_dataframe = pd.Series(gen_data_list, name=data_point).drop_duplicates().to_frame()
+    gen_dataframe['country'] = country
+    gen_country_dataframe = pd.merge(
+        left=gen_dataframe,
+        right=countrieseurope.rename(columns={'name':'country'}),
+        left_on='country',
+        right_on='name',
+        how='inner'
+        )
     # standardise names formatting
     standardise_text_lambda = lambda x: unidecode.unidecode(" ".join(x.lower().strip().split())) if pd.isna(x) else x
-    tmp_firstname_country_data["firstnames"] = tmp_firstname_country_data["firstnames"].apply(lambda x: standardise_text_lambda(x))
-    tmp_lastname_country_data["lastnames"] = tmp_lastname_country_data["lastnames"].apply(lambda x: standardise_text_lambda(x))
-    # deduplicate data
-    tmp_firstname_country_data = tmp_firstname_country_data.drop_duplicates(subset=["firstnames"])
-    tmp_lastname_country_data = tmp_lastname_country_data.drop_duplicates(subset=["lastnames"])
-    # print shapes
-    logging.info(f"tmp_firstname_country_data.shape: {tmp_firstname_country_data.shape}")
-    logging.info(f"tmp_lastname_country_data.shape: {tmp_lastname_country_data.shape}")
-    # save firstnames names data to temp directory (if pairwise firstnames have been created)
-    if tmp_firstname_country_data.shape[0] >= llama_firstname_country_data.shape[0]:
-        tmp_firstname_country_data.to_csv(fpath_temp_llama_firstnames, index=False, encoding="latin1")
-        logging.info(f"Wrote {fpath_temp_llama_firstnames} ...")
-    # save lastnames data to temp directory (if pairwise lastnames have been created)
-    if tmp_lastname_country_data.shape[0] >= llama_lastname_country_data.shape[0]:
-        tmp_lastname_country_data.to_csv(fpath_temp_llama_lastnames, index=False, encoding="latin1")
-        logging.info(f"Wrote {fpath_temp_llama_lastnames} ...")
-    return (tmp_firstname_country_data, tmp_lastname_country_data)
+    gen_country_dataframe[data_point] = gen_country_dataframe[data_point].apply(lambda x: standardise_text_lambda(x))
+    logging.info(f"gen_country_dataframe.shape: {gen_country_dataframe.shape}")
+    # save generated data
+    gen_country_dataframe.to_csv(country_fpath, index=False, encoding="latin1")
+    logging.info(f"Wrote {country_fpath} ...")
+    return gen_country_dataframe
 
-def main(bedrock, model_id, run_bedrock=False):
+def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     """
     Docstring for main
     """
-    
     # load countries, firstnames and surnames files
     countrieseurope = pd.read_csv(cons.fpath_countries_europe, usecols=['name', 'ISO numeric'])
-    orig_firstnames = pd.read_csv(cons.fpath_firstnames)
-    orig_surnames = pd.read_csv(cons.fpath_lastnames)
-    # determine file size
-    orig_filesize = int((orig_firstnames.shape[0] + orig_surnames.shape[0])/2)
     n_countries = countrieseurope.shape[0]
-    n_user_names = min(2, int(orig_filesize / n_countries))
-    # generate user names
-    firstname_country_data, lastname_country_data, error_countries = [], [], []
+    # set lists to collect generated data with
+    gen_country_dataframe_list, error_countries = [], []
     # set countries list
     #countries_list = countrieseurope['name'].to_list()
     countries_list = ['Cyprus']
-    
     # iterate over countries list
     for country in countries_list:
         logging.info(f"{country} ...")
+        country_fpath=fpath_dict['country_fpath'].format(country)
         try:
             if run_bedrock:
                 # call bedrock model and generate user names data
-                tmp_firstname_country_data, tmp_lastname_country_data = invoke_bedrock(model=bedrock, model_id=model_id, n_user_names=n_user_names, country=country, countrieseurope=countrieseurope)
+                country_filter = (countrieseurope["name"] == country)
+                country_population = countrieseurope.loc[country_filter, "population"].iloc[0]
+                # set n data points for ai generator depending on type
+                if data_point in ("firstnames", "lastnames"):
+                    n_data_points = int(np.log(country_population)**1.5)
+                elif data_point == "email_domains":
+                    n_data_points = 5
+                else:
+                    raise ValueError(f"Invalid parameter data_point value {data_point}")
+                # invoke bedrock and generate data points
+                tmp_gen_country_data = invoke_bedrock(
+                    model=bedrock,
+                    model_id=model_id,
+                    data_point=data_point,
+                    n_data_points=n_data_points,
+                    country=country,
+                    countrieseurope=countrieseurope,
+                    country_fpath=country_fpath
+                    )
                 logging.info("Waiting ...")
                 # wait 20 seconds before retrying
                 time.sleep(20)
             else:
-                tmp_firstname_country_data = pd.read_csv(cons.fpath_temp_llama_firstnames.format(country=country.lower()), encoding="latin1")
-                tmp_lastname_country_data = pd.read_csv(cons.fpath_temp_llama_lastnames.format(country=country.lower()), encoding="latin1")
+                tmp_gen_country_data = pd.read_csv(country_fpath, encoding="latin1")
             # append to user country data
-            firstname_country_data.append(tmp_firstname_country_data)
-            lastname_country_data.append(tmp_lastname_country_data)
+            gen_country_dataframe_list.append(tmp_gen_country_data)
         except Exception as e:
             logging.info(e)
             error_countries.append(country)
-    
     # log if any countries failed to generate data
     if len(error_countries) > 0:
         logging.info(f"Failed to generated data for countries: {error_countries}")
-    
-    # load existing reference data
-    firstname_country_df = pd.read_csv(cons.fpath_llama_firstnames, encoding="latin1")
-    lastname_country_df = pd.read_csv(cons.fpath_llama_lastnames, encoding="latin1")
-    # append to country data lists
-    firstname_country_data.append(firstname_country_df)
-    lastname_country_data.append(lastname_country_df)
     # concatenate user country data together and deduplicate across firstnames and countries
-    output_firstname_country_df = pd.concat(firstname_country_data, axis=0, ignore_index=True)
-    output_lastname_country_df = pd.concat(lastname_country_data, axis=0, ignore_index=True)
+    output_gen_country_dataframe = pd.concat(gen_country_dataframe_list, axis=0, ignore_index=True)
     # sort and deduplicate output data
-    output_firstname_country_df = output_firstname_country_df.drop_duplicates(subset=["country","firstnames"]).sort_values(by=["country","firstnames"])
-    output_lastname_country_df = output_lastname_country_df.drop_duplicates(subset=["country","lastnames"]).sort_values(by=["country","lastnames"])
-    
+    sort_dedup_cols = ["country",data_point]
+    output_gen_country_dataframe = output_gen_country_dataframe.drop_duplicates(subset=sort_dedup_cols).sort_values(by=sort_dedup_cols)
     # write data to disk
-    if output_firstname_country_df['country'].nunique() == n_countries:
-        logging.info(f"output_firstname_country_df.shape: {output_firstname_country_df.shape}")
-        output_firstname_country_df.to_csv(cons.fpath_llama_firstnames, index=False, encoding="latin1")
+    if output_gen_country_dataframe['country'].nunique() == n_countries:
+        logging.info(f"output_gen_country_dataframe.shape: {output_gen_country_dataframe.shape}")
+        output_gen_country_dataframe.to_csv(fpath_dict["fpath"], index=False, encoding="latin1")
     else:
         logging.info("WARNING Insufficient first name data generated.")
-    if output_lastname_country_df['country'].nunique() == n_countries:
-        logging.info(f"output_lastname_country_df.shape: {output_lastname_country_df.shape}")
-        output_lastname_country_df.to_csv(cons.fpath_llama_lastnames, index=False, encoding="latin1")
-    else:
-        logging.info("WARNING Insufficient last name data generated.")
 
 lgr = logging.getLogger()
 lgr.setLevel(logging.INFO)
@@ -252,5 +243,6 @@ if __name__ == "__main__":
     # create bedrock instance
     bedrock = Bedrock(bedrock_runtime=bedrock_runtime)
     # execute main programme
-    main(bedrock=bedrock, run_bedrock=True, model_id=model_id)
+    for data_point, fpath_dict in cons.llama_data_point_fpaths.items():
+        main(bedrock=bedrock, model_id=model_id, data_point=data_point, fpath_dict=fpath_dict, run_bedrock=True)
 
