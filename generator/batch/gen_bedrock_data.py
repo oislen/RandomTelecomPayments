@@ -1,6 +1,5 @@
-# python generator/batch/gen_user_names_file.py
+# python generator/batch/gen_bedrock_data.py
 
-import os
 import json
 import boto3
 from botocore.config import Config
@@ -10,7 +9,6 @@ import logging
 import unidecode
 import pandas as pd
 import numpy as np
-from typing import Dict
 
 sys.path.append("E:\\GitHub\\RandomTelecomPayments\\generator")
 
