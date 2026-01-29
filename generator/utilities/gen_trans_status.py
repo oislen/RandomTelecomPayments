@@ -33,7 +33,7 @@ def gen_trans_status(
     country_code_columns = ["registration_country_code","ip_country_code","card_country_code"]
     # if card hash
     if pd.notna(series['card_hash']):
-        status = "rejected"
+        status = "Rejected"
         # add rejections based on crime rates within country codes
         if rejection_rates_dict["country_code_trans_reject_rate_dict"][np.random.choice(a=series[country_code_columns].dropna().to_list(), size=1)[0]] >= random.uniform(0, 1)/rejection_scaling_factor:
             error_code = np.random.choice(a=list(cons.data_model_rejection_codes_fraud.keys()),p=list(cons.data_model_rejection_codes_fraud.values()),size=1)[0]
@@ -59,11 +59,11 @@ def gen_trans_status(
             error_code = np.random.choice(a=list(cons.data_model_rejection_codes_funds.keys()),p=list(cons.data_model_rejection_codes_funds.values()),size=1)[0]
         # otherwise return successful status
         else:
-            successful_status = {key:cons.data_model_transaction_status[key] for key in ['successful', 'pending']}
+            successful_status = {key:cons.data_model_transaction_status[key] for key in ['Successful', 'Pending']}
             successful_probs = [value/sum(successful_status.values()) for value in successful_status.values()]
             status = np.random.choice(a=list(successful_status.keys()), size=1, p=successful_probs)[0]
             error_code = np.nan
     else:
-        status = np.random.choice(a=['successful', 'pending'], size=1, p=[0.98, 0.02])[0]
+        status = np.random.choice(a=['Successful', 'Pending'], size=1, p=[0.98, 0.02])[0]
         error_code = np.nan
     return [status, error_code]
