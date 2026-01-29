@@ -51,7 +51,7 @@ Your task is to generate an arbitrary N number of distinct and varied first name
 system_email_prompt = """
 """
 
-firstname_prompt = 'Generate {n_data_points} first names for people from the country "{country}"'
+first_name_prompt = 'Generate {n_data_points} first names for people from the country "{country}"'
 surname_prompt = 'Generate {n_data_points} last names for people from the country "{country}"'
 email_domain_prompt = 'Generate {n_data_points} popular email domains names for people from the country "{country}"'
 
@@ -102,13 +102,13 @@ def invoke_bedrock(
     -------
     tuple:
         A tuple containing two pandas DataFrames:
-            - tmp_firstname_country_data (pd.DataFrame): DataFrame with deduplicated and standardized first names along with country information.
-            - tmp_lastname_country_data (pd.DataFrame): DataFrame with deduplicated and standardized last names along with country information.
+            - tmp_first_name_country_data (pd.DataFrame): DataFrame with deduplicated and standardized first names along with country information.
+            - tmp_last_name_country_data (pd.DataFrame): DataFrame with deduplicated and standardized last names along with country information.
     
     Raises
     ------
     json.JSONDecodeError: If the model response cannot be parsed as JSON.
-    KeyError: If the expected keys ("firstnames", "lastnames") are missing from the JSON response.
+    KeyError: If the expected keys ("first_names", "last_names") are missing from the JSON response.
     Exception: If the merge with country data fails or file I/O operations encounter errors.
     
     Notes
@@ -157,7 +157,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     """
     Docstring for main
     """
-    # load countries, firstnames and surnames files
+    # load countries, first_names and surnames files
     countrieseurope = pd.read_csv(cons.fpath_countries_europe, usecols=['name', 'ISO numeric'])
     n_countries = countrieseurope.shape[0]
     # set lists to collect generated data with
@@ -175,7 +175,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
                 country_filter = (countrieseurope["name"] == country)
                 country_population = countrieseurope.loc[country_filter, "population"].iloc[0]
                 # set n data points for ai generator depending on type
-                if data_point in ("firstnames", "lastnames"):
+                if data_point in ("first_names", "last_names"):
                     n_data_points = int(np.log(country_population)**1.5)
                 elif data_point == "email_domains":
                     n_data_points = 5
@@ -204,7 +204,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     # log if any countries failed to generate data
     if len(error_countries) > 0:
         logging.info(f"Failed to generated data for countries: {error_countries}")
-    # concatenate user country data together and deduplicate across firstnames and countries
+    # concatenate user country data together and deduplicate across first_names and countries
     output_gen_country_dataframe = pd.concat(gen_country_dataframe_list, axis=0, ignore_index=True)
     # sort and deduplicate output data
     sort_dedup_cols = ["country",data_point]

@@ -34,8 +34,8 @@ random.seed(programmeparams.random_seed)
 np.random.seed(seed=programmeparams.random_seed)
 
 # create relative file paths
-fpath_firstnames = '.' + cons.fpath_llama_firstnames.split(cons.fpath_repo_dir)[1]
-fpath_lastnames = '.' + cons.fpath_llama_lastnames.split(cons.fpath_repo_dir)[1]
+fpath_first_names = '.' + cons.fpath_llama_first_names.split(cons.fpath_repo_dir)[1]
+fpath_last_names = '.' + cons.fpath_llama_last_names.split(cons.fpath_repo_dir)[1]
 fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
 fpath_email_domain = '.' + cons.fpath_email_domain.split(cons.fpath_repo_dir)[1]
 fpath_smartphones = '.' + cons.fpath_smartphones.split(cons.fpath_repo_dir)[1]
@@ -48,8 +48,8 @@ user_obj = User(
     n_user_ids=programmeparams.n_users,
     start_date=programmeparams.registration_start_date,
     end_date=programmeparams.registration_end_date,
-    fpath_firstnames=fpath_firstnames,
-    fpath_lastnames=fpath_lastnames,
+    fpath_first_names=fpath_first_names,
+    fpath_last_names=fpath_last_names,
     fpath_countries_europe=fpath_countries_europe,
     fpath_email_domain=fpath_email_domain
     )

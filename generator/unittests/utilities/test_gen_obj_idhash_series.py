@@ -20,8 +20,8 @@ from objects.Device import Device
 start_date = cons.unittest_registration_start_date
 end_date = cons.unittest_registration_end_date
 n_user_ids = cons.unittest_n_entities
-fpath_firstnames = '.' + cons.fpath_llama_firstnames.split(cons.fpath_repo_dir)[1]
-fpath_lastnames = '.' + cons.fpath_llama_lastnames.split(cons.fpath_repo_dir)[1]
+fpath_first_names = '.' + cons.fpath_llama_first_names.split(cons.fpath_repo_dir)[1]
+fpath_last_names = '.' + cons.fpath_llama_last_names.split(cons.fpath_repo_dir)[1]
 fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
 fpath_email_domain = '.' + cons.fpath_email_domain.split(cons.fpath_repo_dir)[1]
 fpath_smartphones = '.' + cons.fpath_smartphones.split(cons.fpath_repo_dir)[1]
@@ -30,7 +30,7 @@ random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
 
 # create user object
-user_object = User(n_user_ids=n_user_ids, start_date=start_date, end_date=end_date, fpath_firstnames=fpath_firstnames, fpath_lastnames=fpath_lastnames, fpath_countries_europe=fpath_countries_europe, fpath_email_domain=fpath_email_domain)
+user_object = User(n_user_ids=n_user_ids, start_date=start_date, end_date=end_date, fpath_first_names=fpath_first_names, fpath_last_names=fpath_last_names, fpath_countries_europe=fpath_countries_europe, fpath_email_domain=fpath_email_domain)
 # generate random entity counts
 random_entity_counts = gen_random_entity_counts(user_obj=user_object)
 # generate random entity values
