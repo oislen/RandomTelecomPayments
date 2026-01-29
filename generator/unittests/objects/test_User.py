@@ -63,7 +63,18 @@ fpath_first_names = '.' + cons.fpath_llama_first_names.split(cons.fpath_repo_dir
 fpath_last_names = '.' + cons.fpath_llama_last_names.split(cons.fpath_repo_dir)[1]
 fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
 fpath_email_domain = '.' + cons.fpath_email_domain.split(cons.fpath_repo_dir)[1]
-user_object = User(n_user_ids=exp_n_user_ids, start_date=exp_start_date, end_date=exp_end_date, fpath_first_names=fpath_first_names, fpath_last_names=fpath_last_names, fpath_countries_europe=fpath_countries_europe, fpath_email_domain=fpath_email_domain)
+fpath_bedrock_email_domain = '.' + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
+
+user_object = User(
+    n_user_ids=exp_n_user_ids,
+    start_date=exp_start_date,
+    end_date=exp_end_date,
+    fpath_first_names=fpath_first_names,
+    fpath_last_names=fpath_last_names,
+    fpath_countries_europe=fpath_countries_europe,
+    fpath_email_domain=fpath_email_domain,
+    fpath_bedrock_email_domain=fpath_bedrock_email_domain
+    )
 
 obs_user_ids_cnts_dict = user_object.user_ids_cnts_dict
 obs_user_ids_props_dict = user_object.user_ids_props_dict

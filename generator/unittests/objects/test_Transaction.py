@@ -22,10 +22,10 @@ exp_transaction_hashes_props_dict = {
     "dded2b63f8242648": 0.3793103448275862,
 }
 exp_transaction_hashes_status_dict = {
-    "63cea7c46926aa74": "successful",
-    "37725417bd51fb40": "successful",
-    "b95cb80aae9fbbfe": "successful",
-    "dded2b63f8242648": "successful",
+    "63cea7c46926aa74": "Successful",
+    "37725417bd51fb40": "Successful",
+    "b95cb80aae9fbbfe": "Successful",
+    "dded2b63f8242648": "Successful",
 }
 exp_transaction_hashes_amounts_dict = {
     "63cea7c46926aa74": 2.99,

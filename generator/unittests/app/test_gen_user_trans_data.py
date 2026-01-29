@@ -38,6 +38,7 @@ fpath_first_names = '.' + cons.fpath_llama_first_names.split(cons.fpath_repo_dir
 fpath_last_names = '.' + cons.fpath_llama_last_names.split(cons.fpath_repo_dir)[1]
 fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
 fpath_email_domain = '.' + cons.fpath_email_domain.split(cons.fpath_repo_dir)[1]
+fpath_bedrock_email_domain = '.' + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
 fpath_smartphones = '.' + cons.fpath_smartphones.split(cons.fpath_repo_dir)[1]
 fpath_countrycrimeindex = '.' + cons.fpath_countrycrimeindex.split(cons.fpath_repo_dir)[1]
 fpath_unittest_user_data = '.' + cons.fpath_unittest_user_data.split(cons.fpath_repo_dir)[1]
@@ -51,7 +52,8 @@ user_obj = User(
     fpath_first_names=fpath_first_names,
     fpath_last_names=fpath_last_names,
     fpath_countries_europe=fpath_countries_europe,
-    fpath_email_domain=fpath_email_domain
+    fpath_email_domain=fpath_email_domain,
+    fpath_bedrock_email_domain=fpath_bedrock_email_domain,
     )
 
 # generate random entity counts for each user
