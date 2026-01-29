@@ -84,9 +84,9 @@ class User:
         self.user_ids = list(self.user_ids_cnts_dict.keys())
         self.user_ids_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.user_ids_cnts_dict)
         self.user_ids_country_code_dict = gen_country_codes_dict(idhashes=self.user_ids, fpath_countries_europe=self.fpath_countries_europe)
-        self.user_ids_first_name_dict = self.gen_user_bedrock_name_data(fpath_first_names=self.fpath_first_names, sample_column_name="first_names")
-        self.user_ids_last_name_dict = self.gen_user_bedrock_name_data(fpath_last_names=self.fpath_last_names, sample_column_name="last_names")
-        self.user_ids_email_domain_dict = self.gen_user_email_domain(fpath_email_domain=self.fpath_email_domain, fpath_bedrock_email_domain=self.fpath_bedrock_email_domain)
+        self.user_ids_first_name_dict = self.gen_user_bedrock_name_data(fpath_bedrock_data=self.fpath_first_names, sample_column_name="first_names")
+        self.user_ids_last_name_dict = self.gen_user_bedrock_name_data(fpath_bedrock_data=self.fpath_last_names, sample_column_name="last_names")
+        self.user_ids_email_domain_dict = self.gen_user_bedrock_email_domain(fpath_email_domain=self.fpath_email_domain, fpath_bedrock_email_domain=self.fpath_bedrock_email_domain)
         self.user_ids_dates_dict = gen_dates_dict(idhashes=self.user_ids, start_date=self.start_date, end_date=self.end_date)
     
     @beartype
