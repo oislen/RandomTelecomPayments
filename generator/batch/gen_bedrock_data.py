@@ -145,7 +145,7 @@ def invoke_bedrock(
         how='inner'
         )
     # standardise names formatting
-    standardise_text_lambda = lambda x: unidecode.unidecode(" ".join(x.lower().strip().split())) if pd.isna(x) else x
+    standardise_text_lambda = lambda x: unidecode.unidecode(" ".join(x.strip())) if pd.isna(x) else x
     gen_country_dataframe[data_point] = gen_country_dataframe[data_point].apply(lambda x: standardise_text_lambda(x))
     logging.info(f"gen_country_dataframe.shape: {gen_country_dataframe.shape}")
     # save generated data
