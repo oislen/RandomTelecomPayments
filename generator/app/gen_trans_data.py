@@ -89,11 +89,11 @@ def gen_trans_data(
     trans_data.loc[zero_transaction_amount_filter | missing_card_hash_filter, ['card_payment_channel']] = np.nan
     trans_data.loc[zero_transaction_amount_filter, ['card_hash', 'card_type', 'card_country_code_alpha']] = np.nan
     # add payment method as either card, store_wallet or store_points
-    trans_data['transaction_payment_method'] = 'card'
+    trans_data['transaction_payment_method'] = 'Card'
     zero_transaction_amount_filter = (trans_data['transaction_amount'] == 0.0)
     missing_card_hash_filter = (trans_data['card_hash'].isnull())
-    # trans_data.loc[missing_card_hash_filter, 'transaction_payment_method'] = missing_card_hash_filter.apply(lambda x: np.random.choice(a = list(cons.data_model_non_card_trans_methods.keys()), size = 1, p = list(cons.data_model_non_card_trans_methods.values()))[0])
-    trans_data.loc[missing_card_hash_filter, 'transaction_payment_method'] = pd.Series(np.random.choice(a = list(cons.data_model_non_card_trans_methods.keys()), size = missing_card_hash_filter.sum(), p = list(cons.data_model_non_card_trans_methods.values()))[0])
+    # trans_data.loc[missing_card_hash_filter, 'transaction_payment_method'] = missing_card_hash_filter.apply(lambda x: np.random.choice(a = list(cons.data_model_non_card_trans_methods.keys()), size = 1, p = list(cons.data_model_non_card_trans_methods.values())))
+    trans_data.loc[missing_card_hash_filter, 'transaction_payment_method'] = pd.Series(np.random.choice(a = list(cons.data_model_non_card_trans_methods.keys()), size = missing_card_hash_filter.sum(), p = list(cons.data_model_non_card_trans_methods.values())))
     trans_data.loc[zero_transaction_amount_filter, 'transaction_payment_method'] = np.nan
     # align country codes for user, ip and card
     country_code_columns = ['registration_country_code_alpha', 'ip_country_code_alpha', 'card_country_code_alpha']
