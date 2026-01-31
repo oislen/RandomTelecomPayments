@@ -1,1 +1,1 @@
-call python -m pdb utilities\gen_user_names_file.py
+call uv run utilities\gen_user_names_file.py

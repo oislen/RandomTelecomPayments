@@ -1,5 +1,5 @@
 call cd ..
-call python -m unittest discover generator\unittests\utilities
-call python -m unittest discover generator\unittests\objects
-call python -m unittest discover generator\unittests\app
+call uv run python -m unittest discover generator\unittests\utilities
+call uv run python -m unittest discover generator\unittests\objects
+call uv run python -m unittest discover generator\unittests\app
 call cd generator
