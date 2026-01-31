@@ -28,10 +28,10 @@ exp_application_hashes_props_dict = {
     "dded2b63f8242648": 0.2727272727272727,
 }
 exp_application_hashes_payment_channel_dict = {
-    "63cea7c46926aa74": "adyen",
-    "37725417bd51fb40": "adyen",
-    "b95cb80aae9fbbfe": "paypal",
-    "dded2b63f8242648": "docomo",
+    "63cea7c46926aa74": "Adyen",
+    "37725417bd51fb40": "Adyen",
+    "b95cb80aae9fbbfe": "PayPal",
+    "dded2b63f8242648": "Docomo",
 }
 exp_n_application_hashes = cons.unittest_n_entities
 exp_lam = cons.data_model_poisson_params["application"]["lambda"]
