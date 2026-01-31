@@ -16,10 +16,10 @@ exp_card_hashes_cnts_dict = {
     "dded2b63f8242648": 1,
 }
 exp_card_hashes_type_dict = {
-    "63cea7c46926aa74": "visa",
-    "37725417bd51fb40": "mastercard",
-    "b95cb80aae9fbbfe": "visa",
-    "dded2b63f8242648": "mastercard",
+    "63cea7c46926aa74": "Visa",
+    "37725417bd51fb40": "Mastercard",
+    "b95cb80aae9fbbfe": "Visa",
+    "dded2b63f8242648": "Mastercard",
 }
 exp_card_hashes_props_dict = {
     "63cea7c46926aa74": 0.16666666666666666,

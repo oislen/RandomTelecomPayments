@@ -50,8 +50,8 @@ def gen_user_data(
     # take a deep copy of the data
     user_data = random_entity_counts.copy()
     # add user data
-    user_data = join_idhashes_dict(data=user_data, idhashes_dict=user_obj.user_ids_firstname_dict, idhash_key_name='uid', idhash_val_name='firstname')
-    user_data = join_idhashes_dict(data=user_data, idhashes_dict=user_obj.user_ids_lastname_dict, idhash_key_name='uid', idhash_val_name='lastname')
+    user_data = join_idhashes_dict(data=user_data, idhashes_dict=user_obj.user_ids_first_name_dict, idhash_key_name='uid', idhash_val_name='first_name')
+    user_data = join_idhashes_dict(data=user_data, idhashes_dict=user_obj.user_ids_last_name_dict, idhash_key_name='uid', idhash_val_name='last_name')
     user_data = join_idhashes_dict(data=user_data, idhashes_dict=user_obj.user_ids_dates_dict, idhash_key_name='uid', idhash_val_name='registration_date')
     user_data = join_idhashes_dict(data=user_data, idhashes_dict=user_obj.user_ids_country_code_dict, idhash_key_name='uid', idhash_val_name='registration_country_code_alpha')
     user_data = join_idhashes_dict(data=user_data, idhashes_dict=user_obj.user_ids_email_domain_dict, idhash_key_name='uid', idhash_val_name='email_domain')

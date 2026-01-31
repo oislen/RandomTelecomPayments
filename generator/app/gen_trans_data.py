@@ -89,11 +89,10 @@ def gen_trans_data(
     trans_data.loc[zero_transaction_amount_filter | missing_card_hash_filter, ['card_payment_channel']] = np.nan
     trans_data.loc[zero_transaction_amount_filter, ['card_hash', 'card_type', 'card_country_code_alpha']] = np.nan
     # add payment method as either card, store_wallet or store_points
-    trans_data['transaction_payment_method'] = 'card'
+    trans_data['transaction_payment_method'] = 'Card'
     zero_transaction_amount_filter = (trans_data['transaction_amount'] == 0.0)
     missing_card_hash_filter = (trans_data['card_hash'].isnull())
-    # trans_data.loc[missing_card_hash_filter, 'transaction_payment_method'] = missing_card_hash_filter.apply(lambda x: np.random.choice(a = list(cons.data_model_non_card_trans_methods.keys()), size = 1, p = list(cons.data_model_non_card_trans_methods.values()))[0])
-    trans_data.loc[missing_card_hash_filter, 'transaction_payment_method'] = pd.Series(np.random.choice(a = list(cons.data_model_non_card_trans_methods.keys()), size = missing_card_hash_filter.sum(), p = list(cons.data_model_non_card_trans_methods.values()))[0])
+    trans_data.loc[missing_card_hash_filter, 'transaction_payment_method'] = pd.Series(np.random.choice(a = list(cons.data_model_non_card_trans_methods.keys()), size = missing_card_hash_filter.sum(), p = list(cons.data_model_non_card_trans_methods.values()), replace=True), index=trans_data[missing_card_hash_filter].index)
     trans_data.loc[zero_transaction_amount_filter, 'transaction_payment_method'] = np.nan
     # align country codes for user, ip and card
     country_code_columns = ['registration_country_code_alpha', 'ip_country_code_alpha', 'card_country_code_alpha']
@@ -118,14 +117,7 @@ def gen_trans_data(
     trans_data[['transaction_status', 'transaction_error_code']] = trans_data.apply(lambda series: gen_trans_status(series = series, rejection_rates_dict = rejection_rates_dict), result_type = 'expand', axis = 1)
     
     # order columns and sort rows by transaction date
-    user_cols = ['userid', 'firstname', 'lastname', 'registration_date', 'registration_country_code', 'uid', 'email_domain']
-    device_cols = ['device_hash', 'device_type']
-    card_cols = ['card_hash', 'card_type', 'card_country_code']
-    ip_cols = ['ip_hash', 'ip_country_code']
-    app_cols = ['application_hash']
-    trans_cols = ['transaction_hash', 'transaction_date', 'transaction_amount', 'transaction_payment_method', 'card_payment_channel', 'transaction_status', 'transaction_error_code']
-    itr_cols = ['itr_hash']
-    col_order = user_cols +  device_cols + card_cols + ip_cols + app_cols + trans_cols + itr_cols
+    col_order = cons.user_cols + cons. device_cols + cons.card_cols + cons.ip_cols + cons.app_cols + cons.trans_cols + cons.itr_cols
     trans_data = trans_data[col_order].sort_values(by = 'transaction_date').reset_index(drop = True)
     
     return trans_data
