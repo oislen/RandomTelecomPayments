@@ -68,7 +68,7 @@ docker cp rtp:/home/user/RandomTelecomPayments/data/RandomTelecomPayments.csv %u
 Alternatively, a FastApi interface has been configured within the docker image to allow for interaction with the Random Telecom Payments app via REST API calls. The FastApi interface can be accessed by publishing port 8000 when running the docker image as follows:
 
 ```
-docker run --name rtp --publish 8000:8000 --entrypoint fastapi --rm oislen/randomtelecompayments:latest run generator/api.py
+docker run --name rtp --publish 8000:8000 --entrypoint uv --rm oislen/randomtelecompayments:latest run fastapi run generator/api.py
 ```
 
 Once the web endpoint is running, navigate to localhost:8000/docs in your preferred browser to access the FastApi interface documentation and test the available API calls.

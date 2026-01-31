@@ -1,1 +1,1 @@
-fastapi run api.py
+uv run fastapi run api.py
