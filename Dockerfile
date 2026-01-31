@@ -20,11 +20,12 @@ RUN mkdir -p /home/${user} && chown -R ${user}: /home/${user}
 # copy repo
 COPY . /home/${user}/RandomTelecomPayments
 
-# install required python packages
-RUN python -m pip install -v -r /home/${user}/RandomTelecomPayments/requirements.txt
-
 # set working directory for random telecom payments app
 WORKDIR /home/${user}/RandomTelecomPayments
 
+# install required python packages
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+RUN uv sync
+
 EXPOSE 8000
-ENTRYPOINT  ["python", "generator/main.py"]
+ENTRYPOINT  ["uv", "run", "generator/main.py"]
