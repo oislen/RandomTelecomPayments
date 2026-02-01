@@ -31,7 +31,7 @@ data = pd.read_csv(cons.fpath_randomtelecomtransdata,  parse_dates=parse_dates)
 userdata = pd.read_parquet(cons.fpath_randomtelecomusersdata)
 
 # show head of data
-data.head()
+data.info()
 ```
 
 ## Users
@@ -40,13 +40,16 @@ Check that the data makes sense and there are no anomalies at a user level.
 
 ### Unique UserIds per UID
 
-There shoule be exactly one unique userid for every UID.
+There should be exactly one unique userid for every UID.
 
 ```{python}
 #| label: nunique-userids-per-uid
-nunique_userids_per_uid = data.groupby(by='uid').agg({'userid':'nunique'})
+nunique_userids_per_uid = data.groupby(by='uid', dropna=False).agg({'userid':'nunique'}).sort_values(by=['userid'])
 sns.histplot(data=nunique_userids_per_uid,x='userid', bins = 20)
-data['userid'].notnull().value_counts()
+# test assertions
+assert nunique_userids_per_uid['userid'].max() == 1
+assert nunique_userids_per_uid['userid'].min() == 1
+assert not data['userid'].isnull().any()
 ```
 
 ### Unique Fullnames per UID
@@ -57,9 +60,12 @@ There should be exactly one unique fullname for every UID.
 #| label: nunique-names-per-uid
 tmp_data = data.copy()
 tmp_data['fullname'] = tmp_data['first_name'] + ' ' + tmp_data['last_name']
-nunique_names_per_uid = tmp_data.groupby(['userid']).agg({'fullname':'nunique'})
+nunique_names_per_uid = tmp_data.groupby(['userid'], dropna=False).agg({'fullname':'nunique'}).sort_values(by=['fullname'])
 sns.histplot(data=nunique_names_per_uid,x='fullname', bins = 20)
-tmp_data['fullname'].notnull().value_counts()
+# test assertions
+assert nunique_names_per_uid['fullname'].max() == 1
+assert nunique_names_per_uid['fullname'].min() == 1
+assert not tmp_data['fullname'].isnull().any()
 ```
 
 ### Unique Registration Dates per UID
@@ -68,9 +74,12 @@ A user should register only on a single date.
 
 ```{python}
 #| label: nunique-regdates-per-uid
-nunique_regdate_per_uid = data.groupby(by='uid').agg({'registration_date':'nunique'})
+nunique_regdate_per_uid = data.groupby(by='uid', dropna=False).agg({'registration_date':'nunique'}).sort_values(by=['registration_date'])
 sns.histplot(data=nunique_regdate_per_uid,x='registration_date', bins = 20)
-data['registration_date'].notnull().value_counts()
+# test assertions
+assert nunique_regdate_per_uid['registration_date'].max() == 1
+assert nunique_regdate_per_uid['registration_date'].min() == 1
+assert not data['registration_date'].isnull().any()
 ```
 
 ### Unique Registration Countries per UID
@@ -79,9 +88,12 @@ When registering the user should set their country code of residence.
 
 ```{python}
 #| label: nunique-regcountries-per-uid
-nunique_regcountry_per_uid = data.groupby(by='uid').agg({'registration_country_code':'nunique'})
+nunique_regcountry_per_uid = data.groupby(by='uid', dropna=False).agg({'registration_country_code':'nunique'}).sort_values(by=['registration_country_code'])
 sns.histplot(data=nunique_regcountry_per_uid,x='registration_country_code', bins = 20)
-data['registration_country_code'].notnull().value_counts()
+# test assertions
+assert nunique_regcountry_per_uid['registration_country_code'].max() == 1
+assert nunique_regcountry_per_uid['registration_country_code'].min() == 1
+assert not data['registration_country_code'].isnull().any()
 ```
 
 ### Unique Email Domains per UID
@@ -90,9 +102,12 @@ A user should register with a single email address corresponding to a single ema
 
 ```{python}
 #| label: nunique-emaildomains-per-uid
-nunique_emaildomains_per_uid = data.groupby(by='uid').agg({'email_domain':'nunique'})
+nunique_emaildomains_per_uid = data.groupby(by='uid', dropna=False).agg({'email_domain':'nunique'}).sort_values(by=['email_domain'])
 sns.histplot(data=nunique_emaildomains_per_uid,x='email_domain', bins = 20)
-data['email_domain'].notnull().value_counts()
+# test assertions
+assert nunique_emaildomains_per_uid['email_domain'].max() == 1
+assert nunique_emaildomains_per_uid['email_domain'].min() == 1
+assert not data['email_domain'].isnull().any()
 ```
 
 ### Unique Device Hash per UID
@@ -101,9 +116,12 @@ A UID should have 1 to 3 devices.
 
 ```{python}
 #| label: nunique-devices-per-uid
-nunique_devices_per_uid = data.groupby(by='uid').agg({'device_hash':'nunique'})
+nunique_devices_per_uid = data.groupby(by='uid', dropna=False).agg({'device_hash':'nunique'}).sort_values(by=['device_hash'])
 sns.histplot(data=nunique_devices_per_uid,x='device_hash', bins = 20)
-data['device_hash'].notnull().value_counts()
+# test assertions
+assert nunique_devices_per_uid['device_hash'].max() <= 3
+assert nunique_devices_per_uid['device_hash'].min() == 1
+assert not data['device_hash'].isnull().any()
 ```
 
 ### Unique Card Hash per UID
@@ -112,9 +130,12 @@ A UID should have 1 to 2 cards, with an overall distribution less than the corre
 
 ```{python}
 #| label: nunique-cards-per-uid
-nunique_cards_per_uid = data.groupby(by='uid').agg({'card_hash':'nunique'})
+nunique_cards_per_uid = data.groupby(by='uid', dropna=False).agg({'card_hash':'nunique'}).sort_values(by=['card_hash'])
 sns.histplot(data=nunique_cards_per_uid,x='card_hash', bins = 20)
-data['card_hash'].notnull().value_counts()
+# test assertions
+assert nunique_cards_per_uid['card_hash'].max() <= 2
+assert nunique_cards_per_uid['card_hash'].min() == 1
+assert data['card_hash'].isnull().any()
 ```
 
 ### Unique IP Hash per UID
@@ -123,27 +144,41 @@ A UID should have between 1 and 10 ips.
 
 ```{python}
 #| label: nunique-ips-per-uid
-nunique_ips_per_uid = data.groupby(by='uid').agg({'ip_hash':'nunique'})
+nunique_ips_per_uid = data.groupby(by='uid', dropna=False).agg({'ip_hash':'nunique'}).sort_values(by=['ip_hash'])
 sns.histplot(data=nunique_ips_per_uid,x='ip_hash', bins = 10)
-data['ip_hash'].notnull().value_counts()
+# test assertions
+assert nunique_ips_per_uid['ip_hash'].max() <= 30
+assert nunique_ips_per_uid['ip_hash'].min() == 1
+assert not data['ip_hash'].isnull().any()
 ```
 
 ### Unique Application Hash per UID
 
 ```{python}
 #| label: nunique-apps-per-uid
-nunique_apps_per_uid = data.groupby(by='uid').agg({'application_hash':'nunique'})
+nunique_apps_per_uid = data.groupby(by='uid', dropna=False).agg({'application_hash':'nunique'}).sort_values(by=['application_hash'])
 sns.histplot(data=nunique_apps_per_uid,x='application_hash', bins = 10)
-data['ip_hash'].notnull().value_counts()
+# test assertions
+assert nunique_apps_per_uid['application_hash'].max() <= 30
+assert nunique_apps_per_uid['application_hash'].min() == 1
+assert not data['application_hash'].isnull().any()
 ```
 
 ### Unique Transaction Hash per UID
 
 ```{python}
 #| label: nunique-transactions-per-uid
-nunique_ips_per_uid = data.groupby(by='uid').agg({'transaction_hash':'nunique'})
+nunique_ips_per_uid = data.groupby(by='uid', dropna=False).agg({'transaction_hash':'nunique'}).sort_values(by=['transaction_hash'])
 sns.histplot(data=nunique_ips_per_uid,x='transaction_hash', bins=10)
-data.assign(transaction_hash=data['transaction_hash'].notnull().astype(int)).groupby(by=['transaction_hash', 'transaction_payment_method'], as_index=False, dropna=False).agg({'transaction_amount':'sum'})
+transaction_payment_rel = data.assign(transaction_hash=data['transaction_hash'].notnull().astype(int)).groupby(by=['transaction_hash', 'transaction_payment_method'], as_index=False, dropna=False).agg({'transaction_amount':'sum'})
+assert transaction_payment_rel['transaction_hash'].max() <= 300
+assert transaction_payment_rel['transaction_hash'].min() == 1
+assert not data['transaction_hash'].isnull().any()
+#assert transaction_payment_rel.loc[transaction_payment_rel['transaction_payment_method'] == "Card", "transaction_amount"].iloc[0] > 0
+#assert transaction_payment_rel.loc[transaction_payment_rel['transaction_payment_method'] == "Points", "transaction_amount"].iloc[0] > 0
+#assert transaction_payment_rel.loc[transaction_payment_rel['transaction_payment_method'] == "Wallet", "transaction_amount"].iloc[0] > 0
+#assert transaction_payment_rel.loc[transaction_payment_rel['transaction_payment_method'].isnull(), "transaction_amount"].iloc[0] == 0
+#transaction_payment_rel
 ```
 
 ## Transaction
