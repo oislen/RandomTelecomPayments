@@ -1,4 +1,12 @@
 
+---
+title: "Customer Value Score"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
 ```{python}
 #| label: set-up
 import os
@@ -9,6 +17,7 @@ import sys
 
 sys.path.append(os.getcwd())
 sys.path.append(os.path.dirname(os.getcwd()))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
 ```
@@ -18,7 +27,7 @@ import generator.cons as cons
 ```{python}
 #| label: data-load
 # load user feature data
-user_feat_foath = os.path.join('..', 'data', 'report', 'user_feat_data.csv')
+user_feat_foath = os.path.join('..', '..', 'data', 'report', 'user_feat_data.csv')
 feat_data = pd.read_csv(user_feat_foath)
 feat_data.head()
 ```
@@ -90,6 +99,6 @@ base_score_data = base_score_data.groupby(by=['userid'], group_keys=False).apply
 
 ```{python}
 #| label: write data
-user_score_data_fpath=os.path.join('..', 'data', 'report', 'customer_value_score.csv')
+user_score_data_fpath=os.path.join('..', '..', 'data', 'report', 'customer_value_score.csv')
 base_score_data.to_csv(user_score_data_fpath, index=False)
 ```

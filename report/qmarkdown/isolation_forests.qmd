@@ -1,3 +1,10 @@
+---
+title: "Isolation Forests"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
 
 ```{python}
 #| label: set-up
@@ -14,6 +21,7 @@ import pickle
 
 sys.path.append(os.getcwd())
 sys.path.append(os.path.dirname(os.getcwd()))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
 ```
@@ -23,11 +31,11 @@ import generator.cons as cons
 ```{python}
 #| label: data-load
 # load user feature data
-user_feat_foath = os.path.join('..', 'data', 'report', 'user_feat_data.csv')
+user_feat_foath = os.path.join('..', '..', 'data', 'report', 'user_feat_data.csv')
 feat_data = pd.read_csv(user_feat_foath)
 
 # load network data
-comp_data_fpath=os.path.join('..', 'data', 'report', 'user_comp_data.csv')
+comp_data_fpath=os.path.join('..', '..', 'data', 'report', 'user_comp_data.csv')
 comp_data = pd.read_csv(comp_data_fpath)
 
 # join feature and component data
@@ -61,9 +69,9 @@ class IsolationForestsModel():
 # initiate isolation forest model
 model = IsolationForestsModel(n_estimators=5, random_state=None, n_jobs=2, warm_start=True)
 
-if False:
+if True:
     # write load to disk
-    model_fpath = os.path.join('..', 'data', 'report', 'isolation_forests_model.pickle')
+    model_fpath = os.path.join('..', '..', 'data', 'report', 'isolation_forests_model.pickle')
     model.write(model_fpath)
 ```
 
@@ -97,7 +105,7 @@ def gen_anomaly_score(group):
     group_sort['anomaly_score'] = group_sort['score'].cumsum()
     return group_sort
 
-if False:
+if True:
     # apply isolation forests model across each transaction week
     score_data = model_data.groupby(by=['transaction_week'], group_keys=False, as_index=False).apply(lambda group: apply_isolation_forests(group, model_fpath=model_fpath))
     # generate anomaly score
@@ -112,7 +120,7 @@ if False:
 ```{python}
 #| label: write-data
 # save user anaomly data to disk
-score_data_users_fpath=os.path.join('..', 'data', 'report', 'user_anomaly_data.csv')
+score_data_users_fpath=os.path.join('..', '..', 'data', 'report', 'user_anomaly_data.csv')
 anomaly_data.to_csv(score_data_users_fpath, index=False)
 ```
 
@@ -121,10 +129,10 @@ anomaly_data.to_csv(score_data_users_fpath, index=False)
 ```{python}
 # initiate and load isolation forest model
 model = IsolationForestsModel()
-model_fpath = os.path.join('..', 'data', 'report', 'isolation_forests_model.pickle')
+model_fpath = os.path.join('..', '..', 'data', 'report', 'isolation_forests_model.pickle')
 model = model.read(model_fpath)
 # load scored data
-score_data_users_fpath=os.path.join('..', 'data', 'report', 'user_anomaly_data.csv')
+score_data_users_fpath=os.path.join('..', '..', 'data', 'report', 'user_anomaly_data.csv')
 anomaly_data = pd.read_csv(score_data_users_fpath)
 eval_data = anomaly_data.loc[anomaly_data['transaction_week'] == 52, :].copy()
 # generate shap beeswarm plot

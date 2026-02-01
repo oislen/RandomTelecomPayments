@@ -1,3 +1,10 @@
+---
+title: "Networks"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
 
 ```{python}
 #| label: set-up
@@ -15,6 +22,7 @@ from sklearn.ensemble import IsolationForest
 
 sys.path.append(os.getcwd())
 sys.path.append(os.path.dirname(os.getcwd()))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
 ```
@@ -24,7 +32,7 @@ import generator.cons as cons
 ```{python}
 #| label: data-load
 # load random telecom payments data
-data_fpath=os.path.join('..', 'data', 'arch', 'RandomTelecomPaymentsV1.1.csv')
+data_fpath=os.path.join('..', '..', 'data', 'arch', 'RandomTelecomPaymentsV1.1.csv')
 parse_dates = ['registration_date', 'transaction_date']
 date_parser = lambda x: datetime.strptime(x, '%Y-%m-%d')
 data = pd.read_csv(filepath_or_buffer=data_fpath,  parse_dates=parse_dates)
@@ -148,6 +156,6 @@ feat_data = feat_data.sort_values(by=['transaction_week', 'userid']).reset_index
 
 ```{python}
 #| label: write data
-feat_data_fpath=os.path.join('..', 'data', 'report', 'user_comp_data.csv')
+feat_data_fpath=os.path.join('..', '..', 'data', 'report', 'user_comp_data.csv')
 feat_data.to_csv(feat_data_fpath, index=False)
 ```
