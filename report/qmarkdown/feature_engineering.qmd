@@ -23,6 +23,7 @@ sys.path.append(os.path.dirname(os.getcwd()))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
+from report.qmarkdown.utilities.feature_engineer import feature_engineer, merge_features
 ```
 
 # Load Random Telecom Payments Data
@@ -43,30 +44,6 @@ data['transaction_week'] = data['transaction_date'].dt.isocalendar().week
 
 ```{python}
 #| label: feature-engineering
-def feature_engineer(data, ids, groups, target, func):
-    """
-    """
-    # aggregate across the ids and group, applying the function to the target
-    data_agg = data.copy().groupby(by=ids+groups, as_index=False).agg({target:func})
-    # pivot the target results across each group
-    data_pivot = pd.pivot_table(data=data_agg, index=ids, values=target, columns=groups)
-    # rename and format the columns
-    data_pivot.columns = data_pivot.columns.str.split(':').str[0] + f'_{func}'
-    data_pivot = data_pivot.reset_index()
-    data_pivot.columns.name = None
-    return data_pivot
-
-
-def merge_features(feat_objs):
-    """
-    """
-    feat_data = pd.DataFrame(columns=['userid', 'transaction_week'])
-    # join objects
-    for feat_obj in feat_objs:
-        feat_data = pd.merge(left=feat_data, right=feat_obj, how='outer', on=['userid', 'transaction_week'])
-    # fill for missing values
-    feat_data = feat_data.fillna(0)
-    return feat_data
 
 # user trans error counts and sums
 userid_error_cnt_data = feature_engineer(data=data, ids=['userid', 'transaction_week'], groups=['transaction_error_code'], target='transaction_amount', func='size')

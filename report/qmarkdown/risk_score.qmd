@@ -25,6 +25,7 @@ sys.path.append(os.path.dirname(os.getcwd()))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
+from report.qmarkdown.utilities.plotting import lift_plot
 ```
 
 # Data Prep
@@ -98,42 +99,9 @@ clf.fit(X_data, y_data)
 ## Evaluate
 
 ```{python}
-def liftplot(col, target, data, order = 'default', cut = None):
-    """
-    Plot a bar chart of the target variable against a given predictor
-    """
-    # take deep cut of data for temporary storage
-    tmp_data = data.copy()
-    # calculate the avergae rate of taking out a loan
-    mean_y_yes = tmp_data[target].mean()
-    # if quantile cutting col
-    if cut != None:
-        tmp_data[col] = pd.cut(x = tmp_data[col], bins = cut)
-    # determine plot order based on bin height
-    if order == 'default':
-        plot_order = tmp_data.groupby(col)[target].mean().sort_values(ascending=False).index.values
-    else:
-        plot_order = order
-    # set figure size
-    plt.figure(figsize=(8, 6))
-    # create bar plot
-    sns.barplot(data = tmp_data, x = col, y = target, estimator = np.mean, errorbar = None, color = 'royalblue', order = plot_order)
-    # format plot title, ticks and labels
-    plt.title(f'{col} vs {target}', size = 20)
-    plt.yticks(size = 15)
-    plt.xticks(rotation = 45, size = 15)
-    plt.xlabel(col, size = 18)
-    plt.ylabel(target, size = 18)
-    # red line indicates average rate of taking out a loan
-    plt.axhline(y=mean_y_yes, color = 'red', linestyle = '--', linewidth = 3)
-    # show and close plot
-    plt.show()
-    plt.close()
-    return 0
-
 # make valid and test predictions
 valid_data['predict_proba'] = clf.predict_proba(valid_data[X_cols])[:, 1]
 valid_data.sort_values(by=['predict_proba'])
 
-liftplot(col='predict_proba', target='black_list_users', data=valid_data, order = None, cut = 10)
+lift_plot(col='predict_proba', target='black_list_users', data=valid_data, order = None, cut = 10)
 ```

@@ -12,8 +12,6 @@ jupyter: python3
 #| label: set-up
 import sys
 import os
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 sys.path.append(os.getcwd())
 sys.path.append(os.path.dirname(os.getcwd()))
@@ -21,21 +19,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
 from generator.utilities.gen_random_poisson_power import gen_random_poisson_power
+from report.qmarkdown.utilities.plotting import distribution_plot
 
 # set the number of users to generate random entity counts for
 n_users = 10000
-
-def dist_plot(data, bins='auto', title=None):
-    """
-    """
-    # set plot size and style
-    sns.set(rc={'figure.figsize':(7, 7), "lines.linewidth": 0.7})
-    sns.set_style("white")
-    dist_plot = sns.histplot(data=data, bins=bins)
-    if title != None:
-        dist_plot.set_title(label=title)
-    plt.show()
-    plt.close()
 ```
 
 This report aims to illustrate the underlying Poisson Power Distributions used to generate the random entity counts for each user object group; Devices, Cards, Ips, Applications and Transactions. The goal being to replicate what the real life count distributions would be for these user based entity counts.
@@ -48,7 +35,7 @@ The count of used devices per userid.
 #| label: device-count-per-userid
 device_poisson_params = cons.data_model_poisson_params['device']
 device_cnts_per_user = gen_random_poisson_power(lam=device_poisson_params['lambda'], size=n_users, power=device_poisson_params['power'])
-dist_plot(data=device_cnts_per_user, title="Random Poisson Power Distribution for Devices")
+distribution_plot(data=device_cnts_per_user, title="Random Poisson Power Distribution for Devices")
 
 ```
 
@@ -60,7 +47,7 @@ The count of used cards per userid.
 #| label: card-count-per-userid
 card_poisson_params = cons.data_model_poisson_params['card']
 card_cnts_per_user = gen_random_poisson_power(lam=card_poisson_params['lambda'], size=n_users, power=card_poisson_params['power'])
-dist_plot(data=card_cnts_per_user, title="Random Poisson Power Distribution for Cards")
+distribution_plot(data=card_cnts_per_user, title="Random Poisson Power Distribution for Cards")
 ```
 
 # IP
@@ -71,7 +58,7 @@ The count of used IPs per userid.
 #| label: ip-count-per-userid
 ip_poisson_params = cons.data_model_poisson_params['ip']
 ip_cnts_per_user = gen_random_poisson_power(lam=ip_poisson_params['lambda'], size=n_users, power=ip_poisson_params['power'])
-dist_plot(data=ip_cnts_per_user, title="Random Poisson Power Distribution for Ips")
+distribution_plot(data=ip_cnts_per_user, title="Random Poisson Power Distribution for Ips")
 ```
 
 # Application
@@ -82,7 +69,7 @@ The count of applications per userid.
 #| label: application-count-per-userid
 app_poisson_params = cons.data_model_poisson_params['application']
 app_cnts_per_user = gen_random_poisson_power(lam=app_poisson_params['lambda'], size=n_users, power=app_poisson_params['power'])
-dist_plot(data=app_cnts_per_user, title="Random Poisson Power Distribution for Applications")
+distribution_plot(data=app_cnts_per_user, title="Random Poisson Power Distribution for Applications")
 ```
 
 # Transaction
@@ -93,5 +80,5 @@ The count of transactions per userid.
 #| label: transaction-count-per-userid
 trans_poisson_params = cons.data_model_poisson_params['transaction']
 trans_cnts_per_user = gen_random_poisson_power(lam=trans_poisson_params['lambda'], size=n_users, power=trans_poisson_params['power'])
-dist_plot(data=trans_cnts_per_user, title="Random Poisson Power Distribution for Transactions")
+distribution_plot(data=trans_cnts_per_user, title="Random Poisson Power Distribution for Transactions")
 ```

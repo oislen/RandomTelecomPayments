@@ -20,6 +20,7 @@ sys.path.append(os.path.dirname(os.getcwd()))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
+from report.qmarkdown.utilities.value_score import week_pct_score, gen_weekly_user_scores, apply_cumsum
 ```
 
 # Data Load
@@ -38,26 +39,6 @@ Percentile score / rank the users across each week number based on their success
 
 ```{python}
 #| label: score-data
-def week_pct_score(group, score_cols = ['successful_size','successful_sum']):
-    """
-    """
-    # percentile rank the score columns
-    group_score = group[score_cols].rank(method='average', ascending=True, pct=True, axis=0)
-    group_score.columns = group_score.columns + '_pct'
-    # join score results back to groups
-    group_results = group.join(group_score)
-    return group_results
-
-def gen_weekly_user_scores(group):
-    """
-    """
-    # define score and id columns
-    id_cols = ['userid', 'transaction_week']
-    score_cols=['successful_size_pct', 'successful_sum_pct']
-    value_cols = ['customer_value_score']
-    # calcualte the customer value score
-    group['customer_value_score'] = group[score_cols].mean(axis=1)
-    return group[id_cols+score_cols+value_cols]
 
 # only conder users who made at least one transaction in any given week
 score_data_week = feat_data.loc[feat_data['successful_size'] > 0, :].copy()
@@ -72,17 +53,6 @@ score_data_week.head(10)
 
 ```{python}
 #| label: base-data
-def apply_cumsum(group):
-    """
-    """
-    # define score and id columns
-    id_cols = ['userid', 'transaction_week']
-    score_cols=['successful_size_pct', 'successful_sum_pct']
-    value_cols = ['customer_value_score', 'customer_value_score_cumsum']
-    # sort and apply cumsum
-    group_sort = group.sort_values(by='transaction_week')
-    group_sort['customer_value_score_cumsum'] = group_sort['customer_value_score'].cumsum()
-    return group_sort[id_cols+score_cols+value_cols]
 
 # create base data
 base_user_data = feat_data[['userid']].drop_duplicates().reset_index(drop=True).assign(key = 1).sort_values(by='userid')
