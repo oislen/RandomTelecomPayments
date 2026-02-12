@@ -24,26 +24,37 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
 from report.qmarkdown.utilities.feature_engineer import feature_engineer, merge_features
+
+data_dir = os.path.join('..', '..', 'data')
+data_arch_dir = os.path.join(data_dir, 'arch')
+data_report_dir = os.path.join(data_dir, 'report')
 ```
 
 # Load Random Telecom Payments Data
 
 ```{python}
 #| label: data-load
+
 # load random telecom payments data
-data_fpath=os.path.join('..', '..', 'data', 'arch', 'RandomTelecomPaymentsV1.1.csv')
 parse_dates = ['registration_date', 'transaction_date']
 date_parser = lambda x: datetime.strptime(x, '%Y-%m-%d')
-data = pd.read_csv(filepath_or_buffer=data_fpath,  parse_dates=parse_dates)
-
-# determine the week number for all transaction dates
-data['transaction_week'] = data['transaction_date'].dt.isocalendar().week
+data = pd.read_csv(filepath_or_buffer=cons.fpath_arch_randomtelecomdata,  parse_dates=parse_dates)
 ```
 
 # Engineer User Features per Week
 
+For each transaction date week number, variety of sum and count features across different levels and entities within the dataset.
+- Total user transaction counts and amounts by error code
+- Total user transaction counts and amounts by status code
+- Total user device counts
+- Total user card counts
+- Total user ip counts
+
 ```{python}
 #| label: feature-engineering
+
+# determine the week number for all transaction dates
+data['transaction_week'] = data['transaction_date'].dt.isocalendar().week
 
 # user trans error counts and sums
 userid_error_cnt_data = feature_engineer(data=data, ids=['userid', 'transaction_week'], groups=['transaction_error_code'], target='transaction_amount', func='size')
@@ -59,18 +70,21 @@ userid_card_cnt_data = feature_engineer(data=data, ids=['userid', 'transaction_w
 userid_ip_cnt_data = feature_engineer(data=data, ids=['userid', 'transaction_week'], groups=[], target='ip_hash', func='size')
 
 # join all user feature datasets together
-feat_objs = [userid_device_cnt_data, userid_card_cnt_data, userid_ip_cnt_data, userid_status_cnt_data, userid_status_sum_data, userid_error_cnt_data, userid_error_sum_data]
-feat_data = merge_features(feat_objs)
+feat_objects = [userid_device_cnt_data, userid_card_cnt_data, userid_ip_cnt_data, userid_status_cnt_data, userid_status_sum_data, userid_error_cnt_data, userid_error_sum_data]
+feat_data = merge_features(feat_objects)
 ```
 
 # Create the Base User Feature Dataset
 
+Generate a base dataset which spreads all users across all known weeks with their associated weekly engineered features at that time.
+
 ```{python}
 #| label: base-data
+
 # create base data
 base_user_data = data[['userid']].drop_duplicates().reset_index(drop=True).assign(key = 1).sort_values(by='userid')
-base_transweek_data = data[['transaction_week']].drop_duplicates().reset_index(drop=True).assign(key = 1).sort_values(by='transaction_week')
-base_data = pd.merge(left=base_user_data, right=base_transweek_data, on='key', how='inner').drop(columns=['key'])
+base_trans_week_data = data[['transaction_week']].drop_duplicates().reset_index(drop=True).assign(key = 1).sort_values(by='transaction_week')
+base_data = pd.merge(left=base_user_data, right=base_trans_week_data, on='key', how='inner').drop(columns=['key'])
 base_feat_data = pd.merge(left=base_data, right=feat_data, on=['userid','transaction_week'], how='left')
 # fill 0 for any weeks missing user feature data
 base_feat_data = base_feat_data.fillna(0)
@@ -80,6 +94,8 @@ base_feat_data = base_feat_data.fillna(0)
 
 ```{python}
 #| label: write data
-feat_data_fpath=os.path.join('..', '..', 'data', 'report', 'user_feat_data.csv')
+
+# write feature data to disk
+feat_data_fpath=os.path.join(data_report_dir, 'user_feat_data.csv')
 base_feat_data.to_csv(feat_data_fpath, index=False)
 ```

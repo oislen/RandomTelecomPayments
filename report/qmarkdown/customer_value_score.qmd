@@ -20,55 +20,76 @@ sys.path.append(os.path.dirname(os.getcwd()))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
-from report.qmarkdown.utilities.value_score import week_pct_score, gen_weekly_user_scores, apply_cumsum
+from report.qmarkdown.utilities.value_score import week_pct_score, gen_weekly_user_scores, apply_cum_sum
+
+data_dir = os.path.join('..', '..', 'data')
+data_report_dir = os.path.join(data_dir, 'report')
 ```
 
 # Data Load
 
+Load the engineered feature data.
+
 ```{python}
 #| label: data-load
+
 # load user feature data
-user_feat_foath = os.path.join('..', '..', 'data', 'report', 'user_feat_data.csv')
-feat_data = pd.read_csv(user_feat_foath)
+user_feat_fpath = os.path.join(data_report_dir, 'user_feat_data.csv')
+feat_data = pd.read_csv(user_feat_fpath)
 feat_data.head()
 ```
 
-# Customer Value Score
+# Weekly Customer Value Score
 
-Percentile score / rank the users across each week number based on their successful transaction count, and amount total.
+Percentile score / rank the users across each week number based on their successful transaction count, and amount total. The goal being to score the top purchasing users across each week.
 
 ```{python}
-#| label: score-data
+#| label: weekly-score-data
 
-# only conder users who made at least one transaction in any given week
+# only consider users who made at least one transaction in any given week
 score_data_week = feat_data.loc[feat_data['successful_size'] > 0, :].copy()
-# score each user across each week for their percentile score in number of successfull transactions counts and acounts
-score_data_week = score_data_week.groupby(by=['transaction_week'], group_keys=False).apply(lambda group: week_pct_score(group))
+# score each user across each week for their percentile score in number of successfully transactions counts and accounts
+score_data_week = score_data_week.join(score_data_week.groupby(by=['transaction_week'], group_keys=False)[['successful_size','successful_sum']].apply(lambda group: week_pct_score(group)))
 # group by each user and apply a cumulative sum to determine weekly values scores over time
-score_data_week = score_data_week.groupby(by=['userid'], group_keys=False).apply(lambda group: gen_weekly_user_scores(group))
+score_data_week = score_data_week.join(score_data_week.groupby(by=['userid'], group_keys=False)[['successful_size_pct', 'successful_sum_pct']].apply(lambda group: gen_weekly_user_scores(group)))
+score_data_week.head(10)
+```
+
+# Global Customer Value Score
+
+Calculate the global customer value score which is the cumulative sum of all weekly customer value scores.
+
+```{python}
+#| label: global-value-score
+
+# apply cumulative sum to generate value scores cumulative increase over time
+score_data_week = score_data_week.join(score_data_week.groupby(by=['userid'], group_keys=False)[['transaction_week', 'customer_value_score']].apply(lambda group: apply_cum_sum(group)))
 score_data_week.head(10)
 ```
 
 # Create Base Value Score Dataset
 
+Generate a base dataset which spreads all users across all known weeks with their associated weekly engineered features at that time.
+
 ```{python}
 #| label: base-data
 
 # create base data
-base_user_data = feat_data[['userid']].drop_duplicates().reset_index(drop=True).assign(key = 1).sort_values(by='userid')
-base_transweek_data = feat_data[['transaction_week']].drop_duplicates().reset_index(drop=True).assign(key = 1).sort_values(by='transaction_week')
-base_data = pd.merge(left=base_user_data, right=base_transweek_data, on='key', how='inner').drop(columns=['key'])
-base_score_data = pd.merge(left=base_data, right=score_data_week, on=['userid','transaction_week'], how='left')
+base_score_data = pd.merge(left=feat_data, right=score_data_week, on=['userid','transaction_week'], how='left')
 # fill missing pct and score values as 0
 base_score_data = base_score_data.fillna(0)
-# apply cumulative sum to generate value scores cumulative increase over time
-base_score_data = base_score_data.groupby(by=['userid'], group_keys=False).apply(lambda group: apply_cumsum(group))
+# subset out required columns
+sub_cols = ["userid", "transaction_week", "successful_size_pct", "successful_sum_pct", "customer_value_score", "customer_value_score_cum_sum"]
+base_score_data = base_score_data[sub_cols]
+base_score_data.head(10)
 ```
 
 # Write Data to Disk
 
 ```{python}
 #| label: write data
-user_score_data_fpath=os.path.join('..', '..', 'data', 'report', 'customer_value_score.csv')
+
+# write customer value score to disk
+user_score_data_fpath=os.path.join(data_report_dir, 'customer_value_score.csv')
 base_score_data.to_csv(user_score_data_fpath, index=False)
 ```

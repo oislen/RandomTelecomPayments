@@ -13,13 +13,13 @@ def feature_engineer(data, ids, groups, target, func):
     data_pivot.columns.name = None
     return data_pivot
 
-def merge_features(feat_objs):
+def merge_features(feat_objects):
     """
     """
     feat_data = pd.DataFrame(columns=['userid', 'transaction_week'])
     # join objects
-    for feat_obj in feat_objs:
-        feat_data = pd.merge(left=feat_data, right=feat_obj, how='outer', on=['userid', 'transaction_week'])
+    for feat_object in feat_objects:
+        feat_data = pd.merge(left=feat_data, right=feat_object, how='outer', on=['userid', 'transaction_week'])
     # fill for missing values
     feat_data = feat_data.fillna(0)
     return feat_data
