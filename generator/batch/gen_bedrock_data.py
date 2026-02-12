@@ -15,7 +15,7 @@ sys.path.append("E:\\GitHub\\RandomTelecomPayments\\generator")
 import cons
 from utilities.Bedrock import Bedrock
 
-system_name_prompt = """# Task
+system_prompt = """# Task
 
 You are a name generator for people from different countries in Europe.
 Your task is to generate an arbitrary N number of distinct and varied first names, or last names, for people from a given European country of origin.
@@ -52,8 +52,21 @@ system_email_prompt = """
 """
 
 first_name_prompt = 'Generate {n_data_points} first names for people from the country "{country}"'
-surname_prompt = 'Generate {n_data_points} last names for people from the country "{country}"'
+last_name_prompt = 'Generate {n_data_points} last names for people from the country "{country}"'
 email_domain_prompt = 'Generate {n_data_points} popular email domains names for people from the country "{country}"'
+
+data_point_prompt_dict = {
+    "first_names":first_name_prompt,
+    "last_names":last_name_prompt,
+    "email_domain":email_domain_prompt
+}
+
+boto3_config = Config(
+    retries={
+        "max_attempts":3,
+        "mode": "adaptive"
+        }
+    )
 
 bedrock_config = {
     "inferenceConfig":{
@@ -63,7 +76,7 @@ bedrock_config = {
     },
     "system":[
         {
-            "text":system_name_prompt
+            "text":system_prompt
         }
     ]
 }
@@ -75,8 +88,6 @@ def invoke_bedrock(
     n_data_points:int,
     country:str,
     countrieseurope:pd.DataFrame,
-    prompt:str,
-    system_prompt:str,
     country_fpath:str,
     ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
@@ -121,9 +132,10 @@ def invoke_bedrock(
     """
     logging.info("Calling Bedrock ...")
     # call bedrock model
-    formatted_prompt = prompt.format(n_data_points=n_data_points, country=country)
+    formatted_prompt = data_point_prompt_dict[data_point].format(n_data_points=n_data_points, country=country)
     messages = [{"role":"user", "content":[{"text":formatted_prompt}]}]
     logging.info(messages)
+    breakpoint()
     #model_response = model.prompt(model_id=model_id, user_prompt=formatted_prompt, system_prompt=system_prompt, max_gen_len=2048)
     model_response = model.converse(modelId=model_id, messages=messages, system=bedrock_config['system'], inference_config=bedrock_config['inferenceConfig'])
     # split out answer
@@ -158,7 +170,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     Docstring for main
     """
     # load countries, first_names and surnames files
-    countrieseurope = pd.read_csv(cons.fpath_countries_europe, usecols=['name', 'ISO numeric'])
+    countrieseurope = pd.read_csv(cons.fpath_countries_europe, usecols=['name', 'ISO numeric', 'population'])
     n_countries = countrieseurope.shape[0]
     # set lists to collect generated data with
     gen_country_dataframe_list, error_countries = [], []
@@ -168,7 +180,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     # iterate over countries list
     for country in countries_list:
         logging.info(f"{country} ...")
-        country_fpath=fpath_dict['country_fpath'].format(country)
+        country_fpath=fpath_dict['country_fpath'].format(country=country)
         try:
             if run_bedrock:
                 # call bedrock model and generate user names data
@@ -223,6 +235,7 @@ if __name__ == "__main__":
     # set aws region
     aws_region = "us-east-1"
     model_id="us.meta.llama3-1-70b-instruct-v1:0"
+    #model_id="us.anthropic.claude-sonnet-4-5-20250929-v1:0"
     # load aws config
     with open(cons.fpath_aws_session_token, "r") as j:
         aws_config = json.loads(j.read())
@@ -236,7 +249,7 @@ if __name__ == "__main__":
     bedrock_runtime = session.client(
         service_name="bedrock-runtime",
         region_name=aws_region,
-        config=Config(retries={"max_attempts":1, "mode": "adaptive"})
+        #config=boto3_config
         )
     # create bedrock instance
     bedrock = Bedrock(bedrock_runtime=bedrock_runtime)

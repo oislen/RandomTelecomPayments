@@ -1,1 +1,1 @@
-call uv run utilities\gen_user_names_file.py
+call uv run batch\gen_bedrock_data.py
