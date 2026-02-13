@@ -1,1 +1,0 @@
-call uv run batch\gen_bedrock_data.py
