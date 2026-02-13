@@ -19,7 +19,7 @@ sys.path.append("E:\\GitHub\\RandomTelecomPayments\\generator")
 import cons
 from utilities.Bedrock import Bedrock
 
-system_prompt = """# Task
+system_name_prompt = """# Task
 
 You are a name generator for people from different countries in Europe.
 Your task is to generate an arbitrary N number of distinct and varied first names, or last names, for people from a given European country of origin.
@@ -53,16 +53,39 @@ Your task is to generate an arbitrary N number of distinct and varied first name
 """
 
 system_email_prompt = """
+# Task
+
+You are an email domain name generator for different countries in Europe.
+Your task is to generate an arbitrary N number of distinct and varied email domains, for a given European country.
+
+# Requirements
+
+- Generate typical and popular email domains.
+- Do not repeat any email domains more than once.
+- Each individual email domain must be unique.
+- You should return the email domains using a valid JSON object tagged as <answer></answer>.
+- The valid JSON object should be of the following structures; `["email domain 1","email domain 2",...,"email domain N"]`.
+
+# Examples
+
+- Generate 2 popular email domain names for people from the country "Germany" -> <answer>["gmail.com","web.de"]</answer>
+- Generate 4 popular email domain names for people from the country "United Kingdom" -> <answer>["gmail.com","outlook.com","yahoo.co.uk","btinternet.com"]</answer>
+- Generate 3 popular email domain names for people from the country "France" -> <answer>["orange.fr","laposte.net","free.fr"]</answer>
+- Generate 5 popular email domain names for people from the country "Spain" -> <answer>["gmail.com","hotmail.es","yahoo.es","outlook.es","telefonica.net"]</answer>
+- Generate 6 popular email domain names for people from the country "Sweden" -> <answer>["gmail.com","hotmail.com","outlook.com","telia.com","spray.se","comhem.se"]</answer>
 """
+
+system_name = [{"text":system_name_prompt,}]
+system_email = [{"text":system_email_prompt,}]
 
 first_name_prompt = 'Generate {n_data_points} first names for people from the country "{country}"'
 last_name_prompt = 'Generate {n_data_points} last names for people from the country "{country}"'
-email_domain_prompt = 'Generate {n_data_points} popular email domains names for people from the country "{country}"'
+email_domain_prompt = 'Generate {n_data_points} popular email domain names for people from the country "{country}"'
 
 data_point_prompt_dict = {
-    "first_names":first_name_prompt,
-    "last_names":last_name_prompt,
-    "email_domain":email_domain_prompt
+    "first_names":[first_name_prompt, system_name],
+    "last_names":[last_name_prompt, system_name],
+    "email_domains":[email_domain_prompt, system_email]
 }
 
 boto3_config = Config(
@@ -74,16 +97,9 @@ boto3_config = Config(
         }
     )
 
-bedrock_config = {
-    "inferenceConfig":{
-        "maxTokens":8192,
-        "temperature":0.1,
-    },
-    "system":[
-        {
-            "text":system_prompt,
-        },
-    ]
+inferenceConfig = {
+    "maxTokens":8192,
+    "temperature":0.1,
 }
 
 def invoke_bedrock(
@@ -137,10 +153,11 @@ def invoke_bedrock(
     """
     logging.info("Calling Bedrock ...")
     # call bedrock model
-    formatted_prompt = data_point_prompt_dict[data_point].format(n_data_points=n_data_points, country=country)
+    formatted_prompt = data_point_prompt_dict[data_point][0].format(n_data_points=n_data_points, country=country)
+    system = data_point_prompt_dict[data_point][1]
     messages = [{"role":"user", "content":[{"text":formatted_prompt}]}]
     logging.info(messages)
-    model_response = model.converse(modelId=model_id, messages=messages, system=bedrock_config['system'], inference_config=bedrock_config['inferenceConfig'])
+    model_response = model.converse(modelId=model_id, messages=messages, system=system, inference_config=inferenceConfig)
     # split out answer
     text = model_response['output']['message']['content'][0]['text'].split("<answer>")[1].split("</answer>")[0]
     # parse json
@@ -166,7 +183,8 @@ def invoke_bedrock(
     gen_country_dataframe = gen_country_dataframe.drop_duplicates(subset=[data_point])
     logging.info(f"gen_country_dataframe.shape: {gen_country_dataframe.shape}")
     # save generated data
-    gen_country_dataframe.to_csv(country_fpath, index=False, encoding="utf-8")
+    sub_cols = [data_point,"country","ISO numeric"]
+    gen_country_dataframe[sub_cols].dropna().to_csv(country_fpath, index=False, encoding="utf-8")
     logging.info(f"Wrote {country_fpath} ...")
     return gen_country_dataframe
 
@@ -182,7 +200,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     gen_country_dataframe_list, error_countries = [], []
     # set countries list
     countries_list = countrieseurope['name'].to_list()
-    #countries_list = ['Cyprus']
+    #countries_list = ['Vatican City']
     # iterate over countries list
     for country in countries_list:
         logging.info(f"country:{country} ...")
@@ -250,6 +268,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     data_point = args.data_point
     run_bedrock = args.run_bedrock
+    logging.info(f"data_point: {data_point}")
+    logging.info(f"run_bedrock: {run_bedrock}")
     # set aws region
     aws_region = "us-east-1"
     model_id="us.anthropic.claude-sonnet-4-5-20250929-v1:0"
