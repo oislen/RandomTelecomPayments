@@ -1,5 +1,8 @@
-# python generator/batch/gen_bedrock_data.py
+# uv run python batch/gen_bedrock_data.py --data_point first_names --run_bedrock
+# uv run python batch/gen_bedrock_data.py --data_point last_names --run_bedrock
+# uv run python batch/gen_bedrock_data.py --data_point email_domains --run_bedrock
 
+import os
 import json
 import boto3
 from botocore.config import Config
@@ -9,6 +12,7 @@ import logging
 import unidecode
 import pandas as pd
 import numpy as np
+import argparse
 
 sys.path.append("E:\\GitHub\\RandomTelecomPayments\\generator")
 
@@ -62,8 +66,10 @@ data_point_prompt_dict = {
 }
 
 boto3_config = Config(
+    connect_timeout=60,
+    read_timeout=300,
     retries={
-        "max_attempts":3,
+        "max_attempts":2,
         "mode": "adaptive"
         }
     )
@@ -146,18 +152,21 @@ def invoke_bedrock(
     # generate pandas dataframe
     gen_dataframe = pd.Series(gen_data_list, name=data_point).drop_duplicates().to_frame()
     gen_dataframe['country'] = country
-    gen_country_dataframe = pd.merge(
-        left=gen_dataframe,
-        right=countrieseurope.rename(columns={'name':'country'}),
-        on='country',
-        how='inner'
-        )
+    gen_country_dataframe = pd.merge(left=gen_dataframe, right=countrieseurope.rename(columns={'name':'country'}), on='country', how='inner')
     # standardise names formatting
     standardise_text_lambda = lambda x: unidecode.unidecode(" ".join(x.strip())) if pd.isna(x) else x
     gen_country_dataframe[data_point] = gen_country_dataframe[data_point].apply(lambda x: standardise_text_lambda(x))
+    # check against previous iterations
+    tmp_gen_country_dataframe = pd.DataFrame()
+    if os.path.exists(country_fpath):
+        tmp_gen_country_dataframe = pd.read_csv(country_fpath, encoding="utf-8")
+    # concatenate results
+    gen_country_dataframe = pd.concat(objs=[gen_country_dataframe, tmp_gen_country_dataframe], axis=0, ignore_index=True)
+    # deduplicate data
+    gen_country_dataframe = gen_country_dataframe.drop_duplicates(subset=[data_point])
     logging.info(f"gen_country_dataframe.shape: {gen_country_dataframe.shape}")
     # save generated data
-    gen_country_dataframe.to_csv(country_fpath, index=False, encoding="latin1")
+    gen_country_dataframe.to_csv(country_fpath, index=False, encoding="utf-8")
     logging.info(f"Wrote {country_fpath} ...")
     return gen_country_dataframe
 
@@ -172,8 +181,8 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     # set lists to collect generated data with
     gen_country_dataframe_list, error_countries = [], []
     # set countries list
-    #countries_list = countrieseurope['name'].to_list()
-    countries_list = ['Cyprus']
+    countries_list = countrieseurope['name'].to_list()
+    #countries_list = ['Cyprus']
     # iterate over countries list
     for country in countries_list:
         logging.info(f"country:{country} ...")
@@ -186,7 +195,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
                 # set n data points for ai generator depending on type
                 if data_point in ("first_names", "last_names"):
                     n_data_points = int(np.log(country_population)**1.5)
-                elif data_point == "email_domain":
+                elif data_point == "email_domains":
                     n_data_points = 5
                 else:
                     raise ValueError(f"Invalid parameter data_point value {data_point}")
@@ -205,6 +214,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
                 time.sleep(20)
             else:
                 tmp_gen_country_data = pd.read_csv(country_fpath, encoding="latin1")
+                logging.info(f"tmp_gen_country_data.shape:{tmp_gen_country_data.shape}")
             # append to user country data
             gen_country_dataframe_list.append(tmp_gen_country_data)
         except Exception as e:
@@ -213,6 +223,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     # log if any countries failed to generate data
     if len(error_countries) > 0:
         logging.info(f"Failed to generated data for countries: {error_countries}")
+    logging.info(f"Concatenating Country files ...")
     # concatenate user country data together and deduplicate across first_names and countries
     output_gen_country_dataframe = pd.concat(gen_country_dataframe_list, axis=0, ignore_index=True)
     # sort and deduplicate output data
@@ -220,8 +231,9 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     output_gen_country_dataframe = output_gen_country_dataframe.drop_duplicates(subset=sort_dedup_cols).sort_values(by=sort_dedup_cols)
     # write data to disk
     if output_gen_country_dataframe['country'].nunique() == n_countries:
+        logging.info(f"Writing reference file: {fpath_dict['fpath']}")
+        output_gen_country_dataframe.to_csv(fpath_dict["fpath"], index=False, encoding="utf-8")
         logging.info(f"output_gen_country_dataframe.shape: {output_gen_country_dataframe.shape}")
-        output_gen_country_dataframe.to_csv(fpath_dict["fpath"], index=False, encoding="latin1")
     else:
         logging.info(f"WARNING Insufficient {data_point} data generated.")
 
@@ -229,6 +241,15 @@ lgr = logging.getLogger()
 lgr.setLevel(logging.INFO)
 
 if __name__ == "__main__":
+    # define argument parser object
+    parser = argparse.ArgumentParser(description="Execute Random TeleCom Data Programme.")
+    # add input arguments
+    parser.add_argument("--data_point", action="store", dest="data_point", type=str, choices=list(cons.llama_data_point_fpaths.keys()), help="String, the data point to generate Bedrock data for.",)
+    parser.add_argument("--run_bedrock", action=argparse.BooleanOptionalAction, dest="run_bedrock", type=bool, default=False, help="Boolean, whether to generate data by calling Bedrock",)
+    # extract input arguments
+    args = parser.parse_args()
+    data_point = args.data_point
+    run_bedrock = args.run_bedrock
     # set aws region
     aws_region = "us-east-1"
     model_id="us.anthropic.claude-sonnet-4-5-20250929-v1:0"
@@ -247,11 +268,16 @@ if __name__ == "__main__":
     bedrock_runtime = session.client(
         service_name="bedrock-runtime",
         region_name=aws_region,
-        #config=boto3_config
+        config=boto3_config
         )
     # create bedrock instance
     bedrock = Bedrock(bedrock_runtime=bedrock_runtime)
     # execute main programme
-    for data_point, fpath_dict in cons.llama_data_point_fpaths.items():
-        main(bedrock=bedrock, model_id=model_id, data_point=data_point, fpath_dict=fpath_dict, run_bedrock=True)
+    main(
+        bedrock=bedrock,
+        model_id=model_id,
+        data_point=data_point,
+        fpath_dict=cons.llama_data_point_fpaths[data_point],
+        run_bedrock=run_bedrock
+    )
 
