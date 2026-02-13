@@ -71,13 +71,12 @@ boto3_config = Config(
 bedrock_config = {
     "inferenceConfig":{
         "maxTokens":8192,
-        "temperature":0.5,
-        "topP":0.5,
+        "temperature":0.1,
     },
     "system":[
         {
-            "text":system_prompt
-        }
+            "text":system_prompt,
+        },
     ]
 }
 
@@ -135,11 +134,9 @@ def invoke_bedrock(
     formatted_prompt = data_point_prompt_dict[data_point].format(n_data_points=n_data_points, country=country)
     messages = [{"role":"user", "content":[{"text":formatted_prompt}]}]
     logging.info(messages)
-    breakpoint()
-    #model_response = model.prompt(model_id=model_id, user_prompt=formatted_prompt, system_prompt=system_prompt, max_gen_len=2048)
     model_response = model.converse(modelId=model_id, messages=messages, system=bedrock_config['system'], inference_config=bedrock_config['inferenceConfig'])
     # split out answer
-    text = model_response.split("<answer>")[1].split("</answer>")[0]
+    text = model_response['output']['message']['content'][0]['text'].split("<answer>")[1].split("</answer>")[0]
     # parse json
     try:
         gen_data_list = json.loads(text)
@@ -152,8 +149,7 @@ def invoke_bedrock(
     gen_country_dataframe = pd.merge(
         left=gen_dataframe,
         right=countrieseurope.rename(columns={'name':'country'}),
-        left_on='country',
-        right_on='name',
+        on='country',
         how='inner'
         )
     # standardise names formatting
@@ -169,6 +165,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     """
     Docstring for main
     """
+    logging.info(f"data_point:{data_point} ...")
     # load countries, first_names and surnames files
     countrieseurope = pd.read_csv(cons.fpath_countries_europe, usecols=['name', 'ISO numeric', 'population'])
     n_countries = countrieseurope.shape[0]
@@ -179,7 +176,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     countries_list = ['Cyprus']
     # iterate over countries list
     for country in countries_list:
-        logging.info(f"{country} ...")
+        logging.info(f"country:{country} ...")
         country_fpath=fpath_dict['country_fpath'].format(country=country)
         try:
             if run_bedrock:
@@ -189,7 +186,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
                 # set n data points for ai generator depending on type
                 if data_point in ("first_names", "last_names"):
                     n_data_points = int(np.log(country_population)**1.5)
-                elif data_point == "email_domains":
+                elif data_point == "email_domain":
                     n_data_points = 5
                 else:
                     raise ValueError(f"Invalid parameter data_point value {data_point}")
@@ -226,7 +223,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
         logging.info(f"output_gen_country_dataframe.shape: {output_gen_country_dataframe.shape}")
         output_gen_country_dataframe.to_csv(fpath_dict["fpath"], index=False, encoding="latin1")
     else:
-        logging.info("WARNING Insufficient first name data generated.")
+        logging.info(f"WARNING Insufficient {data_point} data generated.")
 
 lgr = logging.getLogger()
 lgr.setLevel(logging.INFO)
@@ -234,8 +231,9 @@ lgr.setLevel(logging.INFO)
 if __name__ == "__main__":
     # set aws region
     aws_region = "us-east-1"
-    model_id="us.meta.llama3-1-70b-instruct-v1:0"
-    #model_id="us.anthropic.claude-sonnet-4-5-20250929-v1:0"
+    model_id="us.anthropic.claude-sonnet-4-5-20250929-v1:0"
+    logging.info(f"aws_region: {aws_region}")
+    logging.info(f"model_id: {model_id}")
     # load aws config
     with open(cons.fpath_aws_session_token, "r") as j:
         aws_config = json.loads(j.read())
