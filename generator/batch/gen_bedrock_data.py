@@ -180,11 +180,11 @@ def invoke_bedrock(
     # concatenate results
     gen_country_dataframe = pd.concat(objs=[gen_country_dataframe, tmp_gen_country_dataframe], axis=0, ignore_index=True)
     # deduplicate data
-    gen_country_dataframe = gen_country_dataframe.drop_duplicates(subset=[data_point])
+    gen_country_dataframe = gen_country_dataframe.drop_duplicates(subset=[data_point]).dropna()
     logging.info(f"gen_country_dataframe.shape: {gen_country_dataframe.shape}")
     # save generated data
     sub_cols = [data_point,"country","ISO numeric"]
-    gen_country_dataframe[sub_cols].dropna().to_csv(country_fpath, index=False, encoding="utf-8")
+    gen_country_dataframe[sub_cols].sort_values(by=data_point).to_csv(country_fpath, index=False, encoding="utf-8")
     logging.info(f"Wrote {country_fpath} ...")
     return gen_country_dataframe
 
@@ -214,7 +214,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
                 if data_point in ("first_names", "last_names"):
                     n_data_points = int(np.log(country_population)**1.5)
                 elif data_point == "email_domains":
-                    n_data_points = 5
+                    n_data_points = 10
                 else:
                     raise ValueError(f"Invalid parameter data_point value {data_point}")
                 # invoke bedrock and generate data points
