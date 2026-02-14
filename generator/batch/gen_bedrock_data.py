@@ -167,7 +167,7 @@ def invoke_bedrock(
         raise Exception(f"Error parsing JSON: {e}")
     logging.info("Processing results ...")
     # generate pandas dataframe
-    gen_dataframe = pd.Series(gen_data_list, name=data_point).drop_duplicates().to_frame()
+    gen_dataframe = pd.Series(gen_data_list, name=data_point).drop_duplicates().to_frame().reset_index().rename(columns={'index':'rank'})
     gen_dataframe['country'] = country
     gen_country_dataframe = pd.merge(left=gen_dataframe, right=countrieseurope.rename(columns={'name':'country'}), on='country', how='inner')
     # standardise names formatting
@@ -180,11 +180,12 @@ def invoke_bedrock(
     # concatenate results
     gen_country_dataframe = pd.concat(objs=[gen_country_dataframe, tmp_gen_country_dataframe], axis=0, ignore_index=True)
     # deduplicate data
-    gen_country_dataframe = gen_country_dataframe.drop_duplicates(subset=[data_point]).dropna()
+    groupby_cols = [data_point,"country","ISO numeric"]
+    agg_dict = {"rank":"mean"}
+    gen_country_dataframe = gen_country_dataframe.dropna().groupby(groupby_cols, as_index=False).agg(agg_dict).sort_values(by=groupby_cols)
     logging.info(f"gen_country_dataframe.shape: {gen_country_dataframe.shape}")
     # save generated data
-    sub_cols = [data_point,"country","ISO numeric"]
-    gen_country_dataframe[sub_cols].sort_values(by=data_point).to_csv(country_fpath, index=False, encoding="utf-8")
+    gen_country_dataframe.to_csv(country_fpath, index=False, encoding="utf-8")
     logging.info(f"Wrote {country_fpath} ...")
     return gen_country_dataframe
 
@@ -200,7 +201,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     gen_country_dataframe_list, error_countries = [], []
     # set countries list
     countries_list = countrieseurope['name'].to_list()
-    #countries_list = ['Vatican City']
+    #countries_list = ['Netherlands']
     # iterate over countries list
     for country in countries_list:
         logging.info(f"country:{country} ...")
@@ -212,9 +213,9 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
                 country_population = countrieseurope.loc[country_filter, "population"].iloc[0]
                 # set n data points for ai generator depending on type
                 if data_point in ("first_names", "last_names"):
-                    n_data_points = int(np.log(country_population)**1.5)
+                    n_data_points = int(np.log(country_population)**1.75)
                 elif data_point == "email_domains":
-                    n_data_points = 10
+                    n_data_points = 15
                 else:
                     raise ValueError(f"Invalid parameter data_point value {data_point}")
                 # invoke bedrock and generate data points
