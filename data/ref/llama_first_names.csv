@@ -1,2664 +1,5267 @@
-first_names,country,ISO numeric
-Adelina,Albania,8
-AfÃ«rdita,Albania,8
-Agron,Albania,8
-Alban,Albania,8
-Albana,Albania,8
-Anjeza,Albania,8
-Ardian,Albania,8
-Ardit,Albania,8
-Bashkim,Albania,8
-Besnik,Albania,8
-Blerim,Albania,8
-Blerta,Albania,8
-Brunilda,Albania,8
-Bujar,Albania,8
-Dorina,Albania,8
-Drita,Albania,8
-Dritan,Albania,8
-Edmond,Albania,8
-Elona,Albania,8
-Elvira,Albania,8
-Endrit,Albania,8
-Enver,Albania,8
-Erion,Albania,8
-Ermira,Albania,8
-Fatjona,Albania,8
-Fatos,Albania,8
-Fisnik,Albania,8
-Flamur,Albania,8
-Flutura,Albania,8
-Gentian,Albania,8
-Gezim,Albania,8
-GÃ«zim,Albania,8
-Ilir,Albania,8
-Jonida,Albania,8
-Klaudia,Albania,8
-Kujtim,Albania,8
-Lindita,Albania,8
-Luan,Albania,8
-Luljeta,Albania,8
-Majlinda,Albania,8
-Mentor,Albania,8
-Mimoza,Albania,8
-Mirela,Albania,8
-Ornela,Albania,8
-Petrit,Albania,8
-Pranvera,Albania,8
-Rovena,Albania,8
-Shkelqim,Albania,8
-Shpresa,Albania,8
-SkÃ«nder,Albania,8
-Sokol,Albania,8
-Teuta,Albania,8
-Valentina,Albania,8
-Valon,Albania,8
-Vjollca,Albania,8
-Xhevahir,Albania,8
-Zamira,Albania,8
-Albert,Andorra,20
-Andreu,Andorra,20
-Anna,Andorra,20
-Arnau,Andorra,20
-Carla,Andorra,20
-Clara,Andorra,20
-Cristina,Andorra,20
-David,Andorra,20
-Elisabet,Andorra,20
-Emma,Andorra,20
-Enric,Andorra,20
-Francesc,Andorra,20
-Gemma,Andorra,20
-Isabel,Andorra,20
-Joan,Andorra,20
-Jordi,Andorra,20
-Josep,Andorra,20
-JÃºlia,Andorra,20
-Laia,Andorra,20
-Laura,Andorra,20
-LluÃ­s,Andorra,20
-Marc,Andorra,20
-Maria,Andorra,20
-Marta,Andorra,20
-MercÃ¨,Andorra,20
-Miquel,Andorra,20
-Montserrat,Andorra,20
-NÃºria,Andorra,20
-Oriol,Andorra,20
-Pau,Andorra,20
-Pere,Andorra,20
-Rafel,Andorra,20
-Roger,Andorra,20
-Rosa,Andorra,20
-Sergi,Andorra,20
-SÃ­lvia,Andorra,20
-Teresa,Andorra,20
-Xavier,Andorra,20
-Alexander,Austria,40
-Andrea,Austria,40
-Andreas,Austria,40
-Anna,Austria,40
-Barbara,Austria,40
-Benjamin,Austria,40
-Bianca,Austria,40
-Christian,Austria,40
-Christina,Austria,40
-Claudia,Austria,40
-Daniel,Austria,40
-Daniela,Austria,40
-David,Austria,40
-Dominik,Austria,40
-Elias,Austria,40
-Elisabeth,Austria,40
-Emma,Austria,40
-Fabian,Austria,40
-Felix,Austria,40
-Florian,Austria,40
-Gabriel,Austria,40
-Hannah,Austria,40
-Jakob,Austria,40
-Jasmin,Austria,40
-Johanna,Austria,40
-Johannes,Austria,40
-Julia,Austria,40
-Katharina,Austria,40
-Laura,Austria,40
-Lena,Austria,40
-Leon,Austria,40
-Lisa,Austria,40
-Lukas,Austria,40
-Magdalena,Austria,40
-Marie,Austria,40
-Markus,Austria,40
-Martin,Austria,40
-Martina,Austria,40
-Matthias,Austria,40
-Maximilian,Austria,40
-Melanie,Austria,40
-Michael,Austria,40
-Moritz,Austria,40
-Nina,Austria,40
-Noah,Austria,40
-Patrick,Austria,40
-Paul,Austria,40
-Petra,Austria,40
-Philipp,Austria,40
-Raphael,Austria,40
-Sabine,Austria,40
-Sandra,Austria,40
-Sarah,Austria,40
-Sebastian,Austria,40
-Simon,Austria,40
-Sophie,Austria,40
-Stefan,Austria,40
-Stefanie,Austria,40
-Theresa,Austria,40
-Thomas,Austria,40
-Tobias,Austria,40
-Valentina,Austria,40
-Verena,Austria,40
-Aksana,Belarus,112
-Alena,Belarus,112
-Ales,Belarus,112
-Aliaksandr,Belarus,112
-Aliaksei,Belarus,112
-Alina,Belarus,112
-Anastasiya,Belarus,112
-Anatol,Belarus,112
-Andrei,Belarus,112
-Anton,Belarus,112
-Artsiom,Belarus,112
-Barys,Belarus,112
-Darya,Belarus,112
-Dzmitry,Belarus,112
-Dzmitryj,Belarus,112
-Halina,Belarus,112
-Hanna,Belarus,112
-Henadz,Belarus,112
-Ihar,Belarus,112
-Ilya,Belarus,112
-Iryna,Belarus,112
-Ivan,Belarus,112
-Katsiaryna,Belarus,112
-Khrystyna,Belarus,112
-Kiryl,Belarus,112
-Kseniya,Belarus,112
-Leanid,Belarus,112
-Liudmila,Belarus,112
-Lizaveta,Belarus,112
-Maksim,Belarus,112
-Marharyta,Belarus,112
-Maryna,Belarus,112
-Mikalai,Belarus,112
-Mikhail,Belarus,112
-Nadzeya,Belarus,112
-Natallia,Belarus,112
-Palina,Belarus,112
-Pavel,Belarus,112
-Piotr,Belarus,112
-Raman,Belarus,112
-Ruslan,Belarus,112
-Siarhei,Belarus,112
-Sofiya,Belarus,112
-Stanislau,Belarus,112
-Sviatlana,Belarus,112
-Tatsiana,Belarus,112
-Uladzimir,Belarus,112
-Valery,Belarus,112
-Valeryia,Belarus,112
-Vasil,Belarus,112
-Veranika,Belarus,112
-Veronika,Belarus,112
-Viktar,Belarus,112
-Vital,Belarus,112
-Volha,Belarus,112
-Yana,Belarus,112
-Yauheni,Belarus,112
-Yauheniya,Belarus,112
-Yekaterina,Belarus,112
-Yuliana,Belarus,112
-Yuliya,Belarus,112
-Yury,Belarus,112
-Zhanna,Belarus,112
-Adam,Belgium,56
-Alexandre,Belgium,56
-Alice,Belgium,56
-AmÃ©lie,Belgium,56
-Anna,Belgium,56
-Antoine,Belgium,56
-Arthur,Belgium,56
-Bram,Belgium,56
-Camille,Belgium,56
-Charlotte,Belgium,56
-ChloÃ©,Belgium,56
-Clara,Belgium,56
-Elena,Belgium,56
-Elise,Belgium,56
-Ella,Belgium,56
-Emile,Belgium,56
-Emma,Belgium,56
-Ethan,Belgium,56
-Eva,Belgium,56
-Felix,Belgium,56
-Fien,Belgium,56
-Gabriel,Belgium,56
-Hugo,Belgium,56
-Jade,Belgium,56
-Jasper,Belgium,56
-Jules,Belgium,56
-Juliette,Belgium,56
-Kobe,Belgium,56
-Lars,Belgium,56
-Laura,Belgium,56
-Liam,Belgium,56
-Lina,Belgium,56
-Lotte,Belgium,56
-Louis,Belgium,56
-Louise,Belgium,56
-Lucas,Belgium,56
-Lucie,Belgium,56
-LÃ©a,Belgium,56
-Manon,Belgium,56
-Marie,Belgium,56
-Mathis,Belgium,56
-Matteo,Belgium,56
-Maxime,Belgium,56
-Mila,Belgium,56
-Nathan,Belgium,56
-Nina,Belgium,56
-Noah,Belgium,56
-Noor,Belgium,56
-Nora,Belgium,56
-Olivia,Belgium,56
-Oscar,Belgium,56
-RaphaÃ«l,Belgium,56
-Robin,Belgium,56
-Romain,Belgium,56
-Rose,Belgium,56
-Sacha,Belgium,56
-Sarah,Belgium,56
-Simon,Belgium,56
-Sofie,Belgium,56
-Sophie,Belgium,56
-Theo,Belgium,56
-Thomas,Belgium,56
-Victor,Belgium,56
-Wout,Belgium,56
-ZoÃ©,Belgium,56
-Adis,Bosnia and Herzegovina,70
-Admir,Bosnia and Herzegovina,70
-Adnan,Bosnia and Herzegovina,70
-Aida,Bosnia and Herzegovina,70
-Ajla,Bosnia and Herzegovina,70
-Aldin,Bosnia and Herzegovina,70
-Alma,Bosnia and Herzegovina,70
-Almir,Bosnia and Herzegovina,70
-Amela,Bosnia and Herzegovina,70
-Amer,Bosnia and Herzegovina,70
-Amina,Bosnia and Herzegovina,70
-Amir,Bosnia and Herzegovina,70
-Amra,Bosnia and Herzegovina,70
-Armin,Bosnia and Herzegovina,70
-Azra,Bosnia and Herzegovina,70
-Belma,Bosnia and Herzegovina,70
-Damir,Bosnia and Herzegovina,70
-Dina,Bosnia and Herzegovina,70
-Dino,Bosnia and Herzegovina,70
-DÅ¾enan,Bosnia and Herzegovina,70
-Edin,Bosnia and Herzegovina,70
-Edina,Bosnia and Herzegovina,70
-Eldin,Bosnia and Herzegovina,70
-Elma,Bosnia and Herzegovina,70
-Elvir,Bosnia and Herzegovina,70
-Emina,Bosnia and Herzegovina,70
-Emir,Bosnia and Herzegovina,70
-Emira,Bosnia and Herzegovina,70
-Enis,Bosnia and Herzegovina,70
-Faruk,Bosnia and Herzegovina,70
-Fatima,Bosnia and Herzegovina,70
-Haris,Bosnia and Herzegovina,70
-Hasan,Bosnia and Herzegovina,70
-Ines,Bosnia and Herzegovina,70
-Jasmin,Bosnia and Herzegovina,70
-Jasmina,Bosnia and Herzegovina,70
-Kenan,Bosnia and Herzegovina,70
-Lamija,Bosnia and Herzegovina,70
-Lejla,Bosnia and Herzegovina,70
-Maja,Bosnia and Herzegovina,70
-Medina,Bosnia and Herzegovina,70
-Melisa,Bosnia and Herzegovina,70
-Merima,Bosnia and Herzegovina,70
-Mirza,Bosnia and Herzegovina,70
-Muhamed,Bosnia and Herzegovina,70
-Nedim,Bosnia and Herzegovina,70
-Nejra,Bosnia and Herzegovina,70
-Nermin,Bosnia and Herzegovina,70
-Nihad,Bosnia and Herzegovina,70
-Sabina,Bosnia and Herzegovina,70
-Samir,Bosnia and Herzegovina,70
-Samira,Bosnia and Herzegovina,70
-Sanela,Bosnia and Herzegovina,70
-Sead,Bosnia and Herzegovina,70
-Selma,Bosnia and Herzegovina,70
-Senad,Bosnia and Herzegovina,70
-Tarik,Bosnia and Herzegovina,70
-Zerina,Bosnia and Herzegovina,70
-Aleksandar,Bulgaria,100
-Ani,Bulgaria,100
-Antoaneta,Bulgaria,100
-Asen,Bulgaria,100
-Atanas,Bulgaria,100
-Blagoy,Bulgaria,100
-Bogdan,Bulgaria,100
-Borislava,Bulgaria,100
-Boyan,Bulgaria,100
-Chavdar,Bulgaria,100
-Daniela,Bulgaria,100
-Desislava,Bulgaria,100
-Dimitar,Bulgaria,100
-Dragomir,Bulgaria,100
-Elena,Bulgaria,100
-Emilia,Bulgaria,100
-Galina,Bulgaria,100
-Georgi,Bulgaria,100
-Gergana,Bulgaria,100
-Hristo,Bulgaria,100
-Irina,Bulgaria,100
-Ivan,Bulgaria,100
-Ivana,Bulgaria,100
-Kalina,Bulgaria,100
-Kiril,Bulgaria,100
-Krasimir,Bulgaria,100
-Lilyana,Bulgaria,100
-Lyubomir,Bulgaria,100
-Maria,Bulgaria,100
-Mariya,Bulgaria,100
-Mihail,Bulgaria,100
-Milena,Bulgaria,100
-Nadezhda,Bulgaria,100
-Nikolai,Bulgaria,100
-Ognyan,Bulgaria,100
-Penka,Bulgaria,100
-Petar,Bulgaria,100
-Petya,Bulgaria,100
-Plamen,Bulgaria,100
-Radost,Bulgaria,100
-Ralitsa,Bulgaria,100
-Rosen,Bulgaria,100
-Rumen,Bulgaria,100
-Rumyana,Bulgaria,100
-Silviya,Bulgaria,100
-Simeon,Bulgaria,100
-Stanislav,Bulgaria,100
-Stefan,Bulgaria,100
-Stefka,Bulgaria,100
-Stoyan,Bulgaria,100
-Svetlana,Bulgaria,100
-Teodora,Bulgaria,100
-Todor,Bulgaria,100
-Tsvetanka,Bulgaria,100
-Valentin,Bulgaria,100
-Vasil,Bulgaria,100
-Vesela,Bulgaria,100
-Violeta,Bulgaria,100
-Yoana,Bulgaria,100
-Yordan,Bulgaria,100
-Zlatan,Bulgaria,100
-Zoya,Bulgaria,100
-Ana,Croatia,191
-Ana-Marija,Croatia,191
-Anja,Croatia,191
-Ante,Croatia,191
-Antonija,Croatia,191
-Antonio,Croatia,191
-Borna,Croatia,191
-Dario,Croatia,191
-David,Croatia,191
-Domagoj,Croatia,191
-Dominik,Croatia,191
-Dora,Croatia,191
-Ela,Croatia,191
-Ema,Croatia,191
-Filip,Croatia,191
-Fran,Croatia,191
-Gabriela,Croatia,191
-Hana,Croatia,191
-Helena,Croatia,191
-Hrvoje,Croatia,191
-Iva,Croatia,191
-Ivan,Croatia,191
-Ivana,Croatia,191
-Jakov,Croatia,191
-Josip,Croatia,191
-Karla,Croatia,191
-Karlo,Croatia,191
-Katarina,Croatia,191
-Klara,Croatia,191
-Lana,Croatia,191
-Laura,Croatia,191
-Leon,Croatia,191
-Lovro,Croatia,191
-Lucija,Croatia,191
-Luka,Croatia,191
-Maja,Croatia,191
-Mario,Croatia,191
-Marko,Croatia,191
-Marta,Croatia,191
-Martina,Croatia,191
-Mateo,Croatia,191
-Matija,Croatia,191
-Mia,Croatia,191
-Mihael,Croatia,191
-Nika,Croatia,191
-Nikola,Croatia,191
-Nikolina,Croatia,191
-Noa,Croatia,191
-Petar,Croatia,191
-Petra,Croatia,191
-Roko,Croatia,191
-Sara,Croatia,191
-Stjepan,Croatia,191
-Tea,Croatia,191
-Tena,Croatia,191
-Tin,Croatia,191
-Tomislav,Croatia,191
-Valentina,Croatia,191
-Zvonimir,Croatia,191
-Alexandros,Cyprus,196
-Anastasia,Cyprus,196
-Andreas,Cyprus,196
-Androula,Cyprus,196
-Angeliki,Cyprus,196
-Anna,Cyprus,196
-Antonis,Cyprus,196
-Athena,Cyprus,196
-Charalambos,Cyprus,196
-Christina,Cyprus,196
-Christos,Cyprus,196
-Chrysanthi,Cyprus,196
-Constantinos,Cyprus,196
-Costas,Cyprus,196
-Demetris,Cyprus,196
-Despina,Cyprus,196
-Dimitris,Cyprus,196
-Eleni,Cyprus,196
-Elpida,Cyprus,196
-Evanthia,Cyprus,196
-Fotini,Cyprus,196
-Georgios,Cyprus,196
-Giorgos,Cyprus,196
-Ioanna,Cyprus,196
-Irene,Cyprus,196
-Kalliopi,Cyprus,196
-Katerina,Cyprus,196
-Kyriaki,Cyprus,196
-Kyriakos,Cyprus,196
-Leonidas,Cyprus,196
-Loukas,Cyprus,196
-Loukia,Cyprus,196
-Maria,Cyprus,196
-Marios,Cyprus,196
-Maroulla,Cyprus,196
-Michalis,Cyprus,196
-Nikos,Cyprus,196
-Olympia,Cyprus,196
-Panagiotis,Cyprus,196
-Paraskevi,Cyprus,196
-Pavlos,Cyprus,196
-Petros,Cyprus,196
-Philippos,Cyprus,196
-Savvas,Cyprus,196
-Sophia,Cyprus,196
-Spyros,Cyprus,196
-Stavros,Cyprus,196
-Stelios,Cyprus,196
-Theodora,Cyprus,196
-Vasiliki,Cyprus,196
-Yiannis,Cyprus,196
-Adam,Czech Republic,203
-AdÃ©la,Czech Republic,203
-Alena,Czech Republic,203
-AleÅ¡,Czech Republic,203
-Aneta,Czech Republic,203
-Anna,Czech Republic,203
-Barbora,Czech Republic,203
-Daniel,Czech Republic,203
-David,Czech Republic,203
-Denisa,Czech Republic,203
-Dominik,Czech Republic,203
-EliÅ¡ka,Czech Republic,203
-Filip,Czech Republic,203
-Gabriela,Czech Republic,203
-Hana,Czech Republic,203
-Ivana,Czech Republic,203
-Iveta,Czech Republic,203
-Jakub,Czech Republic,203
-Jan,Czech Republic,203
-Jaroslav,Czech Republic,203
-Jitka,Czech Republic,203
-JiÅÃ­,Czech Republic,203
-Josef,Czech Republic,203
-Karel,Czech Republic,203
-KarolÃ­na,Czech Republic,203
-KateÅina,Czech Republic,203
-KlÃ¡ra,Czech Republic,203
-KristÃ½na,Czech Republic,203
-Ladislav,Czech Republic,203
-Lenka,Czech Republic,203
-Lucie,Czech Republic,203
-LukÃ¡Å¡,Czech Republic,203
-Marek,Czech Republic,203
-MarkÃ©ta,Czech Republic,203
-Martin,Czech Republic,203
-Martina,Czech Republic,203
-MatÄj,Czech Republic,203
-Michaela,Czech Republic,203
-Michal,Czech Republic,203
-Milan,Czech Republic,203
-Miroslav,Czech Republic,203
-Monika,Czech Republic,203
-NatÃ¡lie,Czech Republic,203
-Nikola,Czech Republic,203
-OndÅej,Czech Republic,203
-Patrik,Czech Republic,203
-Pavel,Czech Republic,203
-PavlÃ­na,Czech Republic,203
-Petr,Czech Republic,203
-Petra,Czech Republic,203
-Radek,Czech Republic,203
-Radka,Czech Republic,203
-Roman,Czech Republic,203
-Simona,Czech Republic,203
-Stanislav,Czech Republic,203
-Tereza,Czech Republic,203
-TomÃ¡Å¡,Czech Republic,203
-Veronika,Czech Republic,203
-Viktor,Czech Republic,203
-VojtÄch,Czech Republic,203
-VÃ¡clav,Czech Republic,203
-Zuzana,Czech Republic,203
-Å tÄpÃ¡n,Czech Republic,203
-Å Ã¡rka,Czech Republic,203
-Agnes,Denmark,208
-Alberte,Denmark,208
-Alexander,Denmark,208
-Alma,Denmark,208
-Andreas,Denmark,208
-Anna,Denmark,208
-Anton,Denmark,208
-Astrid,Denmark,208
-Benjamin,Denmark,208
-Carl,Denmark,208
-Caroline,Denmark,208
-Christian,Denmark,208
-Christoffer,Denmark,208
-Clara,Denmark,208
-Daniel,Denmark,208
-Ella,Denmark,208
-Emil,Denmark,208
-Emilie,Denmark,208
-Emma,Denmark,208
-Frederik,Denmark,208
-Freja,Denmark,208
-Frida,Denmark,208
-Ida,Denmark,208
-Isabella,Denmark,208
-Jakob,Denmark,208
-Johanne,Denmark,208
-Jonas,Denmark,208
-Josefine,Denmark,208
-Julie,Denmark,208
-Karla,Denmark,208
-Kasper,Denmark,208
-Laura,Denmark,208
-Liv,Denmark,208
-Lucas,Denmark,208
-LÃ¦rke,Denmark,208
-Mads,Denmark,208
-Magnus,Denmark,208
-Maja,Denmark,208
-Marcus,Denmark,208
-Marie,Denmark,208
-Mathias,Denmark,208
-Mathilde,Denmark,208
-Mikkel,Denmark,208
-Nanna,Denmark,208
-Nikolaj,Denmark,208
-Noah,Denmark,208
-Nora,Denmark,208
-Oliver,Denmark,208
-Olivia,Denmark,208
-Oscar,Denmark,208
-Philip,Denmark,208
-Rasmus,Denmark,208
-Sebastian,Denmark,208
-Signe,Denmark,208
-Simon,Denmark,208
-Sofie,Denmark,208
-Tobias,Denmark,208
-Victor,Denmark,208
-Victoria,Denmark,208
-Vigga,Denmark,208
-William,Denmark,208
-Aino,Estonia,233
-Aivar,Estonia,233
-Andres,Estonia,233
-Anneli,Estonia,233
-Ants,Estonia,233
-Anu,Estonia,233
-Arvo,Estonia,233
-Ene,Estonia,233
-Epp,Estonia,233
-Hanna,Estonia,233
-Heino,Estonia,233
-Helgi,Estonia,233
-Indrek,Estonia,233
-Jaak,Estonia,233
-Jaan,Estonia,233
-JÃ¼ri,Estonia,233
-Kadri,Estonia,233
-Kairi,Estonia,233
-Kaja,Estonia,233
-Kalev,Estonia,233
-Katrin,Estonia,233
-Kersti,Estonia,233
-Krista,Estonia,233
-Kristjan,Estonia,233
-Leena,Estonia,233
-Lembit,Estonia,233
-Liina,Estonia,233
-Liisa,Estonia,233
-Maarja,Estonia,233
-Margus,Estonia,233
-Mari,Estonia,233
-Mart,Estonia,233
-Mati,Estonia,233
-Merike,Estonia,233
-Merle,Estonia,233
-Mihkel,Estonia,233
-Olev,Estonia,233
-Peeter,Estonia,233
-Piret,Estonia,233
-Priit,Estonia,233
-Raivo,Estonia,233
-Rein,Estonia,233
-Riina,Estonia,233
-Sirje,Estonia,233
-Taavi,Estonia,233
-Tarmo,Estonia,233
-Tiina,Estonia,233
-Tiiu,Estonia,233
-Toomas,Estonia,233
-Triin,Estonia,233
-TÃµnu,Estonia,233
-Urmas,Estonia,233
-Andrias,Faroe Is.,234
-Anna,Faroe Is.,234
-Beinta,Faroe Is.,234
-Bjarni,Faroe Is.,234
-Brandur,Faroe Is.,234
-Durita,Faroe Is.,234
-Elin,Faroe Is.,234
-Elinborg,Faroe Is.,234
-EydÃ­s,Faroe Is.,234
-FrÃ­Ã°i,Faroe Is.,234
-GuÃ°run,Faroe Is.,234
-Hanus,Faroe Is.,234
-Heini,Faroe Is.,234
-HeiÃ°rÃºn,Faroe Is.,234
-Hildigunn,Faroe Is.,234
-HÃ¸gni,Faroe Is.,234
-Jensa,Faroe Is.,234
-JÃ¡kup,Faroe Is.,234
-JÃ³annes,Faroe Is.,234
-JÃ³han,Faroe Is.,234
-Katrin,Faroe Is.,234
-Magni,Faroe Is.,234
-Marin,Faroe Is.,234
-PÃ¦tur,Faroe Is.,234
-RannvÃ¡,Faroe Is.,234
-RÃ³gvi,Faroe Is.,234
-RÃºna,Faroe Is.,234
-SÃ¡ra,Faroe Is.,234
-SÃ­mun,Faroe Is.,234
-SÃºsanna,Faroe Is.,234
-Trygvi,Faroe Is.,234
-Tummas,Faroe Is.,234
-TÃ³rur,Faroe Is.,234
-VÃ¡r,Faroe Is.,234
-Ãli,Faroe Is.,234
-Aada,Finland,246
-Aino,Finland,246
-Aleksi,Finland,246
-Anni,Finland,246
-Antti,Finland,246
-Arttu,Finland,246
-Eero,Finland,246
-Eetu,Finland,246
-Eino,Finland,246
-Elina,Finland,246
-Ella,Finland,246
-Emilia,Finland,246
-Hanna,Finland,246
-Helmi,Finland,246
-Iida,Finland,246
-Ilmari,Finland,246
-Inkeri,Finland,246
-Jari,Finland,246
-Joona,Finland,246
-Joonas,Finland,246
-Juha,Finland,246
-Jukka,Finland,246
-Kaisa,Finland,246
-Kalle,Finland,246
-Katri,Finland,246
-Kerttu,Finland,246
-Laura,Finland,246
-Lauri,Finland,246
-Leevi,Finland,246
-Liisa,Finland,246
-Lilja,Finland,246
-Linnea,Finland,246
-Markus,Finland,246
-Matias,Finland,246
-Matti,Finland,246
-Mikko,Finland,246
-Niko,Finland,246
-Olivia,Finland,246
-Onni,Finland,246
-Oona,Finland,246
-Oskari,Finland,246
-Petri,Finland,246
-Pihla,Finland,246
-Roope,Finland,246
-Saara,Finland,246
-Sami,Finland,246
-Sanna,Finland,246
-Santeri,Finland,246
-Siiri,Finland,246
-Sofia,Finland,246
-Teemu,Finland,246
-Timo,Finland,246
-Tuuli,Finland,246
-Valtteri,Finland,246
-Veera,Finland,246
-Venla,Finland,246
-Viivi,Finland,246
-Ville,Finland,246
-Adrien,France,250
-Alexandre,France,250
-Alice,France,250
-AmÃ©lie,France,250
-AnaÃ¯s,France,250
-Antoine,France,250
-Arthur,France,250
-Audrey,France,250
-Bastien,France,250
-Benjamin,France,250
-Camille,France,250
-Caroline,France,250
-Charlotte,France,250
-ChloÃ©,France,250
-Clara,France,250
-ClÃ©ment,France,250
-CÃ©line,France,250
-David,France,250
-Delphine,France,250
-Elise,France,250
-Emma,France,250
-Florian,France,250
-FranÃ§ois,France,250
-Gabriel,France,250
-Guillaume,France,250
-Hugo,France,250
-HÃ©lÃ¨ne,France,250
-InÃ¨s,France,250
-Isabelle,France,250
-Jade,France,250
-Jean,France,250
-Julie,France,250
-Julien,France,250
-Justine,France,250
-Laura,France,250
-Laurent,France,250
-Louis,France,250
-Louise,France,250
-Luc,France,250
-Lucas,France,250
-Lucie,France,250
-LÃ©a,France,250
-Manon,France,250
-Margaux,France,250
-Marie,France,250
-Marine,France,250
-Mathieu,France,250
-Mathilde,France,250
-Maxence,France,250
-Maxime,France,250
-Morgane,France,250
-Nathalie,France,250
-Nathan,France,250
-Nicolas,France,250
-OcÃ©ane,France,250
-Olivier,France,250
-Paul,France,250
-Pauline,France,250
-Philippe,France,250
-Pierre,France,250
-Quentin,France,250
-RaphaÃ«l,France,250
-Romain,France,250
-Sarah,France,250
-Simon,France,250
-Sophie,France,250
-SÃ©bastien,France,250
-Thomas,France,250
-ThÃ©o,France,250
-Valentine,France,250
-Victor,France,250
-Vincent,France,250
-Virginie,France,250
-ZoÃ©,France,250
-Ãmilie,France,250
-Ãtienne,France,250
-Adrian,Germany,276
-Alexander,Germany,276
-Alma,Germany,276
-Amelie,Germany,276
-Anna,Germany,276
-Anton,Germany,276
-Antonia,Germany,276
-Ben,Germany,276
-Bruno,Germany,276
-Charlotte,Germany,276
-Clara,Germany,276
-David,Germany,276
-Elias,Germany,276
-Elisabeth,Germany,276
-Ella,Germany,276
-Emil,Germany,276
-Emilia,Germany,276
-Emma,Germany,276
-Fabian,Germany,276
-Felix,Germany,276
-Finn,Germany,276
-Frieda,Germany,276
-Friedrich,Germany,276
-Gabriel,Germany,276
-Greta,Germany,276
-Hannah,Germany,276
-Helena,Germany,276
-Henry,Germany,276
-Ida,Germany,276
-Jakob,Germany,276
-Jan,Germany,276
-Johanna,Germany,276
-Jonas,Germany,276
-Julia,Germany,276
-Julius,Germany,276
-Karl,Germany,276
-Katharina,Germany,276
-Klara,Germany,276
-Lara,Germany,276
-Laura,Germany,276
-Lea,Germany,276
-Lena,Germany,276
-Leon,Germany,276
-Leonard,Germany,276
-Lina,Germany,276
-Lisa,Germany,276
-Luis,Germany,276
-Lukas,Germany,276
-Maja,Germany,276
-Marie,Germany,276
-Marlene,Germany,276
-Mathilda,Germany,276
-Matteo,Germany,276
-Max,Germany,276
-Maximilian,Germany,276
-Mia,Germany,276
-Mila,Germany,276
-Moritz,Germany,276
-Niklas,Germany,276
-Nina,Germany,276
-Noah,Germany,276
-Nora,Germany,276
-Oscar,Germany,276
-Paul,Germany,276
-Paula,Germany,276
-Philipp,Germany,276
-Pia,Germany,276
-Rafael,Germany,276
-Rosa,Germany,276
-Sarah,Germany,276
-Sebastian,Germany,276
-Simon,Germany,276
-Sophie,Germany,276
-Theo,Germany,276
-Theresa,Germany,276
-Tim,Germany,276
-Tom,Germany,276
-Vincent,Germany,276
-Alexander,Gibraltar,292
-Ana,Gibraltar,292
-Andrew,Gibraltar,292
-Benjamin,Gibraltar,292
-Carmen,Gibraltar,292
-Christopher,Gibraltar,292
-Daniel,Gibraltar,292
-David,Gibraltar,292
-Elena,Gibraltar,292
-Emma,Gibraltar,292
-Gabriela,Gibraltar,292
-Isabella,Gibraltar,292
-James,Gibraltar,292
-Jessica,Gibraltar,292
-Joshua,Gibraltar,292
-Laura,Gibraltar,292
-Liam,Gibraltar,292
-Lucia,Gibraltar,292
-Maria,Gibraltar,292
-Matthew,Gibraltar,292
-Mia,Gibraltar,292
-Michael,Gibraltar,292
-Nathan,Gibraltar,292
-Nicole,Gibraltar,292
-Olivia,Gibraltar,292
-Rebecca,Gibraltar,292
-Ryan,Gibraltar,292
-Samuel,Gibraltar,292
-Sofia,Gibraltar,292
-Thomas,Gibraltar,292
-Victoria,Gibraltar,292
-William,Gibraltar,292
-Aikaterini,Greece,300
-Alexandros,Greece,300
-Anastasia,Greece,300
-Andreas,Greece,300
-Angeliki,Greece,300
-Anna,Greece,300
-Antonis,Greece,300
-Apostolos,Greece,300
-Aristotelis,Greece,300
-Athanasios,Greece,300
-Athina,Greece,300
-Christos,Greece,300
-Chrysanthi,Greece,300
-Chrysoula,Greece,300
-Daphne,Greece,300
-Despina,Greece,300
-Dimitra,Greece,300
-Dimitris,Greece,300
-Efthymia,Greece,300
-Eleftheria,Greece,300
-Eleni,Greece,300
-Evangelia,Greece,300
-Filippos,Greece,300
-Fotini,Greece,300
-Georgios,Greece,300
-Giannis,Greece,300
-Giorgos,Greece,300
-Ioanna,Greece,300
-Ioannis,Greece,300
-Irini,Greece,300
-Kalliopi,Greece,300
-Katerina,Greece,300
-Konstantina,Greece,300
-Kostas,Greece,300
-Lefteris,Greece,300
-Leonidas,Greece,300
-Manolis,Greece,300
-Margarita,Greece,300
-Maria,Greece,300
-Melina,Greece,300
-Michalis,Greece,300
-Nikolaos,Greece,300
-Nikos,Greece,300
-Odysseas,Greece,300
-Panagiota,Greece,300
-Panagiotis,Greece,300
-Paraskevi,Greece,300
-Pavlos,Greece,300
-Petros,Greece,300
-Polyxeni,Greece,300
-Sofia,Greece,300
-Sophia,Greece,300
-Sotiris,Greece,300
-Spyros,Greece,300
-Stavros,Greece,300
-Stratos,Greece,300
-Styliani,Greece,300
-Takis,Greece,300
-Thanasis,Greece,300
-Thanos,Greece,300
-Theodora,Greece,300
-Vasiliki,Greece,300
-Vasilis,Greece,300
-Yannis,Greece,300
-Zoi,Greece,300
-Alexander,Guernsey,831
-Amelia,Guernsey,831
-Ava,Guernsey,831
-Benjamin,Guernsey,831
-Charles,Guernsey,831
-Charlotte,Guernsey,831
-Daisy,Guernsey,831
-Daniel,Guernsey,831
-David,Guernsey,831
-Edward,Guernsey,831
-Ella,Guernsey,831
-Emily,Guernsey,831
-Emma,Guernsey,831
-Freya,Guernsey,831
-George,Guernsey,831
-Grace,Guernsey,831
-Harry,Guernsey,831
-Henry,Guernsey,831
-Isabella,Guernsey,831
-Jack,Guernsey,831
-James,Guernsey,831
-Joseph,Guernsey,831
-Lily,Guernsey,831
-Lucy,Guernsey,831
-Matthew,Guernsey,831
-Mia,Guernsey,831
-Michael,Guernsey,831
-Oliver,Guernsey,831
-Olivia,Guernsey,831
-Poppy,Guernsey,831
-Rosie,Guernsey,831
-Ruby,Guernsey,831
-Samuel,Guernsey,831
-Sophie,Guernsey,831
-Thomas,Guernsey,831
-William,Guernsey,831
-Andrea,Hungary,348
-AndrÃ¡s,Hungary,348
-Anita,Hungary,348
-Anna,Hungary,348
-Attila,Hungary,348
-BalÃ¡zs,Hungary,348
-Beatrix,Hungary,348
-Bence,Hungary,348
-BoglÃ¡rka,Hungary,348
-Csaba,Hungary,348
-Dominik,Hungary,348
-DÃ¡niel,Hungary,348
-DÃ³ra,Hungary,348
-Emese,Hungary,348
-ErzsÃ©bet,Hungary,348
-Eszter,Hungary,348
-Fanni,Hungary,348
-Ferenc,Hungary,348
-Gyula,Hungary,348
-GÃ¡bor,Hungary,348
-Henrietta,Hungary,348
-IldikÃ³,Hungary,348
-Imre,Hungary,348
-IstvÃ¡n,Hungary,348
-Judit,Hungary,348
-JÃ¡nos,Hungary,348
-JÃ³zsef,Hungary,348
-Katalin,Hungary,348
-KlÃ¡ra,Hungary,348
-KristÃ³f,Hungary,348
-Krisztina,Hungary,348
-Levente,Hungary,348
-Lilla,Hungary,348
-LÃ¡szlÃ³,Hungary,348
-Melinda,Hungary,348
-MihÃ¡ly,Hungary,348
-MÃ¡ria,Hungary,348
-MÃ¡rton,Hungary,348
-MÃ¡tÃ©,Hungary,348
-MÃ³nika,Hungary,348
-Nikolett,Hungary,348
-Norbert,Hungary,348
-NoÃ©mi,Hungary,348
-OlivÃ©r,Hungary,348
-Orsolya,Hungary,348
-Patrik,Hungary,348
-Petra,Hungary,348
-Piroska,Hungary,348
-PÃ©ter,Hungary,348
-RichÃ¡rd,Hungary,348
-RÃ©ka,Hungary,348
-RÃ³bert,Hungary,348
-Szabolcs,Hungary,348
-Szilvia,Hungary,348
-SÃ¡ndor,Hungary,348
-TamÃ¡s,Hungary,348
-Tibor,Hungary,348
-TÃ­mea,Hungary,348
-ViktÃ³ria,Hungary,348
-ZoltÃ¡n,Hungary,348
-ZsÃ³fia,Hungary,348
-ÃdÃ¡m,Hungary,348
-Ãgnes,Hungary,348
-Ãva,Hungary,348
-Alexander,Iceland,352
-Anna,Iceland,352
-AuÃ°ur,Iceland,352
-Baldur,Iceland,352
-Bjarni,Iceland,352
-BjÃ¶rn,Iceland,352
-DavÃ­Ã°,Iceland,352
-Einar,Iceland,352
-ElÃ­n,Iceland,352
-Emil,Iceland,352
-Freyja,Iceland,352
-Gunnar,Iceland,352
-GuÃ°mundur,Iceland,352
-GuÃ°rÃºn,Iceland,352
-HalldÃ³r,Iceland,352
-Hanna,Iceland,352
-Helga,Iceland,352
-Hildur,Iceland,352
-IngibjÃ¶rg,Iceland,352
-JÃ³hann,Iceland,352
-JÃ³n,Iceland,352
-KatrÃ­n,Iceland,352
-KristjÃ¡n,Iceland,352
-KristÃ­n,Iceland,352
-Lilja,Iceland,352
-MagnÃºs,Iceland,352
-MargrÃ©t,Iceland,352
-PÃ©tur,Iceland,352
-Ragnar,Iceland,352
-RagnheiÃ°ur,Iceland,352
-Saga,Iceland,352
-SigrÃ­Ã°ur,Iceland,352
-SigrÃºn,Iceland,352
-SigurÃ°ur,Iceland,352
-StefÃ¡n,Iceland,352
-SÃ³lveig,Iceland,352
-Unnur,Iceland,352
-Viktor,Iceland,352
-Ãrni,Iceland,352
-Ãsta,Iceland,352
-Ãsabella,Iceland,352
-Ãlafur,Iceland,352
-ÃÃ³r,Iceland,352
-ÃÃ³ra,Iceland,352
-Aidan,Ireland,372
-Ailbhe,Ireland,372
-Aisling,Ireland,372
-Aoibhe,Ireland,372
-Aoife,Ireland,372
-Brendan,Ireland,372
-BrÃ­d,Ireland,372
-Caoimhe,Ireland,372
-Cathal,Ireland,372
-Catriona,Ireland,372
-Cian,Ireland,372
-Ciara,Ireland,372
-Cillian,Ireland,372
-Clodagh,Ireland,372
-ClÃ­odhna,Ireland,372
-Colm,Ireland,372
-Conor,Ireland,372
-Cormac,Ireland,372
-Darragh,Ireland,372
-Declan,Ireland,372
-Deirdre,Ireland,372
-Diarmuid,Ireland,372
-Donal,Ireland,372
-Eilis,Ireland,372
-Eimear,Ireland,372
-Eoghan,Ireland,372
-Eoin,Ireland,372
-Fergal,Ireland,372
-Finn,Ireland,372
-Fiona,Ireland,372
-Fionn,Ireland,372
-GrÃ¡inne,Ireland,372
-Kieran,Ireland,372
-Killian,Ireland,372
-Laoise,Ireland,372
-Liam,Ireland,372
-Lorcan,Ireland,372
-Maeve,Ireland,372
-Mairead,Ireland,372
-Muireann,Ireland,372
-MÃ©abh,Ireland,372
-Niamh,Ireland,372
-NÃ³ra,Ireland,372
-OisÃ­n,Ireland,372
-Orla,Ireland,372
-Patrick,Ireland,372
-PÃ¡draig,Ireland,372
-Ronan,Ireland,372
-Rory,Ireland,372
-RuairÃ­,Ireland,372
-RÃ³isÃ­n,Ireland,372
-Sadhbh,Ireland,372
-Saoirse,Ireland,372
-Seamus,Ireland,372
-SeÃ¡n,Ireland,372
-SinÃ©ad,Ireland,372
-Siobhan,Ireland,372
-Sorcha,Ireland,372
-Tadhg,Ireland,372
-Ãna,Ireland,372
-Alberto,Italy,380
-Alessandra,Italy,380
-Alessandro,Italy,380
-Alessia,Italy,380
-Andrea,Italy,380
-Anna,Italy,380
-Antonio,Italy,380
-Arianna,Italy,380
-Aurora,Italy,380
-Beatrice,Italy,380
-Bianca,Italy,380
-Camilla,Italy,380
-Cecilia,Italy,380
-Chiara,Italy,380
-Claudia,Italy,380
-Claudio,Italy,380
-Cristina,Italy,380
-Daniele,Italy,380
-Davide,Italy,380
-Diego,Italy,380
-Domenico,Italy,380
-Edoardo,Italy,380
-Elena,Italy,380
-Elisa,Italy,380
-Emanuele,Italy,380
-Emma,Italy,380
-Enrico,Italy,380
-Fabio,Italy,380
-Federica,Italy,380
-Federico,Italy,380
-Filippo,Italy,380
-Francesca,Italy,380
-Francesco,Italy,380
-Gabriele,Italy,380
-Giacomo,Italy,380
-Giada,Italy,380
-Giorgia,Italy,380
-Giovanni,Italy,380
-Giulia,Italy,380
-Giuseppe,Italy,380
-Greta,Italy,380
-Ilaria,Italy,380
-Isabella,Italy,380
-Laura,Italy,380
-Leonardo,Italy,380
-Lorenzo,Italy,380
-Luca,Italy,380
-Ludovica,Italy,380
-Marco,Italy,380
-Marta,Italy,380
-Martina,Italy,380
-Massimo,Italy,380
-Matteo,Italy,380
-Michele,Italy,380
-Nicola,Italy,380
-Noemi,Italy,380
-Paola,Italy,380
-Paolo,Italy,380
-Pietro,Italy,380
-Raffaele,Italy,380
-Riccardo,Italy,380
-Roberta,Italy,380
-Roberto,Italy,380
-Salvatore,Italy,380
-Sara,Italy,380
-Serena,Italy,380
-Silvia,Italy,380
-Simone,Italy,380
-Sofia,Italy,380
-Stefano,Italy,380
-Tommaso,Italy,380
-Valentina,Italy,380
-Veronica,Italy,380
-Vincenzo,Italy,380
-Vittoria,Italy,380
-Agnese,Latvia,428
-Aigars,Latvia,428
-Aija,Latvia,428
-Aleksandrs,Latvia,428
-Andris,Latvia,428
-Anita,Latvia,428
-Anna,Latvia,428
-ArtÅ«rs,Latvia,428
-Baiba,Latvia,428
-Dace,Latvia,428
-Daina,Latvia,428
-Daniels,Latvia,428
-Edgars,Latvia,428
-EdvÄ«ns,Latvia,428
-ElÄ«na,Latvia,428
-EmÄ«lija,Latvia,428
-Ernests,Latvia,428
-Gunta,Latvia,428
-Guntis,Latvia,428
-Gustavs,Latvia,428
-Ieva,Latvia,428
-Ilona,Latvia,428
-Ilze,Latvia,428
-Inese,Latvia,428
-Inga,Latvia,428
-Ivars,Latvia,428
-Juris,Latvia,428
-JÄnis,Latvia,428
-JÄkabs,Latvia,428
-Kristaps,Latvia,428
-KristÄ«ne,Latvia,428
-KÄrlis,Latvia,428
-Laima,Latvia,428
-Laura,Latvia,428
-Liene,Latvia,428
-LÄ«ga,Latvia,428
-LÄ«va,Latvia,428
-Madara,Latvia,428
-MÄris,Latvia,428
-MÄrtiÅÅ¡,Latvia,428
-NiklÄvs,Latvia,428
-Normunds,Latvia,428
-Oskars,Latvia,428
-PÄteris,Latvia,428
-Raimonds,Latvia,428
-Ralfs,Latvia,428
-Roberts,Latvia,428
-Rolands,Latvia,428
-Ruta,Latvia,428
-Sanita,Latvia,428
-Signe,Latvia,428
-Uldis,Latvia,428
-Valdis,Latvia,428
-Vita,Latvia,428
-Zane,Latvia,428
-Alexander,Liechtenstein,438
-Andreas,Liechtenstein,438
-Anna,Liechtenstein,438
-Benjamin,Liechtenstein,438
-Christian,Liechtenstein,438
-Daniel,Liechtenstein,438
-David,Liechtenstein,438
-Dominik,Liechtenstein,438
-Florian,Liechtenstein,438
-Julia,Liechtenstein,438
-Katharina,Liechtenstein,438
-Laura,Liechtenstein,438
-Lisa,Liechtenstein,438
-Lukas,Liechtenstein,438
-Marco,Liechtenstein,438
-Markus,Liechtenstein,438
-Martin,Liechtenstein,438
-Melanie,Liechtenstein,438
-Michael,Liechtenstein,438
-Michelle,Liechtenstein,438
-Nadine,Liechtenstein,438
-Nicole,Liechtenstein,438
-Patrick,Liechtenstein,438
-Peter,Liechtenstein,438
-Rebecca,Liechtenstein,438
-Sabrina,Liechtenstein,438
-Sandra,Liechtenstein,438
-Sarah,Liechtenstein,438
-Simon,Liechtenstein,438
-Stefan,Liechtenstein,438
-Thomas,Liechtenstein,438
-Tobias,Liechtenstein,438
-Vanessa,Liechtenstein,438
-AgnÄ,Lithuania,440
-AistÄ,Lithuania,440
-Algirdas,Lithuania,440
-Andrius,Lithuania,440
-Antanas,Lithuania,440
-AustÄja,Lithuania,440
-AuÅ¡ra,Lithuania,440
-BeatriÄÄ,Lithuania,440
-Daiva,Lithuania,440
-Darius,Lithuania,440
-DovilÄ,Lithuania,440
-Dovydas,Lithuania,440
-Edvardas,Lithuania,440
-EglÄ,Lithuania,440
-Emilija,Lithuania,440
-GabrielÄ,Lithuania,440
-GiedrÄ,Lithuania,440
-Gintaras,Lithuania,440
-Greta,Lithuania,440
-Ieva,Lithuania,440
-IndrÄ,Lithuania,440
-Inga,Lithuania,440
-Jolanta,Lithuania,440
-Jonas,Lithuania,440
-Justinas,Lithuania,440
-JÅ«ratÄ,Lithuania,440
-Karolina,Lithuania,440
-Kotryna,Lithuania,440
-Kristina,Lithuania,440
-Laima,Lithuania,440
-Laura,Lithuania,440
-Liepa,Lithuania,440
-Lina,Lithuania,440
-Lukas,Lithuania,440
-Mantas,Lithuania,440
-Marius,Lithuania,440
-MiglÄ,Lithuania,440
-Mindaugas,Lithuania,440
-Monika,Lithuania,440
-Neringa,Lithuania,440
-Paulius,Lithuania,440
-Petras,Lithuania,440
-RamunÄ,Lithuania,440
-Rasa,Lithuania,440
-Reda,Lithuania,440
-Rimas,Lithuania,440
-Rokas,Lithuania,440
-RÅ«ta,Lithuania,440
-Saulius,Lithuania,440
-Simona,Lithuania,440
-Tomas,Lithuania,440
-UgnÄ,Lithuania,440
-UrtÄ,Lithuania,440
-Vaida,Lithuania,440
-Viktorija,Lithuania,440
-Vilma,Lithuania,440
-Vytautas,Lithuania,440
-Å½ivilÄ,Lithuania,440
-Alex,Luxembourg,442
-Amelie,Luxembourg,442
-AndrÃ©,Luxembourg,442
-Anna,Luxembourg,442
-Camille,Luxembourg,442
-Caroline,Luxembourg,442
-Charlotte,Luxembourg,442
-ChloÃ©,Luxembourg,442
-Claude,Luxembourg,442
-CÃ©line,Luxembourg,442
-Daniel,Luxembourg,442
-David,Luxembourg,442
-Emma,Luxembourg,442
-Eva,Luxembourg,442
-FranÃ§ois,Luxembourg,442
-Georges,Luxembourg,442
-Henri,Luxembourg,442
-Isabelle,Luxembourg,442
-Jacques,Luxembourg,442
-Jean,Luxembourg,442
-Julie,Luxembourg,442
-Laura,Luxembourg,442
-Laurent,Luxembourg,442
-Lisa,Luxembourg,442
-Luc,Luxembourg,442
-LÃ©a,Luxembourg,442
-Manon,Luxembourg,442
-Marc,Luxembourg,442
-Marie,Luxembourg,442
-Martine,Luxembourg,442
-Max,Luxembourg,442
-Mia,Luxembourg,442
-Michel,Luxembourg,442
-Nadine,Luxembourg,442
-Nathalie,Luxembourg,442
-Nicolas,Luxembourg,442
-Nina,Luxembourg,442
-Patrick,Luxembourg,442
-Paul,Luxembourg,442
-Pierre,Luxembourg,442
-RenÃ©,Luxembourg,442
-Robert,Luxembourg,442
-Sarah,Luxembourg,442
-Sophie,Luxembourg,442
-Sylvie,Luxembourg,442
-Tom,Luxembourg,442
-Yves,Luxembourg,442
-Aleksandar,Macedonia,807
-Ana,Macedonia,807
-Andrej,Macedonia,807
-Aneta,Macedonia,807
-Angelina,Macedonia,807
-Biljana,Macedonia,807
-Bojan,Macedonia,807
-Branko,Macedonia,807
-Daniela,Macedonia,807
-Darko,Macedonia,807
-Dejan,Macedonia,807
-Dimitar,Macedonia,807
-Dragana,Macedonia,807
-Elena,Macedonia,807
-Emilija,Macedonia,807
-Filip,Macedonia,807
-Gjorgji,Macedonia,807
-Goce,Macedonia,807
-Goran,Macedonia,807
-Ilija,Macedonia,807
-Ivana,Macedonia,807
-Jasmina,Macedonia,807
-Jovana,Macedonia,807
-Katerina,Macedonia,807
-Kiril,Macedonia,807
-Kristina,Macedonia,807
-Lidija,Macedonia,807
-Ljupcho,Macedonia,807
-Maja,Macedonia,807
-Marija,Macedonia,807
-Martin,Macedonia,807
-Metodija,Macedonia,807
-Milena,Macedonia,807
-Monika,Macedonia,807
-Natasha,Macedonia,807
-Nikola,Macedonia,807
-Olivera,Macedonia,807
-Petar,Macedonia,807
-Risto,Macedonia,807
-Sasho,Macedonia,807
-Simona,Macedonia,807
-Slave,Macedonia,807
-Snezana,Macedonia,807
-Sofija,Macedonia,807
-Stefan,Macedonia,807
-Stojan,Macedonia,807
-Tamara,Macedonia,807
-Teodora,Macedonia,807
-Trajko,Macedonia,807
-Vasko,Macedonia,807
-Vesna,Macedonia,807
-Viktor,Macedonia,807
-Violeta,Macedonia,807
-Vlatko,Macedonia,807
-Zoran,Macedonia,807
-Alexander,Malta,470
-Andrew,Malta,470
-Anna,Malta,470
-Anthony,Malta,470
-Carmen,Malta,470
-Catherine,Malta,470
-Charles,Malta,470
-Christopher,Malta,470
-Claire,Malta,470
-Daniel,Malta,470
-Daniela,Malta,470
-David,Malta,470
-Elizabeth,Malta,470
-Emma,Malta,470
-Francis,Malta,470
-George,Malta,470
-Grace,Malta,470
-James,Malta,470
-John,Malta,470
-Joseph,Malta,470
-Josephine,Malta,470
-Laura,Malta,470
-Louise,Malta,470
-Luke,Malta,470
-Margaret,Malta,470
-Maria,Malta,470
-Mark,Malta,470
-Martina,Malta,470
-Matthew,Malta,470
-Michael,Malta,470
-Michelle,Malta,470
-Nicholas,Malta,470
-Nicole,Malta,470
-Paul,Malta,470
-Peter,Malta,470
-Rachel,Malta,470
-Rebecca,Malta,470
-Rita,Malta,470
-Robert,Malta,470
-Rose,Malta,470
-Sarah,Malta,470
-Simon,Malta,470
-Stephen,Malta,470
-Teresa,Malta,470
-Thomas,Malta,470
-Victoria,Malta,470
-Adrian,Moldova,498
-Ala,Moldova,498
-Alexandru,Moldova,498
-Alina,Moldova,498
-Ana,Moldova,498
-Anatol,Moldova,498
-Andrei,Moldova,498
-Bogdan,Moldova,498
-Constantin,Moldova,498
-Cristian,Moldova,498
-Daniela,Moldova,498
-Dmitri,Moldova,498
-Doina,Moldova,498
-Dumitru,Moldova,498
-Ecaterina,Moldova,498
-Elena,Moldova,498
-Eugen,Moldova,498
-Galina,Moldova,498
-Gheorghe,Moldova,498
-Grigore,Moldova,498
-Igor,Moldova,498
-Ilie,Moldova,498
-Inna,Moldova,498
-Ion,Moldova,498
-Irina,Moldova,498
-Larisa,Moldova,498
-Lidia,Moldova,498
-Liubov,Moldova,498
-Ludmila,Moldova,498
-Maria,Moldova,498
-Mariana,Moldova,498
-Maxim,Moldova,498
-Mihai,Moldova,498
-Natalia,Moldova,498
-Nicolae,Moldova,498
-Nina,Moldova,498
-Oleg,Moldova,498
-Olga,Moldova,498
-Oxana,Moldova,498
-Pavel,Moldova,498
-Petru,Moldova,498
-Raisa,Moldova,498
-Rodica,Moldova,498
-Roman,Moldova,498
-Ruslan,Moldova,498
-Sergiu,Moldova,498
-Silvia,Moldova,498
-Svetlana,Moldova,498
-Tamara,Moldova,498
-Tatiana,Moldova,498
-Tudor,Moldova,498
-Valentina,Moldova,498
-Vasile,Moldova,498
-Vera,Moldova,498
-Victor,Moldova,498
-Viorel,Moldova,498
-Vitalie,Moldova,498
-Vlad,Moldova,498
-Zinaida,Moldova,498
-Alexandre,Monaco,492
-AnaÃ¯s,Monaco,492
-Antoine,Monaco,492
-Baptiste,Monaco,492
-Camille,Monaco,492
-Charlotte,Monaco,492
-ChloÃ©,Monaco,492
-Clara,Monaco,492
-Emma,Monaco,492
-Gabriel,Monaco,492
-Hugo,Monaco,492
-InÃ¨s,Monaco,492
-Julie,Monaco,492
-Julien,Monaco,492
-Laura,Monaco,492
-Louis,Monaco,492
-Lucas,Monaco,492
-LÃ©a,Monaco,492
-Manon,Monaco,492
-Marie,Monaco,492
-Mathis,Monaco,492
-Maxime,Monaco,492
-Nathan,Monaco,492
-Nicolas,Monaco,492
-OcÃ©ane,Monaco,492
-Pierre,Monaco,492
-RaphaÃ«l,Monaco,492
-Sarah,Monaco,492
-Sophie,Monaco,492
-Thomas,Monaco,492
-ThÃ©o,Monaco,492
-Ãlise,Monaco,492
-Ãtienne,Monaco,492
-Aleksandar,Montenegro,499
-Aleksandra,Montenegro,499
-Ana,Montenegro,499
-Andrija,Montenegro,499
-AnÄela,Montenegro,499
-Bojan,Montenegro,499
-Branko,Montenegro,499
-Danilo,Montenegro,499
-Dejan,Montenegro,499
-Dijana,Montenegro,499
-Dimitrije,Montenegro,499
-Dragana,Montenegro,499
-DuÅ¡an,Montenegro,499
-Elena,Montenegro,499
-Emilija,Montenegro,499
-Filip,Montenegro,499
-Igor,Montenegro,499
-Isidora,Montenegro,499
-Ivana,Montenegro,499
-Jelena,Montenegro,499
-Jovana,Montenegro,499
-Katarina,Montenegro,499
-Kristina,Montenegro,499
-Luka,Montenegro,499
-Maja,Montenegro,499
-Marija,Montenegro,499
-Marko,Montenegro,499
-Marta,Montenegro,499
-Milica,Montenegro,499
-MiloÅ¡,Montenegro,499
-NataÅ¡a,Montenegro,499
-Nemanja,Montenegro,499
-Nikola,Montenegro,499
-Nikolina,Montenegro,499
-Ognjen,Montenegro,499
-Pavle,Montenegro,499
-Petar,Montenegro,499
-Petra,Montenegro,499
-Radovan,Montenegro,499
-Sara,Montenegro,499
-Sofija,Montenegro,499
-SrÄan,Montenegro,499
-Stefan,Montenegro,499
-Tamara,Montenegro,499
-Teodora,Montenegro,499
-UroÅ¡,Montenegro,499
-Vladimir,Montenegro,499
-Vuk,Montenegro,499
-Zorica,Montenegro,499
-Amy,Netherlands,528
-Anna,Netherlands,528
-Boaz,Netherlands,528
-Bram,Netherlands,528
-Cas,Netherlands,528
-Daan,Netherlands,528
-Elin,Netherlands,528
-Emma,Netherlands,528
-Esmee,Netherlands,528
-Eva,Netherlands,528
-Evi,Netherlands,528
-Feline,Netherlands,528
-Fenna,Netherlands,528
-Finn,Netherlands,528
-Fleur,Netherlands,528
-Gijs,Netherlands,528
-Hidde,Netherlands,528
-Iris,Netherlands,528
-Isa,Netherlands,528
-Jasper,Netherlands,528
-Jayden,Netherlands,528
-Jens,Netherlands,528
-Jesse,Netherlands,528
-Joep,Netherlands,528
-Julia,Netherlands,528
-Koen,Netherlands,528
-Lara,Netherlands,528
-Lars,Netherlands,528
-Levi,Netherlands,528
-Lieke,Netherlands,528
-Lisa,Netherlands,528
-Liv,Netherlands,528
-Lotte,Netherlands,528
-Lucas,Netherlands,528
-Luuk,Netherlands,528
-Lynn,Netherlands,528
-Maud,Netherlands,528
-Max,Netherlands,528
-Mees,Netherlands,528
-Mila,Netherlands,528
-Milan,Netherlands,528
-Nina,Netherlands,528
-Noa,Netherlands,528
-Noah,Netherlands,528
-Noor,Netherlands,528
-Olivier,Netherlands,528
-Puck,Netherlands,528
-Romy,Netherlands,528
-Roos,Netherlands,528
-Ruben,Netherlands,528
-Saar fleur,Netherlands,528
-Sam,Netherlands,528
-Sara,Netherlands,528
-Sem,Netherlands,528
-Sofie,Netherlands,528
-Sophie,Netherlands,528
-Stijn,Netherlands,528
-Sven,Netherlands,528
-Tess,Netherlands,528
-Teun,Netherlands,528
-Thijs,Netherlands,528
-Thomas,Netherlands,528
-Tim,Netherlands,528
-Tom,Netherlands,528
-Vera fleur,Netherlands,528
-Vince,Netherlands,528
-Zoey,Netherlands,528
-Anders,Norway,578
-Andreas,Norway,578
-Astrid,Norway,578
-BjÃ¸rn,Norway,578
-Camilla,Norway,578
-Eirik,Norway,578
-Eline,Norway,578
-Emilie,Norway,578
-Emma,Norway,578
-Erik,Norway,578
-Espen,Norway,578
-Fredrik,Norway,578
-Frida,Norway,578
-Geir,Norway,578
-Gunnar,Norway,578
-Guro,Norway,578
-Hanna,Norway,578
-Helene,Norway,578
-Henrik,Norway,578
-Hilde,Norway,578
-HÃ¥kon,Norway,578
-Ida,Norway,578
-Ingrid,Norway,578
-Ivar,Norway,578
-Jonas,Norway,578
-Jostein,Norway,578
-Julie,Norway,578
-Kari,Norway,578
-Knut,Norway,578
-Kristian,Norway,578
-Kristine,Norway,578
-Lars,Norway,578
-Leif,Norway,578
-Linn,Norway,578
-Liv,Norway,578
-Magnus,Norway,578
-Malin,Norway,578
-Maria,Norway,578
-Marte,Norway,578
-Martin,Norway,578
-Morten,Norway,578
-Nora,Norway,578
-Ole,Norway,578
-Petter,Norway,578
-Ragnhild,Norway,578
-Sara,Norway,578
-Silje,Norway,578
-Sindre,Norway,578
-Sofie,Norway,578
-Solveig,Norway,578
-Stian,Norway,578
-Sven,Norway,578
-Thea,Norway,578
-Thomas,Norway,578
-Tone,Norway,578
-TorbjÃ¸rn,Norway,578
-Trond,Norway,578
-Tuva,Norway,578
-Vilde,Norway,578
-Ãyvind,Norway,578
-Adam,Poland,616
-Adrianna,Poland,616
-Agnieszka,Poland,616
-Aleksandra,Poland,616
-Alicja,Poland,616
-Amelia,Poland,616
-Andrzej,Poland,616
-Angelika,Poland,616
-Anna,Poland,616
-Artur,Poland,616
-Barbara,Poland,616
-Bartosz,Poland,616
-Dariusz,Poland,616
-Dawid,Poland,616
-Dominik,Poland,616
-Emilia,Poland,616
-Ewa,Poland,616
-Filip,Poland,616
-Gabriela,Poland,616
-Grzegorz,Poland,616
-Helena,Poland,616
-Hubert,Poland,616
-Igor,Poland,616
-Izabela,Poland,616
-Jacek,Poland,616
-Jakub,Poland,616
-Jan,Poland,616
-Joanna,Poland,616
-Julia,Poland,616
-Justyna,Poland,616
-Kacper,Poland,616
-Kamil,Poland,616
-Karolina,Poland,616
-Katarzyna,Poland,616
-Klaudia,Poland,616
-Kornelia,Poland,616
-Krzysztof,Poland,616
-Lena,Poland,616
-Maciej,Poland,616
-Magdalena,Poland,616
-Maja,Poland,616
-Marcin,Poland,616
-Marek,Poland,616
-Maria,Poland,616
-Mariusz,Poland,616
-Martyna,Poland,616
-Mateusz,Poland,616
-MichaÅ,Poland,616
-Monika,Poland,616
-Natalia,Poland,616
-Nikola,Poland,616
-Oliwia,Poland,616
-Oskar,Poland,616
-Patrycja,Poland,616
-Paulina,Poland,616
-PaweÅ,Poland,616
-Piotr,Poland,616
-RafaÅ,Poland,616
-Robert,Poland,616
-Sebastian,Poland,616
-StanisÅaw,Poland,616
-Sylwia,Poland,616
-Szymon,Poland,616
-Tadeusz,Poland,616
-Tomasz,Poland,616
-Weronika,Poland,616
-Wiktor,Poland,616
-Wiktoria,Poland,616
-Wojciech,Poland,616
-Zofia,Poland,616
-Zuzanna,Poland,616
-Åukasz,Poland,616
-Afonso,Portugal,620
-Ana,Portugal,620
-Andreia,Portugal,620
-AndrÃ©,Portugal,620
-AntÃ³nio,Portugal,620
-Beatriz,Portugal,620
-Bernardo,Portugal,620
-Bruno,Portugal,620
-Carla,Portugal,620
-Carlos,Portugal,620
-Carolina,Portugal,620
-Catarina,Portugal,620
-ClÃ¡udia,Portugal,620
-Cristina,Portugal,620
-Daniela,Portugal,620
-Diana,Portugal,620
-Diogo,Portugal,620
-Duarte,Portugal,620
-Fernando,Portugal,620
-Filipa,Portugal,620
-Francisca,Portugal,620
-Francisco,Portugal,620
-Gabriel,Portugal,620
-GonÃ§alo,Portugal,620
-Guilherme,Portugal,620
-Helena,Portugal,620
-Henrique,Portugal,620
-Hugo,Portugal,620
-InÃªs,Portugal,620
-Isabel,Portugal,620
-Joana,Portugal,620
-Jorge,Portugal,620
-JosÃ©,Portugal,620
-JoÃ£o,Portugal,620
-Leonor,Portugal,620
-LuÃ­s,Portugal,620
-LÃºcia,Portugal,620
-Manuel,Portugal,620
-Maria,Portugal,620
-Mariana,Portugal,620
-Marta,Portugal,620
-Martim,Portugal,620
-Miguel,Portugal,620
-MÃ³nica,Portugal,620
-Nuno,Portugal,620
-PatrÃ­cia,Portugal,620
-Paula,Portugal,620
-Paulo,Portugal,620
-Pedro,Portugal,620
-Rafael,Portugal,620
-Raquel,Portugal,620
-Ricardo,Portugal,620
-Rita,Portugal,620
-Rodrigo,Portugal,620
-Rui,Portugal,620
-Sara,Portugal,620
-SimÃ£o,Portugal,620
-Sofia,Portugal,620
-Susana,Portugal,620
-SÃ­lvia,Portugal,620
-Teresa,Portugal,620
-Tiago,Portugal,620
-TomÃ¡s,Portugal,620
-Vasco,Portugal,620
-Vera,Portugal,620
-Adrian,Romania,642
-Adriana,Romania,642
-Alexandru,Romania,642
-Alin,Romania,642
-Alina,Romania,642
-Ana,Romania,642
-Andreea,Romania,642
-Andrei,Romania,642
-Bianca,Romania,642
-Bogdan,Romania,642
-Camelia,Romania,642
-Carmen,Romania,642
-Ciprian,Romania,642
-Claudia,Romania,642
-Constantin,Romania,642
-Corina,Romania,642
-Cosmin,Romania,642
-Cristian,Romania,642
-Cristina,Romania,642
-CÄtÄlin,Romania,642
-Dan,Romania,642
-Daniela,Romania,642
-Darius,Romania,642
-Denisa,Romania,642
-Diana,Romania,642
-DragoÈ,Romania,642
-Dumitru,Romania,642
-Elena,Romania,642
-Emil,Romania,642
-Florentina,Romania,642
-Florin,Romania,642
-Gabriela,Romania,642
-George,Romania,642
-Georgiana,Romania,642
-Gheorghe,Romania,642
-Ioana,Romania,642
-Ion,Romania,642
-IonuÈ,Romania,642
-Irina,Romania,642
-Laura,Romania,642
-Lavinia,Romania,642
-Liviu,Romania,642
-Loredana,Romania,642
-Lucian,Romania,642
-LuminiÈa,Romania,642
-Maria,Romania,642
-Marius,Romania,642
-Mihaela,Romania,642
-Mihai,Romania,642
-Monica,Romania,642
-MÄdÄlina,Romania,642
-Nicolae,Romania,642
-Nicoleta,Romania,642
-Oana,Romania,642
-Octavian,Romania,642
-Petru,Romania,642
-Radu,Romania,642
-Raluca,Romania,642
-Ramona,Romania,642
-Roxana,Romania,642
-Sergiu,Romania,642
-Simona,Romania,642
-Sorin,Romania,642
-Teodor,Romania,642
-Valentin,Romania,642
-Valentina,Romania,642
-Vasile,Romania,642
-Vlad,Romania,642
-Ètefan,Romania,642
-Alessandro,San Marino,674
-Alessia,San Marino,674
-Andrea,San Marino,674
-Anna,San Marino,674
-Antonio,San Marino,674
-Beatrice,San Marino,674
-Chiara,San Marino,674
-Davide,San Marino,674
-Elena,San Marino,674
-Elisa,San Marino,674
-Federico,San Marino,674
-Filippo,San Marino,674
-Francesca,San Marino,674
-Giorgia,San Marino,674
-Giovanni,San Marino,674
-Giulia,San Marino,674
-Laura,San Marino,674
-Lorenzo,San Marino,674
-Luca,San Marino,674
-Marco,San Marino,674
-Martina,San Marino,674
-Matteo,San Marino,674
-Michele,San Marino,674
-Nicola,San Marino,674
-Riccardo,San Marino,674
-Roberto,San Marino,674
-Sara,San Marino,674
-Serena,San Marino,674
-Silvia,San Marino,674
-Simone,San Marino,674
-Sofia,San Marino,674
-Stefano,San Marino,674
-Valentina,San Marino,674
-Aleksandar,Serbia,688
-Aleksandra,Serbia,688
-Ana,Serbia,688
-Andrija,Serbia,688
-AnÄela,Serbia,688
-Bojan,Serbia,688
-Branislav,Serbia,688
-Danilo,Serbia,688
-Darko,Serbia,688
-Dejan,Serbia,688
-Dijana,Serbia,688
-Dimitrije,Serbia,688
-Dragana,Serbia,688
-DuÅ¡an,Serbia,688
-Emilija,Serbia,688
-Filip,Serbia,688
-Goran,Serbia,688
-Igor,Serbia,688
-Isidora,Serbia,688
-Ivana,Serbia,688
-Jasmina,Serbia,688
-Jelena,Serbia,688
-Jovan,Serbia,688
-Jovana,Serbia,688
-Jovanka,Serbia,688
-Katarina,Serbia,688
-Kristina,Serbia,688
-Lidija,Serbia,688
-Luka,Serbia,688
-Maja,Serbia,688
-Marija,Serbia,688
-Marko,Serbia,688
-Milan,Serbia,688
-Milica,Serbia,688
-MiloÅ¡,Serbia,688
-Mina,Serbia,688
-Mladen,Serbia,688
-NataÅ¡a,Serbia,688
-Nemanja,Serbia,688
-Nevena,Serbia,688
-Nikola,Serbia,688
-Pavle,Serbia,688
-Petar,Serbia,688
-Predrag,Serbia,688
-Radovan,Serbia,688
-Sanja,Serbia,688
-Sara,Serbia,688
-Slobodan,Serbia,688
-SneÅ¾ana,Serbia,688
-Sofija,Serbia,688
-SrÄan,Serbia,688
-Stefan,Serbia,688
-Svetlana,Serbia,688
-Tamara,Serbia,688
-Teodora,Serbia,688
-Tijana,Serbia,688
-UroÅ¡,Serbia,688
-Vesna,Serbia,688
-Vladimir,Serbia,688
-Vuk,Serbia,688
-Zoran,Serbia,688
-Zorica,Serbia,688
-Adam,Slovakia,703
-Adriana,Slovakia,703
-AlÅ¾beta,Slovakia,703
-Andrej,Slovakia,703
-Barbora,Slovakia,703
-Branislav,Slovakia,703
-Daniel,Slovakia,703
-Daniela,Slovakia,703
-Denisa,Slovakia,703
-Dominik,Slovakia,703
-DuÅ¡an,Slovakia,703
-Emma,Slovakia,703
-Erika,Slovakia,703
-Filip,Slovakia,703
-Gabriela,Slovakia,703
-Igor,Slovakia,703
-Ivana,Slovakia,703
-Jakub,Slovakia,703
-Juraj,Slovakia,703
-JÃ¡n,Slovakia,703
-KatarÃ­na,Slovakia,703
-Klaudia,Slovakia,703
-KristÃ­na,Slovakia,703
-Lenka,Slovakia,703
-Lucia,Slovakia,703
-LukÃ¡Å¡,Slovakia,703
-Marek,Slovakia,703
-Martin,Slovakia,703
-Martina,Slovakia,703
-Matej,Slovakia,703
-Michaela,Slovakia,703
-Michal,Slovakia,703
-Milan,Slovakia,703
-Miroslav,Slovakia,703
-Monika,Slovakia,703
-MÃ¡ria,Slovakia,703
-NatÃ¡lia,Slovakia,703
-Nikola,Slovakia,703
-Nina,Slovakia,703
-Ondrej,Slovakia,703
-Patrik,Slovakia,703
-Pavol,Slovakia,703
-Peter,Slovakia,703
-Petra,Slovakia,703
-Radoslav,Slovakia,703
-Rastislav,Slovakia,703
-RenÃ¡ta,Slovakia,703
-Richard,Slovakia,703
-RÃ³bert,Slovakia,703
-Samuel,Slovakia,703
-Silvia,Slovakia,703
-Simona,Slovakia,703
-Sofia,Slovakia,703
-Stanislav,Slovakia,703
-Tatiana,Slovakia,703
-TomÃ¡Å¡,Slovakia,703
-Veronika,Slovakia,703
-ViktÃ³ria,Slovakia,703
-VladimÃ­r,Slovakia,703
-Zuzana,Slovakia,703
-Å imon,Slovakia,703
-AljaÅ¾,Slovenia,705
-Ana,Slovenia,705
-Andrej,Slovenia,705
-Anja,Slovenia,705
-AnÅ¾e,Slovenia,705
-BlaÅ¾,Slovenia,705
-David,Slovenia,705
-Domen,Slovenia,705
-Ema,Slovenia,705
-Eva,Slovenia,705
-Filip,Slovenia,705
-GaÅ¡per,Slovenia,705
-Gregor,Slovenia,705
-Hana,Slovenia,705
-Ines,Slovenia,705
-Jaka,Slovenia,705
-Jan,Slovenia,705
-Jure,Slovenia,705
-Katja,Slovenia,705
-Klara,Slovenia,705
-Klemen,Slovenia,705
-Lana,Slovenia,705
-Lara,Slovenia,705
-Lucija,Slovenia,705
-Luka,Slovenia,705
-Maja,Slovenia,705
-Mark,Slovenia,705
-Marko,Slovenia,705
-Matej,Slovenia,705
-Matic,Slovenia,705
-MaÅ¡a,Slovenia,705
-Mia,Slovenia,705
-Miha,Slovenia,705
-Neja,Slovenia,705
-Nejc,Slovenia,705
-Nika,Slovenia,705
-Nina,Slovenia,705
-NuÅ¡a,Slovenia,705
-Petra,Slovenia,705
-Pia,Slovenia,705
-Rok,Slovenia,705
-Sara,Slovenia,705
-Simon,Slovenia,705
-Tadej,Slovenia,705
-Teja,Slovenia,705
-Tim,Slovenia,705
-Tina,Slovenia,705
-TjaÅ¡a,Slovenia,705
-TomaÅ¾,Slovenia,705
-UrÅ¡ka,Slovenia,705
-Zala,Slovenia,705
-Zoja,Slovenia,705
-Å pela,Slovenia,705
-Å½an,Slovenia,705
-Å½iga,Slovenia,705
-AdriÃ¡n,Spain,724
-Alberto,Spain,724
-Alejandro,Spain,724
-Alicia,Spain,724
-Ana,Spain,724
-Andrea,Spain,724
-AndrÃ©s,Spain,724
-Antonio,Spain,724
-Beatriz,Spain,724
-Carlos,Spain,724
-Carmen,Spain,724
-Claudia,Spain,724
-Cristina,Spain,724
-Daniel,Spain,724
-David,Spain,724
-Diego,Spain,724
-Dolores,Spain,724
-Elena,Spain,724
-Emilio,Spain,724
-Enrique,Spain,724
-Eva,Spain,724
-Fernando,Spain,724
-Francisco,Spain,724
-Gabriela,Spain,724
-Guillermo,Spain,724
-HÃ©ctor,Spain,724
-Ignacio,Spain,724
-InÃ©s,Spain,724
-Irene,Spain,724
-Isabel,Spain,724
-IvÃ¡n,Spain,724
-Javier,Spain,724
-Jorge,Spain,724
-JosÃ©,Spain,724
-Juan,Spain,724
-Julia,Spain,724
-Laura,Spain,724
-LucÃ­a,Spain,724
-Luis,Spain,724
-Manuel,Spain,724
-Marcos,Spain,724
-Marina,Spain,724
-Marta,Spain,724
-MarÃ­a,Spain,724
-Mercedes,Spain,724
-Miguel,Spain,724
-MÃ³nica,Spain,724
-Natalia,Spain,724
-Nuria,Spain,724
-Pablo,Spain,724
-Patricia,Spain,724
-Paula,Spain,724
-Pedro,Spain,724
-Pilar,Spain,724
-Rafael,Spain,724
-Raquel,Spain,724
-RaÃºl,Spain,724
-Roberto,Spain,724
-RocÃ­o,Spain,724
-Rosa,Spain,724
-RubÃ©n,Spain,724
-Sara,Spain,724
-Sergio,Spain,724
-Silvia,Spain,724
-SofÃ­a,Spain,724
-Susana,Spain,724
-Teresa,Spain,724
-TomÃ¡s,Spain,724
-Valentina,Spain,724
-VerÃ³nica,Spain,724
-VÃ­ctor,Spain,724
-Ãlvaro,Spain,724
-Ãngel,Spain,724
-Ãscar,Spain,724
-Agnes,Sweden,752
-Alexander,Sweden,752
-Alice,Sweden,752
-Alma,Sweden,752
-Anders,Sweden,752
-Andreas,Sweden,752
-Anna,Sweden,752
-Astrid,Sweden,752
-BjÃ¶rn,Sweden,752
-Christian,Sweden,752
-Daniel,Sweden,752
-David,Sweden,752
-Ebba,Sweden,752
-Elin,Sweden,752
-Elise,Sweden,752
-Ella,Sweden,752
-Ellen,Sweden,752
-Emil,Sweden,752
-Emma,Sweden,752
-Erik,Sweden,752
-Filip,Sweden,752
-Fredrik,Sweden,752
-Freja,Sweden,752
-Gustav,Sweden,752
-Henrik,Sweden,752
-Hugo,Sweden,752
-Ida,Sweden,752
-Ingrid,Sweden,752
-Isabelle,Sweden,752
-Jakob,Sweden,752
-Johan,Sweden,752
-Julia,Sweden,752
-Karl,Sweden,752
-Klara,Sweden,752
-Lars,Sweden,752
-Lilly,Sweden,752
-Linnea,Sweden,752
-Lovisa,Sweden,752
-Lucas,Sweden,752
-Magnus,Sweden,752
-Maja,Sweden,752
-Martin,Sweden,752
-Mikael,Sweden,752
-Molly,Sweden,752
-Nils,Sweden,752
-Nova,Sweden,752
-Olivia,Sweden,752
-Olof,Sweden,752
-Oskar,Sweden,752
-Peter,Sweden,752
-Saga,Sweden,752
-Sara,Sweden,752
-Sebastian,Sweden,752
-Selma,Sweden,752
-Signe,Sweden,752
-Simon,Sweden,752
-Sofia,Sweden,752
-Stella,Sweden,752
-Sven,Sweden,752
-Tobias,Sweden,752
-Vera,Sweden,752
-Viktor,Sweden,752
-William,Sweden,752
-Wilma,Sweden,752
-Adrian,Switzerland,756
-Alessia,Switzerland,756
-Alexander,Switzerland,756
-Alina,Switzerland,756
-Amelie,Switzerland,756
-Anja,Switzerland,756
-Anna,Switzerland,756
-Benjamin,Switzerland,756
-Charlotte,Switzerland,756
-Chiara,Switzerland,756
-Clara,Switzerland,756
-Daniel,Switzerland,756
-David,Switzerland,756
-Dominik,Switzerland,756
-Elena,Switzerland,756
-Elias,Switzerland,756
-Emilia,Switzerland,756
-Emma,Switzerland,756
-Fabian,Switzerland,756
-Felix,Switzerland,756
-Florian,Switzerland,756
-Gabriel,Switzerland,756
-Giulia,Switzerland,756
-Hannah,Switzerland,756
-Isabella,Switzerland,756
-Jan,Switzerland,756
-Jasmin,Switzerland,756
-Jonas,Switzerland,756
-Julia,Switzerland,756
-Kevin,Switzerland,756
-Laura,Switzerland,756
-Lea,Switzerland,756
-Lena,Switzerland,756
-Leon,Switzerland,756
-Lisa,Switzerland,756
-Livia,Switzerland,756
-Luca,Switzerland,756
-Lukas,Switzerland,756
-Marco,Switzerland,756
-Marie,Switzerland,756
-Matteo,Switzerland,756
-Maximilian,Switzerland,756
-Mia,Switzerland,756
-Michael,Switzerland,756
-Moritz,Switzerland,756
-Nico,Switzerland,756
-Nina,Switzerland,756
-Noah,Switzerland,756
-Nora,Switzerland,756
-Olivia,Switzerland,756
-Paul,Switzerland,756
-Raphael,Switzerland,756
-Robin,Switzerland,756
-Samuel,Switzerland,756
-Sara,Switzerland,756
-Simon,Switzerland,756
-Sophia,Switzerland,756
-Sophie,Switzerland,756
-Thomas,Switzerland,756
-Tim,Switzerland,756
-Tobias,Switzerland,756
-Valentina,Switzerland,756
-Zoe,Switzerland,756
-Alina,Ukraine,804
-Alla,Ukraine,804
-Anastasiya,Ukraine,804
-Anatoliy,Ukraine,804
-Andriy,Ukraine,804
-Anna,Ukraine,804
-Artem,Ukraine,804
-Bohdan,Ukraine,804
-Borys,Ukraine,804
-Daria,Ukraine,804
-Daryna,Ukraine,804
-Denys,Ukraine,804
-Dmytro,Ukraine,804
-Fedir,Ukraine,804
-Galyna,Ukraine,804
-Halyna,Ukraine,804
-Hanna,Ukraine,804
-Hryhoriy,Ukraine,804
-Ihor,Ukraine,804
-Inna,Ukraine,804
-Iryna,Ukraine,804
-Ivan,Ukraine,804
-Karina,Ukraine,804
-Kateryna,Ukraine,804
-Khrystyna,Ukraine,804
-Kostiantyn,Ukraine,804
-Larysa,Ukraine,804
-Leonid,Ukraine,804
-Lesya,Ukraine,804
-Liliya,Ukraine,804
-Lyudmyla,Ukraine,804
-Maksym,Ukraine,804
-Mariya,Ukraine,804
-Maryna,Ukraine,804
-Mykhailo,Ukraine,804
-Mykola,Ukraine,804
-Natalia,Ukraine,804
-Nataliya,Ukraine,804
-Oksana,Ukraine,804
-Oleg,Ukraine,804
-Oleh,Ukraine,804
-Oleksandr,Ukraine,804
-Olena,Ukraine,804
-Olha,Ukraine,804
-Pavlo,Ukraine,804
-Petro,Ukraine,804
-Roman,Ukraine,804
-Ruslan,Ukraine,804
-Sergiy,Ukraine,804
-Serhiy,Ukraine,804
-Sofiya,Ukraine,804
-Stanislav,Ukraine,804
-Stepan,Ukraine,804
-Svitlana,Ukraine,804
-Tamara,Ukraine,804
-Taras,Ukraine,804
-Tetyana,Ukraine,804
-Vadym,Ukraine,804
-Valentyna,Ukraine,804
-Vasyl,Ukraine,804
-Viktor,Ukraine,804
-Viktoria,Ukraine,804
-Vira,Ukraine,804
-Vitaliy,Ukraine,804
-Vladyslav,Ukraine,804
-Volodymyr,Ukraine,804
-Yana,Ukraine,804
-Yaroslav,Ukraine,804
-Yevhen,Ukraine,804
-Yevheniya,Ukraine,804
-Yulia,Ukraine,804
-Yuriy,Ukraine,804
-Zhanna,Ukraine,804
-Zoryana,Ukraine,804
-Adam,United Kingdom,826
-Alexander,United Kingdom,826
-Alfie,United Kingdom,826
-Alice,United Kingdom,826
-Amelia,United Kingdom,826
-Archie,United Kingdom,826
-Arthur,United Kingdom,826
-Ava,United Kingdom,826
-Benjamin,United Kingdom,826
-Charlie,United Kingdom,826
-Charlotte,United Kingdom,826
-Daisy,United Kingdom,826
-Daniel,United Kingdom,826
-David,United Kingdom,826
-Dylan,United Kingdom,826
-Edward,United Kingdom,826
-Ella,United Kingdom,826
-Elsie,United Kingdom,826
-Emily,United Kingdom,826
-Emma,United Kingdom,826
-Ethan,United Kingdom,826
-Evelyn,United Kingdom,826
-Evie,United Kingdom,826
-Finley,United Kingdom,826
-Florence,United Kingdom,826
-Freddie,United Kingdom,826
-Freya,United Kingdom,826
-George,United Kingdom,826
-Grace,United Kingdom,826
-Hannah,United Kingdom,826
-Harriet,United Kingdom,826
-Harry,United Kingdom,826
-Henry,United Kingdom,826
-Imogen,United Kingdom,826
-Isaac,United Kingdom,826
-Isabella,United Kingdom,826
-Isla,United Kingdom,826
-Ivy,United Kingdom,826
-Jack,United Kingdom,826
-Jacob,United Kingdom,826
-James,United Kingdom,826
-Jessica,United Kingdom,826
-Joseph,United Kingdom,826
-Joshua,United Kingdom,826
-Leo,United Kingdom,826
-Lily,United Kingdom,826
-Logan,United Kingdom,826
-Lucas,United Kingdom,826
-Lucy,United Kingdom,826
-Mason,United Kingdom,826
-Matilda,United Kingdom,826
-Max,United Kingdom,826
-Mia,United Kingdom,826
-Millie,United Kingdom,826
-Molly,United Kingdom,826
-Muhammad,United Kingdom,826
-Noah,United Kingdom,826
-Oliver,United Kingdom,826
-Olivia,United Kingdom,826
-Oscar,United Kingdom,826
-Phoebe,United Kingdom,826
-Poppy,United Kingdom,826
-Rosie,United Kingdom,826
-Ruby,United Kingdom,826
-Samuel,United Kingdom,826
-Scarlett,United Kingdom,826
-Sebastian,United Kingdom,826
-Sienna,United Kingdom,826
-Sophia,United Kingdom,826
-Sophie,United Kingdom,826
-Theodore,United Kingdom,826
-Thomas,United Kingdom,826
-Toby,United Kingdom,826
-Violet,United Kingdom,826
-William,United Kingdom,826
-Willow,United Kingdom,826
-Alessandro,Vatican City,336
-Andrea,Vatican City,336
-Anna,Vatican City,336
-Antonio,Vatican City,336
-Chiara,Vatican City,336
-Francesca,Vatican City,336
-Francesco,Vatican City,336
-Giovanni,Vatican City,336
-Giulia,Vatican City,336
-Giuseppe,Vatican City,336
-Luca,Vatican City,336
-Marco,Vatican City,336
-Maria,Vatican City,336
-Matteo,Vatican City,336
-Paolo,Vatican City,336
-Pietro,Vatican City,336
-Stefano,Vatican City,336
+first_names,country,ISO numeric,rank
+Adelina,Albania,8,51.0
+AfÃ«rdita,Albania,8,39.0
+Agron,Albania,8,12.0
+Alban,Albania,8,42.0
+Albana,Albania,8,7.0
+Alketa,Albania,8,63.0
+Altin,Albania,8,108.0
+Andi,Albania,8,60.0
+Anila,Albania,8,73.0
+Anjeza,Albania,8,3.0
+Arben,Albania,8,54.0
+Ardian,Albania,8,18.0
+Ardit,Albania,8,0.0
+Armand,Albania,8,70.0
+Arta,Albania,8,85.0
+Astrit,Albania,8,76.0
+Avni,Albania,8,96.0
+Bashkim,Albania,8,36.0
+Behar,Albania,8,72.0
+Besa,Albania,8,77.0
+Besart,Albania,8,48.0
+Besim,Albania,8,92.0
+Besnik,Albania,8,2.0
+Blerim,Albania,8,10.0
+Blerta,Albania,8,53.0
+Brunilda,Albania,8,19.0
+Bujar,Albania,8,24.0
+Dafina,Albania,8,79.0
+Dashamir,Albania,8,98.0
+Denisa,Albania,8,91.0
+Donika,Albania,8,37.0
+Drita,Albania,8,13.0
+Dritan,Albania,8,28.0
+Edlira,Albania,8,55.0
+Edmond,Albania,8,26.0
+Eduart,Albania,8,106.0
+Elona,Albania,8,1.0
+Elvira,Albania,8,17.0
+Endrit,Albania,8,44.0
+Entela,Albania,8,67.0
+Enver,Albania,8,74.0
+Erinda,Albania,8,41.0
+Erion,Albania,8,8.0
+Erjona,Albania,8,101.0
+Ermal,Albania,8,52.0
+Ermira,Albania,8,59.0
+Ervin,Albania,8,62.0
+Esmeralda,Albania,8,93.0
+Fatjona,Albania,8,15.0
+Fatmir,Albania,8,84.0
+Fatos,Albania,8,32.0
+Fisnik,Albania,8,64.0
+Flamur,Albania,8,4.0
+Florian,Albania,8,50.0
+Flutura,Albania,8,35.0
+Fluturije,Albania,8,75.0
+Genti,Albania,8,46.0
+Gentian,Albania,8,6.0
+Gezim,Albania,8,30.0
+GÃ«zim,Albania,8,94.0
+Ilir,Albania,8,14.0
+Ilirjan,Albania,8,56.0
+Ina,Albania,8,105.0
+Irena,Albania,8,87.0
+Ismail,Albania,8,90.0
+Jonida,Albania,8,57.0
+Kastriot,Albania,8,82.0
+Klea,Albania,8,107.0
+Klodian,Albania,8,40.0
+Kozeta,Albania,8,69.0
+Krenar,Albania,8,100.0
+Kristina,Albania,8,95.0
+Kujtim,Albania,8,22.0
+Lindita,Albania,8,9.0
+Loreta,Albania,8,97.0
+Luan,Albania,8,68.0
+Lule,Albania,8,81.0
+Luljeta,Albania,8,25.0
+Majlinda,Albania,8,43.0
+Marjana,Albania,8,61.0
+Mentor,Albania,8,38.0
+Migena,Albania,8,99.0
+Mimoza,Albania,8,23.0
+Mirela,Albania,8,5.0
+Murat,Albania,8,78.0
+Nora,Albania,8,83.0
+Ornela,Albania,8,49.0
+Petrit,Albania,8,20.0
+Pranvera,Albania,8,29.0
+Ramiz,Albania,8,88.0
+Rezart,Albania,8,110.0
+Rovena,Albania,8,27.0
+Rudina,Albania,8,47.0
+Saimir,Albania,8,102.0
+Shaban,Albania,8,86.0
+Shkelzen,Albania,8,66.0
+Shpresa,Albania,8,21.0
+Silvana,Albania,8,45.0
+SkÃ«nder,Albania,8,34.0
+Sokol,Albania,8,16.0
+Suela,Albania,8,109.0
+Taulant,Albania,8,104.0
+Teuta,Albania,8,31.0
+Valbona,Albania,8,65.0
+Valdrin,Albania,8,58.0
+Valentina,Albania,8,89.0
+Vjollca,Albania,8,11.0
+Xhensila,Albania,8,103.0
+Xhevat,Albania,8,80.0
+Yllka,Albania,8,71.0
+Zamira,Albania,8,33.0
+AgnÃ¨s,Andorra,20,65.0
+Aina,Andorra,20,47.0
+Albert,Andorra,20,10.0
+Andreu,Andorra,20,20.0
+Anna,Andorra,20,3.0
+Ariadna,Andorra,20,57.0
+Arnau,Andorra,20,38.0
+Bernat,Andorra,20,60.0
+Berta,Andorra,20,41.0
+Carla,Andorra,20,7.0
+Carles,Andorra,20,64.0
+Clara,Andorra,20,17.0
+Cristina,Andorra,20,23.0
+Daniel,Andorra,20,68.0
+David,Andorra,20,4.0
+Dolors,Andorra,20,55.0
+Elisabet,Andorra,20,29.0
+Emma,Andorra,20,13.0
+Enric,Andorra,20,32.0
+Esther,Andorra,20,49.0
+Ferran,Andorra,20,40.0
+Francesc,Andorra,20,26.0
+Gemma,Andorra,20,35.0
+Gerard,Andorra,20,54.0
+Guillem,Andorra,20,44.0
+Helena,Andorra,20,21.0
+Ignasi,Andorra,20,62.0
+Irene,Andorra,20,33.0
+Jaume,Andorra,20,66.0
+Joan,Andorra,20,8.0
+Joana,Andorra,20,59.0
+Jordi,Andorra,20,2.0
+Josep,Andorra,20,28.0
+JÃºlia,Andorra,20,39.0
+Laia,Andorra,20,19.0
+Laura,Andorra,20,5.0
+LluÃ­s,Andorra,20,34.0
+Marc,Andorra,20,0.0
+Maria,Andorra,20,1.0
+Marta,Andorra,20,9.0
+MartÃ­,Andorra,20,46.0
+MercÃ¨,Andorra,20,27.0
+Meritxell,Andorra,20,51.0
+Miquel,Andorra,20,16.0
+Mireia,Andorra,20,37.0
+Montse,Andorra,20,67.0
+Montserrat,Andorra,20,25.0
+NatÃ lia,Andorra,20,63.0
+Neus,Andorra,20,43.0
+NÃºria,Andorra,20,15.0
+Oriol,Andorra,20,24.0
+Pau,Andorra,20,12.0
+Pere,Andorra,20,6.0
+Pilar,Andorra,20,61.0
+Pol,Andorra,20,42.0
+Quim,Andorra,20,58.0
+Ramon,Andorra,20,30.0
+RaÃ¼l,Andorra,20,56.0
+Ricard,Andorra,20,48.0
+Roger,Andorra,20,22.0
+Rosa,Andorra,20,45.0
+Roser,Andorra,20,53.0
+Sandra,Andorra,20,69.0
+Sergi,Andorra,20,14.0
+Sofia,Andorra,20,11.0
+SÃ­lvia,Andorra,20,31.0
+Toni,Andorra,20,36.0
+VicenÃ§,Andorra,20,50.0
+Xavier,Andorra,20,18.0
+Ãlex,Andorra,20,52.0
+Adrian,Austria,40,76.0
+Alexander,Austria,40,28.0
+Alois,Austria,40,116.0
+Andrea,Austria,40,47.0
+Andreas,Austria,40,12.0
+Angelika,Austria,40,69.0
+Anna,Austria,40,3.0
+Anton,Austria,40,88.0
+Barbara,Austria,40,37.0
+Benjamin,Austria,40,48.0
+Bernhard,Austria,40,68.0
+Bianca,Austria,40,63.0
+Brigitte,Austria,40,107.0
+Christa,Austria,40,105.0
+Christian,Austria,40,18.0
+Christina,Austria,40,35.0
+Christoph,Austria,40,56.0
+Claudia,Austria,40,53.0
+Clemens,Austria,40,82.0
+Cornelia,Austria,40,75.0
+Daniel,Austria,40,26.0
+Daniela,Austria,40,49.0
+David,Austria,40,32.0
+Dominik,Austria,40,60.0
+Edith,Austria,40,121.0
+Elfriede,Austria,40,97.0
+Elias,Austria,40,94.0
+Elisabeth,Austria,40,5.0
+Emil,Austria,40,104.0
+Emma,Austria,40,21.0
+Erika,Austria,40,119.0
+Erwin,Austria,40,128.0
+Fabian,Austria,40,62.0
+Felix,Austria,40,50.0
+Florian,Austria,40,34.0
+Franz,Austria,40,0.0
+Franziska,Austria,40,129.0
+Frieda,Austria,40,101.0
+Friedrich,Austria,40,108.0
+Gabriel,Austria,40,66.0
+Gabriele,Austria,40,93.0
+Georg,Austria,40,90.0
+Gertrude,Austria,40,99.0
+Gisela,Austria,40,117.0
+Gregor,Austria,40,70.0
+GÃ¼nther,Austria,40,126.0
+Hannah,Austria,40,25.0
+Heinrich,Austria,40,110.0
+Helga,Austria,40,89.0
+Hermann,Austria,40,118.0
+Hermine,Austria,40,123.0
+Hildegard,Austria,40,111.0
+Hubert,Austria,40,120.0
+Ingrid,Austria,40,87.0
+Irene,Austria,40,103.0
+Jakob,Austria,40,92.0
+Jasmin,Austria,40,43.0
+Johann,Austria,40,2.0
+Johanna,Austria,40,29.0
+Jonas,Austria,40,96.0
+Josef,Austria,40,4.0
+Josefine,Austria,40,127.0
+Julia,Austria,40,11.0
+Karin,Austria,40,61.0
+Karl,Austria,40,6.0
+Katharina,Austria,40,7.0
+Konrad,Austria,40,112.0
+Laura,Austria,40,13.0
+Lena,Austria,40,23.0
+Leonhard,Austria,40,100.0
+Leopold,Austria,40,106.0
+Leopoldine,Austria,40,125.0
+Lisa,Austria,40,17.0
+Lorenz,Austria,40,84.0
+Lukas,Austria,40,38.0
+Magdalena,Austria,40,27.0
+Manuel,Austria,40,58.0
+Manuela,Austria,40,79.0
+Margarete,Austria,40,113.0
+Maria,Austria,40,1.0
+Markus,Austria,40,22.0
+Martin,Austria,40,24.0
+Martina,Austria,40,59.0
+Matthias,Austria,40,30.0
+Maximilian,Austria,40,40.0
+Melanie,Austria,40,41.0
+Michael,Austria,40,8.0
+Michaela,Austria,40,83.0
+Monika,Austria,40,71.0
+Moritz,Austria,40,86.0
+Natalie,Austria,40,81.0
+Nikolaus,Austria,40,72.0
+Nina,Austria,40,19.0
+Oliver,Austria,40,78.0
+Oskar,Austria,40,102.0
+Patrick,Austria,40,44.0
+Paul,Austria,40,52.0
+Peter,Austria,40,14.0
+Petra,Austria,40,57.0
+Philipp,Austria,40,46.0
+Raphael,Austria,40,64.0
+Reinhard,Austria,40,124.0
+Renate,Austria,40,91.0
+Robert,Austria,40,80.0
+Rudolf,Austria,40,114.0
+Sabine,Austria,40,45.0
+Samuel,Austria,40,98.0
+Sandra,Austria,40,39.0
+Sarah,Austria,40,15.0
+Sebastian,Austria,40,36.0
+Silvia,Austria,40,85.0
+Simon,Austria,40,42.0
+Simone,Austria,40,67.0
+Sophie,Austria,40,9.0
+Stefan,Austria,40,20.0
+Stefanie,Austria,40,51.0
+Susanne,Austria,40,73.0
+Tamara,Austria,40,65.0
+Theresa,Austria,40,31.0
+Theresia,Austria,40,115.0
+Thomas,Austria,40,10.0
+Tobias,Austria,40,54.0
+Ursula,Austria,40,95.0
+Valentin,Austria,40,74.0
+Verena,Austria,40,55.0
+Viktoria,Austria,40,33.0
+Waltraud,Austria,40,109.0
+Werner,Austria,40,122.0
+Wolfgang,Austria,40,16.0
+Yvonne,Austria,40,77.0
+Aksana,Belarus,112,27.0
+Aksinia,Belarus,112,107.0
+Alena,Belarus,112,3.0
+Ales,Belarus,112,54.0
+Alesia,Belarus,112,55.0
+Aliaksandr,Belarus,112,0.0
+Aliaksei,Belarus,112,34.0
+Alina,Belarus,112,35.0
+Alisa,Belarus,112,77.0
+Alyaksandr,Belarus,112,106.0
+Anastasiya,Belarus,112,1.0
+Andrei,Belarus,112,2.0
+Anna,Belarus,112,41.0
+Anton,Belarus,112,40.0
+Artsiom,Belarus,112,26.0
+Artur,Belarus,112,76.0
+Barys,Belarus,112,62.0
+Belana,Belarus,112,63.0
+Bohdana,Belarus,112,109.0
+Branislau,Belarus,112,108.0
+Daniil,Belarus,112,84.0
+Danyil,Belarus,112,114.0
+Daria,Belarus,112,85.0
+Darya,Belarus,112,5.0
+Diana,Belarus,112,69.0
+Dina,Belarus,112,115.0
+Dzianis,Belarus,112,68.0
+Dzmitry,Belarus,112,4.0
+Dzmitryj,Belarus,112,32.0
+Eduard,Belarus,112,102.0
+Elina,Belarus,112,103.0
+Faina,Belarus,112,89.0
+Fiodar,Belarus,112,88.0
+Halina,Belarus,112,47.0
+Hanna,Belarus,112,29.0
+Henadz,Belarus,112,46.0
+Heorhiy,Belarus,112,112.0
+Hleb,Belarus,112,66.0
+Ihar,Belarus,112,16.0
+Illia,Belarus,112,116.0
+Ilya,Belarus,112,42.0
+Ina,Belarus,112,39.0
+Irma,Belarus,112,117.0
+Iryna,Belarus,112,17.0
+Ivan,Belarus,112,38.0
+Kanstantsin,Belarus,112,64.0
+Karyna,Belarus,112,79.0
+Kastus,Belarus,112,118.0
+Katsiaryna,Belarus,112,21.0
+Khrystyna,Belarus,112,65.0
+Kiryl,Belarus,112,78.0
+Klara,Belarus,112,119.0
+Kseniya,Belarus,112,43.0
+Larysa,Belarus,112,121.0
+Lavon,Belarus,112,120.0
+Leanid,Belarus,112,60.0
+Liubou,Belarus,112,61.0
+Liudmila,Belarus,112,33.0
+Lizaveta,Belarus,112,91.0
+Luka,Belarus,112,90.0
+Maksim,Belarus,112,14.0
+Marat,Belarus,112,122.0
+Marharyta,Belarus,112,93.0
+Maryia,Belarus,112,57.0
+Maryna,Belarus,112,15.0
+Matvei,Belarus,112,92.0
+Maya,Belarus,112,123.0
+Mikalai,Belarus,112,22.0
+Mikhail,Belarus,112,80.0
+Mikita,Belarus,112,56.0
+Milana,Belarus,112,81.0
+Nadzeya,Belarus,112,125.0
+Natallia,Belarus,112,23.0
+Nazar,Belarus,112,124.0
+Nikita,Belarus,112,94.0
+Nina,Belarus,112,95.0
+Oleg,Belarus,112,126.0
+Olga,Belarus,112,127.0
+Palina,Belarus,112,11.0
+Pavel,Belarus,112,10.0
+Piotr,Belarus,112,50.0
+Polina,Belarus,112,51.0
+Praskovya,Belarus,112,129.0
+Pyotr,Belarus,112,128.0
+Radim,Belarus,112,130.0
+Raisa,Belarus,112,45.0
+Raman,Belarus,112,30.0
+Rayna,Belarus,112,131.0
+Ruslan,Belarus,112,44.0
+Ryta,Belarus,112,97.0
+Sasha,Belarus,112,99.0
+Saveliy,Belarus,112,98.0
+Siamion,Belarus,112,72.0
+Siarhei,Belarus,112,8.0
+Sofiya,Belarus,112,73.0
+Stanislau,Belarus,112,48.0
+Stas,Belarus,112,132.0
+Sveta,Belarus,112,133.0
+Sviatlana,Belarus,112,9.0
+Tamara,Belarus,112,101.0
+Tanya,Belarus,112,135.0
+Taras,Belarus,112,134.0
+Tatsiana,Belarus,112,31.0
+Timur,Belarus,112,100.0
+Ulad,Belarus,112,136.0
+Uladzimir,Belarus,112,20.0
+Uladzislau,Belarus,112,74.0
+Ulyana,Belarus,112,137.0
+Vadzim,Belarus,112,82.0
+Valery,Belarus,112,24.0
+Valiantsina,Belarus,112,25.0
+Varvara,Belarus,112,83.0
+Vasil,Belarus,112,36.0
+Vera,Belarus,112,111.0
+Veranika,Belarus,112,19.0
+Viachaslau,Belarus,112,58.0
+Vika,Belarus,112,139.0
+Vikentiy,Belarus,112,138.0
+Viktar,Belarus,112,6.0
+Viktoryia,Belarus,112,59.0
+Vital,Belarus,112,18.0
+Vitalik,Belarus,112,110.0
+Volha,Belarus,112,7.0
+Yadviga,Belarus,112,141.0
+Yan,Belarus,112,140.0
+Yana,Belarus,112,75.0
+Yaraslau,Belarus,112,86.0
+Yauhen,Belarus,112,70.0
+Yauheni,Belarus,112,28.0
+Yauheniya,Belarus,112,87.0
+Yekaterina,Belarus,112,71.0
+Yuliya,Belarus,112,13.0
+Yury,Belarus,112,12.0
+Zakhar,Belarus,112,104.0
+Zinaida,Belarus,112,53.0
+Zmitser,Belarus,112,52.0
+Zoya,Belarus,112,105.0
+Adam,Belgium,56,15.0
+Adrien,Belgium,56,65.0
+AdÃ¨le,Belgium,56,118.0
+Agathe,Belgium,56,108.0
+Alexander,Belgium,56,43.0
+Alexandre,Belgium,56,83.0
+Alice,Belgium,56,12.0
+Alix,Belgium,56,62.0
+AmÃ©lie,Belgium,56,48.0
+AnaÃ¯s,Belgium,56,68.0
+Anna,Belgium,56,20.0
+Antoine,Belgium,56,53.0
+Apolline,Belgium,56,112.0
+Arnaud,Belgium,56,85.0
+Arthur,Belgium,56,5.0
+Audrey,Belgium,56,88.0
+AurÃ©lien,Belgium,56,131.0
+Baptiste,Belgium,56,81.0
+Bastien,Belgium,56,125.0
+Benjamin,Belgium,56,59.0
+Camille,Belgium,56,6.0
+Capucine,Belgium,56,116.0
+Caroline,Belgium,56,92.0
+Charles,Belgium,56,103.0
+Charlotte,Belgium,56,14.0
+ChloÃ©,Belgium,56,16.0
+Clara,Belgium,56,50.0
+ClÃ©mence,Belgium,56,82.0
+ClÃ©ment,Belgium,56,113.0
+Constance,Belgium,56,110.0
+CÃ©dric,Belgium,56,127.0
+CÃ©line,Belgium,56,74.0
+Damien,Belgium,56,109.0
+David,Belgium,56,91.0
+Diane,Belgium,56,94.0
+Edouard,Belgium,56,105.0
+Elena,Belgium,56,34.0
+Elias,Belgium,56,41.0
+Elise,Belgium,56,60.0
+Ella,Belgium,56,26.0
+EloÃ¯se,Belgium,56,106.0
+Emilie,Belgium,56,66.0
+Emma,Belgium,56,0.0
+Estelle,Belgium,56,132.0
+Ethan,Belgium,56,55.0
+Eva,Belgium,56,46.0
+Felix,Belgium,56,31.0
+Finn,Belgium,56,39.0
+Fiona,Belgium,56,96.0
+Florian,Belgium,56,111.0
+FranÃ§ois,Belgium,56,79.0
+Gabriel,Belgium,56,13.0
+Gabrielle,Belgium,56,98.0
+Gauthier,Belgium,56,123.0
+GrÃ©goire,Belgium,56,129.0
+Guillaume,Belgium,56,75.0
+Henri,Belgium,56,101.0
+Hugo,Belgium,56,21.0
+HÃ©lÃ¨ne,Belgium,56,86.0
+InÃ¨s,Belgium,56,54.0
+Iris,Belgium,56,100.0
+Isabelle,Belgium,56,90.0
+Jade,Belgium,56,36.0
+Jean,Belgium,56,97.0
+Jeanne,Belgium,56,120.0
+Jules,Belgium,56,11.0
+Julie,Belgium,56,72.0
+Julien,Belgium,56,67.0
+Juliette,Belgium,56,18.0
+Justine,Belgium,56,76.0
+Laura,Belgium,56,42.0
+Laurent,Belgium,56,89.0
+Leon,Belgium,56,37.0
+Liam,Belgium,56,19.0
+Lina,Belgium,56,38.0
+Lola,Belgium,56,128.0
+Louis,Belgium,56,7.0
+Louise,Belgium,56,2.0
+LoÃ¯c,Belgium,56,121.0
+Lucas,Belgium,56,1.0
+Lucie,Belgium,56,32.0
+LÃ©a,Belgium,56,8.0
+LÃ©onie,Belgium,56,102.0
+Manon,Belgium,56,52.0
+Marc,Belgium,56,93.0
+Margaux,Belgium,56,64.0
+Margot,Belgium,56,58.0
+Marie,Belgium,56,4.0
+Mathieu,Belgium,56,63.0
+Mathilde,Belgium,56,84.0
+Mathis,Belgium,56,25.0
+Matteo,Belgium,56,47.0
+Maxence,Belgium,56,69.0
+Maxime,Belgium,56,29.0
+MaÃ«lle,Belgium,56,124.0
+Mila,Belgium,56,28.0
+Nathan,Belgium,56,17.0
+Nicolas,Belgium,56,57.0
+Nina,Belgium,56,30.0
+Noah,Belgium,56,3.0
+Nora,Belgium,56,44.0
+NoÃ©mie,Belgium,56,122.0
+OcÃ©ane,Belgium,56,114.0
+Olivia,Belgium,56,10.0
+Olivier,Belgium,56,87.0
+Oscar,Belgium,56,33.0
+Paul,Belgium,56,99.0
+Pauline,Belgium,56,70.0
+Philippe,Belgium,56,95.0
+Pierre,Belgium,56,77.0
+Quentin,Belgium,56,107.0
+RaphaÃ«l,Belgium,56,23.0
+Robin,Belgium,56,49.0
+Romain,Belgium,56,51.0
+Romane,Belgium,56,104.0
+Rose,Belgium,56,56.0
+SalomÃ©,Belgium,56,126.0
+Samuel,Belgium,56,61.0
+Sarah,Belgium,56,40.0
+Simon,Belgium,56,45.0
+Sofia,Belgium,56,24.0
+SÃ©bastien,Belgium,56,71.0
+Theo,Belgium,56,35.0
+Thibault,Belgium,56,117.0
+Thomas,Belgium,56,27.0
+Tristan,Belgium,56,119.0
+Valentin,Belgium,56,115.0
+Valentine,Belgium,56,78.0
+Victoire,Belgium,56,80.0
+Victor,Belgium,56,9.0
+Vincent,Belgium,56,73.0
+Yasmine,Belgium,56,130.0
+ZoÃ©,Belgium,56,22.0
+Adem,Bosnia and Herzegovina,70,80.0
+Adis,Bosnia and Herzegovina,70,20.0
+Admir,Bosnia and Herzegovina,70,52.0
+Adnan,Bosnia and Herzegovina,70,4.0
+Aida,Bosnia and Herzegovina,70,35.0
+Ajla,Bosnia and Herzegovina,70,23.0
+Aldin,Bosnia and Herzegovina,70,40.0
+Alma,Bosnia and Herzegovina,70,9.0
+Almir,Bosnia and Herzegovina,70,26.0
+Amel,Bosnia and Herzegovina,70,56.0
+Amela,Bosnia and Herzegovina,70,57.0
+Amina,Bosnia and Herzegovina,70,3.0
+Amir,Bosnia and Herzegovina,70,0.0
+Amra,Bosnia and Herzegovina,70,27.0
+Armin,Bosnia and Herzegovina,70,32.0
+Asmir,Bosnia and Herzegovina,70,68.0
+Azra,Bosnia and Herzegovina,70,13.0
+Belma,Bosnia and Herzegovina,70,33.0
+Damir,Bosnia and Herzegovina,70,48.0
+Dina,Bosnia and Herzegovina,70,15.0
+Dino,Bosnia and Herzegovina,70,42.0
+DÅ¾enan,Bosnia and Herzegovina,70,64.0
+Edin,Bosnia and Herzegovina,70,34.0
+Edina,Bosnia and Herzegovina,70,59.0
+Eldin,Bosnia and Herzegovina,70,14.0
+Elma,Bosnia and Herzegovina,70,29.0
+Elvir,Bosnia and Herzegovina,70,50.0
+Emina,Bosnia and Herzegovina,70,7.0
+Emir,Bosnia and Herzegovina,70,2.0
+Emira,Bosnia and Herzegovina,70,47.0
+Enes,Bosnia and Herzegovina,70,30.0
+Ermin,Bosnia and Herzegovina,70,70.0
+Esad,Bosnia and Herzegovina,70,100.0
+Fahrudin,Bosnia and Herzegovina,70,74.0
+Faruk,Bosnia and Herzegovina,70,22.0
+Fatima,Bosnia and Herzegovina,70,39.0
+Fuad,Bosnia and Herzegovina,70,82.0
+Hamza,Bosnia and Herzegovina,70,102.0
+Haris,Bosnia and Herzegovina,70,6.0
+Hasan,Bosnia and Herzegovina,70,54.0
+Ilhan,Bosnia and Herzegovina,70,104.0
+Ines,Bosnia and Herzegovina,70,19.0
+Irfan,Bosnia and Herzegovina,70,84.0
+Ismar,Bosnia and Herzegovina,70,76.0
+Jasmin,Bosnia and Herzegovina,70,28.0
+Jasmina,Bosnia and Herzegovina,70,49.0
+Kemal,Bosnia and Herzegovina,70,106.0
+Kenan,Bosnia and Herzegovina,70,10.0
+Lamija,Bosnia and Herzegovina,70,17.0
+Lejla,Bosnia and Herzegovina,70,5.0
+Mahir,Bosnia and Herzegovina,70,86.0
+Maja,Bosnia and Herzegovina,70,43.0
+Medina,Bosnia and Herzegovina,70,53.0
+Mehmed,Bosnia and Herzegovina,70,108.0
+Melisa,Bosnia and Herzegovina,70,25.0
+Mensur,Bosnia and Herzegovina,70,66.0
+Merima,Bosnia and Herzegovina,70,11.0
+Mersiha,Bosnia and Herzegovina,70,61.0
+Mirsad,Bosnia and Herzegovina,70,46.0
+Mirza,Bosnia and Herzegovina,70,18.0
+Muhamed,Bosnia and Herzegovina,70,38.0
+Naida,Bosnia and Herzegovina,70,67.0
+Nedim,Bosnia and Herzegovina,70,36.0
+Nedzad,Bosnia and Herzegovina,70,110.0
+Nejra,Bosnia and Herzegovina,70,21.0
+Nermin,Bosnia and Herzegovina,70,8.0
+Nihad,Bosnia and Herzegovina,70,58.0
+Nusret,Bosnia and Herzegovina,70,88.0
+Osman,Bosnia and Herzegovina,70,90.0
+Rasim,Bosnia and Herzegovina,70,92.0
+Refik,Bosnia and Herzegovina,70,112.0
+Sabina,Bosnia and Herzegovina,70,63.0
+Safet,Bosnia and Herzegovina,70,114.0
+Samir,Bosnia and Herzegovina,70,16.0
+Samira,Bosnia and Herzegovina,70,31.0
+Sanela,Bosnia and Herzegovina,70,51.0
+Sara,Bosnia and Herzegovina,70,45.0
+Sead,Bosnia and Herzegovina,70,44.0
+Selma,Bosnia and Herzegovina,70,1.0
+Semir,Bosnia and Herzegovina,70,78.0
+Senad,Bosnia and Herzegovina,70,24.0
+Suad,Bosnia and Herzegovina,70,94.0
+Sumeja,Bosnia and Herzegovina,70,71.0
+Tarik,Bosnia and Herzegovina,70,12.0
+Vahid,Bosnia and Herzegovina,70,96.0
+Vedad,Bosnia and Herzegovina,70,116.0
+Vedran,Bosnia and Herzegovina,70,62.0
+Zajim,Bosnia and Herzegovina,70,118.0
+Zerina,Bosnia and Herzegovina,70,41.0
+Zijad,Bosnia and Herzegovina,70,98.0
+Zlatan,Bosnia and Herzegovina,70,60.0
+Albena,Bulgaria,100,99.0
+Aleksandar,Bulgaria,100,14.0
+Anelia,Bulgaria,100,81.0
+Angel,Bulgaria,100,124.0
+Angelina,Bulgaria,100,109.0
+Antoaneta,Bulgaria,100,39.0
+Asen,Bulgaria,100,60.0
+Atanas,Bulgaria,100,32.0
+Bilyana,Bulgaria,100,47.0
+Blagoy,Bulgaria,100,62.0
+Bogdan,Bulgaria,100,78.0
+Borislav,Bulgaria,100,34.0
+Boyan,Bulgaria,100,18.0
+Boyko,Bulgaria,100,122.0
+Bozhidar,Bulgaria,100,108.0
+Chavdar,Bulgaria,100,54.0
+Danail,Bulgaria,100,114.0
+Daniela,Bulgaria,100,17.0
+Darina,Bulgaria,100,91.0
+Desislava,Bulgaria,100,13.0
+Dimitar,Bulgaria,100,4.0
+Dimitrinka,Bulgaria,100,101.0
+Dobrin,Bulgaria,100,92.0
+Donka,Bulgaria,100,121.0
+Dragomir,Bulgaria,100,82.0
+Ekaterina,Bulgaria,100,113.0
+Elena,Bulgaria,100,3.0
+Elitsa,Bulgaria,100,67.0
+Emiliya,Bulgaria,100,37.0
+Evgeni,Bulgaria,100,88.0
+Galina,Bulgaria,100,57.0
+Georgi,Bulgaria,100,2.0
+Gergana,Bulgaria,100,21.0
+Ginka,Bulgaria,100,107.0
+Hristina,Bulgaria,100,87.0
+Hristo,Bulgaria,100,8.0
+Ilian,Bulgaria,100,64.0
+Iva,Bulgaria,100,85.0
+Ivan,Bulgaria,100,0.0
+Ivanka,Bulgaria,100,119.0
+Ivaylo,Bulgaria,100,72.0
+Ivelina,Bulgaria,100,41.0
+Ivo,Bulgaria,100,102.0
+Kalina,Bulgaria,100,49.0
+Kaloyan,Bulgaria,100,22.0
+Kiril,Bulgaria,100,42.0
+Kostadin,Bulgaria,100,100.0
+Krasimir,Bulgaria,100,70.0
+Kristina,Bulgaria,100,15.0
+Lachezar,Bulgaria,100,104.0
+Liliya,Bulgaria,100,117.0
+Lilyana,Bulgaria,100,77.0
+Luben,Bulgaria,100,68.0
+Lyubomir,Bulgaria,100,30.0
+Maria,Bulgaria,100,1.0
+Marin,Bulgaria,100,66.0
+Mariya,Bulgaria,100,35.0
+Mariyana,Bulgaria,100,105.0
+Metodi,Bulgaria,100,126.0
+Miglena,Bulgaria,100,97.0
+Mihail,Bulgaria,100,44.0
+Milena,Bulgaria,100,25.0
+Miroslav,Bulgaria,100,80.0
+Mladen,Bulgaria,100,112.0
+Monika,Bulgaria,100,55.0
+Nadezhda,Bulgaria,100,59.0
+Nevena,Bulgaria,100,31.0
+Nikola,Bulgaria,100,96.0
+Nikolai,Bulgaria,100,6.0
+Ognyan,Bulgaria,100,50.0
+Pavlina,Bulgaria,100,65.0
+Penka,Bulgaria,100,71.0
+Petar,Bulgaria,100,10.0
+Petrana,Bulgaria,100,51.0
+Petya,Bulgaria,100,5.0
+Plamen,Bulgaria,100,24.0
+Plamena,Bulgaria,100,127.0
+Radka,Bulgaria,100,123.0
+Radomir,Bulgaria,100,110.0
+Radoslav,Bulgaria,100,56.0
+Radostina,Bulgaria,100,29.0
+Ralitsa,Bulgaria,100,19.0
+Rosen,Bulgaria,100,26.0
+Rositsa,Bulgaria,100,73.0
+Rumen,Bulgaria,100,86.0
+Rumyana,Bulgaria,100,45.0
+Silviya,Bulgaria,100,33.0
+Simeon,Bulgaria,100,48.0
+Slavi,Bulgaria,100,94.0
+Snezhana,Bulgaria,100,69.0
+Spas,Bulgaria,100,90.0
+Stanimir,Bulgaria,100,116.0
+Stanimira,Bulgaria,100,63.0
+Stanislav,Bulgaria,100,28.0
+Stefan,Bulgaria,100,12.0
+Stefania,Bulgaria,100,125.0
+Stefka,Bulgaria,100,89.0
+Stoyan,Bulgaria,100,38.0
+Stoyanka,Bulgaria,100,103.0
+Svetlana,Bulgaria,100,7.0
+Svilen,Bulgaria,100,106.0
+Tanya,Bulgaria,100,83.0
+Teodora,Bulgaria,100,9.0
+Tihomir,Bulgaria,100,98.0
+Todor,Bulgaria,100,20.0
+Tsanko,Bulgaria,100,118.0
+Tsvetan,Bulgaria,100,74.0
+Tsvetanka,Bulgaria,100,23.0
+Tsvetelina,Bulgaria,100,53.0
+Valentin,Bulgaria,100,40.0
+Valeri,Bulgaria,100,120.0
+Vasil,Bulgaria,100,16.0
+Vasilka,Bulgaria,100,95.0
+Veneta,Bulgaria,100,111.0
+Veselin,Bulgaria,100,52.0
+Veselina,Bulgaria,100,75.0
+Violeta,Bulgaria,100,27.0
+Vladislav,Bulgaria,100,84.0
+Vyara,Bulgaria,100,61.0
+Yavor,Bulgaria,100,76.0
+Yoana,Bulgaria,100,11.0
+Yordan,Bulgaria,100,46.0
+Yordanka,Bulgaria,100,93.0
+Zdravko,Bulgaria,100,36.0
+Zhivko,Bulgaria,100,58.0
+Zlatka,Bulgaria,100,43.0
+Zornitsa,Bulgaria,100,115.0
+Zornitza,Bulgaria,100,79.0
+Adrian,Croatia,191,112.0
+Ana,Croatia,191,15.0
+Ana-Marija,Croatia,191,50.0
+Andrea,Croatia,191,91.0
+Andrija,Croatia,191,42.0
+Anita,Croatia,191,83.0
+Ante,Croatia,191,3.0
+Antonija,Croatia,191,54.0
+Antonio,Croatia,191,92.0
+Barbara,Croatia,191,61.0
+Bartul,Croatia,191,107.0
+Borna,Croatia,191,100.0
+BoÅ¾ena,Croatia,191,72.0
+Branimir,Croatia,191,37.0
+Branka,Croatia,191,78.0
+Bruno,Croatia,191,93.0
+Damir,Croatia,191,10.0
+Danijel,Croatia,191,45.0
+Danijela,Croatia,191,88.0
+Dario,Croatia,191,35.0
+David,Croatia,191,32.0
+Dijana,Croatia,191,84.0
+Domagoj,Croatia,191,41.0
+Dominik,Croatia,191,31.0
+Dora,Croatia,191,28.0
+Dorian,Croatia,191,111.0
+Dragica,Croatia,191,73.0
+Dubravka,Croatia,191,69.0
+Duje,Croatia,191,105.0
+Elena,Croatia,191,29.0
+Ema,Croatia,191,23.0
+Emanuel,Croatia,191,115.0
+Filip,Croatia,191,30.0
+Fran,Croatia,191,101.0
+Gabriela,Croatia,191,63.0
+Gabrijel,Croatia,191,114.0
+Goran,Croatia,191,12.0
+Gordana,Croatia,191,67.0
+Hrvoje,Croatia,191,36.0
+Irena,Croatia,191,87.0
+Iva,Croatia,191,27.0
+Ivan,Croatia,191,0.0
+Ivana,Croatia,191,17.0
+Ivanka,Croatia,191,82.0
+Ivica,Croatia,191,49.0
+Jadranka,Croatia,191,70.0
+Jakov,Croatia,191,98.0
+Jelena,Croatia,191,89.0
+Josip,Croatia,191,4.0
+Josipa,Croatia,191,80.0
+Juraj,Croatia,191,104.0
+Karla,Croatia,191,55.0
+Karlo,Croatia,191,33.0
+Katarina,Croatia,191,19.0
+Klara,Croatia,191,62.0
+KreÅ¡imir,Croatia,191,38.0
+Kristijan,Croatia,191,44.0
+Kristina,Croatia,191,81.0
+Lana,Croatia,191,59.0
+Laura,Croatia,191,56.0
+Lea,Croatia,191,25.0
+Leon,Croatia,191,97.0
+Liam,Croatia,191,113.0
+Lidija,Croatia,191,76.0
+Lovro,Croatia,191,94.0
+Lucija,Croatia,191,20.0
+Luka,Croatia,191,2.0
+Maja,Croatia,191,21.0
+Marija,Croatia,191,16.0
+Marin,Croatia,191,34.0
+Mario,Croatia,191,46.0
+Marko,Croatia,191,1.0
+Marta,Croatia,191,60.0
+Martina,Croatia,191,53.0
+Matej,Croatia,191,5.0
+Matija,Croatia,191,43.0
+Mia,Croatia,191,24.0
+Mihael,Croatia,191,102.0
+Mirjana,Croatia,191,68.0
+Miroslav,Croatia,191,14.0
+Mladen,Croatia,191,39.0
+Monika,Croatia,191,64.0
+Nada,Croatia,191,71.0
+Natalija,Croatia,191,86.0
+Nika,Croatia,191,57.0
+Niko,Croatia,191,110.0
+Nikola,Croatia,191,8.0
+Nikolina,Croatia,191,51.0
+Nina,Croatia,191,26.0
+Noa,Croatia,191,99.0
+Patrik,Croatia,191,106.0
+Petar,Croatia,191,7.0
+Petra,Croatia,191,18.0
+Rafael,Croatia,191,116.0
+Renata,Croatia,191,74.0
+Roko,Croatia,191,96.0
+Sanja,Croatia,191,65.0
+Sara,Croatia,191,22.0
+Silvija,Croatia,191,85.0
+Slaven,Croatia,191,47.0
+Slavica,Croatia,191,79.0
+SnjeÅ¾ana,Croatia,191,77.0
+Stjepan,Croatia,191,9.0
+Tanja,Croatia,191,90.0
+Tatjana,Croatia,191,75.0
+Tena,Croatia,191,58.0
+Tin,Croatia,191,95.0
+Toma,Croatia,191,108.0
+Tomislav,Croatia,191,6.0
+Valentina,Croatia,191,52.0
+Vedran,Croatia,191,40.0
+Vesna,Croatia,191,66.0
+Vito,Croatia,191,109.0
+Zoran,Croatia,191,13.0
+Zvonimir,Croatia,191,11.0
+Å imun,Croatia,191,103.0
+Å½eljko,Croatia,191,48.0
+Agapi,Cyprus,196,93.0
+Alexandros,Cyprus,196,30.0
+Anastasia,Cyprus,196,15.0
+Andreas,Cyprus,196,0.0
+Androniki,Cyprus,196,65.0
+Androula,Cyprus,196,31.0
+Angeliki,Cyprus,196,55.0
+Angelos,Cyprus,196,96.0
+Anna,Cyprus,196,7.0
+Antonis,Cyprus,196,22.0
+Ariadne,Cyprus,196,83.0
+Aristos,Cyprus,196,76.0
+Athena,Cyprus,196,41.0
+Charalambos,Cyprus,196,28.0
+Christakis,Cyprus,196,80.0
+Christina,Cyprus,196,17.0
+Christodoulos,Cyprus,196,64.0
+Christos,Cyprus,196,4.0
+Chrysanthi,Cyprus,196,33.0
+Chrysoula,Cyprus,196,53.0
+Chrysovalantou,Cyprus,196,71.0
+Constantinos,Cyprus,196,42.0
+Costas,Cyprus,196,14.0
+Demetra,Cyprus,196,57.0
+Demetris,Cyprus,196,36.0
+Demos,Cyprus,196,98.0
+Despina,Cyprus,196,13.0
+Dimitris,Cyprus,196,6.0
+Dora,Cyprus,196,87.0
+Eftychia,Cyprus,196,61.0
+Eirini,Cyprus,196,89.0
+Eleftheria,Cyprus,196,69.0
+Eleni,Cyprus,196,3.0
+Elpida,Cyprus,196,43.0
+Evagoras,Cyprus,196,88.0
+Evangelia,Cyprus,196,75.0
+Evanthia,Cyprus,196,47.0
+Fotini,Cyprus,196,27.0
+Georgios,Cyprus,196,2.0
+Giannos,Cyprus,196,72.0
+Giorgos,Cyprus,196,40.0
+Haris,Cyprus,196,52.0
+Ioanna,Cyprus,196,11.0
+Ioannis,Cyprus,196,62.0
+Irene,Cyprus,196,19.0
+Kalia,Cyprus,196,95.0
+Kalliopi,Cyprus,196,39.0
+Katerina,Cyprus,196,9.0
+Kyproulla,Cyprus,196,86.0
+Kyriaki,Cyprus,196,25.0
+Kyriakos,Cyprus,196,48.0
+Lambros,Cyprus,196,74.0
+Lefteris,Cyprus,196,50.0
+Leonidas,Cyprus,196,90.0
+Loizos,Cyprus,196,34.0
+Loukas,Cyprus,196,58.0
+Loukia,Cyprus,196,45.0
+Lydia,Cyprus,196,85.0
+Makis,Cyprus,196,94.0
+Maria,Cyprus,196,1.0
+Marios,Cyprus,196,24.0
+Maritsa,Cyprus,196,67.0
+Maroulla,Cyprus,196,35.0
+Melina,Cyprus,196,81.0
+Michalis,Cyprus,196,12.0
+Miltos,Cyprus,196,78.0
+Neophytos,Cyprus,196,54.0
+Nicoletta,Cyprus,196,63.0
+Niki,Cyprus,196,79.0
+Nikos,Cyprus,196,8.0
+Odysseas,Cyprus,196,82.0
+Olympia,Cyprus,196,73.0
+Ourania,Cyprus,196,37.0
+Panagiota,Cyprus,196,51.0
+Panayiotis,Cyprus,196,10.0
+Pantelis,Cyprus,196,70.0
+Paraskevi,Cyprus,196,29.0
+Pavlos,Cyprus,196,38.0
+Penelope,Cyprus,196,91.0
+Petros,Cyprus,196,20.0
+Philippos,Cyprus,196,56.0
+Polyxeni,Cyprus,196,59.0
+Savvas,Cyprus,196,32.0
+Sophia,Cyprus,196,5.0
+Sotiris,Cyprus,196,46.0
+Spyros,Cyprus,196,60.0
+Stavros,Cyprus,196,16.0
+Stelios,Cyprus,196,26.0
+Styliani,Cyprus,196,49.0
+Takis,Cyprus,196,44.0
+Tasos,Cyprus,196,84.0
+Thanos,Cyprus,196,92.0
+Theodora,Cyprus,196,23.0
+Vasiliki,Cyprus,196,21.0
+Vasilis,Cyprus,196,66.0
+Xenia,Cyprus,196,97.0
+Yiannis,Cyprus,196,18.0
+Yiota,Cyprus,196,99.0
+Zoe,Cyprus,196,77.0
+Adam,Czech Republic,203,32.0
+AdÃ©la,Czech Republic,203,35.0
+Alena,Czech Republic,203,23.0
+AleÅ¡,Czech Republic,203,42.0
+AlÅ¾bÄta,Czech Republic,203,105.0
+Aneta,Czech Republic,203,53.0
+Anna,Czech Republic,203,103.0
+AntonÃ­n,Czech Republic,203,56.0
+Barbora,Czech Republic,203,21.0
+BedÅich,Czech Republic,203,86.0
+Blanka,Czech Republic,203,91.0
+Bohumil,Czech Republic,203,80.0
+Bohuslav,Czech Republic,203,100.0
+Borivoj,Czech Republic,203,120.0
+BoÅ¾ena,Czech Republic,203,81.0
+Bronislav,Czech Republic,203,94.0
+Ctibor,Czech Republic,203,96.0
+Dagmar,Czech Republic,203,77.0
+Dalibor,Czech Republic,203,110.0
+Daniel,Czech Republic,203,36.0
+Daniela,Czech Republic,203,69.0
+David,Czech Republic,203,16.0
+Denisa,Czech Republic,203,55.0
+Dominik,Czech Republic,203,58.0
+DrahomÃ­r,Czech Republic,203,122.0
+EliÅ¡ka,Czech Republic,203,47.0
+Eva,Czech Republic,203,3.0
+Filip,Czech Republic,203,30.0
+FrantiÅ¡ek,Czech Republic,203,84.0
+Gabriela,Czech Republic,203,43.0
+Hana,Czech Republic,203,7.0
+Helena,Czech Republic,203,111.0
+Igor,Czech Republic,203,92.0
+Irena,Czech Republic,203,75.0
+Ivana,Czech Republic,203,25.0
+Iveta,Czech Republic,203,65.0
+Jakub,Czech Republic,203,14.0
+Jan,Czech Republic,203,4.0
+Jana,Czech Republic,203,1.0
+Jarmila,Czech Republic,203,99.0
+JaromÃ­r,Czech Republic,203,82.0
+Jaroslav,Czech Republic,203,48.0
+Jaroslava,Czech Republic,203,85.0
+JindÅich,Czech Republic,203,104.0
+Jitka,Czech Republic,203,61.0
+JiÅÃ­,Czech Republic,203,6.0
+Josef,Czech Republic,203,26.0
+Kamil,Czech Republic,203,88.0
+Karel,Czech Republic,203,50.0
+KarolÃ­na,Czech Republic,203,51.0
+KateÅina,Czech Republic,203,9.0
+KlÃ¡ra,Czech Republic,203,45.0
+KristÃ½na,Czech Republic,203,31.0
+KvÄta,Czech Republic,203,119.0
+Ladislav,Czech Republic,203,54.0
+Lenka,Czech Republic,203,11.0
+Libor,Czech Republic,203,70.0
+LibuÅ¡e,Czech Republic,203,95.0
+Lucie,Czech Republic,203,5.0
+Ludmila,Czech Republic,203,73.0
+LukÃ¡Å¡,Czech Republic,203,20.0
+MagdalÃ©na,Czech Republic,203,107.0
+Marcela,Czech Republic,203,93.0
+Marek,Czech Republic,203,22.0
+Marie,Czech Republic,203,101.0
+MarkÃ©ta,Czech Republic,203,15.0
+Marta,Czech Republic,203,125.0
+Martin,Czech Republic,203,10.0
+Martina,Czech Republic,203,41.0
+MatÄj,Czech Republic,203,34.0
+Michaela,Czech Republic,203,39.0
+Michal,Czech Republic,203,12.0
+Milada,Czech Republic,203,115.0
+Milan,Czech Republic,203,24.0
+Milena,Czech Republic,203,83.0
+Miloslav,Czech Republic,203,78.0
+Miroslav,Czech Republic,203,52.0
+Monika,Czech Republic,203,27.0
+NatÃ¡lie,Czech Republic,203,49.0
+Nikola,Czech Republic,203,33.0
+OldÅich,Czech Republic,203,74.0
+Olga,Czech Republic,203,89.0
+OndÅej,Czech Republic,203,18.0
+Otakar,Czech Republic,203,106.0
+Patrik,Czech Republic,203,62.0
+Pavel,Czech Republic,203,8.0
+PavlÃ­na,Czech Republic,203,57.0
+Petr,Czech Republic,203,0.0
+Petra,Czech Republic,203,13.0
+PÅemysl,Czech Republic,203,108.0
+Radek,Czech Republic,203,40.0
+Radim,Czech Republic,203,90.0
+Radka,Czech Republic,203,63.0
+RadomÃ­r,Czech Republic,203,112.0
+Renata,Czech Republic,203,67.0
+Robert,Czech Republic,203,72.0
+Roman,Czech Republic,203,44.0
+Rostislav,Czech Republic,203,76.0
+RÅ¯Å¾ena,Czech Republic,203,87.0
+Simona,Czech Republic,203,37.0
+SlavomÃ­r,Czech Republic,203,118.0
+Stanislav,Czech Republic,203,46.0
+Svatopluk,Czech Republic,203,98.0
+Tereza,Czech Republic,203,17.0
+TomÃ¡Å¡,Czech Republic,203,2.0
+Veronika,Czech Republic,203,19.0
+VladimÃ­r,Czech Republic,203,66.0
+Vlasta,Czech Republic,203,79.0
+Vlastimil,Czech Republic,203,64.0
+VojtÄch,Czech Republic,203,38.0
+Vratislav,Czech Republic,203,114.0
+VÃ¡clav,Czech Republic,203,28.0
+VÃ­tÄzslav,Czech Republic,203,124.0
+VÄra,Czech Republic,203,71.0
+Zdena,Czech Republic,203,121.0
+Zdenka,Czech Republic,203,97.0
+ZdenÄk,Czech Republic,203,60.0
+Zuzana,Czech Republic,203,29.0
+ÄestmÃ­r,Czech Republic,203,116.0
+Å tÄpÃ¡n,Czech Republic,203,68.0
+Å Ã¡rka,Czech Republic,203,59.0
+Adam,Denmark,208,72.0
+Agnes,Denmark,208,61.0
+Aksel,Denmark,208,116.0
+Alberte,Denmark,208,41.0
+Alexander,Denmark,208,20.0
+Alma,Denmark,208,53.0
+Amalie,Denmark,208,79.0
+Anders,Denmark,208,92.0
+Andreas,Denmark,208,40.0
+Ane,Denmark,208,113.0
+Anna,Denmark,208,13.0
+Anton,Denmark,208,46.0
+Asger,Denmark,208,122.0
+Asta,Denmark,208,71.0
+Astrid,Denmark,208,49.0
+August,Denmark,208,62.0
+Benjamin,Denmark,208,34.0
+Bodil,Denmark,208,117.0
+Camilla,Denmark,208,77.0
+Carl,Denmark,208,64.0
+Caroline,Denmark,208,17.0
+Casper,Denmark,208,110.0
+Cecilie,Denmark,208,39.0
+Christian,Denmark,208,24.0
+Christoffer,Denmark,208,58.0
+Clara,Denmark,208,9.0
+Daniel,Denmark,208,56.0
+David,Denmark,208,104.0
+Elias,Denmark,208,66.0
+Ella,Denmark,208,55.0
+Ellen,Denmark,208,67.0
+Emil,Denmark,208,22.0
+Emilie,Denmark,208,35.0
+Emma,Denmark,208,1.0
+Erik,Denmark,208,98.0
+Esther,Denmark,208,69.0
+Filippa,Denmark,208,73.0
+Frederik,Denmark,208,16.0
+Freja,Denmark,208,5.0
+Frida,Denmark,208,47.0
+Gry,Denmark,208,99.0
+Gustav,Denmark,208,68.0
+Hans,Denmark,208,96.0
+Helle,Denmark,208,109.0
+Henrik,Denmark,208,88.0
+Ida,Denmark,208,7.0
+Ingrid,Denmark,208,89.0
+Isabella,Denmark,208,19.0
+Jakob,Denmark,208,38.0
+Jens,Denmark,208,80.0
+Jesper,Denmark,208,108.0
+Johanne,Denmark,208,75.0
+Johannes,Denmark,208,120.0
+Jonas,Denmark,208,42.0
+Josefine,Denmark,208,21.0
+Julie,Denmark,208,33.0
+Karla,Denmark,208,29.0
+Kasper,Denmark,208,50.0
+Katrine,Denmark,208,43.0
+Kirsten,Denmark,208,119.0
+Kristian,Denmark,208,100.0
+Lars,Denmark,208,90.0
+Lasse,Denmark,208,52.0
+Laura,Denmark,208,11.0
+Lene,Denmark,208,121.0
+Liv,Denmark,208,51.0
+Liva,Denmark,208,85.0
+Lone,Denmark,208,107.0
+Lucas,Denmark,208,2.0
+Lukas,Denmark,208,74.0
+Luna,Denmark,208,95.0
+LÃ¦rke,Denmark,208,31.0
+Mads,Denmark,208,0.0
+Magnus,Denmark,208,14.0
+Maja,Denmark,208,25.0
+Malthe,Denmark,208,60.0
+Marcus,Denmark,208,54.0
+Marie,Denmark,208,23.0
+Martin,Denmark,208,84.0
+Mathias,Denmark,208,32.0
+Mathilde,Denmark,208,15.0
+Mette,Denmark,208,111.0
+Michael,Denmark,208,102.0
+Mikkel,Denmark,208,18.0
+Mille,Denmark,208,45.0
+Morten,Denmark,208,94.0
+Nanna,Denmark,208,27.0
+Niels,Denmark,208,86.0
+Nikolaj,Denmark,208,28.0
+Noah,Denmark,208,8.0
+Nora,Denmark,208,63.0
+Oliver,Denmark,208,6.0
+Olivia,Denmark,208,59.0
+Oscar,Denmark,208,10.0
+Pernille,Denmark,208,103.0
+Peter,Denmark,208,78.0
+Philip,Denmark,208,48.0
+Rasmus,Denmark,208,26.0
+Rikke,Denmark,208,101.0
+Rosa,Denmark,208,87.0
+Saga,Denmark,208,93.0
+Sebastian,Denmark,208,30.0
+Signe,Denmark,208,37.0
+Silje,Denmark,208,81.0
+Simon,Denmark,208,36.0
+Siri,Denmark,208,115.0
+Sofie,Denmark,208,3.0
+Stine,Denmark,208,105.0
+SÃ¸ren,Denmark,208,76.0
+Thea,Denmark,208,83.0
+Theodor,Denmark,208,118.0
+Thomas,Denmark,208,82.0
+Thor,Denmark,208,114.0
+Tilde,Denmark,208,91.0
+Tobias,Denmark,208,44.0
+Trine,Denmark,208,123.0
+Valdemar,Denmark,208,70.0
+Vera,Denmark,208,97.0
+Victor,Denmark,208,12.0
+Victoria,Denmark,208,57.0
+Vigga,Denmark,208,65.0
+Villads,Denmark,208,112.0
+William,Denmark,208,4.0
+Aare,Estonia,233,58.0
+Aet,Estonia,233,71.0
+Aili,Estonia,233,101.0
+Ain,Estonia,233,86.0
+Aino,Estonia,233,33.0
+Aivar,Estonia,233,40.0
+Alar,Estonia,233,52.0
+Andres,Estonia,233,8.0
+Annela,Estonia,233,93.0
+Anneli,Estonia,233,5.0
+Ants,Estonia,233,28.0
+Anu,Estonia,233,13.0
+Arvo,Estonia,233,76.0
+Eda,Estonia,233,81.0
+Eha,Estonia,233,99.0
+Ene,Estonia,233,35.0
+Erki,Estonia,233,56.0
+Ester,Estonia,233,45.0
+Evi,Estonia,233,65.0
+Hannes,Estonia,233,82.0
+Heiki,Estonia,233,54.0
+Heino,Estonia,233,100.0
+Helgi,Estonia,233,37.0
+Heli,Estonia,233,49.0
+Indrek,Estonia,233,26.0
+Inga,Estonia,233,61.0
+Ivo,Estonia,233,46.0
+Jaak,Estonia,233,18.0
+Jaan,Estonia,233,4.0
+Jaanus,Estonia,233,62.0
+Juhan,Estonia,233,88.0
+JÃ¼ri,Estonia,233,38.0
+Kaarel,Estonia,233,94.0
+Kadri,Estonia,233,3.0
+Kaie,Estonia,233,67.0
+Kaire,Estonia,233,95.0
+Kairi,Estonia,233,51.0
+Kaja,Estonia,233,79.0
+Kalev,Estonia,233,30.0
+Karin,Estonia,233,7.0
+Katrin,Estonia,233,15.0
+Kerli,Estonia,233,85.0
+Kersti,Estonia,233,23.0
+Krista,Estonia,233,27.0
+Kristi,Estonia,233,63.0
+Kristjan,Estonia,233,0.0
+KÃ¼lli,Estonia,233,41.0
+Lauri,Estonia,233,74.0
+Leena,Estonia,233,47.0
+Lembit,Estonia,233,64.0
+Liina,Estonia,233,69.0
+Liis,Estonia,233,83.0
+Liisa,Estonia,233,1.0
+Maarja,Estonia,233,21.0
+Madis,Estonia,233,78.0
+Maire,Estonia,233,59.0
+Malle,Estonia,233,39.0
+Margus,Estonia,233,34.0
+Mari,Estonia,233,9.0
+Marika,Estonia,233,75.0
+Marko,Estonia,233,66.0
+Mart,Estonia,233,44.0
+Marten,Estonia,233,2.0
+Meeli,Estonia,233,87.0
+Meelis,Estonia,233,92.0
+Merike,Estonia,233,29.0
+Merle,Estonia,233,55.0
+Mihkel,Estonia,233,16.0
+Monika,Estonia,233,97.0
+Olev,Estonia,233,36.0
+Ott,Estonia,233,72.0
+Peeter,Estonia,233,14.0
+Piia,Estonia,233,91.0
+Pille,Estonia,233,53.0
+Piret,Estonia,233,17.0
+Priit,Estonia,233,10.0
+Raimo,Estonia,233,80.0
+Raivo,Estonia,233,24.0
+Rando,Estonia,233,90.0
+Raul,Estonia,233,48.0
+Reet,Estonia,233,73.0
+Rein,Estonia,233,12.0
+Riina,Estonia,233,31.0
+Siim,Estonia,233,68.0
+Sirje,Estonia,233,19.0
+Taavi,Estonia,233,50.0
+Tanel,Estonia,233,42.0
+Tarmo,Estonia,233,32.0
+Tauno,Estonia,233,98.0
+Tiina,Estonia,233,11.0
+Tiina-Mai,Estonia,233,89.0
+Tiit,Estonia,233,57.0
+Tiiu,Estonia,233,25.0
+Toomas,Estonia,233,6.0
+Triin,Estonia,233,43.0
+TÃµnis,Estonia,233,70.0
+TÃµnu,Estonia,233,20.0
+Urmas,Estonia,233,22.0
+Valdur,Estonia,233,84.0
+Viivi,Estonia,233,77.0
+Viljar,Estonia,233,60.0
+Ãllar,Estonia,233,96.0
+Andrias,Faroe Is.,234,23.0
+Anna,Faroe Is.,234,1.0
+ArnbjÃ¸rn,Faroe Is.,234,51.0
+Beinta,Faroe Is.,234,32.0
+Bjarni,Faroe Is.,234,8.0
+BjÃ¸rt,Faroe Is.,234,56.0
+Brandur,Faroe Is.,234,15.0
+BÃ¡rÃ°ur,Faroe Is.,234,40.0
+Durita,Faroe Is.,234,16.0
+DÃ¡njal,Faroe Is.,234,37.0
+Eirikur,Faroe Is.,234,57.0
+EivÃ¸r,Faroe Is.,234,41.0
+Elin,Faroe Is.,234,28.0
+EydÃ­s,Faroe Is.,234,9.0
+EyÃ°finn,Faroe Is.,234,49.0
+Finnur,Faroe Is.,234,42.0
+FrÃ­Ã°a,Faroe Is.,234,14.0
+GuÃ°rÃºn,Faroe Is.,234,7.0
+Hanna,Faroe Is.,234,12.0
+Heini,Faroe Is.,234,17.0
+Heri,Faroe Is.,234,44.0
+Hildur,Faroe Is.,234,30.0
+Hjalti,Faroe Is.,234,25.0
+HÃ¡kun,Faroe Is.,234,61.0
+HÃ¸gni,Faroe Is.,234,33.0
+Inga,Faroe Is.,234,47.0
+Jensa,Faroe Is.,234,18.0
+JÃ¡kup,Faroe Is.,234,6.0
+JÃ³annes,Faroe Is.,234,29.0
+JÃ³gvan,Faroe Is.,234,53.0
+JÃ³han,Faroe Is.,234,0.0
+JÃ³nvÃ¸r,Faroe Is.,234,62.0
+Katrin,Faroe Is.,234,26.0
+Kristian,Faroe Is.,234,19.0
+LÃ­v,Faroe Is.,234,50.0
+Magnus,Faroe Is.,234,59.0
+Malena,Faroe Is.,234,45.0
+Maria,Faroe Is.,234,39.0
+Marjun,Faroe Is.,234,20.0
+Mikkjal,Faroe Is.,234,35.0
+Niklas,Faroe Is.,234,63.0
+Pauli,Faroe Is.,234,31.0
+PÃ¦tur,Faroe Is.,234,4.0
+RannvÃ¡,Faroe Is.,234,3.0
+Regin,Faroe Is.,234,38.0
+RÃ³gvi,Faroe Is.,234,11.0
+RÃºna,Faroe Is.,234,60.0
+Sigrun,Faroe Is.,234,43.0
+SjÃºrÃ°ur,Faroe Is.,234,48.0
+SteinbjÃ¸rg,Faroe Is.,234,58.0
+SÃ¡ra,Faroe Is.,234,24.0
+SÃ­mun,Faroe Is.,234,10.0
+SÃ³lja,Faroe Is.,234,34.0
+SÃºsanna,Faroe Is.,234,5.0
+Trygvi,Faroe Is.,234,27.0
+TrÃ³ndur,Faroe Is.,234,46.0
+Tummas,Faroe Is.,234,21.0
+TuriÃ°,Faroe Is.,234,54.0
+TÃ³rÃ°ur,Faroe Is.,234,13.0
+VÃ¡r,Faroe Is.,234,22.0
+Ãsa,Faroe Is.,234,36.0
+Ãlavur,Faroe Is.,234,55.0
+Ãli,Faroe Is.,234,2.0
+Aada,Finland,246,64.0
+Aatos,Finland,246,79.0
+Aino,Finland,246,0.0
+Akseli,Finland,246,95.0
+Aleksi,Finland,246,61.0
+Anneli,Finland,246,16.0
+Antti,Finland,246,9.0
+Ari,Finland,246,47.0
+Arja,Finland,246,24.0
+Arttu,Finland,246,105.0
+Eero,Finland,246,1.0
+Eetu,Finland,246,65.0
+Eila,Finland,246,34.0
+Eino,Finland,246,87.0
+Elias,Finland,246,73.0
+Ella,Finland,246,66.0
+Emil,Finland,246,109.0
+Emilia,Finland,246,60.0
+Enni,Finland,246,92.0
+Erkki,Finland,246,33.0
+Hanna,Finland,246,50.0
+Hannu,Finland,246,25.0
+Heikki,Finland,246,31.0
+Helena,Finland,246,8.0
+Helmi,Finland,246,68.0
+Iida,Finland,246,70.0
+Ilkka,Finland,246,45.0
+Ilmari,Finland,246,89.0
+Isla,Finland,246,78.0
+Jaana,Finland,246,46.0
+Janne,Finland,246,51.0
+Jari,Finland,246,11.0
+Johanna,Finland,246,56.0
+Joona,Finland,246,83.0
+Juha,Finland,246,17.0
+Juhani,Finland,246,5.0
+Juho,Finland,246,59.0
+Jukka,Finland,246,27.0
+Kaapo,Finland,246,85.0
+Kaarina,Finland,246,4.0
+Kari,Finland,246,13.0
+Kasper,Finland,246,111.0
+Katja,Finland,246,52.0
+Kerttu,Finland,246,106.0
+Kristiina,Finland,246,44.0
+Laura,Finland,246,54.0
+Lauri,Finland,246,69.0
+Leena,Finland,246,20.0
+Leevi,Finland,246,77.0
+Liisa,Finland,246,2.0
+Lilja,Finland,246,80.0
+Linnea,Finland,246,86.0
+Maria,Finland,246,58.0
+Marja,Finland,246,6.0
+Marjatta,Finland,246,32.0
+Markku,Finland,246,21.0
+Matias,Finland,246,113.0
+Matilda,Finland,246,82.0
+Matti,Finland,246,15.0
+Merja,Finland,246,28.0
+Mika,Finland,246,57.0
+Mikko,Finland,246,3.0
+Minea,Finland,246,98.0
+Minna,Finland,246,40.0
+Niilo,Finland,246,81.0
+Niko,Finland,246,99.0
+Olavi,Finland,246,39.0
+Olivia,Finland,246,74.0
+Onni,Finland,246,67.0
+Oona,Finland,246,100.0
+Oskari,Finland,246,63.0
+Pekka,Finland,246,7.0
+Pentti,Finland,246,37.0
+Pertti,Finland,246,29.0
+Petri,Finland,246,49.0
+Pihla,Finland,246,76.0
+Pirjo,Finland,246,14.0
+PÃ¤ivi,Finland,246,22.0
+Raimo,Finland,246,43.0
+Rasmus,Finland,246,93.0
+Riitta,Finland,246,18.0
+Ritva,Finland,246,30.0
+Roope,Finland,246,91.0
+Saaga,Finland,246,96.0
+Sami,Finland,246,55.0
+Santeri,Finland,246,101.0
+Sari,Finland,246,10.0
+Seija,Finland,246,36.0
+Seppo,Finland,246,23.0
+Siiri,Finland,246,88.0
+Sirkka,Finland,246,42.0
+Sofia,Finland,246,62.0
+Tapani,Finland,246,41.0
+Tarja,Finland,246,48.0
+Timo,Finland,246,19.0
+Toivo,Finland,246,97.0
+Tuija,Finland,246,26.0
+Tuomas,Finland,246,103.0
+Tuula,Finland,246,12.0
+Ulla,Finland,246,38.0
+Valtteri,Finland,246,71.0
+Veikko,Finland,246,35.0
+Venla,Finland,246,72.0
+Viivi,Finland,246,94.0
+Viljami,Finland,246,107.0
+Ville,Finland,246,53.0
+VÃ¤inÃ¶,Finland,246,75.0
+Adrien,France,250,62.0
+AgnÃ¨s,France,250,117.0
+Alain,France,250,108.0
+Alexandre,France,250,12.0
+Alice,France,250,39.0
+AmÃ©lie,France,250,47.0
+AnaÃ¯s,France,250,25.0
+AndrÃ©,France,250,96.0
+Annie,France,250,125.0
+Antoine,France,250,6.0
+Antonin,France,250,82.0
+Arlette,France,250,155.0
+Arnaud,France,250,140.0
+Arthur,France,250,52.0
+Audrey,France,250,57.0
+AurÃ©lien,France,250,152.0
+Baptiste,France,250,84.0
+Bastien,France,250,150.0
+Benjamin,France,250,36.0
+Bernadette,France,250,145.0
+Bernard,France,250,104.0
+Brigitte,France,250,101.0
+Bruno,France,250,128.0
+Camille,France,250,5.0
+Caroline,France,250,59.0
+Catherine,France,250,95.0
+Chantal,France,250,127.0
+Charles,France,250,86.0
+Charlotte,France,250,31.0
+ChloÃ©,France,250,7.0
+Christian,France,250,114.0
+Christine,France,250,109.0
+Christophe,France,250,122.0
+Clara,France,250,19.0
+ClÃ©ment,France,250,42.0
+Colette,France,250,133.0
+Corinne,France,250,115.0
+CÃ©dric,France,250,134.0
+CÃ©line,France,250,45.0
+Damien,France,250,142.0
+Daniel,France,250,116.0
+Danielle,France,250,107.0
+David,France,250,32.0
+Delphine,France,250,83.0
+Denise,France,250,135.0
+Didier,France,250,126.0
+Dominique,France,250,121.0
+Emma,France,250,11.0
+Fabrice,France,250,130.0
+Florian,France,250,68.0
+FranÃ§ois,France,250,18.0
+FranÃ§oise,France,250,99.0
+FrÃ©dÃ©ric,France,250,138.0
+FÃ©lix,France,250,80.0
+Gabriel,France,250,54.0
+Gaston,France,250,92.0
+GeneviÃ¨ve,France,250,143.0
+Georges,France,250,100.0
+Guillaume,France,250,38.0
+GÃ©rard,France,250,112.0
+Henri,France,250,88.0
+Henriette,France,250,147.0
+Hugo,France,250,46.0
+HÃ©lÃ¨ne,France,250,89.0
+InÃ¨s,France,250,23.0
+Isabelle,France,250,77.0
+Jacqueline,France,250,105.0
+Jacques,France,250,102.0
+Jean,France,250,1.0
+Jeanne,France,250,151.0
+Josiane,France,250,131.0
+Jules,France,250,74.0
+Julie,France,250,9.0
+Julien,France,250,24.0
+Juliette,France,250,43.0
+Justine,France,250,63.0
+JÃ©rÃ´me,France,250,136.0
+Laura,France,250,27.0
+Laure,France,250,71.0
+Laurence,France,250,119.0
+Laurent,France,250,16.0
+Louis,France,250,48.0
+Louise,France,250,21.0
+Luc,France,250,4.0
+Lucas,France,250,44.0
+Lucie,France,250,33.0
+LÃ©a,France,250,13.0
+LÃ©on,France,250,76.0
+Madeleine,France,250,153.0
+Manon,France,250,17.0
+Marcel,France,250,94.0
+Margaux,France,250,41.0
+Marie,France,250,0.0
+Marine,France,250,37.0
+Martine,France,250,93.0
+Mathieu,France,250,14.0
+Mathilde,France,250,53.0
+Matthieu,France,250,146.0
+Maxence,France,250,70.0
+Maxime,France,250,26.0
+Michel,France,250,106.0
+MichÃ¨le,France,250,123.0
+Monique,France,250,97.0
+Morgane,France,250,67.0
+MÃ©lanie,France,250,69.0
+Nadine,France,250,129.0
+Nathalie,France,250,75.0
+Nathan,France,250,60.0
+Nicolas,France,250,8.0
+Nicole,France,250,103.0
+NoÃ©mie,France,250,55.0
+OcÃ©ane,France,250,65.0
+Odette,France,250,141.0
+Olivier,France,250,22.0
+Oscar,France,250,78.0
+Patricia,France,250,111.0
+Patrick,France,250,118.0
+Paul,France,250,50.0
+Pauline,France,250,29.0
+Philippe,France,250,20.0
+Pierre,France,250,2.0
+Quentin,France,250,66.0
+RaphaÃ«l,France,250,40.0
+RenÃ©,France,250,98.0
+Romain,France,250,34.0
+RÃ©mi,France,250,156.0
+Sandrine,France,250,81.0
+Sarah,France,250,15.0
+Simon,France,250,56.0
+Simone,France,250,139.0
+Sophie,France,250,3.0
+StÃ©phane,France,250,132.0
+StÃ©phanie,France,250,85.0
+Suzanne,France,250,149.0
+Sylvie,France,250,91.0
+SÃ©bastien,France,250,30.0
+Thibault,France,250,154.0
+Thierry,France,250,120.0
+Thomas,France,250,10.0
+ThÃ©o,France,250,58.0
+ThÃ©rÃ¨se,France,250,157.0
+Tristan,France,250,144.0
+Valentin,France,250,148.0
+Valentine,France,250,49.0
+ValÃ©rie,France,250,79.0
+Victor,France,250,72.0
+Vincent,France,250,28.0
+Virginie,France,250,87.0
+VÃ©ronique,France,250,113.0
+Yves,France,250,110.0
+Yvette,France,250,137.0
+ZoÃ©,France,250,51.0
+Ãdouard,France,250,90.0
+Ãlise,France,250,35.0
+Ãlodie,France,250,73.0
+Ãmilie,France,250,61.0
+Ãric,France,250,124.0
+Ãtienne,France,250,64.0
+Adrian,Germany,276,62.0
+Alexander,Germany,276,42.0
+Alma,Germany,276,87.0
+Amelie,Germany,276,35.0
+Andrea,Germany,276,131.0
+Andreas,Germany,276,108.0
+Anja,Germany,276,153.0
+Anna,Germany,276,11.0
+Anni,Germany,276,107.0
+Annika,Germany,276,121.0
+Anton,Germany,276,28.0
+Antonia,Germany,276,73.0
+Ben,Germany,276,18.0
+Benedikt,Germany,276,94.0
+Bernd,Germany,276,140.0
+Birgit,Germany,276,137.0
+Bruno,Germany,276,86.0
+Carla,Germany,276,97.0
+Charlotte,Germany,276,29.0
+Christian,Germany,276,100.0
+Christina,Germany,276,161.0
+Christoph,Germany,276,122.0
+Clara,Germany,276,27.0
+Claudia,Germany,276,135.0
+Clemens,Germany,276,92.0
+Constantin,Germany,276,78.0
+Daniel,Germany,276,106.0
+Daniela,Germany,276,159.0
+David,Germany,276,38.0
+Dieter,Germany,276,134.0
+Elias,Germany,276,20.0
+Elisa,Germany,276,99.0
+Elisabeth,Germany,276,75.0
+Ella,Germany,276,43.0
+Emil,Germany,276,48.0
+Emilia,Germany,276,31.0
+Emma,Germany,276,3.0
+Erich,Germany,276,154.0
+Erna,Germany,276,109.0
+Eva,Germany,276,119.0
+Fabian,Germany,276,60.0
+Felix,Germany,276,2.0
+Finn,Germany,276,14.0
+Florian,Germany,276,98.0
+Franziska,Germany,276,63.0
+Frida,Germany,276,113.0
+Frieda,Germany,276,37.0
+Friedrich,Germany,276,80.0
+Gabriel,Germany,276,72.0
+Georg,Germany,276,120.0
+Gerhard,Germany,276,152.0
+Greta,Germany,276,41.0
+Gustav,Germany,276,90.0
+GÃ¼nter,Germany,276,146.0
+Hanna,Germany,276,111.0
+Hannah,Germany,276,1.0
+Hans,Germany,276,132.0
+Heike,Germany,276,149.0
+Heinz,Germany,276,156.0
+Helena,Germany,276,55.0
+Helene,Germany,276,89.0
+Helmut,Germany,276,150.0
+Henriette,Germany,276,83.0
+Henry,Germany,276,24.0
+Horst,Germany,276,142.0
+Ida,Germany,276,39.0
+Isabella,Germany,276,69.0
+Jakob,Germany,276,36.0
+Jasmin,Germany,276,123.0
+Johanna,Germany,276,33.0
+Johannes,Germany,276,114.0
+Jonas,Germany,276,10.0
+Jonathan,Germany,276,50.0
+Josephine,Germany,276,79.0
+Julia,Germany,276,21.0
+Julian,Germany,276,74.0
+JÃ¼rgen,Germany,276,130.0
+Karin,Germany,276,147.0
+Karl,Germany,276,32.0
+Katharina,Germany,276,61.0
+Klara,Germany,276,53.0
+Klaus,Germany,276,126.0
+Kurt,Germany,276,160.0
+Lara,Germany,276,115.0
+Laura,Germany,276,15.0
+Lea,Germany,276,17.0
+Lena,Germany,276,13.0
+Leon,Germany,276,6.0
+Leonard,Germany,276,46.0
+Lina,Germany,276,25.0
+Lisa,Germany,276,23.0
+Lotte,Germany,276,105.0
+Louis,Germany,276,22.0
+Ludwig,Germany,276,84.0
+Luise,Germany,276,91.0
+Lukas,Germany,276,8.0
+Magdalena,Germany,276,77.0
+Maja,Germany,276,51.0
+Manfred,Germany,276,148.0
+Marie,Germany,276,9.0
+Markus,Germany,276,124.0
+Marlene,Germany,276,59.0
+Martha,Germany,276,93.0
+Martin,Germany,276,112.0
+Martina,Germany,276,141.0
+Mathilda,Germany,276,45.0
+Matteo,Germany,276,68.0
+Matthias,Germany,276,116.0
+Max,Germany,276,0.0
+Maximilian,Germany,276,44.0
+Melanie,Germany,276,125.0
+Mia,Germany,276,5.0
+Michael,Germany,276,102.0
+Mila,Germany,276,101.0
+Monika,Germany,276,133.0
+Moritz,Germany,276,34.0
+Nadine,Germany,276,155.0
+Nicole,Germany,276,145.0
+Niklas,Germany,276,58.0
+Nina,Germany,276,117.0
+Noah,Germany,276,16.0
+Nora,Germany,276,49.0
+Oskar,Germany,276,30.0
+Otto,Germany,276,88.0
+Paul,Germany,276,4.0
+Paula,Germany,276,47.0
+Pauline,Germany,276,85.0
+Peter,Germany,276,118.0
+Petra,Germany,276,129.0
+Philipp,Germany,276,54.0
+Pia,Germany,276,57.0
+Rafael,Germany,276,70.0
+Rainer,Germany,276,136.0
+Raphael,Germany,276,96.0
+Rosalie,Germany,276,81.0
+Sabine,Germany,276,127.0
+Samuel,Germany,276,52.0
+Sarah,Germany,276,19.0
+Sebastian,Germany,276,56.0
+Silke,Germany,276,151.0
+Simon,Germany,276,40.0
+Sophia,Germany,276,67.0
+Sophie,Germany,276,7.0
+Stefan,Germany,276,110.0
+Stefanie,Germany,276,143.0
+Stella,Germany,276,103.0
+Susanne,Germany,276,139.0
+Tanja,Germany,276,157.0
+Thea,Germany,276,95.0
+Theo,Germany,276,26.0
+Theresa,Germany,276,65.0
+Thomas,Germany,276,104.0
+Tim,Germany,276,12.0
+Tobias,Germany,276,66.0
+Uwe,Germany,276,138.0
+Valentin,Germany,276,76.0
+Victoria,Germany,276,71.0
+Vincent,Germany,276,64.0
+Walter,Germany,276,158.0
+Werner,Germany,276,144.0
+Wilhelm,Germany,276,82.0
+Wolfgang,Germany,276,128.0
+Alexander,Gibraltar,292,26.0
+Amanda,Gibraltar,292,41.0
+Ana,Gibraltar,292,15.0
+Andrew,Gibraltar,292,18.0
+Anthony,Gibraltar,292,44.0
+Benjamin,Gibraltar,292,20.0
+Carmen,Gibraltar,292,13.0
+Catherine,Gibraltar,292,45.0
+Charles,Gibraltar,292,38.0
+Charlotte,Gibraltar,292,51.0
+Christopher,Gibraltar,292,16.0
+Claire,Gibraltar,292,57.0
+Daniel,Gibraltar,292,2.0
+David,Gibraltar,292,12.0
+Edward,Gibraltar,292,42.0
+Elena,Gibraltar,292,19.0
+Emily,Gibraltar,292,49.0
+Emma,Gibraltar,292,5.0
+Gabriela,Gibraltar,292,23.0
+George,Gibraltar,292,40.0
+Grace,Gibraltar,292,53.0
+Hannah,Gibraltar,292,35.0
+Isabella,Gibraltar,292,3.0
+James,Gibraltar,292,4.0
+Jennifer,Gibraltar,292,47.0
+Jessica,Gibraltar,292,31.0
+John,Gibraltar,292,34.0
+Joseph,Gibraltar,292,32.0
+Joshua,Gibraltar,292,6.0
+Laura,Gibraltar,292,21.0
+Liam,Gibraltar,292,0.0
+Lucia,Gibraltar,292,11.0
+Maria,Gibraltar,292,17.0
+Mark,Gibraltar,292,46.0
+Matthew,Gibraltar,292,10.0
+Melissa,Gibraltar,292,55.0
+Mia,Gibraltar,292,9.0
+Michael,Gibraltar,292,14.0
+Michelle,Gibraltar,292,43.0
+Natalie,Gibraltar,292,39.0
+Nathan,Gibraltar,292,24.0
+Nicole,Gibraltar,292,25.0
+Olivia,Gibraltar,292,7.0
+Paul,Gibraltar,292,48.0
+Peter,Gibraltar,292,50.0
+Philip,Gibraltar,292,54.0
+Rachel,Gibraltar,292,33.0
+Rebecca,Gibraltar,292,27.0
+Richard,Gibraltar,292,56.0
+Robert,Gibraltar,292,36.0
+Ryan,Gibraltar,292,8.0
+Samuel,Gibraltar,292,22.0
+Sarah,Gibraltar,292,29.0
+Sofia,Gibraltar,292,1.0
+Stephen,Gibraltar,292,52.0
+Thomas,Gibraltar,292,28.0
+Victoria,Gibraltar,292,37.0
+William,Gibraltar,292,30.0
+Achilleas,Greece,300,92.0
+Agapi,Greece,300,89.0
+Aikaterini,Greece,300,43.0
+Alexandros,Greece,300,20.0
+Alexis,Greece,300,110.0
+Anastasia,Greece,300,17.0
+Andreas,Greece,300,12.0
+Angeliki,Greece,300,25.0
+Angelos,Greece,300,82.0
+Anna,Greece,300,9.0
+Antonis,Greece,300,30.0
+Apostolos,Greece,300,40.0
+Ariadni,Greece,300,73.0
+Aris,Greece,300,132.0
+Aristidis,Greece,300,58.0
+Athina,Greece,300,49.0
+Chara,Greece,300,91.0
+Christoforos,Greece,300,76.0
+Christos,Greece,300,14.0
+Chrysanthi,Greece,300,51.0
+Chrysoula,Greece,300,23.0
+Dafni,Greece,300,69.0
+Danae,Greece,300,81.0
+Demos,Greece,300,128.0
+Despina,Greece,300,13.0
+Dimitra,Greece,300,31.0
+Dimitrios,Greece,300,78.0
+Dimitris,Greece,300,0.0
+Dionysis,Greece,300,56.0
+Dora,Greece,300,105.0
+Efthymia,Greece,300,39.0
+Eleftheria,Greece,300,65.0
+Eleni,Greece,300,3.0
+Elina,Greece,300,123.0
+Elpida,Greece,300,83.0
+Evangelia,Greece,300,35.0
+Evgenia,Greece,300,57.0
+Evi,Greece,300,97.0
+Fani,Greece,300,111.0
+Filippos,Greece,300,60.0
+Fotini,Greece,300,19.0
+Fotis,Greece,300,88.0
+Georgia,Greece,300,61.0
+Georgios,Greece,300,32.0
+Giannis,Greece,300,46.0
+Giorgios,Greece,300,124.0
+Giorgos,Greece,300,4.0
+Grigoris,Greece,300,68.0
+Haris,Greece,300,108.0
+Ilias,Greece,300,54.0
+Ioanna,Greece,300,15.0
+Ioannis,Greece,300,26.0
+Irini,Greece,300,41.0
+Ismini,Greece,300,85.0
+Joanna,Greece,300,133.0
+Kalliopi,Greece,300,37.0
+Katerina,Greece,300,5.0
+Kiki,Greece,300,99.0
+Konstantina,Greece,300,29.0
+Konstantinos,Greece,300,122.0
+Kosmas,Greece,300,100.0
+Kostas,Greece,300,6.0
+Kyriakos,Greece,300,80.0
+Lambros,Greece,300,86.0
+Lefteris,Greece,300,42.0
+Lena,Greece,300,101.0
+Leonidas,Greece,300,70.0
+Litsa,Greece,300,113.0
+Loukas,Greece,300,118.0
+Lydia,Greece,300,77.0
+Makis,Greece,300,64.0
+Manolis,Greece,300,34.0
+Margarita,Greece,300,55.0
+Maria,Greece,300,1.0
+Marika,Greece,300,95.0
+Marios,Greece,300,74.0
+Melina,Greece,300,71.0
+Michalis,Greece,300,16.0
+Minas,Greece,300,126.0
+Nefeli,Greece,300,109.0
+Nektarios,Greece,300,90.0
+Niki,Greece,300,67.0
+Nikiforos,Greece,300,116.0
+Nikolaos,Greece,300,52.0
+Nikos,Greece,300,2.0
+Odysseas,Greece,300,94.0
+Olga,Greece,300,79.0
+Panagiota,Greece,300,33.0
+Panagiotis,Greece,300,10.0
+Pantelis,Greece,300,98.0
+Paraskevi,Greece,300,27.0
+Pavlos,Greece,300,50.0
+Penelope,Greece,300,75.0
+Petros,Greece,300,22.0
+Polyxeni,Greece,300,53.0
+Popi,Greece,300,125.0
+Prokopis,Greece,300,114.0
+Rania,Greece,300,121.0
+Rea,Greece,300,103.0
+Roula,Greece,300,93.0
+Sakis,Greece,300,72.0
+Savvas,Greece,300,106.0
+Simos,Greece,300,130.0
+Sofia,Greece,300,7.0
+Sophia,Greece,300,59.0
+Sotiris,Greece,300,38.0
+Soula,Greece,300,119.0
+Spyros,Greece,300,24.0
+Stavros,Greece,300,18.0
+Stefanos,Greece,300,96.0
+Stelios,Greece,300,66.0
+Stratos,Greece,300,44.0
+Styliani,Greece,300,45.0
+Takis,Greece,300,48.0
+Tasos,Greece,300,102.0
+Thanasis,Greece,300,36.0
+Thanos,Greece,300,62.0
+Themis,Greece,300,120.0
+Theodora,Greece,300,21.0
+Thodoris,Greece,300,84.0
+Tonia,Greece,300,131.0
+Toula,Greece,300,117.0
+Vangelis,Greece,300,112.0
+Varvara,Greece,300,63.0
+Vasiliki,Greece,300,11.0
+Vasilis,Greece,300,28.0
+Vicky,Greece,300,129.0
+Voula,Greece,300,115.0
+Xenia,Greece,300,87.0
+Yannis,Greece,300,8.0
+Yorgos,Greece,300,104.0
+Zoi,Greece,300,47.0
+Adam,Guernsey,831,52.0
+Alexander,Guernsey,831,24.0
+Alice,Guernsey,831,51.0
+Amelia,Guernsey,831,13.0
+Amy,Guernsey,831,59.0
+Andrew,Guernsey,831,40.0
+Ava,Guernsey,831,29.0
+Benjamin,Guernsey,831,20.0
+Charles,Guernsey,831,30.0
+Charlotte,Guernsey,831,5.0
+Chloe,Guernsey,831,21.0
+Christopher,Guernsey,831,38.0
+Connor,Guernsey,831,64.0
+Daisy,Guernsey,831,57.0
+Daniel,Guernsey,831,16.0
+David,Guernsey,831,34.0
+Edward,Guernsey,831,28.0
+Elizabeth,Guernsey,831,61.0
+Ella,Guernsey,831,27.0
+Emily,Guernsey,831,7.0
+Emma,Guernsey,831,1.0
+Ethan,Guernsey,831,60.0
+Evie,Guernsey,831,39.0
+Freya,Guernsey,831,37.0
+George,Guernsey,831,6.0
+Grace,Guernsey,831,9.0
+Hannah,Guernsey,831,19.0
+Harry,Guernsey,831,12.0
+Henry,Guernsey,831,26.0
+Isabella,Guernsey,831,23.0
+Jack,Guernsey,831,10.0
+Jacob,Guernsey,831,58.0
+James,Guernsey,831,0.0
+Jennifer,Guernsey,831,65.0
+Jessica,Guernsey,831,41.0
+John,Guernsey,831,46.0
+Joseph,Guernsey,831,32.0
+Joshua,Guernsey,831,14.0
+Katie,Guernsey,831,45.0
+Laura,Guernsey,831,49.0
+Lewis,Guernsey,831,62.0
+Lily,Guernsey,831,15.0
+Lucy,Guernsey,831,11.0
+Luke,Guernsey,831,54.0
+Matthew,Guernsey,831,22.0
+Megan,Guernsey,831,17.0
+Mia,Guernsey,831,33.0
+Michael,Guernsey,831,36.0
+Molly,Guernsey,831,55.0
+Nathan,Guernsey,831,66.0
+Nicholas,Guernsey,831,50.0
+Oliver,Guernsey,831,2.0
+Olivia,Guernsey,831,25.0
+Peter,Guernsey,831,44.0
+Poppy,Guernsey,831,31.0
+Rebecca,Guernsey,831,47.0
+Richard,Guernsey,831,48.0
+Robert,Guernsey,831,42.0
+Rosie,Guernsey,831,53.0
+Ruby,Guernsey,831,35.0
+Ryan,Guernsey,831,56.0
+Samuel,Guernsey,831,18.0
+Sarah,Guernsey,831,43.0
+Sophie,Guernsey,831,3.0
+Thomas,Guernsey,831,8.0
+Victoria,Guernsey,831,63.0
+William,Guernsey,831,4.0
+Adrienn,Hungary,348,65.0
+Andor,Hungary,348,126.0
+Andrea,Hungary,348,25.0
+AndrÃ¡s,Hungary,348,10.0
+Anita,Hungary,348,41.0
+Anna,Hungary,348,7.0
+AnnamÃ¡ria,Hungary,348,77.0
+Attila,Hungary,348,22.0
+BalÃ¡zs,Hungary,348,26.0
+BarnabÃ¡s,Hungary,348,80.0
+Beatrix,Hungary,348,39.0
+Bence,Hungary,348,32.0
+Benedek,Hungary,348,86.0
+Bernadett,Hungary,348,59.0
+BoglÃ¡rka,Hungary,348,91.0
+BorbÃ¡la,Hungary,348,121.0
+Botond,Hungary,348,84.0
+Brigitta,Hungary,348,75.0
+BÃ©la,Hungary,348,110.0
+CecÃ­lia,Hungary,348,119.0
+Csaba,Hungary,348,42.0
+Csilla,Hungary,348,83.0
+DezsÅ,Hungary,348,124.0
+DiÃ¡na,Hungary,348,93.0
+Dominik,Hungary,348,70.0
+DÃ¡vid,Hungary,348,28.0
+DÃ©nes,Hungary,348,78.0
+DÃ³ra,Hungary,348,31.0
+Edina,Hungary,348,81.0
+ElemÃ©r,Hungary,348,106.0
+Emese,Hungary,348,37.0
+Emil,Hungary,348,122.0
+EmÃ­lia,Hungary,348,125.0
+Erika,Hungary,348,45.0
+ErnÅ,Hungary,348,112.0
+ErzsÃ©bet,Hungary,348,3.0
+Eszter,Hungary,348,17.0
+Fanni,Hungary,348,69.0
+Ferenc,Hungary,348,14.0
+Frigyes,Hungary,348,120.0
+Gabriella,Hungary,348,61.0
+GergÅ,Hungary,348,66.0
+Gizella,Hungary,348,113.0
+Gyula,Hungary,348,56.0
+GyÃ¶gy,Hungary,348,108.0
+GÃ¡bor,Hungary,348,12.0
+GÃ©za,Hungary,348,102.0
+Henrietta,Hungary,348,57.0
+IldikÃ³,Hungary,348,85.0
+Ilona,Hungary,348,15.0
+Imre,Hungary,348,54.0
+IrÃ©n,Hungary,348,107.0
+IstvÃ¡n,Hungary,348,0.0
+JenÅ,Hungary,348,104.0
+JolÃ¡n,Hungary,348,109.0
+Judit,Hungary,348,11.0
+JÃ¡nos,Hungary,348,4.0
+JÃ³zsef,Hungary,348,20.0
+JÃºlia,Hungary,348,97.0
+Katalin,Hungary,348,1.0
+Kinga,Hungary,348,73.0
+Klotild,Hungary,348,123.0
+KlÃ¡ra,Hungary,348,55.0
+KornÃ©l,Hungary,348,76.0
+KornÃ©lia,Hungary,348,127.0
+KristÃ³f,Hungary,348,90.0
+Krisztina,Hungary,348,21.0
+KrisztiÃ¡n,Hungary,348,50.0
+KÃ¡lmÃ¡n,Hungary,348,114.0
+KÃ¡roly,Hungary,348,62.0
+Lajos,Hungary,348,60.0
+Laura,Hungary,348,95.0
+Levente,Hungary,348,36.0
+Lilla,Hungary,348,71.0
+LÃ¡szlÃ³,Hungary,348,2.0
+LÃ­via,Hungary,348,117.0
+Magdolna,Hungary,348,101.0
+Marcell,Hungary,348,92.0
+Margit,Hungary,348,105.0
+Marianna beatrix,Hungary,348,87.0
+Melinda,Hungary,348,51.0
+MihÃ¡ly,Hungary,348,18.0
+MilÃ¡n,Hungary,348,94.0
+MÃ¡ria,Hungary,348,5.0
+MÃ¡rton,Hungary,348,30.0
+MÃ¡tÃ©,Hungary,348,38.0
+MÃ³nika,Hungary,348,23.0
+Nikolett,Hungary,348,49.0
+Norbert,Hungary,348,40.0
+NoÃ©mi,Hungary,348,35.0
+NÃ¡ndor,Hungary,348,96.0
+OlivÃ©r,Hungary,348,72.0
+Orsolya,Hungary,348,53.0
+Patrik,Hungary,348,68.0
+Petra,Hungary,348,33.0
+Piroska,Hungary,348,99.0
+PÃ¡l,Hungary,348,58.0
+PÃ©ter,Hungary,348,8.0
+RenÃ¡ta,Hungary,348,63.0
+RichÃ¡rd,Hungary,348,46.0
+Roland,Hungary,348,88.0
+RozÃ¡lia,Hungary,348,111.0
+Rudolf,Hungary,348,116.0
+RÃ©ka,Hungary,348,29.0
+RÃ³bert,Hungary,348,48.0
+Sarolta,Hungary,348,115.0
+Szabolcs,Hungary,348,74.0
+Szilvia,Hungary,348,43.0
+SÃ¡ndor,Hungary,348,24.0
+TamÃ¡s,Hungary,348,16.0
+TerÃ©zia,Hungary,348,103.0
+Tibor,Hungary,348,44.0
+TÃ­mea,Hungary,348,47.0
+Veronika,Hungary,348,89.0
+Viktor,Hungary,348,82.0
+ViktÃ³ria,Hungary,348,27.0
+Vilmos,Hungary,348,118.0
+Vivien,Hungary,348,67.0
+ZalÃ¡n,Hungary,348,98.0
+ZoltÃ¡n,Hungary,348,6.0
+Zsolt,Hungary,348,52.0
+Zsuzsanna,Hungary,348,79.0
+ZsÃ³fia,Hungary,348,19.0
+ÃdÃ¡m,Hungary,348,34.0
+Ãgnes,Hungary,348,13.0
+Ãkos,Hungary,348,64.0
+ÃrpÃ¡d,Hungary,348,100.0
+Ãva,Hungary,348,9.0
+Andri,Iceland,352,78.0
+Anna,Iceland,352,2.0
+Ari,Iceland,352,66.0
+Atli,Iceland,352,58.0
+AuÃ°ur,Iceland,352,37.0
+Baldur,Iceland,352,38.0
+Birna,Iceland,352,53.0
+Bjarni,Iceland,352,25.0
+BjÃ¶rn,Iceland,352,9.0
+Bragi,Iceland,352,80.0
+BryndÃ­s,Iceland,352,39.0
+Dagur,Iceland,352,62.0
+DavÃ­Ã°,Iceland,352,34.0
+DÃ³ra,Iceland,352,75.0
+Egill,Iceland,352,70.0
+Einar,Iceland,352,13.0
+EirÃ­kur,Iceland,352,42.0
+ElÃ­n,Iceland,352,12.0
+ElÃ­sabet,Iceland,352,63.0
+Embla,Iceland,352,77.0
+Emil,Iceland,352,56.0
+Erla,Iceland,352,49.0
+FriÃ°rik,Iceland,352,36.0
+Gunnar,Iceland,352,7.0
+GuÃ°mundur,Iceland,352,26.0
+GuÃ°rÃºn,Iceland,352,0.0
+HalldÃ³r,Iceland,352,19.0
+Hanna,Iceland,352,35.0
+Haukur,Iceland,352,40.0
+Helga,Iceland,352,8.0
+Hildur,Iceland,352,16.0
+HjÃ¶rtur,Iceland,352,52.0
+Hrafnhildur,Iceland,352,61.0
+Hulda,Iceland,352,71.0
+HÃ¶rÃ°ur,Iceland,352,74.0
+Inga,Iceland,352,57.0
+IngibjÃ¶rg,Iceland,352,20.0
+JÃ³hann,Iceland,352,30.0
+JÃ³n,Iceland,352,3.0
+KatrÃ­n,Iceland,352,14.0
+KolbrÃºn,Iceland,352,41.0
+Kristjana,Iceland,352,27.0
+KristjÃ¡n,Iceland,352,48.0
+KristÃ­n,Iceland,352,4.0
+KÃ¡ri,Iceland,352,60.0
+Lilja,Iceland,352,47.0
+LÃ¡rus,Iceland,352,82.0
+MagnÃºs,Iceland,352,15.0
+MargrÃ©t,Iceland,352,6.0
+PÃ©tur,Iceland,352,28.0
+Ragnar,Iceland,352,23.0
+RagnheiÃ°ur,Iceland,352,18.0
+Rakel,Iceland,352,65.0
+RÃºn,Iceland,352,81.0
+Saga,Iceland,352,79.0
+Sif,Iceland,352,83.0
+SignÃ½,Iceland,352,67.0
+SigrÃ­Ã°ur,Iceland,352,29.0
+SigrÃºn,Iceland,352,10.0
+SigurÃ°ur,Iceland,352,1.0
+Sindri,Iceland,352,64.0
+Snorri,Iceland,352,54.0
+StefÃ¡n,Iceland,352,17.0
+Steinunn,Iceland,352,43.0
+Svanhildur,Iceland,352,59.0
+Sveinn,Iceland,352,72.0
+SÃ³lveig,Iceland,352,24.0
+Unnur,Iceland,352,33.0
+ValgerÃ°ur,Iceland,352,51.0
+VilhjÃ¡lmur,Iceland,352,44.0
+VÃ©dÃ­s,Iceland,352,69.0
+ÃgÃºst,Iceland,352,50.0
+Ãrni,Iceland,352,21.0
+ÃsdÃ­s,Iceland,352,73.0
+Ãslaug,Iceland,352,31.0
+Ãsta,Iceland,352,45.0
+Ãlafur,Iceland,352,5.0
+Ãskar,Iceland,352,68.0
+Ãorsteinn,Iceland,352,32.0
+Ãorvaldur,Iceland,352,46.0
+ÃrÃ¶stur,Iceland,352,76.0
+ÃÃ³r,Iceland,352,11.0
+ÃÃ³ra,Iceland,352,22.0
+ÃÃ³runn,Iceland,352,55.0
+Adam,Ireland,372,72.0
+Aidan,Ireland,372,34.0
+Ailbhe,Ireland,372,49.0
+Aisling,Ireland,372,9.0
+Amy,Ireland,372,125.0
+Andrew,Ireland,372,94.0
+Anna,Ireland,372,111.0
+Anne,Ireland,372,79.0
+Anthony,Ireland,372,114.0
+Aoibhe,Ireland,372,47.0
+Aoife,Ireland,372,1.0
+Barry,Ireland,372,122.0
+Breda,Ireland,372,69.0
+Brendan,Ireland,372,28.0
+Brian,Ireland,372,80.0
+Brid,Ireland,372,55.0
+Bridget,Ireland,372,61.0
+Bronagh,Ireland,372,41.0
+Callum,Ireland,372,54.0
+Caoimhe,Ireland,372,11.0
+Cara,Ireland,372,45.0
+Cathal,Ireland,372,26.0
+Catherine,Ireland,372,105.0
+Catriona,Ireland,372,53.0
+Christopher,Ireland,372,110.0
+Cian,Ireland,372,8.0
+Ciara,Ireland,372,7.0
+Cillian,Ireland,372,22.0
+Claire,Ireland,372,81.0
+Clodagh,Ireland,372,25.0
+Colin,Ireland,372,96.0
+Colm,Ireland,372,30.0
+Conor,Ireland,372,2.0
+Daniel,Ireland,372,62.0
+Darragh,Ireland,372,12.0
+David,Ireland,372,84.0
+Declan,Ireland,372,20.0
+Deirdre,Ireland,372,31.0
+Dermot,Ireland,372,56.0
+Donal,Ireland,372,36.0
+Dylan,Ireland,372,74.0
+Eamon,Ireland,372,58.0
+Edward,Ireland,372,116.0
+Eileen,Ireland,372,63.0
+Eimear,Ireland,372,27.0
+Elizabeth,Ireland,372,107.0
+Emer,Ireland,372,39.0
+Emma,Ireland,372,83.0
+Eoghan,Ireland,372,44.0
+Eoin,Ireland,372,14.0
+Fergus,Ireland,372,38.0
+Finn,Ireland,372,50.0
+Fiona,Ireland,372,33.0
+Fionn,Ireland,372,16.0
+Gary,Ireland,372,98.0
+Gerard,Ireland,372,120.0
+Grace,Ireland,372,117.0
+Grainne,Ireland,372,23.0
+Hannah,Ireland,372,119.0
+Helen,Ireland,372,103.0
+Ian,Ireland,372,100.0
+Jack,Ireland,372,68.0
+James,Ireland,372,64.0
+Jane,Ireland,372,113.0
+Jennifer,Ireland,372,93.0
+Jessica,Ireland,372,127.0
+John,Ireland,372,86.0
+Joseph,Ireland,372,108.0
+Karen,Ireland,372,99.0
+Kathleen,Ireland,372,59.0
+Kenneth,Ireland,372,124.0
+Kevin,Ireland,372,78.0
+Killian,Ireland,372,40.0
+Laura,Ireland,372,87.0
+Liam,Ireland,372,0.0
+Lisa,Ireland,372,97.0
+Lorcan,Ireland,372,42.0
+Luke,Ireland,372,70.0
+Maeve,Ireland,372,17.0
+Mairead,Ireland,372,29.0
+Margaret,Ireland,372,75.0
+Maria,Ireland,372,109.0
+Mark,Ireland,372,88.0
+Martin,Ireland,372,126.0
+Mary,Ireland,372,77.0
+Matthew,Ireland,372,112.0
+Maureen,Ireland,372,65.0
+Michael,Ireland,372,60.0
+Michelle,Ireland,372,95.0
+Muireann,Ireland,372,51.0
+Niall,Ireland,372,43.0
+Niamh,Ireland,372,3.0
+Nora,Ireland,372,57.0
+Noreen,Ireland,372,71.0
+Nuala,Ireland,372,35.0
+Oisin,Ireland,372,10.0
+Olivia,Ireland,372,121.0
+Orla,Ireland,372,19.0
+Padraig,Ireland,372,32.0
+Patricia,Ireland,372,73.0
+Patrick,Ireland,372,6.0
+Paul,Ireland,372,90.0
+Peter,Ireland,372,102.0
+Rachel,Ireland,372,89.0
+Rebecca,Ireland,372,91.0
+Robert,Ireland,372,104.0
+Roisin,Ireland,372,15.0
+Ronan,Ireland,372,24.0
+Rory,Ireland,372,52.0
+Ruairi,Ireland,372,46.0
+Ruth,Ireland,372,115.0
+Ryan,Ireland,372,66.0
+Saoirse,Ireland,372,5.0
+Sarah,Ireland,372,85.0
+Seamus,Ireland,372,48.0
+Sean,Ireland,372,4.0
+Shane,Ireland,372,76.0
+Sheila,Ireland,372,67.0
+Sinead,Ireland,372,21.0
+Siobhan,Ireland,372,13.0
+Sophie,Ireland,372,123.0
+Sorcha,Ireland,372,37.0
+Stephen,Ireland,372,92.0
+Susan,Ireland,372,101.0
+Tadhg,Ireland,372,18.0
+Thomas,Ireland,372,82.0
+Timothy,Ireland,372,118.0
+William,Ireland,372,106.0
+Adele,Italy,380,157.0
+Alberto,Italy,380,52.0
+Aldo,Italy,380,136.0
+Alessandra,Italy,380,65.0
+Alessandro,Italy,380,4.0
+Alessia,Italy,380,17.0
+Alessio,Italy,380,72.0
+Alice,Italy,380,49.0
+Andrea,Italy,380,10.0
+Angelica,Italy,380,135.0
+Angelo,Italy,380,94.0
+Anna,Italy,380,35.0
+Annalisa,Italy,380,115.0
+Antonella,Italy,380,83.0
+Antonio,Italy,380,24.0
+Arianna,Italy,380,43.0
+Armando,Italy,380,116.0
+Arturo,Italy,380,138.0
+Barbara,Italy,380,123.0
+Beatrice,Italy,380,25.0
+Benedetta,Italy,380,149.0
+Bianca,Italy,380,133.0
+Bruno,Italy,380,120.0
+Camilla,Italy,380,29.0
+Carla,Italy,380,119.0
+Carlo,Italy,380,90.0
+Carlotta,Italy,380,75.0
+Caterina,Italy,380,145.0
+Cecilia,Italy,380,131.0
+Chiara,Italy,380,5.0
+Cinzia,Italy,380,97.0
+Claudia,Italy,380,39.0
+Claudio,Italy,380,68.0
+Corrado,Italy,380,150.0
+Cosimo,Italy,380,126.0
+Cristian,Italy,380,80.0
+Cristina,Italy,380,55.0
+Daniela,Italy,380,85.0
+Daniele,Italy,380,42.0
+Dario,Italy,380,96.0
+Davide,Italy,380,14.0
+Debora,Italy,380,81.0
+Diego,Italy,380,66.0
+Domenico,Italy,380,82.0
+Donatella,Italy,380,117.0
+Edoardo,Italy,380,62.0
+Elena,Italy,380,15.0
+Eleonora,Italy,380,73.0
+Elisa,Italy,380,23.0
+Elisabetta,Italy,380,121.0
+Emanuela,Italy,380,79.0
+Emanuele,Italy,380,46.0
+Enrico,Italy,380,70.0
+Enzo,Italy,380,118.0
+Ezio,Italy,380,156.0
+Fabio,Italy,380,50.0
+Fabrizio,Italy,380,98.0
+Federica,Italy,380,7.0
+Federico,Italy,380,34.0
+Filippo,Italy,380,28.0
+Flavio,Italy,380,110.0
+Francesca,Italy,380,19.0
+Francesco,Italy,380,2.0
+Gabriele,Italy,380,20.0
+Gaia,Italy,380,147.0
+Gennaro,Italy,380,128.0
+Giacomo,Italy,380,56.0
+Giada,Italy,380,71.0
+Giancarlo,Italy,380,114.0
+Gianluca,Italy,380,78.0
+Gianmarco,Italy,380,106.0
+Gianni,Italy,380,88.0
+Giorgia,Italy,380,13.0
+Giovanna,Italy,380,67.0
+Giovanni,Italy,380,38.0
+Giulia,Italy,380,1.0
+Giuseppe,Italy,380,26.0
+Greta,Italy,380,45.0
+Guido,Italy,380,140.0
+Ilaria,Italy,380,41.0
+Irene,Italy,380,63.0
+Ivano,Italy,380,148.0
+Katia,Italy,380,105.0
+Laura,Italy,380,31.0
+Leonardo,Italy,380,58.0
+Livia,Italy,380,155.0
+Lorenza,Italy,380,107.0
+Lorenzo,Italy,380,8.0
+Luca,Italy,380,12.0
+Lucia,Italy,380,61.0
+Luciano,Italy,380,152.0
+Ludovica,Italy,380,141.0
+Manuela,Italy,380,93.0
+Marcello,Italy,380,132.0
+Marco,Italy,380,0.0
+Margherita,Italy,380,137.0
+Marianna,Italy,380,125.0
+Marta,Italy,380,51.0
+Martina,Italy,380,11.0
+Massimo,Italy,380,64.0
+Matilde,Italy,380,151.0
+Matteo,Italy,380,6.0
+Mattia,Italy,380,84.0
+Maurizio,Italy,380,130.0
+Mauro,Italy,380,86.0
+Michela,Italy,380,59.0
+Michele,Italy,380,36.0
+Mirko,Italy,380,102.0
+Monica,Italy,380,89.0
+Nadia,Italy,380,129.0
+Nicola,Italy,380,32.0
+Nicoletta,Italy,380,101.0
+Nino,Italy,380,144.0
+Noemi,Italy,380,47.0
+Ornella,Italy,380,127.0
+Paola,Italy,380,57.0
+Paolo,Italy,380,44.0
+Pasquale,Italy,380,104.0
+Patrizia,Italy,380,91.0
+Piero,Italy,380,134.0
+Pietro,Italy,380,54.0
+Raffaele,Italy,380,76.0
+Raffaella,Italy,380,103.0
+Renato,Italy,380,112.0
+Riccardo,Italy,380,18.0
+Roberta,Italy,380,37.0
+Roberto,Italy,380,40.0
+Rocco,Italy,380,108.0
+Rossella,Italy,380,99.0
+Ruggero,Italy,380,154.0
+Sabrina,Italy,380,69.0
+Salvatore,Italy,380,60.0
+Samuele,Italy,380,74.0
+Sara,Italy,380,21.0
+Serena,Italy,380,33.0
+Sergio,Italy,380,92.0
+Silvia,Italy,380,27.0
+Silvio,Italy,380,142.0
+Simona,Italy,380,87.0
+Simone,Italy,380,16.0
+Sofia,Italy,380,3.0
+Sonia,Italy,380,111.0
+Stefania,Italy,380,95.0
+Stefano,Italy,380,22.0
+Stella,Italy,380,139.0
+Teresa,Italy,380,153.0
+Tiziana,Italy,380,113.0
+Tiziano,Italy,380,146.0
+Tommaso,Italy,380,30.0
+Umberto,Italy,380,124.0
+Valentina,Italy,380,9.0
+Valeria,Italy,380,77.0
+Valerio,Italy,380,100.0
+Veronica,Italy,380,53.0
+Vincenzo,Italy,380,48.0
+Viola,Italy,380,143.0
+Vittorio,Italy,380,122.0
+Viviana,Italy,380,109.0
+Agnese,Latvia,428,15.0
+Aigars,Latvia,428,30.0
+Aija,Latvia,428,37.0
+Aiva,Latvia,428,55.0
+Alberts,Latvia,428,88.0
+Aleksandrs,Latvia,428,40.0
+Alise,Latvia,428,100.0
+Anda,Latvia,428,71.0
+Andrejs,Latvia,428,66.0
+Andris,Latvia,428,4.0
+Anete,Latvia,428,75.0
+Anita,Latvia,428,43.0
+Anna,Latvia,428,1.0
+Armands,Latvia,428,62.0
+ArtÅ«rs,Latvia,428,6.0
+Atis,Latvia,428,78.0
+Ausma,Latvia,428,87.0
+Baiba,Latvia,428,29.0
+Dace,Latvia,428,19.0
+Daina,Latvia,428,39.0
+Daniels,Latvia,428,60.0
+DiÄna,Latvia,428,63.0
+Dzintra,Latvia,428,89.0
+Edgars,Latvia,428,8.0
+EdvÄ«ns,Latvia,428,52.0
+Elza,Latvia,428,104.0
+ElÄ«na,Latvia,428,13.0
+EmÄ«lija,Latvia,428,98.0
+EmÄ«ls,Latvia,428,70.0
+Ernests,Latvia,428,44.0
+Evita,Latvia,428,35.0
+Fricis,Latvia,428,90.0
+Gatis,Latvia,428,14.0
+Gita,Latvia,428,77.0
+Gunta,Latvia,428,45.0
+Gustavs,Latvia,428,72.0
+Haralds,Latvia,428,94.0
+Henrijs,Latvia,428,82.0
+Ieva,Latvia,428,7.0
+Ilona,Latvia,428,53.0
+Ilze,Latvia,428,17.0
+Inese,Latvia,428,21.0
+Ineta,Latvia,428,27.0
+Inga,Latvia,428,49.0
+IrÄna,Latvia,428,95.0
+Ivars,Latvia,428,32.0
+Jolanta,Latvia,428,67.0
+Juris,Latvia,428,18.0
+JÄnis,Latvia,428,0.0
+JÄkabs,Latvia,428,42.0
+JÅ«lija,Latvia,428,96.0
+JÅ«lijs,Latvia,428,80.0
+KatrÄ«na,Latvia,428,99.0
+Kristaps,Latvia,428,64.0
+KristÄ«na,Latvia,428,33.0
+KristÄ«ne,Latvia,428,5.0
+KÄrlis,Latvia,428,12.0
+Laima,Latvia,428,9.0
+Laura,Latvia,428,25.0
+Liene,Latvia,428,31.0
+Ligita,Latvia,428,91.0
+LÄsma,Latvia,428,65.0
+LÄ«ga,Latvia,428,3.0
+LÄ«va,Latvia,428,57.0
+Madara,Latvia,428,59.0
+Maija,Latvia,428,41.0
+Maksims,Latvia,428,68.0
+Marija,Latvia,428,97.0
+Marks,Latvia,428,86.0
+Marta,Latvia,428,101.0
+MatÄ«ss,Latvia,428,48.0
+Mirdza,Latvia,428,81.0
+MÄris,Latvia,428,2.0
+MÄrtiÅÅ¡,Latvia,428,16.0
+NiklÄvs,Latvia,428,74.0
+Normunds,Latvia,428,34.0
+Oskars,Latvia,428,24.0
+Oto,Latvia,428,92.0
+Paula,Latvia,428,102.0
+PÄteris,Latvia,428,20.0
+Raimonds,Latvia,428,36.0
+Ralfs,Latvia,428,54.0
+Rasma,Latvia,428,83.0
+Reinis,Latvia,428,76.0
+Rihards,Latvia,428,10.0
+Roberts,Latvia,428,50.0
+Rolands,Latvia,428,26.0
+Ruta,Latvia,428,69.0
+RÅ«dolfs,Latvia,428,84.0
+SabÄ«ne,Latvia,428,103.0
+Sanita,Latvia,428,23.0
+Signe,Latvia,428,47.0
+Sintija,Latvia,428,61.0
+Toms,Latvia,428,46.0
+Uldis,Latvia,428,28.0
+Valda,Latvia,428,79.0
+Valdis,Latvia,428,22.0
+Velta,Latvia,428,93.0
+Vija,Latvia,428,85.0
+Viktors,Latvia,428,58.0
+Vineta,Latvia,428,73.0
+Vita,Latvia,428,51.0
+Zane,Latvia,428,11.0
+Äriks,Latvia,428,56.0
+Ä¢irts,Latvia,428,38.0
+Adrian,Liechtenstein,438,56.0
+Alexander,Liechtenstein,438,32.0
+Andrea,Liechtenstein,438,25.0
+Andreas,Liechtenstein,438,14.0
+Angelika,Liechtenstein,438,51.0
+Anna,Liechtenstein,438,3.0
+Barbara,Liechtenstein,438,11.0
+Benjamin,Liechtenstein,438,44.0
+Brigitte,Liechtenstein,438,19.0
+Christian,Liechtenstein,438,22.0
+Christine,Liechtenstein,438,15.0
+Claudia,Liechtenstein,438,31.0
+Daniel,Liechtenstein,438,20.0
+Daniela,Liechtenstein,438,53.0
+David,Liechtenstein,438,40.0
+Dominik,Liechtenstein,438,50.0
+Elisabeth,Liechtenstein,438,5.0
+Eva,Liechtenstein,438,43.0
+Florian,Liechtenstein,438,42.0
+Franz,Liechtenstein,438,6.0
+Gabriele,Liechtenstein,438,37.0
+Georg,Liechtenstein,438,28.0
+Hans,Liechtenstein,438,0.0
+Helga,Liechtenstein,438,27.0
+Ingrid,Liechtenstein,438,29.0
+Josef,Liechtenstein,438,8.0
+Julia,Liechtenstein,438,47.0
+Karin,Liechtenstein,438,41.0
+Katharina,Liechtenstein,438,7.0
+Klaus,Liechtenstein,438,4.0
+Lukas,Liechtenstein,438,36.0
+Marcel,Liechtenstein,438,54.0
+Maria,Liechtenstein,438,1.0
+Markus,Liechtenstein,438,24.0
+Martin,Liechtenstein,438,16.0
+Martina,Liechtenstein,438,33.0
+Matthias,Liechtenstein,438,30.0
+Melanie,Liechtenstein,438,59.0
+Michael,Liechtenstein,438,12.0
+Monika,Liechtenstein,438,9.0
+Nicole,Liechtenstein,438,45.0
+Oliver,Liechtenstein,438,58.0
+Patrick,Liechtenstein,438,52.0
+Peter,Liechtenstein,438,2.0
+Petra,Liechtenstein,438,21.0
+Philipp,Liechtenstein,438,34.0
+Renate,Liechtenstein,438,39.0
+Sabine,Liechtenstein,438,23.0
+Sandra,Liechtenstein,438,49.0
+Sebastian,Liechtenstein,438,46.0
+Silvia,Liechtenstein,438,35.0
+Simon,Liechtenstein,438,38.0
+Sonja,Liechtenstein,438,55.0
+Stefan,Liechtenstein,438,18.0
+Susanne,Liechtenstein,438,13.0
+Thomas,Liechtenstein,438,10.0
+Tobias,Liechtenstein,438,48.0
+Ursula,Liechtenstein,438,17.0
+Verena,Liechtenstein,438,57.0
+Wolfgang,Liechtenstein,438,26.0
+AgnÄ,Lithuania,440,35.0
+AistÄ,Lithuania,440,111.0
+Aivaras,Lithuania,440,92.0
+Aldona,Lithuania,440,103.0
+Algirdas,Lithuania,440,30.0
+Alvydas,Lithuania,440,82.0
+Andrius mindaugas,Lithuania,440,16.0
+Antanas,Lithuania,440,96.0
+ArtÅ«ras,Lithuania,440,40.0
+ArÅ«nas,Lithuania,440,14.0
+Asta,Lithuania,440,85.0
+AudronÄ,Lithuania,440,75.0
+Aurimas mindaugas,Lithuania,440,48.0
+AustÄja,Lithuania,440,5.0
+AuÅ¡ra,Lithuania,440,53.0
+BirutÄ,Lithuania,440,69.0
+Bronius,Lithuania,440,112.0
+Dainius,Lithuania,440,56.0
+Daiva,Lithuania,440,67.0
+Dalia,Lithuania,440,79.0
+Danute,Lithuania,440,105.0
+Darius,Lithuania,440,6.0
+DeimantÄ,Lithuania,440,113.0
+Deividas,Lithuania,440,44.0
+Dominykas,Lithuania,440,88.0
+Donatas,Lithuania,440,34.0
+DovilÄ,Lithuania,440,23.0
+Edita,Lithuania,440,83.0
+Edvinas,Lithuania,440,52.0
+Egidijus,Lithuania,440,72.0
+EglÄ,Lithuania,440,25.0
+Emilija,Lithuania,440,11.0
+Evaldas mindaugas,Lithuania,440,66.0
+GabrielÄ,Lithuania,440,9.0
+Gediminas,Lithuania,440,24.0
+Giedrius,Lithuania,440,76.0
+GiedrÄ,Lithuania,440,51.0
+Gintaras,Lithuania,440,38.0
+GraÅ¾ina,Lithuania,440,91.0
+Greta,Lithuania,440,3.0
+Henrikas,Lithuania,440,110.0
+Ieva,Lithuania,440,7.0
+Ignas,Lithuania,440,90.0
+IndrÄ,Lithuania,440,27.0
+Inga,Lithuania,440,45.0
+Irena,Lithuania,440,89.0
+Jadvyga,Lithuania,440,97.0
+Jolanta,Lithuania,440,47.0
+Jonas,Lithuania,440,2.0
+Juozas,Lithuania,440,100.0
+Jurgita,Lithuania,440,41.0
+Justina,Lithuania,440,15.0
+Justinas,Lithuania,440,86.0
+JÅ«ratÄ,Lithuania,440,71.0
+Kamile,Lithuania,440,13.0
+Karolis,Lithuania,440,62.0
+Kazys,Lithuania,440,106.0
+Kristina,Lithuania,440,37.0
+KÄstutis,Lithuania,440,28.0
+Laima,Lithuania,440,65.0
+Laura,Lithuania,440,33.0
+Lina,Lithuania,440,43.0
+Linas,Lithuania,440,58.0
+Loreta,Lithuania,440,77.0
+Lukas,Lithuania,440,12.0
+Mantas,Lithuania,440,10.0
+Marija,Lithuania,440,101.0
+Marius,Lithuania,440,22.0
+Martynas,Lithuania,440,64.0
+Mindaugas,Lithuania,440,4.0
+Monika,Lithuania,440,29.0
+Nerijus,Lithuania,440,54.0
+Neringa,Lithuania,440,17.0
+NijolÄ,Lithuania,440,81.0
+Ona,Lithuania,440,99.0
+Paulius mindaugas,Lithuania,440,20.0
+Petras,Lithuania,440,98.0
+Povilas,Lithuania,440,46.0
+Pranas,Lithuania,440,104.0
+Raimonda,Lithuania,440,73.0
+RamunÄ,Lithuania,440,55.0
+Rasa,Lithuania,440,39.0
+Reda,Lithuania,440,59.0
+Remigijus,Lithuania,440,78.0
+Renata,Lithuania,440,87.0
+Rima,Lithuania,440,95.0
+Rimantas,Lithuania,440,68.0
+Robertas,Lithuania,440,60.0
+Rokas,Lithuania,440,18.0
+Rytis,Lithuania,440,32.0
+RÅ«ta,Lithuania,440,1.0
+Saulius,Lithuania,440,26.0
+Sigita,Lithuania,440,63.0
+Simas,Lithuania,440,84.0
+Simona,Lithuania,440,21.0
+Sonata,Lithuania,440,109.0
+Stasys,Lithuania,440,102.0
+Tadas,Lithuania,440,50.0
+Tomas,Lithuania,440,8.0
+UgnÄ,Lithuania,440,19.0
+Vaida,Lithuania,440,49.0
+Valdas,Lithuania,440,36.0
+Vidas,Lithuania,440,70.0
+Viktoras,Lithuania,440,108.0
+Viktorija,Lithuania,440,31.0
+Vilma,Lithuania,440,57.0
+Violeta,Lithuania,440,93.0
+Virginijus,Lithuania,440,80.0
+Vitalija,Lithuania,440,107.0
+Vytas,Lithuania,440,94.0
+Vytautas,Lithuania,440,0.0
+Å arÅ«nas,Lithuania,440,74.0
+Å½ivilÄ,Lithuania,440,61.0
+Å½ygimantas,Lithuania,440,42.0
+Alain,Luxembourg,442,46.0
+Alex,Luxembourg,442,24.0
+Alice,Luxembourg,442,55.0
+AmÃ©lie,Luxembourg,442,35.0
+AndrÃ©,Luxembourg,442,18.0
+Anna,Luxembourg,442,43.0
+Anne,Luxembourg,442,5.0
+Antoine,Luxembourg,442,78.0
+BenoÃ®t,Luxembourg,442,80.0
+Camille,Luxembourg,442,19.0
+Carla,Luxembourg,442,57.0
+Catherine,Luxembourg,442,83.0
+Charles,Luxembourg,442,60.0
+Charlotte,Luxembourg,442,25.0
+ChloÃ©,Luxembourg,442,31.0
+Christian,Luxembourg,442,32.0
+Christophe,Luxembourg,442,76.0
+Claire,Luxembourg,442,7.0
+Claude,Luxembourg,442,38.0
+CÃ©line,Luxembourg,442,73.0
+Daniel,Luxembourg,442,28.0
+Danielle,Luxembourg,442,89.0
+David,Luxembourg,442,26.0
+Elise,Luxembourg,442,29.0
+Emma,Luxembourg,442,9.0
+Eva,Luxembourg,442,39.0
+Fabien,Luxembourg,442,84.0
+Felix,Luxembourg,442,64.0
+FranÃ§ois,Luxembourg,442,12.0
+Georges,Luxembourg,442,42.0
+Guy,Luxembourg,442,52.0
+Henri,Luxembourg,442,40.0
+Ines,Luxembourg,442,59.0
+Isabelle,Luxembourg,442,71.0
+Jacques,Luxembourg,442,36.0
+Jade,Luxembourg,442,49.0
+Jean,Luxembourg,442,0.0
+Joseph,Luxembourg,442,56.0
+JoÃ«lle,Luxembourg,442,87.0
+Julie,Luxembourg,442,11.0
+Julien,Luxembourg,442,70.0
+Lara,Luxembourg,442,67.0
+Laura,Luxembourg,442,17.0
+Laurent,Luxembourg,442,10.0
+Lena,Luxembourg,442,51.0
+Lily,Luxembourg,442,61.0
+Lisa,Luxembourg,442,21.0
+Louis,Luxembourg,442,58.0
+Luc,Luxembourg,442,2.0
+Lucie,Luxembourg,442,45.0
+LÃ©a,Luxembourg,442,13.0
+Manon,Luxembourg,442,27.0
+Mara,Luxembourg,442,65.0
+Marc,Luxembourg,442,4.0
+Marie,Luxembourg,442,1.0
+Martine,Luxembourg,442,75.0
+Mathieu,Luxembourg,442,72.0
+Mathilde,Luxembourg,442,33.0
+Max,Luxembourg,442,22.0
+Mia,Luxembourg,442,41.0
+Michel,Luxembourg,442,14.0
+Monique,Luxembourg,442,79.0
+Nadine,Luxembourg,442,85.0
+Nathalie,Luxembourg,442,69.0
+Nicolas,Luxembourg,442,8.0
+Nina,Luxembourg,442,23.0
+Nora,Luxembourg,442,47.0
+Olivia,Luxembourg,442,53.0
+Olivier,Luxembourg,442,86.0
+Oscar,Luxembourg,442,66.0
+Patrick,Luxembourg,442,30.0
+Paul,Luxembourg,442,6.0
+Philippe,Luxembourg,442,48.0
+Pierre,Luxembourg,442,16.0
+Raymond,Luxembourg,442,54.0
+RenÃ©,Luxembourg,442,44.0
+Robert,Luxembourg,442,34.0
+Rosa,Luxembourg,442,63.0
+Sarah,Luxembourg,442,15.0
+Serge,Luxembourg,442,88.0
+Simon,Luxembourg,442,68.0
+Sophie,Luxembourg,442,3.0
+Sylvie,Luxembourg,442,77.0
+SÃ©bastien,Luxembourg,442,74.0
+Thierry,Luxembourg,442,82.0
+Tom,Luxembourg,442,20.0
+Victor,Luxembourg,442,62.0
+VÃ©ronique,Luxembourg,442,81.0
+Yves,Luxembourg,442,50.0
+ZoÃ©,Luxembourg,442,37.0
+Aleksandar,Macedonia,807,0.0
+Aleksandrija,Macedonia,807,57.0
+Ana,Macedonia,807,30.0
+Andrej,Macedonia,807,16.0
+Aneta,Macedonia,807,98.0
+Angelina,Macedonia,807,77.0
+Beti,Macedonia,807,99.0
+Biljana,Macedonia,807,42.0
+Bisera,Macedonia,807,58.0
+Blagica,Macedonia,807,78.0
+Blagoj,Macedonia,807,19.0
+Bojan,Macedonia,807,6.0
+Cveta,Macedonia,807,59.0
+Cvetanka,Macedonia,807,79.0
+Cvijeta,Macedonia,807,100.0
+Dafina,Macedonia,807,80.0
+Daniela,Macedonia,807,36.0
+Danka,Macedonia,807,101.0
+Darko,Macedonia,807,7.0
+Dejan,Macedonia,807,13.0
+Despina,Macedonia,807,60.0
+Dimitar,Macedonia,807,4.0
+Dragana,Macedonia,807,43.0
+Elena,Macedonia,807,31.0
+Elizabeta,Macedonia,807,61.0
+Emiliana,Macedonia,807,102.0
+Emilija,Macedonia,807,44.0
+Evgenija,Macedonia,807,81.0
+Fani,Macedonia,807,82.0
+Fanka,Macedonia,807,103.0
+Filip,Macedonia,807,14.0
+Frosina,Macedonia,807,62.0
+Gjorgji,Macedonia,807,5.0
+Goca,Macedonia,807,83.0
+Goce,Macedonia,807,20.0
+Gordana,Macedonia,807,45.0
+Grozda,Macedonia,807,104.0
+Grozdana,Macedonia,807,63.0
+Hristijana,Macedonia,807,84.0
+Hristina,Macedonia,807,64.0
+Hristinka,Macedonia,807,105.0
+Igor,Macedonia,807,8.0
+Ilija,Macedonia,807,21.0
+Irena,Macedonia,807,85.0
+Iskra,Macedonia,807,65.0
+Ivana,Macedonia,807,37.0
+Ivanka,Macedonia,807,106.0
+Jadranka,Macedonia,807,107.0
+Jana,Macedonia,807,86.0
+Jasmina,Macedonia,807,46.0
+Jovan,Macedonia,807,22.0
+Jovana,Macedonia,807,34.0
+Julija,Macedonia,807,66.0
+Kalina,Macedonia,807,47.0
+Karolina,Macedonia,807,67.0
+Katerina,Macedonia,807,33.0
+Kiril,Macedonia,807,23.0
+Kristijan,Macedonia,807,15.0
+Kristina,Macedonia,807,38.0
+Ksenija,Macedonia,807,87.0
+Lena,Macedonia,807,88.0
+Lidija,Macedonia,807,48.0
+Ljupka,Macedonia,807,68.0
+Magdalena,Macedonia,807,89.0
+Maja,Macedonia,807,39.0
+Makedonka,Macedonia,807,69.0
+Marija,Macedonia,807,32.0
+Marko,Macedonia,807,3.0
+Metodij,Macedonia,807,24.0
+Milena,Macedonia,807,49.0
+Natalija,Macedonia,807,70.0
+Natasha,Macedonia,807,35.0
+Neda,Macedonia,807,50.0
+Nevena,Macedonia,807,90.0
+Nikola,Macedonia,807,2.0
+Olga,Macedonia,807,71.0
+Olgica,Macedonia,807,91.0
+Olivera,Macedonia,807,51.0
+Pavlina,Macedonia,807,72.0
+Petar,Macedonia,807,10.0
+Petra,Macedonia,807,92.0
+Rada,Macedonia,807,73.0
+Radmila,Macedonia,807,52.0
+Risto,Macedonia,807,25.0
+Rozalija,Macedonia,807,93.0
+Silvana,Macedonia,807,74.0
+Simona,Macedonia,807,40.0
+Slave,Macedonia,807,26.0
+Snezana,Macedonia,807,53.0
+Sofija,Macedonia,807,94.0
+Stefan,Macedonia,807,1.0
+Stojan,Macedonia,807,17.0
+Tamara,Macedonia,807,95.0
+Tanja,Macedonia,807,75.0
+Tatjana,Macedonia,807,54.0
+Teodora,Macedonia,807,41.0
+Todor,Macedonia,807,27.0
+Trajko,Macedonia,807,11.0
+Valentina,Macedonia,807,55.0
+Vasil,Macedonia,807,18.0
+Vasilka,Macedonia,807,96.0
+Vera,Macedonia,807,76.0
+Viktor,Macedonia,807,12.0
+Vladimir,Macedonia,807,28.0
+Zdenka,Macedonia,807,97.0
+Zlatko,Macedonia,807,29.0
+Zoran,Macedonia,807,9.0
+Zorica,Macedonia,807,56.0
+Aaron,Malta,470,82.0
+Adrian,Malta,470,50.0
+Alexander,Malta,470,46.0
+Amanda,Malta,470,49.0
+Andrew,Malta,470,26.0
+Angele,Malta,470,75.0
+Anna,Malta,470,3.0
+Anthony,Malta,470,8.0
+Benjamin,Malta,470,66.0
+Brian,Malta,470,56.0
+Carmen,Malta,470,5.0
+Catherine,Malta,470,15.0
+Charlene,Malta,470,69.0
+Charles,Malta,470,12.0
+Christine,Malta,470,51.0
+Christopher,Malta,470,32.0
+Claire,Malta,470,27.0
+Claudia,Malta,470,63.0
+Daniel,Malta,470,30.0
+Daniela,Malta,470,57.0
+David,Malta,470,18.0
+Denise,Malta,470,71.0
+Doreen,Malta,470,83.0
+Edward,Malta,470,60.0
+Elaine,Malta,470,79.0
+Elizabeth,Malta,470,21.0
+Emma,Malta,470,35.0
+Ethan,Malta,470,84.0
+Francesca,Malta,470,59.0
+Francis,Malta,470,10.0
+Gabriel,Malta,470,70.0
+George,Malta,470,14.0
+Grace,Malta,470,13.0
+Isaac,Malta,470,72.0
+Jacob,Malta,470,78.0
+James,Malta,470,28.0
+Jessica,Malta,470,47.0
+John,Malta,470,2.0
+Jonathan,Malta,470,52.0
+Joseph,Malta,470,0.0
+Josephine,Malta,470,9.0
+Joshua,Malta,470,86.0
+Julian,Malta,470,64.0
+Kevin,Malta,470,54.0
+Laura,Malta,470,37.0
+Lorraine,Malta,470,85.0
+Louise,Malta,470,25.0
+Luke,Malta,470,40.0
+Margaret,Malta,470,17.0
+Maria,Malta,470,1.0
+Mariella,Malta,470,73.0
+Mark,Malta,470,20.0
+Martin,Malta,470,62.0
+Martina,Malta,470,61.0
+Matthew,Malta,470,24.0
+Melanie,Malta,470,55.0
+Melissa,Malta,470,45.0
+Michael,Malta,470,6.0
+Michelle,Malta,470,29.0
+Miriam,Malta,470,77.0
+Natalie,Malta,470,53.0
+Nathan,Malta,470,74.0
+Nicholas,Malta,470,36.0
+Nicole,Malta,470,41.0
+Oliver,Malta,470,76.0
+Patrick,Malta,470,48.0
+Paul,Malta,470,4.0
+Peter,Malta,470,16.0
+Philip,Malta,470,44.0
+Rachel,Malta,470,33.0
+Rebecca,Malta,470,39.0
+Rita,Malta,470,7.0
+Robert,Malta,470,34.0
+Roberta,Malta,470,67.0
+Rose,Malta,470,11.0
+Ryan,Malta,470,58.0
+Samuel,Malta,470,68.0
+Sarah,Malta,470,31.0
+Simon,Malta,470,38.0
+Stephanie,Malta,470,43.0
+Stephen,Malta,470,22.0
+Suzanne,Malta,470,81.0
+Teresa,Malta,470,19.0
+Thomas,Malta,470,42.0
+Vanessa,Malta,470,65.0
+Veronica,Malta,470,87.0
+Victoria,Malta,470,23.0
+William,Malta,470,80.0
+Adrian,Moldova,498,46.0
+Ala,Moldova,498,55.0
+Alexandru,Moldova,498,4.0
+Alexei,Moldova,498,84.0
+Alina,Moldova,498,41.0
+Alla,Moldova,498,87.0
+Ana,Moldova,498,17.0
+Anastasia,Moldova,498,91.0
+Anatol,Moldova,498,34.0
+Andrei,Moldova,498,6.0
+Angela,Moldova,498,49.0
+Antonina,Moldova,498,113.0
+Aurelia,Moldova,498,75.0
+Bogdan,Moldova,498,102.0
+Constantin,Moldova,498,20.0
+Corneliu,Moldova,498,92.0
+Costea,Moldova,498,106.0
+Cristian,Moldova,498,44.0
+Cristina,Moldova,498,51.0
+Daniela,Moldova,498,47.0
+Diana,Moldova,498,45.0
+Dmitri,Moldova,498,30.0
+Dorin,Moldova,498,100.0
+Dorina,Moldova,498,57.0
+Dumitru,Moldova,498,8.0
+Ecaterina,Moldova,498,31.0
+Elena,Moldova,498,3.0
+Emilian,Moldova,498,110.0
+Eugen,Moldova,498,54.0
+Eugenia,Moldova,498,65.0
+Fiodor,Moldova,498,80.0
+Galina,Moldova,498,21.0
+Ghenadi,Moldova,498,86.0
+Gheorghe,Moldova,498,12.0
+Grigore,Moldova,498,36.0
+Grigori,Moldova,498,112.0
+Iacob,Moldova,498,90.0
+Igor,Moldova,498,26.0
+Ilie,Moldova,498,56.0
+Inna,Moldova,498,79.0
+Ion,Moldova,498,0.0
+Irina,Moldova,498,13.0
+Iurie,Moldova,498,72.0
+Larisa,Moldova,498,37.0
+Leonid,Moldova,498,82.0
+Lidia,Moldova,498,27.0
+Lilia,Moldova,498,85.0
+Liliana,Moldova,498,59.0
+Liuba,Moldova,498,107.0
+Liubov,Moldova,498,67.0
+Liudmila,Moldova,498,89.0
+Liviu,Moldova,498,104.0
+Lucia,Moldova,498,71.0
+Ludmila,Moldova,498,19.0
+Maria,Moldova,498,1.0
+Mariana,Moldova,498,53.0
+Marin,Moldova,498,96.0
+Marina,Moldova,498,101.0
+Maxim,Moldova,498,50.0
+Mihai,Moldova,498,14.0
+Mihail,Moldova,498,68.0
+Nadejda,Moldova,498,63.0
+Natalia,Moldova,498,5.0
+Natasha,Moldova,498,99.0
+Nelli,Moldova,498,95.0
+Nicolae,Moldova,498,10.0
+Nicolai,Moldova,498,60.0
+Nina,Moldova,498,25.0
+Oksana,Moldova,498,103.0
+Oleg,Moldova,498,32.0
+Olga,Moldova,498,11.0
+Oxana,Moldova,498,43.0
+Pavel,Moldova,498,22.0
+Petru,Moldova,498,24.0
+Polina,Moldova,498,111.0
+Radu,Moldova,498,98.0
+Raisa,Moldova,498,33.0
+Rimma,Moldova,498,109.0
+Rodica,Moldova,498,61.0
+Roman,Moldova,498,48.0
+Ruslan,Moldova,498,40.0
+Semion,Moldova,498,94.0
+Serghei,Moldova,498,66.0
+Sergiu,Moldova,498,16.0
+Silvia,Moldova,498,73.0
+Stanislav,Moldova,498,58.0
+Stela,Moldova,498,69.0
+Stepan,Moldova,498,78.0
+Svetlana,Moldova,498,9.0
+Tamara,Moldova,498,39.0
+Tatiana,Moldova,498,7.0
+Tatjana,Moldova,498,105.0
+Tatyana,Moldova,498,81.0
+Tudor,Moldova,498,64.0
+Valentin,Moldova,498,28.0
+Valentina,Moldova,498,35.0
+Valeri,Moldova,498,114.0
+Valeriu,Moldova,498,70.0
+Vasile,Moldova,498,2.0
+Vasili,Moldova,498,74.0
+Veaceslav,Moldova,498,62.0
+Vera,Moldova,498,23.0
+Veronica,Moldova,498,77.0
+Victor,Moldova,498,18.0
+Victoria,Moldova,498,15.0
+Viorel,Moldova,498,38.0
+Viorica,Moldova,498,93.0
+Vitalie,Moldova,498,52.0
+Vladislav,Moldova,498,42.0
+Vladlen,Moldova,498,76.0
+Zina,Moldova,498,83.0
+Zinaida,Moldova,498,29.0
+Adrien,Monaco,492,34.0
+Alexandre,Monaco,492,6.0
+Alice,Monaco,492,39.0
+AmÃ©lie,Monaco,492,55.0
+AnaÃ¯s,Monaco,492,29.0
+Antoine,Monaco,492,4.0
+Arthur,Monaco,492,46.0
+Baptiste,Monaco,492,26.0
+Benjamin,Monaco,492,38.0
+Camille,Monaco,492,7.0
+Charlotte,Monaco,492,1.0
+ChloÃ©,Monaco,492,15.0
+Clara,Monaco,492,33.0
+ClÃ©ment,Monaco,492,28.0
+CÃ©line,Monaco,492,59.0
+Emma,Monaco,492,11.0
+Eva,Monaco,492,51.0
+Florian,Monaco,492,40.0
+Gabriel,Monaco,492,52.0
+Gabriella,Monaco,492,3.0
+Hugo,Monaco,492,20.0
+InÃ¨s,Monaco,492,27.0
+Jacques,Monaco,492,2.0
+Jade,Monaco,492,45.0
+Julie,Monaco,492,23.0
+Julien,Monaco,492,16.0
+Juliette,Monaco,492,57.0
+Laura,Monaco,492,21.0
+Lina,Monaco,492,47.0
+Louis,Monaco,492,0.0
+Lucas,Monaco,492,10.0
+Lucie,Monaco,492,41.0
+LÃ©a,Monaco,492,13.0
+Manon,Monaco,492,17.0
+Marc,Monaco,492,58.0
+Margaux,Monaco,492,43.0
+Marie,Monaco,492,9.0
+Mathieu,Monaco,492,22.0
+Maxime,Monaco,492,18.0
+Nathan,Monaco,492,48.0
+Nicolas,Monaco,492,14.0
+Nina,Monaco,492,49.0
+OcÃ©ane,Monaco,492,25.0
+Olivier,Monaco,492,56.0
+Paul,Monaco,492,50.0
+Pauline,Monaco,492,31.0
+Pierre,Monaco,492,8.0
+Quentin,Monaco,492,42.0
+RaphaÃ«l,Monaco,492,24.0
+Romain,Monaco,492,32.0
+Rose,Monaco,492,53.0
+Sarah,Monaco,492,19.0
+Simon,Monaco,492,44.0
+Sophie,Monaco,492,5.0
+Thomas,Monaco,492,12.0
+ThÃ©o,Monaco,492,36.0
+Vincent,Monaco,492,30.0
+ZoÃ©,Monaco,492,35.0
+Ãlise,Monaco,492,37.0
+Ãtienne,Monaco,492,54.0
+Aleksandar,Montenegro,499,6.0
+Aleksandra,Montenegro,499,39.0
+Ana,Montenegro,499,1.0
+Anastasija,Montenegro,499,19.0
+Andrija,Montenegro,499,18.0
+AnÄela,Montenegro,499,23.0
+Biljana,Montenegro,499,65.0
+Bogdan,Montenegro,499,84.0
+Bojan,Montenegro,499,28.0
+Bojana,Montenegro,499,45.0
+Branko,Montenegro,499,52.0
+Danica,Montenegro,499,83.0
+Danijela,Montenegro,499,69.0
+Danilo,Montenegro,499,20.0
+Darko,Montenegro,499,46.0
+Dejan,Montenegro,499,30.0
+Dijana,Montenegro,499,51.0
+Dimitrije,Montenegro,499,88.0
+Dragan,Montenegro,499,66.0
+Dragana,Montenegro,499,27.0
+Dragica,Montenegro,499,79.0
+DuÅ¡an,Montenegro,499,24.0
+DuÅ¡anka,Montenegro,499,73.0
+Emilija,Montenegro,499,37.0
+Filip,Montenegro,499,12.0
+Goran,Montenegro,499,48.0
+Gordana,Montenegro,499,55.0
+Igor,Montenegro,499,26.0
+Isidora,Montenegro,499,35.0
+Ivana,Montenegro,499,7.0
+Jasmina,Montenegro,499,67.0
+Jelena,Montenegro,499,3.0
+Jovan,Montenegro,499,38.0
+Jovana,Montenegro,499,13.0
+Katarina,Montenegro,499,17.0
+Kristina,Montenegro,499,29.0
+Ljiljana,Montenegro,499,57.0
+Luka,Montenegro,499,8.0
+Maja,Montenegro,499,9.0
+Marija,Montenegro,499,33.0
+Marko,Montenegro,499,0.0
+Milan,Montenegro,499,40.0
+Milena,Montenegro,499,75.0
+Milica,Montenegro,499,5.0
+Milorad,Montenegro,499,82.0
+MiloÅ¡,Montenegro,499,16.0
+Miodrag,Montenegro,499,56.0
+Mira,Montenegro,499,89.0
+Mirjana,Montenegro,499,61.0
+Miroslav,Montenegro,499,72.0
+Mladen,Montenegro,499,64.0
+MomÄilo,Montenegro,499,78.0
+Nada,Montenegro,499,81.0
+NataÅ¡a,Montenegro,499,43.0
+NebojÅ¡a,Montenegro,499,68.0
+Nemanja,Montenegro,499,14.0
+Nikola,Montenegro,499,2.0
+Nikolina,Montenegro,499,21.0
+Ognjen,Montenegro,499,34.0
+Olivera,Montenegro,499,71.0
+Pavle,Montenegro,499,36.0
+Petar,Montenegro,499,10.0
+Predrag,Montenegro,499,60.0
+Radmila,Montenegro,499,77.0
+Radomir,Montenegro,499,74.0
+Radovan,Montenegro,499,54.0
+Rajko,Montenegro,499,62.0
+Ranko,Montenegro,499,80.0
+Rastko,Montenegro,499,90.0
+Sanja,Montenegro,499,31.0
+Sara,Montenegro,499,15.0
+Slavica,Montenegro,499,53.0
+Slobodan,Montenegro,499,58.0
+SneÅ¾ana,Montenegro,499,49.0
+Sofija,Montenegro,499,91.0
+SrÄan,Montenegro,499,42.0
+Stana,Montenegro,499,87.0
+Stefan,Montenegro,499,4.0
+Svetlana,Montenegro,499,63.0
+Tamara,Montenegro,499,25.0
+Teodora,Montenegro,499,11.0
+Tijana,Montenegro,499,41.0
+UroÅ¡,Montenegro,499,44.0
+Vasilije,Montenegro,499,86.0
+Vera,Montenegro,499,85.0
+Vesna,Montenegro,499,47.0
+Vladimir,Montenegro,499,22.0
+Vuk,Montenegro,499,32.0
+VukaÅ¡in,Montenegro,499,92.0
+Zdravko,Montenegro,499,76.0
+Zoran,Montenegro,499,50.0
+Zorica,Montenegro,499,59.0
+Å½eljko,Montenegro,499,70.0
+Amber,Netherlands,528,56.0
+Anna,Netherlands,528,6.0
+Anouk,Netherlands,528,66.0
+Bas,Netherlands,528,93.0
+Boaz,Netherlands,528,49.0
+Bram,Netherlands,528,7.0
+Brent,Netherlands,528,113.0
+Cas,Netherlands,528,57.0
+Daan,Netherlands,528,3.0
+DaniÃ«l,Netherlands,528,95.0
+Dex,Netherlands,528,59.0
+Dion,Netherlands,528,129.0
+Dirk,Netherlands,528,119.0
+Elin,Netherlands,528,48.0
+Eline,Netherlands,528,94.0
+Emma,Netherlands,528,0.0
+Esmee,Netherlands,528,74.0
+Eva,Netherlands,528,10.0
+Evi,Netherlands,528,30.0
+Fay,Netherlands,528,110.0
+Feline,Netherlands,528,64.0
+Femke,Netherlands,528,44.0
+Fenna,Netherlands,528,28.0
+Fien,Netherlands,528,80.0
+Finn,Netherlands,528,13.0
+Fleur,Netherlands,528,20.0
+Floris,Netherlands,528,69.0
+Gijs,Netherlands,528,37.0
+Guus,Netherlands,528,75.0
+Hidde,Netherlands,528,71.0
+Hugo,Netherlands,528,53.0
+Indy,Netherlands,528,106.0
+Iris,Netherlands,528,46.0
+Isa,Netherlands,528,18.0
+Jan,Netherlands,528,101.0
+Jasmijn,Netherlands,528,90.0
+Jasper,Netherlands,528,35.0
+Jayden,Netherlands,528,45.0
+Jelle,Netherlands,528,85.0
+Jens,Netherlands,528,39.0
+Jesse,Netherlands,528,23.0
+Jill,Netherlands,528,68.0
+Jip,Netherlands,528,115.0
+Joep,Netherlands,528,61.0
+Joris,Netherlands,528,107.0
+Jorn,Netherlands,528,131.0
+Julia,Netherlands,528,4.0
+Jurre,Netherlands,528,81.0
+Koen,Netherlands,528,65.0
+Lana,Netherlands,528,124.0
+Lara,Netherlands,528,58.0
+Lars,Netherlands,528,11.0
+Lena,Netherlands,528,76.0
+Levi,Netherlands,528,41.0
+Lieke,Netherlands,528,32.0
+Lilly,Netherlands,528,126.0
+Lina,Netherlands,528,88.0
+Linde,Netherlands,528,104.0
+Linn,Netherlands,528,122.0
+Lisa,Netherlands,528,8.0
+Lise,Netherlands,528,84.0
+Liv,Netherlands,528,38.0
+Liva,Netherlands,528,108.0
+Liz,Netherlands,528,118.0
+Lize,Netherlands,528,72.0
+Loes,Netherlands,528,130.0
+Lois,Netherlands,528,96.0
+Lotte,Netherlands,528,14.0
+LoÃ¯s,Netherlands,528,114.0
+Lucas,Netherlands,528,1.0
+Lukas,Netherlands,528,99.0
+Lune,Netherlands,528,132.0
+Luuk,Netherlands,528,27.0
+Lynn,Netherlands,528,26.0
+Maarten,Netherlands,528,121.0
+Mara,Netherlands,528,112.0
+Marit,Netherlands,528,102.0
+Mats,Netherlands,528,67.0
+Matthijs,Netherlands,528,111.0
+Maud,Netherlands,528,52.0
+Max,Netherlands,528,19.0
+Mees,Netherlands,528,43.0
+Merel,Netherlands,528,70.0
+Mick,Netherlands,528,133.0
+Mila,Netherlands,528,12.0
+Milan,Netherlands,528,25.0
+Naomi,Netherlands,528,86.0
+Niels,Netherlands,528,89.0
+Nienke,Netherlands,528,100.0
+Nina,Netherlands,528,42.0
+Noa,Netherlands,528,50.0
+Noah,Netherlands,528,15.0
+Noor,Netherlands,528,22.0
+Noud,Netherlands,528,77.0
+Olivier,Netherlands,528,51.0
+Pepijn,Netherlands,528,105.0
+Pieter,Netherlands,528,91.0
+Puck,Netherlands,528,62.0
+Quinten,Netherlands,528,117.0
+Rens,Netherlands,528,127.0
+Roan,Netherlands,528,79.0
+Romy,Netherlands,528,98.0
+Roos,Netherlands,528,34.0
+Ruben,Netherlands,528,31.0
+Saar,Netherlands,528,16.0
+Sam,Netherlands,528,33.0
+Sander,Netherlands,528,125.0
+Sanne,Netherlands,528,116.0
+Sara,Netherlands,528,40.0
+Sem,Netherlands,528,5.0
+Siem,Netherlands,528,87.0
+Sofie,Netherlands,528,54.0
+Sophie,Netherlands,528,2.0
+Stijn,Netherlands,528,29.0
+Suus,Netherlands,528,82.0
+Sven,Netherlands,528,55.0
+Tess,Netherlands,528,24.0
+Teun,Netherlands,528,47.0
+Thijs,Netherlands,528,9.0
+Thom,Netherlands,528,97.0
+Ties,Netherlands,528,63.0
+Tim,Netherlands,528,17.0
+Timo,Netherlands,528,109.0
+Tobias,Netherlands,528,83.0
+Tom,Netherlands,528,21.0
+Tygo,Netherlands,528,135.0
+Vera,Netherlands,528,60.0
+Vince,Netherlands,528,73.0
+Wouter,Netherlands,528,103.0
+Yara,Netherlands,528,78.0
+Zoey,Netherlands,528,36.0
+Adrian,Norway,578,74.0
+Agnes,Norway,578,111.0
+Aksel,Norway,578,100.0
+Alexander,Norway,578,78.0
+Alma,Norway,578,101.0
+Amalie,Norway,578,61.0
+Anders,Norway,578,44.0
+Andreas,Norway,578,56.0
+Anita,Norway,578,45.0
+Anna,Norway,578,69.0
+Arne,Norway,578,14.0
+Astrid,Norway,578,3.0
+Aurora,Norway,578,97.0
+Benjamin,Norway,578,110.0
+Berit,Norway,578,33.0
+BjÃ¸rn,Norway,578,8.0
+Camilla,Norway,578,47.0
+Cecilie,Norway,578,125.0
+Christian,Norway,578,116.0
+Daniel,Norway,578,68.0
+David,Norway,578,112.0
+Einar,Norway,578,124.0
+Elias,Norway,578,96.0
+Elin,Norway,578,35.0
+Elise,Norway,578,77.0
+Ella,Norway,578,103.0
+Emil,Norway,578,82.0
+Emilia,Norway,578,109.0
+Emilie,Norway,578,53.0
+Emma,Norway,578,7.0
+Erik,Norway,578,4.0
+Espen,Norway,578,64.0
+Filip,Norway,578,90.0
+Fredrik,Norway,578,58.0
+Frida,Norway,578,63.0
+Geir,Norway,578,34.0
+Grete,Norway,578,31.0
+Gunnar,Norway,578,20.0
+Hanna,Norway,578,15.0
+Hedda,Norway,578,89.0
+Helene,Norway,578,71.0
+Henrik,Norway,578,48.0
+Hilde,Norway,578,39.0
+HÃ¥kon,Norway,578,18.0
+Ida,Norway,578,51.0
+Ingeborg,Norway,578,25.0
+Ingrid,Norway,578,1.0
+Isak,Norway,578,104.0
+Ivar,Norway,578,22.0
+Jakob,Norway,578,94.0
+Jan,Norway,578,38.0
+Johanne,Norway,578,113.0
+Johannes,Norway,578,108.0
+Jonas,Norway,578,54.0
+Julie,Norway,578,49.0
+JÃ¸rgen,Norway,578,122.0
+Kari,Norway,578,17.0
+Karoline,Norway,578,81.0
+Kjell,Norway,578,40.0
+Knut,Norway,578,10.0
+Kristian,Norway,578,52.0
+Kristin,Norway,578,29.0
+Lars,Norway,578,0.0
+Leah,Norway,578,95.0
+Leif,Norway,578,24.0
+Linnea,Norway,578,73.0
+Lise,Norway,578,43.0
+Liv,Norway,578,11.0
+Lucas,Norway,578,86.0
+Magnus,Norway,578,6.0
+Maja,Norway,578,79.0
+Mari,Norway,578,19.0
+Maria,Norway,578,67.0
+Marianne,Norway,578,123.0
+Marit,Norway,578,27.0
+Markus,Norway,578,72.0
+Marte,Norway,578,115.0
+Martin,Norway,578,50.0
+Martine,Norway,578,83.0
+Mathias,Norway,578,106.0
+Mathilde,Norway,578,55.0
+Mia,Norway,578,75.0
+Morten,Norway,578,42.0
+Nathalie,Norway,578,85.0
+Nikolai,Norway,578,80.0
+Noah,Norway,578,98.0
+Nora,Norway,578,9.0
+Oda,Norway,578,91.0
+Odd,Norway,578,26.0
+Ole,Norway,578,2.0
+Oliver,Norway,578,84.0
+Olivia,Norway,578,105.0
+Oskar,Norway,578,92.0
+Per,Norway,578,36.0
+Petter,Norway,578,118.0
+Rikke,Norway,578,119.0
+Rune,Norway,578,28.0
+Saga,Norway,578,107.0
+Sander,Norway,578,114.0
+Sara,Norway,578,65.0
+Sebastian,Norway,578,70.0
+Selma,Norway,578,99.0
+Sigrid,Norway,578,13.0
+Silje,Norway,578,37.0
+Simen,Norway,578,62.0
+Sindre,Norway,578,60.0
+Sofie,Norway,578,5.0
+Solveig,Norway,578,21.0
+Stein,Norway,578,30.0
+Stian,Norway,578,66.0
+Svein,Norway,578,16.0
+Synne,Norway,578,117.0
+Thea,Norway,578,23.0
+Theodor,Norway,578,102.0
+Thomas,Norway,578,46.0
+Tiril,Norway,578,93.0
+Tobias,Norway,578,76.0
+Tone,Norway,578,41.0
+Tonje,Norway,578,121.0
+Tor,Norway,578,12.0
+Trond,Norway,578,32.0
+Tuva,Norway,578,59.0
+Vegard,Norway,578,120.0
+Victoria,Norway,578,87.0
+Vilde,Norway,578,57.0
+William,Norway,578,88.0
+Adam,Poland,616,24.0
+Adrian,Poland,616,62.0
+Adrianna,Poland,616,55.0
+Agata,Poland,616,107.0
+Agnieszka,Poland,616,9.0
+Alan,Poland,616,142.0
+Aleksander,Poland,616,106.0
+Aleksandra,Poland,616,19.0
+Alicja,Poland,616,65.0
+Amelia,Poland,616,127.0
+Andrzej,Poland,616,8.0
+Aneta,Poland,616,75.0
+Angelika,Poland,616,59.0
+Anna,Poland,616,1.0
+Antoni,Poland,616,136.0
+Antonina,Poland,616,131.0
+Artur,Poland,616,50.0
+Barbara,Poland,616,11.0
+Bartosz,Poland,616,32.0
+Beata,Poland,616,71.0
+Bogdan,Poland,616,100.0
+Borys,Poland,616,110.0
+BoÅ¼ena,Poland,616,115.0
+Cecylia,Poland,616,125.0
+CzesÅaw,Poland,616,112.0
+Damian,Poland,616,52.0
+Daniel,Poland,616,70.0
+Danuta,Poland,616,87.0
+Dariusz,Poland,616,36.0
+Dawid,Poland,616,42.0
+Dominik,Poland,616,90.0
+Dominika,Poland,616,49.0
+Dorota,Poland,616,79.0
+Edyta,Poland,616,111.0
+ElÅ¼bieta,Poland,616,81.0
+Emilia,Poland,616,57.0
+Eryk,Poland,616,130.0
+Ewa,Poland,616,13.0
+Ewelina,Poland,616,99.0
+Fabian,Poland,616,144.0
+Filip,Poland,616,44.0
+Franciszek,Poland,616,88.0
+Gabriela,Poland,616,63.0
+GraÅ¼yna,Poland,616,91.0
+Grzegorz,Poland,616,26.0
+Halina,Poland,616,89.0
+Hanna,Poland,616,133.0
+Helena,Poland,616,121.0
+Henryk,Poland,616,96.0
+Hubert,Poland,616,60.0
+Ignacy,Poland,616,148.0
+Igor,Poland,616,66.0
+Irena,Poland,616,123.0
+Iwona,Poland,616,77.0
+Izabela,Poland,616,47.0
+Izabella,Poland,616,101.0
+Jacek,Poland,616,56.0
+Jadwiga,Poland,616,119.0
+Jakub,Poland,616,0.0
+Jan,Poland,616,10.0
+JarosÅaw,Poland,616,104.0
+Jerzy,Poland,616,94.0
+Joanna,Poland,616,15.0
+Jolanta,Poland,616,93.0
+Julia,Poland,616,37.0
+Julian,Poland,616,146.0
+Justyna,Poland,616,31.0
+Kacper,Poland,616,48.0
+Kamil,Poland,616,28.0
+Kamila,Poland,616,97.0
+Karol,Poland,616,74.0
+Karolina,Poland,616,25.0
+Katarzyna,Poland,616,5.0
+Kazimierz,Poland,616,118.0
+Kinga,Poland,616,69.0
+Klara,Poland,616,145.0
+Klaudia,Poland,616,51.0
+Konrad,Poland,616,72.0
+Kornelia,Poland,616,103.0
+Krystyna,Poland,616,117.0
+Krzysztof,Poland,616,6.0
+Lena,Poland,616,129.0
+Leon,Poland,616,132.0
+Leszek,Poland,616,114.0
+Lidia,Poland,616,113.0
+Liliana,Poland,616,137.0
+Lucyna,Poland,616,141.0
+Maciej,Poland,616,38.0
+Magdalena,Poland,616,7.0
+Maja,Poland,616,67.0
+Maksymilian,Poland,616,84.0
+Marcel,Poland,616,138.0
+Marcin,Poland,616,18.0
+Marek,Poland,616,20.0
+Maria,Poland,616,3.0
+Mariola,Poland,616,143.0
+Mariusz,Poland,616,64.0
+Marta,Poland,616,95.0
+Martyna,Poland,616,33.0
+Mateusz,Poland,616,30.0
+MaÅgorzata,Poland,616,45.0
+MichaÅ,Poland,616,14.0
+Milena,Poland,616,105.0
+MirosÅaw,Poland,616,122.0
+MiÅosz,Poland,616,76.0
+Monika,Poland,616,23.0
+Natalia,Poland,616,21.0
+Natan,Poland,616,134.0
+Nikodem,Poland,616,92.0
+Nikola,Poland,616,61.0
+Norbert,Poland,616,102.0
+Olaf,Poland,616,128.0
+Olivier,Poland,616,140.0
+Oliwia,Poland,616,35.0
+Oskar,Poland,616,80.0
+Patrycja,Poland,616,41.0
+Paulina,Poland,616,27.0
+PaweÅ,Poland,616,16.0
+Piotr,Poland,616,4.0
+PrzemysÅaw,Poland,616,68.0
+RadosÅaw,Poland,616,98.0
+RafaÅ,Poland,616,34.0
+Renata,Poland,616,73.0
+Robert,Poland,616,54.0
+Ryszard,Poland,616,120.0
+RÃ³Å¼a,Poland,616,135.0
+Sabina,Poland,616,147.0
+Sebastian,Poland,616,46.0
+StanisÅaw,Poland,616,58.0
+Sylwia,Poland,616,53.0
+Szymon,Poland,616,40.0
+Tadeusz,Poland,616,78.0
+Teresa,Poland,616,85.0
+Tomasz,Poland,616,12.0
+Tymoteusz,Poland,616,126.0
+Urszula,Poland,616,83.0
+Waldemar,Poland,616,116.0
+Wanda,Poland,616,139.0
+Weronika,Poland,616,29.0
+Wiktor,Poland,616,82.0
+Wiktoria,Poland,616,43.0
+Wioletta,Poland,616,109.0
+Witold,Poland,616,124.0
+Wojciech,Poland,616,2.0
+WÅadysÅaw,Poland,616,108.0
+Zbigniew,Poland,616,86.0
+Zofia,Poland,616,17.0
+Zuzanna,Poland,616,39.0
+Åukasz,Poland,616,22.0
+Å»aneta,Poland,616,149.0
+Adriana,Portugal,620,69.0
+Afonso,Portugal,620,60.0
+Alberto,Portugal,620,88.0
+Alexandre,Portugal,620,118.0
+Alice,Portugal,620,119.0
+AmÃ©lia,Portugal,620,105.0
+Ana,Portugal,620,3.0
+Anabela,Portugal,620,93.0
+Andreia,Portugal,620,51.0
+AndrÃ©,Portugal,620,30.0
+AntÃ³nio,Portugal,620,2.0
+Armando,Portugal,620,92.0
+Artur,Portugal,620,84.0
+Augusto,Portugal,620,94.0
+Beatriz,Portugal,620,7.0
+Bernardo,Portugal,620,62.0
+Bruna,Portugal,620,79.0
+Bruno,Portugal,620,28.0
+BÃ¡rbara,Portugal,620,113.0
+Carla,Portugal,620,37.0
+Carlos,Portugal,620,14.0
+Carolina,Portugal,620,13.0
+Catarina,Portugal,620,21.0
+Clara,Portugal,620,121.0
+ClÃ¡udia,Portugal,620,49.0
+ConceiÃ§Ã£o,Portugal,620,91.0
+Cristiano,Portugal,620,106.0
+Cristina,Portugal,620,35.0
+CÃ©lia,Portugal,620,77.0
+CÃ©sar,Portugal,620,98.0
+Daniel,Portugal,620,116.0
+Daniela,Portugal,620,65.0
+David,Portugal,620,114.0
+Diana,Portugal,620,57.0
+Dinis,Portugal,620,78.0
+Diogo,Portugal,620,32.0
+Duarte,Portugal,620,54.0
+Eduarda,Portugal,620,129.0
+Eduardo,Portugal,620,108.0
+Elisabete,Portugal,620,99.0
+Fernanda,Portugal,620,103.0
+Fernando,Portugal,620,34.0
+Filipa,Portugal,620,87.0
+Filipe,Portugal,620,52.0
+Francisca,Portugal,620,5.0
+Francisco,Portugal,620,8.0
+FÃ¡bio,Portugal,620,76.0
+FÃ¡tima,Portugal,620,71.0
+Gabriel,Portugal,620,66.0
+Gabriela,Portugal,620,83.0
+GonÃ§alo,Portugal,620,42.0
+GraÃ§a,Portugal,620,95.0
+Guilherme,Portugal,620,68.0
+Helena,Portugal,620,55.0
+Henrique,Portugal,620,58.0
+Hugo,Portugal,620,48.0
+InÃªs,Portugal,620,15.0
+Irene,Portugal,620,117.0
+Isabel,Portugal,620,27.0
+Ivo,Portugal,620,120.0
+Jaime,Portugal,620,82.0
+Joana,Portugal,620,23.0
+Joaquim,Portugal,620,90.0
+Jorge,Portugal,620,36.0
+JosÃ©,Portugal,620,4.0
+JoÃ£o,Portugal,620,0.0
+JÃºlia,Portugal,620,81.0
+Laura,Portugal,620,123.0
+Leandro,Portugal,620,100.0
+Leonor,Portugal,620,9.0
+Liliana,Portugal,620,63.0
+Lucas,Portugal,620,124.0
+Lurdes,Portugal,620,89.0
+LuÃ­s,Portugal,620,12.0
+LÃ­dia,Portugal,620,115.0
+LÃºcia,Portugal,620,61.0
+Madalena,Portugal,620,125.0
+Mafalda,Portugal,620,111.0
+Manuel,Portugal,620,6.0
+Manuela,Portugal,620,73.0
+Marcelo,Portugal,620,102.0
+Marco,Portugal,620,122.0
+Margarida,Portugal,620,85.0
+Maria,Portugal,620,1.0
+Mariana,Portugal,620,11.0
+Marta,Portugal,620,29.0
+Martim,Portugal,620,64.0
+Mateus,Portugal,620,110.0
+Miguel,Portugal,620,18.0
+MÃ¡rcio,Portugal,620,126.0
+MÃ¡rio,Portugal,620,86.0
+MÃ³nica,Portugal,620,41.0
+NatÃ¡lia,Portugal,620,101.0
+Nelson,Portugal,620,104.0
+Nuno,Portugal,620,26.0
+Olga,Portugal,620,97.0
+PatrÃ­cia,Portugal,620,33.0
+Paula,Portugal,620,45.0
+Paulo,Portugal,620,16.0
+Pedro,Portugal,620,10.0
+Rafael,Portugal,620,50.0
+Raquel,Portugal,620,47.0
+Raul,Portugal,620,96.0
+Renato,Portugal,620,72.0
+Ricardo,Portugal,620,22.0
+Rita,Portugal,620,19.0
+Rodrigo,Portugal,620,44.0
+Rosa,Portugal,620,75.0
+Rui,Portugal,620,24.0
+RÃºben,Portugal,620,74.0
+Samuel,Portugal,620,112.0
+Sandra,Portugal,620,39.0
+Sara,Portugal,620,31.0
+SimÃ£o,Portugal,620,70.0
+Sofia,Portugal,620,17.0
+Susana,Portugal,620,43.0
+SÃ©rgio,Portugal,620,38.0
+SÃ­lvia,Portugal,620,53.0
+Telmo,Portugal,620,128.0
+Teresa,Portugal,620,25.0
+Tiago,Portugal,620,20.0
+TomÃ¡s,Portugal,620,56.0
+Vanessa,Portugal,620,67.0
+Vasco,Portugal,620,40.0
+Vera,Portugal,620,59.0
+VÃ¢nia,Portugal,620,109.0
+VÃ­tor,Portugal,620,46.0
+Ãlvaro,Portugal,620,80.0
+Ãngela,Portugal,620,107.0
+Adrian,Romania,642,10.0
+Adriana,Romania,642,39.0
+Alexandru,Romania,642,6.0
+Alin,Romania,642,70.0
+Alina,Romania,642,11.0
+Ana,Romania,642,5.0
+Anca,Romania,642,75.0
+Andreea,Romania,642,17.0
+Andrei,Romania,642,0.0
+Anica,Romania,642,135.0
+AniÈoara,Romania,642,129.0
+Aurel,Romania,642,86.0
+Aurelia,Romania,642,119.0
+Bianca,Romania,642,55.0
+Bogdan,Romania,642,20.0
+Camelia,Romania,642,45.0
+Carmen,Romania,642,33.0
+Ciprian,Romania,642,44.0
+Claudia,Romania,642,49.0
+Claudiu,Romania,642,94.0
+Codrin,Romania,642,126.0
+Constantin,Romania,642,24.0
+ConstanÈa,Romania,642,133.0
+Corina,Romania,642,63.0
+Cornel,Romania,642,82.0
+Cornelia,Romania,642,101.0
+Cosmin,Romania,642,40.0
+Costel,Romania,642,140.0
+Cristian,Romania,642,8.0
+Cristina,Romania,642,23.0
+CÄlin,Romania,642,106.0
+CÄtÄlin,Romania,642,60.0
+Dan,Romania,642,30.0
+Daniela,Romania,642,9.0
+Darius,Romania,642,114.0
+Decebal,Romania,642,128.0
+Delia,Romania,642,79.0
+Denisa,Romania,642,57.0
+Diana,Romania,642,25.0
+Doina,Romania,642,85.0
+Dorin,Romania,642,76.0
+Dorina,Romania,642,121.0
+Doru,Romania,642,68.0
+DragoÈ,Romania,642,32.0
+Dumitru,Romania,642,42.0
+Ecaterina,Romania,642,91.0
+Elena,Romania,642,3.0
+Emil,Romania,642,50.0
+Eugen,Romania,642,96.0
+Felicia,Romania,642,117.0
+Flavius,Romania,642,132.0
+Floarea,Romania,642,123.0
+Florentina,Romania,642,65.0
+Florica,Romania,642,107.0
+Florin,Romania,642,14.0
+Gabriel,Romania,642,64.0
+Gabriela,Romania,642,13.0
+Gelu,Romania,642,136.0
+George,Romania,642,38.0
+Georgiana,Romania,642,43.0
+Gheorghe,Romania,642,12.0
+Grigore,Romania,642,100.0
+Horea,Romania,642,98.0
+Horia,Romania,642,120.0
+Ileana,Romania,642,111.0
+Ilie,Romania,642,124.0
+Ioana,Romania,642,7.0
+Ion,Romania,642,2.0
+IonuÈ,Romania,642,26.0
+Irina,Romania,642,41.0
+Iulia,Romania,642,67.0
+Iulian,Romania,642,80.0
+Larisa,Romania,642,71.0
+Laura,Romania,642,21.0
+LaurenÈiu,Romania,642,72.0
+Lavinia,Romania,642,53.0
+Leontina,Romania,642,131.0
+Lidia,Romania,642,115.0
+Liliana,Romania,642,83.0
+Liviu,Romania,642,56.0
+Loredana,Romania,642,59.0
+Lucian,Romania,642,46.0
+LuminiÈa,Romania,642,61.0
+Maria,Romania,642,1.0
+Marian,Romania,642,22.0
+Mariana,Romania,642,87.0
+Maricica,Romania,642,127.0
+Marius,Romania,642,66.0
+Matei,Romania,642,112.0
+Mihaela,Romania,642,31.0
+Mihai,Romania,642,4.0
+Mircea,Romania,642,90.0
+Monica,Romania,642,19.0
+MÄdÄlina,Romania,642,73.0
+Natalia,Romania,642,93.0
+Nicolae,Romania,642,18.0
+Nicoleta,Romania,642,37.0
+Nicu,Romania,642,104.0
+Oana,Romania,642,29.0
+Octavian,Romania,642,54.0
+Otilia,Romania,642,99.0
+Ovidiu,Romania,642,116.0
+Paraschiva,Romania,642,109.0
+Petre,Romania,642,110.0
+Petru,Romania,642,52.0
+Radu,Romania,642,36.0
+Raluca,Romania,642,27.0
+Ramona,Romania,642,51.0
+Relu,Romania,642,138.0
+Remus,Romania,642,118.0
+Rodica,Romania,642,89.0
+Roxana,Romania,642,35.0
+RÄzvan,Romania,642,92.0
+Sabin,Romania,642,130.0
+Sanda,Romania,642,113.0
+Sandu,Romania,642,108.0
+Sergiu,Romania,642,58.0
+Silvia,Romania,642,69.0
+Silviu,Romania,642,88.0
+Simona,Romania,642,15.0
+Sorin,Romania,642,48.0
+Stanca,Romania,642,139.0
+Stela,Romania,642,103.0
+Sultana,Romania,642,141.0
+Tatiana,Romania,642,95.0
+Teodora,Romania,642,77.0
+Tiberiu,Romania,642,102.0
+Toma,Romania,642,134.0
+Traian,Romania,642,74.0
+Tudor,Romania,642,78.0
+Valentin,Romania,642,62.0
+Valentina,Romania,642,47.0
+Vasile,Romania,642,16.0
+Vasilica,Romania,642,125.0
+Veronica,Romania,642,97.0
+Violeta,Romania,642,81.0
+Viorel,Romania,642,84.0
+Viorica,Romania,642,105.0
+Vlad,Romania,642,34.0
+Zamfira,Romania,642,137.0
+Èerban,Romania,642,122.0
+Ètefan,Romania,642,28.0
+Alberto,San Marino,674,50.0
+Alessandro,San Marino,674,4.0
+Alessia,San Marino,674,17.0
+Andrea,San Marino,674,10.0
+Anna,San Marino,674,27.0
+Antonio,San Marino,674,34.0
+Arianna,San Marino,674,43.0
+Beatrice,San Marino,674,23.0
+Camilla,San Marino,674,49.0
+Chiara,San Marino,674,7.0
+Claudia,San Marino,674,33.0
+Claudio,San Marino,674,54.0
+Cristina,San Marino,674,39.0
+Daniele,San Marino,674,38.0
+Davide,San Marino,674,12.0
+Elena,San Marino,674,13.0
+Elisa,San Marino,674,25.0
+Emanuele,San Marino,674,42.0
+Enrico,San Marino,674,52.0
+Fabio,San Marino,674,48.0
+Federica,San Marino,674,35.0
+Federico,San Marino,674,16.0
+Filippo,San Marino,674,40.0
+Francesca,San Marino,674,5.0
+Francesco,San Marino,674,28.0
+Gabriele,San Marino,674,22.0
+Giorgia,San Marino,674,19.0
+Giovanni,San Marino,674,32.0
+Giulia,San Marino,674,1.0
+Greta,San Marino,674,53.0
+Ilaria,San Marino,674,47.0
+Irene,San Marino,674,57.0
+Laura,San Marino,674,29.0
+Leonardo,San Marino,674,58.0
+Lorenzo,San Marino,674,8.0
+Luca,San Marino,674,2.0
+Lucia,San Marino,674,55.0
+Marco,San Marino,674,0.0
+Martina,San Marino,674,11.0
+Massimo,San Marino,674,46.0
+Matteo,San Marino,674,6.0
+Michela,San Marino,674,51.0
+Michele,San Marino,674,36.0
+Nicola,San Marino,674,26.0
+Paola,San Marino,674,45.0
+Paolo,San Marino,674,30.0
+Pietro,San Marino,674,56.0
+Riccardo,San Marino,674,18.0
+Roberta,San Marino,674,37.0
+Roberto,San Marino,674,44.0
+Sara,San Marino,674,15.0
+Serena,San Marino,674,31.0
+Silvia,San Marino,674,21.0
+Simone,San Marino,674,14.0
+Sofia,San Marino,674,3.0
+Stefano,San Marino,674,20.0
+Tommaso,San Marino,674,24.0
+Valentina,San Marino,674,9.0
+Veronica,San Marino,674,41.0
+Aleksandar,Serbia,688,12.0
+Aleksandra,Serbia,688,19.0
+Ana,Serbia,688,1.0
+Andrija,Serbia,688,60.0
+Angelina,Serbia,688,101.0
+AnÄela,Serbia,688,71.0
+Biljana,Serbia,688,45.0
+Bogdan,Serbia,688,58.0
+Bojan,Serbia,688,28.0
+Branimir,Serbia,688,122.0
+Branislav,Serbia,688,74.0
+Branka,Serbia,688,65.0
+Branko,Serbia,688,38.0
+Danica,Serbia,688,95.0
+Danijela,Serbia,688,31.0
+Danilo,Serbia,688,78.0
+Dara,Serbia,688,109.0
+Darko,Serbia,688,40.0
+Dejan,Serbia,688,26.0
+Dijana,Serbia,688,51.0
+Dimitrije,Serbia,688,56.0
+Dobrivoje,Serbia,688,108.0
+Dragan,Serbia,688,46.0
+Dragana,Serbia,688,21.0
+Dragica,Serbia,688,59.0
+Dragoslava,Serbia,688,103.0
+DuÅ¡an,Serbia,688,16.0
+DuÅ¡ica,Serbia,688,67.0
+Emilija,Serbia,688,69.0
+Filip,Serbia,688,10.0
+Goran,Serbia,688,30.0
+Gordana,Serbia,688,41.0
+Igor,Serbia,688,34.0
+Isidora,Serbia,688,75.0
+Ivana,Serbia,688,13.0
+Jasmina,Serbia,688,35.0
+Jelena,Serbia,688,3.0
+Jelisaveta,Serbia,688,85.0
+Jovan,Serbia,688,22.0
+Jovana,Serbia,688,7.0
+Katarina,Serbia,688,11.0
+Kristina,Serbia,688,73.0
+Lidija,Serbia,688,83.0
+Ljiljana,Serbia,688,49.0
+Ljubica,Serbia,688,121.0
+Ljubomir,Serbia,688,94.0
+Luka,Serbia,688,6.0
+Maja,Serbia,688,17.0
+Marija,Serbia,688,29.0
+Marko,Serbia,688,0.0
+Mihailo,Serbia,688,76.0
+Milan,Serbia,688,24.0
+Milana,Serbia,688,117.0
+Milanka,Serbia,688,97.0
+Milena,Serbia,688,79.0
+Mileva,Serbia,688,111.0
+Milica,Serbia,688,5.0
+MiloÅ¡,Serbia,688,14.0
+Milutin,Serbia,688,104.0
+Miodrag,Serbia,688,62.0
+Mira,Serbia,688,91.0
+Mirjana,Serbia,688,53.0
+Miroslav,Serbia,688,84.0
+Mladen,Serbia,688,42.0
+MomÄilo,Serbia,688,90.0
+Nada,Serbia,688,87.0
+NataÅ¡a,Serbia,688,25.0
+Nemanja,Serbia,688,8.0
+Nenad,Serbia,688,48.0
+Nevena,Serbia,688,61.0
+Nikola,Serbia,688,4.0
+Olivera,Serbia,688,57.0
+Pavle,Serbia,688,54.0
+Petar,Serbia,688,20.0
+Predrag,Serbia,688,44.0
+Radmila,Serbia,688,55.0
+Radojka,Serbia,688,113.0
+Radomir,Serbia,688,64.0
+Radoslav,Serbia,688,106.0
+Radovan,Serbia,688,82.0
+Rastko,Serbia,688,118.0
+Ratko,Serbia,688,92.0
+RaÅ¡ko,Serbia,688,100.0
+RuÅ¾ica,Serbia,688,99.0
+Sanja,Serbia,688,39.0
+SaÅ¡a,Serbia,688,72.0
+Slavica,Serbia,688,47.0
+Slavka,Serbia,688,119.0
+Slobodan,Serbia,688,66.0
+Smiljana,Serbia,688,105.0
+SneÅ¾ana,Serbia,688,23.0
+Sofija,Serbia,688,77.0
+Sonja,Serbia,688,63.0
+SrÄan,Serbia,688,36.0
+Stana,Serbia,688,93.0
+Stanislav,Serbia,688,96.0
+Stefan,Serbia,688,2.0
+Stevan,Serbia,688,86.0
+Stojanka,Serbia,688,123.0
+Svetlana,Serbia,688,33.0
+Svetozar,Serbia,688,112.0
+Tamara,Serbia,688,15.0
+Tatjana,Serbia,688,81.0
+Teodora,Serbia,688,9.0
+Tijana,Serbia,688,37.0
+Tomislav,Serbia,688,116.0
+UroÅ¡,Serbia,688,50.0
+Vaso,Serbia,688,102.0
+Veljko,Serbia,688,68.0
+Vera,Serbia,688,89.0
+Vesna,Serbia,688,27.0
+Violeta,Serbia,688,107.0
+Vlade,Serbia,688,80.0
+Vladimir,Serbia,688,18.0
+Vojislav,Serbia,688,110.0
+Vuk,Serbia,688,52.0
+Zagorka,Serbia,688,115.0
+Zdravko,Serbia,688,88.0
+Zoran,Serbia,688,32.0
+Zorica,Serbia,688,43.0
+Äedomir,Serbia,688,114.0
+ÄorÄe,Serbia,688,70.0
+Å½ivojin,Serbia,688,98.0
+Adam,Slovakia,703,4.0
+Adriana,Slovakia,703,37.0
+AdriÃ¡n,Slovakia,703,92.0
+Alena,Slovakia,703,77.0
+Alexander,Slovakia,703,72.0
+AlÅ¾beta,Slovakia,703,45.0
+Andrej,Slovakia,703,38.0
+Aneta,Slovakia,703,103.0
+Anna,Slovakia,703,9.0
+Anton,Slovakia,703,86.0
+Barbora,Slovakia,703,19.0
+BeÃ¡ta,Slovakia,703,67.0
+Bohumil,Slovakia,703,110.0
+Bohuslav,Slovakia,703,118.0
+BoÅ¾ena,Slovakia,703,83.0
+Branislav,Slovakia,703,52.0
+Ctibor,Slovakia,703,112.0
+Dagmar,Slovakia,703,69.0
+Daniel,Slovakia,703,26.0
+Daniela,Slovakia,703,49.0
+Darina,Slovakia,703,101.0
+Denisa,Slovakia,703,39.0
+Dominik,Slovakia,703,14.0
+DuÅ¡an,Slovakia,703,60.0
+DÃ¡vid,Slovakia,703,90.0
+Edita,Slovakia,703,109.0
+Emma,Slovakia,703,5.0
+Erik,Slovakia,703,96.0
+Erika,Slovakia,703,93.0
+Eva,Slovakia,703,61.0
+Filip,Slovakia,703,6.0
+Gabriela,Slovakia,703,43.0
+Hana,Slovakia,703,115.0
+Helena,Slovakia,703,81.0
+Igor,Slovakia,703,54.0
+Ingrid,Slovakia,703,95.0
+Irena,Slovakia,703,111.0
+Ivana,Slovakia,703,41.0
+Iveta,Slovakia,703,63.0
+Jakub,Slovakia,703,0.0
+Jana,Slovakia,703,79.0
+Janka,Slovakia,703,57.0
+Jaroslav,Slovakia,703,76.0
+Jolana,Slovakia,703,119.0
+Jozef,Slovakia,703,66.0
+Juraj,Slovakia,703,28.0
+JÃ¡n,Slovakia,703,34.0
+Kamil,Slovakia,703,100.0
+Karol,Slovakia,703,68.0
+KatarÃ­na,Slovakia,703,31.0
+KlÃ¡ra,Slovakia,703,91.0
+KristÃ­na,Slovakia,703,15.0
+Ladislav,Slovakia,703,62.0
+Lenka,Slovakia,703,25.0
+Lucia,Slovakia,703,1.0
+LukÃ¡Å¡,Slovakia,703,18.0
+Marcela,Slovakia,703,75.0
+Marek,Slovakia,703,20.0
+MariÃ¡n,Slovakia,703,104.0
+Marta,Slovakia,703,113.0
+Martin,Slovakia,703,10.0
+Martina,Slovakia,703,29.0
+Matej,Slovakia,703,2.0
+MatÃºÅ¡,Slovakia,703,94.0
+Michaela,Slovakia,703,35.0
+Michal,Slovakia,703,12.0
+Milan,Slovakia,703,40.0
+Milena,Slovakia,703,87.0
+Miroslav,Slovakia,703,46.0
+Monika,Slovakia,703,27.0
+MÃ¡ria,Slovakia,703,59.0
+NatÃ¡lia,Slovakia,703,13.0
+Nikola,Slovakia,703,47.0
+Nina,Slovakia,703,7.0
+Norbert,Slovakia,703,102.0
+Ondrej,Slovakia,703,24.0
+OÄ¾ga,Slovakia,703,89.0
+Patrik,Slovakia,703,22.0
+PaulÃ­na,Slovakia,703,71.0
+Pavol,Slovakia,703,32.0
+Peter,Slovakia,703,30.0
+Petra,Slovakia,703,21.0
+Radka,Slovakia,703,97.0
+RadomÃ­r,Slovakia,703,108.0
+Radoslav,Slovakia,703,50.0
+Rastislav,Slovakia,703,64.0
+RenÃ¡ta,Slovakia,703,55.0
+Richard,Slovakia,703,42.0
+Roman,Slovakia,703,44.0
+Rudolf,Slovakia,703,74.0
+RuÅ¾ena,Slovakia,703,117.0
+RÃ³bert,Slovakia,703,58.0
+Samuel,Slovakia,703,16.0
+SebastiÃ¡n,Slovakia,703,98.0
+Silvia,Slovakia,703,53.0
+Simona,Slovakia,703,17.0
+SlavomÃ­r,Slovakia,703,116.0
+SlÃ¡vka,Slovakia,703,105.0
+Sofia,Slovakia,703,3.0
+SoÅa,Slovakia,703,121.0
+Stanislav,Slovakia,703,56.0
+Tatiana,Slovakia,703,51.0
+TerÃ©zia,Slovakia,703,73.0
+Tibor,Slovakia,703,78.0
+TomÃ¡Å¡,Slovakia,703,8.0
+Veronika,Slovakia,703,33.0
+Viera,Slovakia,703,99.0
+Viktor,Slovakia,703,70.0
+ViktÃ³ria,Slovakia,703,11.0
+Viliam,Slovakia,703,120.0
+VladimÃ­r,Slovakia,703,48.0
+Vladislav,Slovakia,703,106.0
+Vojtech,Slovakia,703,114.0
+Zdenka,Slovakia,703,65.0
+Zuzana,Slovakia,703,23.0
+Ä½ubica,Slovakia,703,85.0
+Ä½ubomÃ­r,Slovakia,703,88.0
+Å imon,Slovakia,703,36.0
+Å tefan,Slovakia,703,84.0
+Å½ofia,Slovakia,703,107.0
+Ajda,Slovenia,705,64.0
+Alen,Slovenia,705,65.0
+Alja,Slovenia,705,82.0
+AljaÅ¾,Slovenia,705,35.0
+Ana,Slovenia,705,1.0
+Andrej,Slovenia,705,53.0
+Anja,Slovenia,705,22.0
+AnÅ¾e,Slovenia,705,15.0
+BlaÅ¾,Slovenia,705,27.0
+Bor,Slovenia,705,105.0
+BoÅ¡tjan,Slovenia,705,67.0
+David,Slovenia,705,23.0
+Domen,Slovenia,705,49.0
+Ela,Slovenia,705,74.0
+Ema,Slovenia,705,12.0
+Enej,Slovenia,705,99.0
+Eva,Slovenia,705,6.0
+Filip,Slovenia,705,57.0
+Gal,Slovenia,705,87.0
+GaÅ¡per,Slovenia,705,51.0
+Grega,Slovenia,705,25.0
+Gregor,Slovenia,705,59.0
+Hana,Slovenia,705,50.0
+Ines,Slovenia,705,34.0
+Iza,Slovenia,705,76.0
+Jaka,Slovenia,705,19.0
+Jan,Slovenia,705,5.0
+JoÅ¡t,Slovenia,705,69.0
+Julija,Slovenia,705,72.0
+Jure,Slovenia,705,41.0
+Katja,Slovenia,705,20.0
+Klara,Slovenia,705,28.0
+Klemen,Slovenia,705,33.0
+Kristjan,Slovenia,705,91.0
+Lana,Slovenia,705,46.0
+Lara,Slovenia,705,14.0
+Lea,Slovenia,705,32.0
+Leja,Slovenia,705,80.0
+Leon,Slovenia,705,85.0
+Liam,Slovenia,705,77.0
+Lina,Slovenia,705,62.0
+Lota,Slovenia,705,94.0
+Lovro,Slovenia,705,71.0
+Lucija,Slovenia,705,48.0
+Luka,Slovenia,705,0.0
+Luna,Slovenia,705,84.0
+Maja,Slovenia,705,2.0
+Manca,Slovenia,705,52.0
+Mark,Slovenia,705,13.0
+Marko,Slovenia,705,39.0
+Matej,Slovenia,705,3.0
+Matic,Slovenia,705,29.0
+Matija,Slovenia,705,61.0
+MaÅ¡a,Slovenia,705,36.0
+Mia,Slovenia,705,66.0
+Miha,Slovenia,705,17.0
+Mija,Slovenia,705,88.0
+Mina,Slovenia,705,96.0
+Nace,Slovenia,705,73.0
+Nejc,Slovenia,705,11.0
+NeÅ¾a,Slovenia,705,68.0
+Nik,Slovenia,705,79.0
+Nika,Slovenia,705,4.0
+Nina,Slovenia,705,10.0
+NuÅ¡a,Slovenia,705,42.0
+Oskar,Slovenia,705,83.0
+Petra,Slovenia,705,18.0
+Pia,Slovenia,705,44.0
+PrimoÅ¾,Slovenia,705,47.0
+Rene,Slovenia,705,95.0
+Rok,Slovenia,705,21.0
+Sara,Slovenia,705,8.0
+SaÅ¡o,Slovenia,705,55.0
+Sebastijan,Slovenia,705,89.0
+Sofija,Slovenia,705,78.0
+Tadej,Slovenia,705,45.0
+Tara,Slovenia,705,54.0
+Teja,Slovenia,705,30.0
+Tilen,Slovenia,705,75.0
+Tim,Slovenia,705,9.0
+Timotej,Slovenia,705,97.0
+Tina,Slovenia,705,16.0
+Tinkara,Slovenia,705,70.0
+Tisa,Slovenia,705,90.0
+TjaÅ¡a,Slovenia,705,40.0
+TomaÅ¾,Slovenia,705,37.0
+Urban,Slovenia,705,63.0
+UroÅ¡,Slovenia,705,103.0
+UrÅ¡ka,Slovenia,705,26.0
+Valentin,Slovenia,705,93.0
+Vita,Slovenia,705,60.0
+Zala,Slovenia,705,38.0
+Zara,Slovenia,705,86.0
+Zoja,Slovenia,705,58.0
+Å pela,Slovenia,705,24.0
+Å½an,Slovenia,705,7.0
+Å½iga,Slovenia,705,31.0
+Adriana,Spain,724,99.0
+AdriÃ¡n,Spain,724,58.0
+AgustÃ­n,Spain,724,108.0
+Alberto,Spain,724,36.0
+Alejandro,Spain,724,20.0
+Alfredo,Spain,724,92.0
+Alicia,Spain,724,75.0
+Amparo,Spain,724,91.0
+Ana,Spain,724,3.0
+Andrea,Spain,724,61.0
+AndrÃ©s,Spain,724,48.0
+Angela,Spain,724,23.0
+Antonia,Spain,724,27.0
+Antonio,Spain,724,8.0
+Armando,Spain,724,122.0
+Arturo,Spain,724,94.0
+AsunciÃ³n,Spain,724,145.0
+Baltasar,Spain,724,150.0
+Beatriz,Spain,724,51.0
+BelÃ©n,Spain,724,147.0
+Benito,Spain,724,152.0
+Bernardo,Spain,724,124.0
+Blanca,Spain,724,113.0
+Blas,Spain,724,154.0
+Carlos,Spain,724,2.0
+Carmen,Spain,724,5.0
+Casimiro,Spain,724,156.0
+Catalina,Spain,724,115.0
+Celia,Spain,724,149.0
+Clara,Spain,724,89.0
+Claudia,Spain,724,121.0
+ConcepciÃ³n,Spain,724,25.0
+Consuelo,Spain,724,129.0
+Cristina,Spain,724,21.0
+CÃ©sar,Spain,724,112.0
+Daniel,Spain,724,16.0
+Daniela,Spain,724,119.0
+David,Spain,724,12.0
+Diego,Spain,724,50.0
+Dolores,Spain,724,9.0
+Domingo,Spain,724,126.0
+Eduardo,Spain,724,128.0
+Elena,Spain,724,33.0
+Emilia,Spain,724,151.0
+Emilio,Spain,724,78.0
+EncarnaciÃ³n,Spain,724,39.0
+Enrique,Spain,724,42.0
+Ernesto hÃ©ctor,Spain,724,116.0
+Esperanza,Spain,724,131.0
+Esteban,Spain,724,104.0
+Esther,Spain,724,103.0
+Eva,Spain,724,77.0
+Felipe,Spain,724,82.0
+Fernando,Spain,724,24.0
+Francisca,Spain,724,19.0
+Francisco,Spain,724,6.0
+FÃ¡tima,Spain,724,153.0
+Gabriel,Spain,724,130.0
+Gabriela,Spain,724,117.0
+Gema,Spain,724,155.0
+Gerardo,Spain,724,120.0
+Gloria,Spain,724,157.0
+Gonzalo,Spain,724,84.0
+Guillermo,Spain,724,68.0
+Hugo,Spain,724,132.0
+HÃ©ctor,Spain,724,86.0
+Ignacio,Spain,724,70.0
+Inmaculada,Spain,724,125.0
+InÃ©s,Spain,724,87.0
+Irene,Spain,724,79.0
+Isabel,Spain,724,7.0
+IvÃ¡n,Spain,724,60.0
+Jaime,Spain,724,80.0
+Javier,Spain,724,14.0
+JesÃºs,Spain,724,46.0
+JoaquÃ­n,Spain,724,90.0
+Jorge,Spain,724,34.0
+Josefa,Spain,724,29.0
+JosÃ©,Spain,724,4.0
+Juan,Spain,724,0.0
+Julia,Spain,724,37.0
+Julio,Spain,724,110.0
+Laura,Spain,724,47.0
+Leonardo,Spain,724,134.0
+Lidia,Spain,724,105.0
+Lorena,Spain,724,101.0
+Lorenzo,Spain,724,106.0
+Lourdes,Spain,724,135.0
+LucÃ­a,Spain,724,31.0
+Luis,Spain,724,30.0
+Macarena,Spain,724,133.0
+Manuel,Spain,724,10.0
+Manuela,Spain,724,35.0
+Marcos,Spain,724,64.0
+Margarita,Spain,724,93.0
+Marina,Spain,724,63.0
+Marta,Spain,724,49.0
+MartÃ­n,Spain,724,74.0
+MarÃ­a,Spain,724,1.0
+Mateo,Spain,724,96.0
+MatÃ­as,Spain,724,136.0
+Mauricio,Spain,724,114.0
+Maximiliano,Spain,724,138.0
+Mercedes,Spain,724,17.0
+Miguel,Spain,724,18.0
+Milagros,Spain,724,137.0
+Miriam,Spain,724,107.0
+Montserrat,Spain,724,41.0
+MÃ³nica,Spain,724,73.0
+Natalia,Spain,724,67.0
+NicolÃ¡s,Spain,724,98.0
+Noelia,Spain,724,123.0
+Nuria,Spain,724,57.0
+Olga,Spain,724,111.0
+Orlando,Spain,724,140.0
+Pablo,Spain,724,28.0
+Pascual,Spain,724,142.0
+Patricia,Spain,724,45.0
+Paula,Spain,724,81.0
+Pedro,Spain,724,26.0
+Pilar,Spain,724,11.0
+PurificaciÃ³n,Spain,724,139.0
+Rafael,Spain,724,22.0
+RamÃ³n,Spain,724,40.0
+Raquel,Spain,724,69.0
+RaÃºl,Spain,724,52.0
+Remedios,Spain,724,127.0
+Ricardo,Spain,724,76.0
+Roberto,Spain,724,38.0
+RocÃ­o,Spain,724,59.0
+Rodrigo,Spain,724,102.0
+Rosa,Spain,724,15.0
+Rosario,Spain,724,43.0
+RubÃ©n,Spain,724,54.0
+Sandra,Spain,724,65.0
+Santiago,Spain,724,88.0
+Sara,Spain,724,53.0
+SebastiÃ¡n,Spain,724,100.0
+Sergio,Spain,724,32.0
+Silvia,Spain,724,55.0
+SimÃ³n,Spain,724,144.0
+SofÃ­a,Spain,724,97.0
+Soledad,Spain,724,141.0
+Sonia,Spain,724,85.0
+Susana,Spain,724,71.0
+Teresa,Spain,724,13.0
+TomÃ¡s,Spain,724,72.0
+Trinidad,Spain,724,143.0
+ValentÃ­n,Spain,724,118.0
+VerÃ³nica,Spain,724,83.0
+Vicente,Spain,724,146.0
+Victoria,Spain,724,95.0
+VÃ­ctor,Spain,724,56.0
+Yolanda,Spain,724,109.0
+Ãlvaro,Spain,724,66.0
+Ãngel,Spain,724,44.0
+Ãscar,Spain,724,62.0
+Adam,Sweden,752,70.0
+Agneta,Sweden,752,105.0
+Albin,Sweden,752,102.0
+Alexander,Sweden,752,52.0
+Alfred,Sweden,752,108.0
+Algot,Sweden,752,124.0
+Alma,Sweden,752,39.0
+Anders,Sweden,752,10.0
+Andreas,Sweden,752,36.0
+Anna,Sweden,752,1.0
+Annika,Sweden,752,113.0
+Anton,Sweden,752,64.0
+Arvid,Sweden,752,110.0
+Astrid,Sweden,752,17.0
+Axel,Sweden,752,100.0
+Benjamin,Sweden,752,94.0
+Birgitta,Sweden,752,101.0
+BjÃ¶rn,Sweden,752,24.0
+Britta,Sweden,752,97.0
+Camilla,Sweden,752,125.0
+Cecilia,Sweden,752,115.0
+Christian,Sweden,752,42.0
+Daniel,Sweden,752,34.0
+David,Sweden,752,50.0
+Ebba,Sweden,752,21.0
+Ebbe,Sweden,752,118.0
+Edith,Sweden,752,69.0
+Edvin,Sweden,752,106.0
+Elias,Sweden,752,76.0
+Elin,Sweden,752,15.0
+Elisabet,Sweden,752,107.0
+Elise,Sweden,752,49.0
+Ellie,Sweden,752,71.0
+Elvira,Sweden,752,79.0
+Emil,Sweden,752,62.0
+Emilia,Sweden,752,37.0
+Emma,Sweden,752,11.0
+Erik,Sweden,752,0.0
+Ester,Sweden,752,59.0
+Eva,Sweden,752,131.0
+Felix,Sweden,752,84.0
+Filip,Sweden,752,58.0
+Folke,Sweden,752,126.0
+Fredrik,Sweden,752,26.0
+Freja,Sweden,752,61.0
+Frida,Sweden,752,33.0
+Greta,Sweden,752,89.0
+Gunilla,Sweden,752,99.0
+Gustav,Sweden,752,6.0
+Hanna,Sweden,752,29.0
+Hedda,Sweden,752,63.0
+Helena,Sweden,752,119.0
+Henrik,Sweden,752,22.0
+Hilma,Sweden,752,85.0
+Hugo,Sweden,752,80.0
+Ida,Sweden,752,27.0
+Ingeborg,Sweden,752,91.0
+Ingrid,Sweden,752,5.0
+Iris,Sweden,752,67.0
+Isak,Sweden,752,74.0
+Ivar,Sweden,752,120.0
+Johan,Sweden,752,12.0
+Johanna,Sweden,752,123.0
+Jonas,Sweden,752,48.0
+Juni,Sweden,752,73.0
+Karin,Sweden,752,3.0
+Karl,Sweden,752,16.0
+Katarina,Sweden,752,121.0
+Klara,Sweden,752,23.0
+Kristina,Sweden,752,109.0
+Lars,Sweden,752,2.0
+Lena,Sweden,752,127.0
+Leo,Sweden,752,86.0
+Lilly,Sweden,752,57.0
+Linnea,Sweden,752,9.0
+Linus,Sweden,752,82.0
+Liv,Sweden,752,47.0
+Lovisa,Sweden,752,31.0
+Lucas,Sweden,752,92.0
+Ludvig,Sweden,752,72.0
+Magnus,Sweden,752,20.0
+Maja,Sweden,752,7.0
+Margareta,Sweden,752,103.0
+Maria,Sweden,752,129.0
+Marianne,Sweden,752,111.0
+Martin,Sweden,752,38.0
+Matilda,Sweden,752,35.0
+Mattias,Sweden,752,44.0
+Melker,Sweden,752,114.0
+Mikael,Sweden,752,28.0
+Moa,Sweden,752,55.0
+Molly,Sweden,752,65.0
+MÃ¤rta,Sweden,752,81.0
+Nellie,Sweden,752,77.0
+Niklas,Sweden,752,46.0
+Nils,Sweden,752,14.0
+Noah,Sweden,752,88.0
+Nova,Sweden,752,75.0
+Oliver,Sweden,752,90.0
+Olle,Sweden,752,104.0
+Olof,Sweden,752,4.0
+Oscar,Sweden,752,54.0
+Per,Sweden,752,18.0
+Peter,Sweden,752,30.0
+Ragnar,Sweden,752,128.0
+Rut,Sweden,752,93.0
+Saga,Sweden,752,19.0
+Sebastian,Sweden,752,60.0
+Selma,Sweden,752,53.0
+Signe,Sweden,752,43.0
+Sigrid,Sweden,752,83.0
+Simon,Sweden,752,68.0
+Sixten,Sweden,752,122.0
+Sofia,Sweden,752,13.0
+Stefan,Sweden,752,40.0
+Stella,Sweden,752,45.0
+Susanne,Sweden,752,117.0
+Svea,Sweden,752,87.0
+Sven,Sweden,752,8.0
+Theo,Sweden,752,96.0
+Thomas,Sweden,752,32.0
+Tobias,Sweden,752,66.0
+Ture,Sweden,752,130.0
+Tyra,Sweden,752,51.0
+Ulla,Sweden,752,95.0
+Valter,Sweden,752,116.0
+Vera,Sweden,752,41.0
+Viggo,Sweden,752,112.0
+Viktor,Sweden,752,56.0
+Vincent,Sweden,752,98.0
+William,Sweden,752,78.0
+Wilma,Sweden,752,25.0
+Adrian,Switzerland,756,60.0
+Alessandro,Switzerland,756,52.0
+Alessia,Switzerland,756,37.0
+Alessio,Switzerland,756,90.0
+Alice,Switzerland,756,79.0
+Alina,Switzerland,756,49.0
+Aline,Switzerland,756,93.0
+Amelie,Switzerland,756,45.0
+Andrin,Switzerland,756,76.0
+Anja,Switzerland,756,123.0
+Anna,Switzerland,756,9.0
+Annina,Switzerland,756,109.0
+Ben,Switzerland,756,24.0
+Carla,Switzerland,756,91.0
+Charlotte,Switzerland,756,41.0
+Chiara,Switzerland,756,17.0
+Clara,Switzerland,756,71.0
+Colin,Switzerland,756,122.0
+Damian,Switzerland,756,92.0
+Dario,Switzerland,756,62.0
+David,Switzerland,756,8.0
+Dominik,Switzerland,756,68.0
+Elena,Switzerland,756,15.0
+Elia,Switzerland,756,86.0
+Elias,Switzerland,756,22.0
+Elina,Switzerland,756,115.0
+Elisa,Switzerland,756,69.0
+Ella,Switzerland,756,81.0
+Emilia,Switzerland,756,33.0
+Emma,Switzerland,756,3.0
+Eva,Switzerland,756,59.0
+Fabian,Switzerland,756,56.0
+Fabienne,Switzerland,756,121.0
+Fabio,Switzerland,756,78.0
+Felix,Switzerland,756,16.0
+Finn,Switzerland,756,38.0
+Fiona,Switzerland,756,67.0
+Francesca,Switzerland,756,107.0
+Gabriel,Switzerland,756,6.0
+Gian,Switzerland,756,82.0
+Gioia,Switzerland,756,113.0
+Giulia,Switzerland,756,31.0
+Hannah,Switzerland,756,29.0
+Isabella,Switzerland,756,55.0
+Jan,Switzerland,756,34.0
+Janis,Switzerland,756,120.0
+Jasmin,Switzerland,756,89.0
+Johanna,Switzerland,756,99.0
+Jonas,Switzerland,756,18.0
+Julia,Switzerland,756,13.0
+Julian,Switzerland,756,48.0
+Kilian,Switzerland,756,108.0
+Lara,Switzerland,756,63.0
+Larissa,Switzerland,756,117.0
+Laura,Switzerland,756,11.0
+Lea,Switzerland,756,5.0
+Leandro,Switzerland,756,102.0
+Lena,Switzerland,756,19.0
+Lenny,Switzerland,756,114.0
+Leon,Switzerland,756,4.0
+Leonie,Switzerland,756,51.0
+Lia,Switzerland,756,57.0
+Liam,Switzerland,756,32.0
+Lian,Switzerland,756,104.0
+Lina,Switzerland,756,77.0
+Linus,Switzerland,756,74.0
+Lisa,Switzerland,756,25.0
+Livia,Switzerland,756,111.0
+Livio,Switzerland,756,84.0
+Loris,Switzerland,756,88.0
+Louis,Switzerland,756,42.0
+Luca,Switzerland,756,0.0
+Lukas,Switzerland,756,10.0
+Luna,Switzerland,756,73.0
+Maja,Switzerland,756,65.0
+Marco,Switzerland,756,30.0
+Marie,Switzerland,756,27.0
+Marlene,Switzerland,756,95.0
+Martina,Switzerland,756,105.0
+Matteo,Switzerland,756,14.0
+Mattia,Switzerland,756,72.0
+Mattis,Switzerland,756,110.0
+Mauro,Switzerland,756,116.0
+Maximilian,Switzerland,756,36.0
+Melina,Switzerland,756,119.0
+Melissa,Switzerland,756,87.0
+Mia,Switzerland,756,1.0
+Mila,Switzerland,756,53.0
+Milo,Switzerland,756,100.0
+Moritz,Switzerland,756,50.0
+Natalie,Switzerland,756,101.0
+Nevio,Switzerland,756,106.0
+Nico,Switzerland,756,12.0
+Nicola,Switzerland,756,66.0
+Nils,Switzerland,756,94.0
+Nina,Switzerland,756,21.0
+Noah,Switzerland,756,2.0
+Noel,Switzerland,756,46.0
+Noemi,Switzerland,756,85.0
+Nora,Switzerland,756,61.0
+Oliver,Switzerland,756,54.0
+Olivia,Switzerland,756,43.0
+Paul,Switzerland,756,26.0
+Raphael,Switzerland,756,40.0
+Remo,Switzerland,756,124.0
+Robin,Switzerland,756,58.0
+Sabrina,Switzerland,756,125.0
+Samuel,Switzerland,756,44.0
+Sandro,Switzerland,756,80.0
+Sara,Switzerland,756,23.0
+Selina,Switzerland,756,97.0
+Serena,Switzerland,756,103.0
+Severin,Switzerland,756,112.0
+Simon,Switzerland,756,28.0
+Sofia,Switzerland,756,7.0
+Sophia,Switzerland,756,83.0
+Sophie,Switzerland,756,39.0
+Stella,Switzerland,756,75.0
+Theo,Switzerland,756,98.0
+Tim,Switzerland,756,20.0
+Timon,Switzerland,756,118.0
+Tobias,Switzerland,756,64.0
+Valentin,Switzerland,756,96.0
+Valentina,Switzerland,756,35.0
+Yannis,Switzerland,756,70.0
+Zoe,Switzerland,756,47.0
+Adelina,Ukraine,804,124.0
+Alina,Ukraine,804,29.0
+Alisa,Ukraine,804,117.0
+Amelia,Ukraine,804,126.0
+Anastasia,Ukraine,804,1.0
+Anatoliy,Ukraine,804,54.0
+Andriana,Ukraine,804,101.0
+Andriy,Ukraine,804,4.0
+Angelina,Ukraine,804,73.0
+Anhelina,Ukraine,804,129.0
+Anna,Ukraine,804,35.0
+Arina,Ukraine,804,122.0
+Artem,Ukraine,804,30.0
+Bogdan,Ukraine,804,87.0
+Bohdan,Ukraine,804,22.0
+Bohdana,Ukraine,804,109.0
+Borys,Ukraine,804,66.0
+Bozhena,Ukraine,804,140.0
+Chrystyna,Ukraine,804,141.0
+Danylo,Ukraine,804,72.0
+Daria,Ukraine,804,116.0
+Daryna,Ukraine,804,31.0
+Denys,Ukraine,804,32.0
+Diana,Ukraine,804,77.0
+Dmytro,Ukraine,804,2.0
+Dominika,Ukraine,804,127.0
+Elizaveta,Ukraine,804,114.0
+Emilia,Ukraine,804,96.0
+Evelina,Ukraine,804,111.0
+Fedir,Ukraine,804,76.0
+Galina,Ukraine,804,65.0
+Halyna,Ukraine,804,21.0
+Hanna,Ukraine,804,49.0
+Hryhoriy,Ukraine,804,58.0
+Ihor,Ukraine,804,38.0
+Illia,Ukraine,804,78.0
+Inna,Ukraine,804,25.0
+Iryna,Ukraine,804,11.0
+Ivan,Ukraine,804,8.0
+Ivana,Ukraine,804,142.0
+Ivanna,Ukraine,804,83.0
+Kalyna,Ukraine,804,133.0
+Kamila,Ukraine,804,125.0
+Karina,Ukraine,804,75.0
+Kateryna,Ukraine,804,3.0
+Khrystyna,Ukraine,804,43.0
+Kira,Ukraine,804,115.0
+Kostyantyn,Ukraine,804,52.0
+Kristina,Ukraine,804,112.0
+Kyrylo,Ukraine,804,95.0
+Lada,Ukraine,804,130.0
+Larisa,Ukraine,804,59.0
+Larysa,Ukraine,804,143.0
+Leonid,Ukraine,804,56.0
+Lesia,Ukraine,804,37.0
+Lesya,Ukraine,804,88.0
+Liliya,Ukraine,804,47.0
+Liubov,Ukraine,804,135.0
+Lyubov,Ukraine,804,69.0
+Lyudmyla,Ukraine,804,23.0
+Maksym,Ukraine,804,28.0
+Marianna,Ukraine,804,108.0
+Mariya,Ukraine,804,19.0
+Markiyan,Ukraine,804,84.0
+Marta,Ukraine,804,105.0
+Maryna,Ukraine,804,51.0
+Matviy,Ukraine,804,97.0
+Mayya,Ukraine,804,144.0
+Melania,Ukraine,804,128.0
+Milana,Ukraine,804,98.0
+Miroslava,Ukraine,804,120.0
+Mykhailo,Ukraine,804,40.0
+Mykola,Ukraine,804,10.0
+Myron,Ukraine,804,89.0
+Myroslav,Ukraine,804,68.0
+Nadiya,Ukraine,804,94.0
+Natalia,Ukraine,804,7.0
+Nataliya,Ukraine,804,39.0
+Nazar,Ukraine,804,82.0
+Oksana,Ukraine,804,5.0
+Oksanka,Ukraine,804,134.0
+Oleh,Ukraine,804,36.0
+Oleksandr,Ukraine,804,0.0
+Olena,Ukraine,804,13.0
+Olesya,Ukraine,804,90.0
+Olha,Ukraine,804,57.0
+Orest,Ukraine,804,99.0
+Oresta,Ukraine,804,137.0
+Ostap,Ukraine,804,70.0
+Pavlo,Ukraine,804,34.0
+Petro,Ukraine,804,14.0
+Polina,Ukraine,804,100.0
+Raisa,Ukraine,804,67.0
+Roksolana,Ukraine,804,136.0
+Roman,Ukraine,804,26.0
+Rostyslav,Ukraine,804,93.0
+Ruslan,Ukraine,804,44.0
+Ruslana,Ukraine,804,81.0
+Sergiy,Ukraine,804,74.0
+Serhiy,Ukraine,804,12.0
+Sofiia,Ukraine,804,107.0
+Sofiya,Ukraine,804,33.0
+Solomiia,Ukraine,804,132.0
+Stanislav,Ukraine,804,60.0
+Stefania,Ukraine,804,121.0
+Stefaniia,Ukraine,804,138.0
+Stepan,Ukraine,804,48.0
+Svitlana,Ukraine,804,17.0
+Taisia,Ukraine,804,103.0
+Tamara,Ukraine,804,61.0
+Taras,Ukraine,804,24.0
+Tetiana,Ukraine,804,15.0
+Timofiy,Ukraine,804,91.0
+Ulyana,Ukraine,804,110.0
+Vadym,Ukraine,804,62.0
+Valentyna,Ukraine,804,55.0
+Valeria,Ukraine,804,113.0
+Valeriya,Ukraine,804,79.0
+Varvara,Ukraine,804,119.0
+Vasyl,Ukraine,804,16.0
+Vasylyna,Ukraine,804,86.0
+Veronika,Ukraine,804,102.0
+Viktor,Ukraine,804,20.0
+Viktoria,Ukraine,804,27.0
+Vira,Ukraine,804,71.0
+Vitaliy,Ukraine,804,42.0
+Vlada,Ukraine,804,118.0
+Vladyslav,Ukraine,804,50.0
+Volodymyr,Ukraine,804,6.0
+Yana,Ukraine,804,41.0
+Yaroslav,Ukraine,804,46.0
+Yaryna,Ukraine,804,106.0
+Yeva,Ukraine,804,123.0
+Yevhen,Ukraine,804,64.0
+Yevheniya,Ukraine,804,53.0
+Yulia,Ukraine,804,9.0
+Yuliana,Ukraine,804,85.0
+Yuriy,Ukraine,804,18.0
+Yustyna,Ukraine,804,139.0
+Zakhar,Ukraine,804,80.0
+Zhanna,Ukraine,804,63.0
+Zlata,Ukraine,804,104.0
+Zoriana,Ukraine,804,131.0
+Zoryana,Ukraine,804,45.0
+Zoya,Ukraine,804,92.0
+Abigail,United Kingdom,826,103.0
+Adam,United Kingdom,826,70.0
+Albert,United Kingdom,826,146.0
+Albie,United Kingdom,826,132.0
+Alexander,United Kingdom,826,36.0
+Alfie,United Kingdom,826,24.0
+Alice,United Kingdom,826,39.0
+Amber,United Kingdom,826,159.0
+Amelia,United Kingdom,826,1.0
+Amelie,United Kingdom,826,109.0
+Angus,United Kingdom,826,162.0
+Annabelle,United Kingdom,826,111.0
+Arabella,United Kingdom,826,93.0
+Archie,United Kingdom,826,30.0
+Arthur,United Kingdom,826,28.0
+Austin,United Kingdom,826,142.0
+Ava,United Kingdom,826,27.0
+Beatrice,United Kingdom,826,85.0
+Benjamin,United Kingdom,826,44.0
+Bethany,United Kingdom,826,155.0
+Blake,United Kingdom,826,118.0
+Bonnie,United Kingdom,826,131.0
+Callum,United Kingdom,826,94.0
+Charlie,United Kingdom,826,20.0
+Charlotte,United Kingdom,826,3.0
+Chloe,United Kingdom,826,95.0
+Clara,United Kingdom,826,113.0
+Daisy,United Kingdom,826,33.0
+Daniel,United Kingdom,826,52.0
+Darcey,United Kingdom,826,161.0
+Darcie,United Kingdom,826,117.0
+David,United Kingdom,826,82.0
+Delilah,United Kingdom,826,133.0
+Dexter,United Kingdom,826,156.0
+Dylan,United Kingdom,826,74.0
+Edith,United Kingdom,826,149.0
+Edward,United Kingdom,826,38.0
+Eleanor,United Kingdom,826,105.0
+Elias,United Kingdom,826,150.0
+Elijah,United Kingdom,826,66.0
+Eliza,United Kingdom,826,87.0
+Elizabeth,United Kingdom,826,73.0
+Ella,United Kingdom,826,17.0
+Elliot,United Kingdom,826,104.0
+Elsie,United Kingdom,826,51.0
+Emilia,United Kingdom,826,83.0
+Emily,United Kingdom,826,13.0
+Emma,United Kingdom,826,63.0
+Esme,United Kingdom,826,69.0
+Ethan,United Kingdom,826,56.0
+Evelyn,United Kingdom,826,61.0
+Evie,United Kingdom,826,23.0
+Ezra,United Kingdom,826,128.0
+Felicity,United Kingdom,826,127.0
+Felix,United Kingdom,826,106.0
+Finlay,United Kingdom,826,120.0
+Finley,United Kingdom,826,64.0
+Florence,United Kingdom,826,35.0
+Francesca,United Kingdom,826,137.0
+Freddie,United Kingdom,826,26.0
+Frederick,United Kingdom,826,136.0
+Freya,United Kingdom,826,9.0
+Gabriel,United Kingdom,826,130.0
+George,United Kingdom,826,2.0
+Georgina,United Kingdom,826,141.0
+Grace,United Kingdom,826,19.0
+Hannah,United Kingdom,826,79.0
+Harriet,United Kingdom,826,53.0
+Harrison,United Kingdom,826,62.0
+Harry,United Kingdom,826,4.0
+Harvey,United Kingdom,826,114.0
+Heidi,United Kingdom,826,121.0
+Henry,United Kingdom,826,18.0
+Hugo,United Kingdom,826,90.0
+Imogen,United Kingdom,826,57.0
+Iris,United Kingdom,826,115.0
+Isaac,United Kingdom,826,48.0
+Isabella,United Kingdom,826,25.0
+Isla,United Kingdom,826,5.0
+Ivy,United Kingdom,826,29.0
+Jack,United Kingdom,826,6.0
+Jacob,United Kingdom,826,54.0
+James,United Kingdom,826,16.0
+Jasmine,United Kingdom,826,97.0
+Jasper,United Kingdom,826,110.0
+Jaxon,United Kingdom,826,148.0
+Jenson,United Kingdom,826,108.0
+Joseph,United Kingdom,826,80.0
+Joshua,United Kingdom,826,34.0
+Jude,United Kingdom,826,92.0
+Kai,United Kingdom,826,116.0
+Lara,United Kingdom,826,151.0
+Layla,United Kingdom,826,91.0
+Leo,United Kingdom,826,22.0
+Leon,United Kingdom,826,158.0
+Lewis,United Kingdom,826,96.0
+Lexi,United Kingdom,826,163.0
+Lily,United Kingdom,826,11.0
+Logan,United Kingdom,826,60.0
+Lottie,United Kingdom,826,99.0
+Louie,United Kingdom,826,126.0
+Luca,United Kingdom,826,86.0
+Lucas,United Kingdom,826,42.0
+Lucy,United Kingdom,826,49.0
+Luke,United Kingdom,826,100.0
+Lydia,United Kingdom,826,143.0
+Lyla,United Kingdom,826,125.0
+Mabel,United Kingdom,826,123.0
+Maisie,United Kingdom,826,77.0
+Margot,United Kingdom,826,129.0
+Martha,United Kingdom,826,145.0
+Mason,United Kingdom,826,88.0
+Matilda,United Kingdom,826,43.0
+Matthew,United Kingdom,826,98.0
+Max,United Kingdom,826,40.0
+Maya,United Kingdom,826,67.0
+Megan,United Kingdom,826,153.0
+Mia,United Kingdom,826,21.0
+Michael,United Kingdom,826,102.0
+Millie,United Kingdom,826,55.0
+Mohammed,United Kingdom,826,58.0
+Molly,United Kingdom,826,89.0
+Nathan,United Kingdom,826,84.0
+Noah,United Kingdom,826,8.0
+Oakley,United Kingdom,826,160.0
+Olive,United Kingdom,826,147.0
+Oliver,United Kingdom,826,0.0
+Ollie,United Kingdom,826,124.0
+Orla,United Kingdom,826,119.0
+Oscar,United Kingdom,826,10.0
+Penelope,United Kingdom,826,75.0
+Phoebe,United Kingdom,826,45.0
+Poppy,United Kingdom,826,7.0
+Reggie,United Kingdom,826,138.0
+Reuben,United Kingdom,826,72.0
+Riley,United Kingdom,826,122.0
+Robyn,United Kingdom,826,135.0
+Roman,United Kingdom,826,140.0
+Ronnie,United Kingdom,826,144.0
+Rory,United Kingdom,826,112.0
+Rose,United Kingdom,826,101.0
+Rosie,United Kingdom,826,31.0
+Ruby,United Kingdom,826,41.0
+Samuel,United Kingdom,826,50.0
+Scarlett,United Kingdom,826,65.0
+Sebastian,United Kingdom,826,46.0
+Sienna,United Kingdom,826,47.0
+Sonny,United Kingdom,826,152.0
+Sophia,United Kingdom,826,107.0
+Sophie,United Kingdom,826,15.0
+Stanley,United Kingdom,826,134.0
+Tabitha,United Kingdom,826,157.0
+Teddy,United Kingdom,826,154.0
+Thea,United Kingdom,826,71.0
+Theo,United Kingdom,826,78.0
+Theodore,United Kingdom,826,32.0
+Thomas,United Kingdom,826,14.0
+Toby,United Kingdom,826,68.0
+Violet,United Kingdom,826,59.0
+William,United Kingdom,826,12.0
+Willow,United Kingdom,826,37.0
+Zachary,United Kingdom,826,76.0
+Zara,United Kingdom,826,81.0
+Zoe,United Kingdom,826,139.0
+Alessandro,Vatican City,336,13.0
+Angelo,Vatican City,336,5.0
+Anna,Vatican City,336,9.0
+Antonio,Vatican City,336,4.0
+Benedetto,Vatican City,336,26.0
+Carlo,Vatican City,336,10.0
+Caterina,Vatican City,336,25.0
+Chiara,Vatican City,336,15.0
+Domenico,Vatican City,336,19.0
+Elisabetta,Vatican City,336,21.0
+Francesca,Vatican City,336,16.0
+Francesco,Vatican City,336,2.0
+Gabriele,Vatican City,336,22.0
+Giovanni,Vatican City,336,0.0
+Giulia,Vatican City,336,17.0
+Giuseppe,Vatican City,336,3.0
+Lucia,Vatican City,336,8.0
+Marco,Vatican City,336,11.0
+Maria,Vatican City,336,1.0
+Matteo,Vatican City,336,14.0
+Michele,Vatican City,336,23.0
+Paolo,Vatican City,336,7.0
+Pietro,Vatican City,336,6.0
+Raffaele,Vatican City,336,24.0
+Roberto,Vatican City,336,18.0
+Stefano,Vatican City,336,12.0
+Teresa,Vatican City,336,27.0
+Vincenzo,Vatican City,336,20.0
