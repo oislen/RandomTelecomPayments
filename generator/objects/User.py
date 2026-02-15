@@ -21,7 +21,6 @@ class User:
         fpath_last_names:str=cons.fpath_llama_last_names,
         fpath_countries_europe:str=cons.fpath_countries_europe,
         fpath_email_domain:str=cons.fpath_llama_email_domains,
-        fpath_bedrock_email_domain:str=cons.fpath_llama_email_domains,
         ):
         """
         The randomly generated user data model object
@@ -77,7 +76,6 @@ class User:
         self.fpath_last_names = fpath_last_names
         self.fpath_countries_europe = fpath_countries_europe
         self.fpath_email_domain = fpath_email_domain
-        self.fpath_bedrock_email_domain = fpath_bedrock_email_domain
         self.lam = cons.data_model_poisson_params["user"]["lambda"]
         self.power = cons.data_model_poisson_params["user"]["power"]
         self.user_ids_cnts_dict = gen_idhash_cnt_dict(idhash_type="id", n=self.n_user_ids, lam=self.lam, power=self.power)

@@ -76,7 +76,6 @@ def gen_random_telecom_data(
         fpath_last_names=cons.fpath_llama_last_names,
         fpath_countries_europe=cons.fpath_countries_europe,
         fpath_email_domain=cons.fpath_llama_email_domains,
-        fpath_bedrock_email_domain=cons.fpath_llama_email_domains
         )
     
     # generate random entity counts for each user
