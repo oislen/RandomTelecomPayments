@@ -20,8 +20,7 @@ class User:
         fpath_first_names:str=cons.fpath_llama_first_names,
         fpath_last_names:str=cons.fpath_llama_last_names,
         fpath_countries_europe:str=cons.fpath_countries_europe,
-        fpath_email_domain:str=cons.fpath_email_domain,
-        fpath_bedrock_email_domain:str=cons.fpath_llama_email_domains,
+        fpath_email_domain:str=cons.fpath_llama_email_domains,
         ):
         """
         The randomly generated user data model object
@@ -77,20 +76,19 @@ class User:
         self.fpath_last_names = fpath_last_names
         self.fpath_countries_europe = fpath_countries_europe
         self.fpath_email_domain = fpath_email_domain
-        self.fpath_bedrock_email_domain = fpath_bedrock_email_domain
         self.lam = cons.data_model_poisson_params["user"]["lambda"]
         self.power = cons.data_model_poisson_params["user"]["power"]
         self.user_ids_cnts_dict = gen_idhash_cnt_dict(idhash_type="id", n=self.n_user_ids, lam=self.lam, power=self.power)
         self.user_ids = list(self.user_ids_cnts_dict.keys())
         self.user_ids_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.user_ids_cnts_dict)
         self.user_ids_country_code_dict = gen_country_codes_dict(idhashes=self.user_ids, fpath_countries_europe=self.fpath_countries_europe)
-        self.user_ids_first_name_dict = self.gen_user_bedrock_name_data(fpath_bedrock_data=self.fpath_first_names, sample_column_name="first_names")
-        self.user_ids_last_name_dict = self.gen_user_bedrock_name_data(fpath_bedrock_data=self.fpath_last_names, sample_column_name="last_names")
-        self.user_ids_email_domain_dict = self.gen_user_bedrock_email_domain(fpath_email_domain=self.fpath_email_domain, fpath_bedrock_email_domain=self.fpath_bedrock_email_domain)
+        self.user_ids_first_name_dict = self.gen_user_bedrock_data(fpath_bedrock_data=self.fpath_first_names, sample_column_name="first_names")
+        self.user_ids_last_name_dict = self.gen_user_bedrock_data(fpath_bedrock_data=self.fpath_last_names, sample_column_name="last_names")
+        self.user_ids_email_domain_dict = self.gen_user_bedrock_data(fpath_bedrock_data=self.fpath_email_domain, sample_column_name="email_domains")
         self.user_ids_dates_dict = gen_dates_dict(idhashes=self.user_ids, start_date=self.start_date, end_date=self.end_date)
     
     @beartype
-    def gen_user_bedrock_name_data(
+    def gen_user_bedrock_data(
         self,
         fpath_bedrock_data:str,
         sample_column_name:str,
@@ -111,51 +109,13 @@ class User:
             A dictionary of user id bedrock data
         """
         # load in list of first names
-        bedrock_data = pd.read_csv(fpath_bedrock_data)
+        bedrock_data = pd.read_csv(fpath_bedrock_data, encoding="utf-8")
         # randomly sample names first_names according to country code and counts
         country_code_dataframe = pd.Series(self.user_ids_country_code_dict, name="country_code").to_frame().reset_index().rename(columns={"index":"user_ids"}).assign(count=1)
         country_codes_cnt = country_code_dataframe.groupby(by="country_code").agg({"user_ids":list,"count":"sum"}).reset_index()
-        country_codes_cnt["sample"] = country_codes_cnt.apply(lambda series: bedrock_data.loc[(bedrock_data["ISO numeric"] == series["country_code"]), sample_column_name].sample(n=series["count"], replace=True, weights=None).to_list(), axis=1)
+        country_codes_cnt["sample"] = country_codes_cnt.apply(lambda series: bedrock_data.loc[(bedrock_data["ISO numeric"] == series["country_code"]), sample_column_name].sample(n=series["count"], replace=True, weights=bedrock_data.loc[(bedrock_data["ISO numeric"] == series["country_code"]), 'probability']).to_list(), axis=1)
         # create the key value pairs mapping user id to bedrock data points
         user_ids_bedrock_pairs = country_codes_cnt.apply(lambda series: dict(zip(series["user_ids"], series["sample"])), axis=1).to_list()
         # convert key value pairs to dict
         user_ids_bedrock_dict = pd.concat([pd.Series(d) for d in user_ids_bedrock_pairs])[country_code_dataframe["user_ids"]].to_dict()
         return user_ids_bedrock_dict
-    
-    @beartype
-    def gen_user_bedrock_email_domain(
-        self,
-        fpath_email_domain:str,
-        fpath_bedrock_email_domain:str,
-        ) -> Dict[str, str]:
-        """
-        Generates a dictionary of random user id email domains
-        
-        Parameters
-        ----------
-        fpath_email_domain : str
-            The file path to the email domains reference file
-        
-        Returns
-        -------
-        Dict[str, str]
-            A dictionary of user id email domains
-        """
-        # load domain names data
-        email_domain_data = pd.read_csv(fpath_email_domain, index_col=0)
-        # calculate the proportion of email domains
-        email_domain_data["proportion"] = email_domain_data["proportion"].divide(email_domain_data["proportion"].sum())
-        # convert email domain proportions to a dictionary
-        email_domain_dict = email_domain_data.set_index("domain").to_dict()["proportion"]
-        # randomly choose the email domains based on proportions
-        user_email_domain_list = list(
-            np.random.choice(
-                a=list(email_domain_dict.keys()),
-                p=list(email_domain_dict.values()),
-                replace=True,
-                size=len(self.user_ids),
-            )
-        )
-        # return the user ids email domains
-        user_ids_email_domain_dict = dict(zip(self.user_ids, user_email_domain_list))
-        return user_ids_email_domain_dict
