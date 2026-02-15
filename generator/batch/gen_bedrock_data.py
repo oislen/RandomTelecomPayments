@@ -171,7 +171,7 @@ def invoke_bedrock(
     gen_dataframe['country'] = country
     gen_country_dataframe = pd.merge(left=gen_dataframe, right=countrieseurope.rename(columns={'name':'country'}), on='country', how='inner')
     # standardise names formatting
-    standardise_text_lambda = lambda x: unidecode.unidecode(" ".join(x.strip())) if pd.isna(x) else x
+    standardise_text_lambda = lambda x: unidecode.unidecode(" ".join(x.strip().split())) if not pd.isna(x) else x
     gen_country_dataframe[data_point] = gen_country_dataframe[data_point].apply(lambda x: standardise_text_lambda(x))
     # check against previous iterations
     tmp_gen_country_dataframe = pd.DataFrame()
@@ -201,7 +201,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     gen_country_dataframe_list, error_countries = [], []
     # set countries list
     countries_list = countrieseurope['name'].to_list()
-    #countries_list = ['Netherlands']
+    countries_list = ['Spain']
     # iterate over countries list
     for country in countries_list:
         logging.info(f"country:{country} ...")
