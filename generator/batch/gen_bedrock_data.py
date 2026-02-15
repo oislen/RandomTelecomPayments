@@ -247,9 +247,14 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     output_gen_country_dataframe = pd.concat(gen_country_dataframe_list, axis=0, ignore_index=True)
     # invert the index ranks and then convert to probability weightings within countries
     invert_rank_lambda = lambda group: group['rank'].max() - group['rank']
-    conv_proba_lambda = lambda group: (group['inverse_rank'] + 1) / (group['inverse_rank'].sum() + 1)
+    conv_proba_lambda = lambda group, power: (group['inverse_rank'].pow(power) + 1) / (group['inverse_rank'].pow(power).sum() + 1)
     output_gen_country_dataframe['inverse_rank'] = output_gen_country_dataframe.groupby(by=["country"], as_index=False, group_keys=False).apply(invert_rank_lambda, include_groups=False)
-    output_gen_country_dataframe['probability'] = output_gen_country_dataframe.groupby(by=["country"], as_index=False, group_keys=False).apply(conv_proba_lambda, include_groups=False)
+    if data_point in ("first_names", "last_names"):
+        output_gen_country_dataframe['probability'] = output_gen_country_dataframe.groupby(by=["country"], as_index=False, group_keys=False).apply(conv_proba_lambda, power=1, include_groups=False)
+    elif data_point == "email_domains":
+        output_gen_country_dataframe['probability'] = output_gen_country_dataframe.groupby(by=["country"], as_index=False, group_keys=False).apply(conv_proba_lambda, power=1.5, include_groups=False)
+    else:
+        raise ValueError(f"Invalid parameter data_point value {data_point}")
     # sort and deduplicate output data
     sort_dedup_cols = ["country",data_point]
     output_gen_country_dataframe = output_gen_country_dataframe.drop_duplicates(subset=sort_dedup_cols).sort_values(by=sort_dedup_cols)
