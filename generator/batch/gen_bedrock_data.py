@@ -245,6 +245,11 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     logging.info(f"Concatenating Country files ...")
     # concatenate user country data together and deduplicate across first_names and countries
     output_gen_country_dataframe = pd.concat(gen_country_dataframe_list, axis=0, ignore_index=True)
+    # invert the index ranks and then convert to probability weightings within countries
+    invert_rank_lambda = lambda group: group['rank'].max() - group['rank']
+    conv_proba_lambda = lambda group: group['inverse_rank'] / group['inverse_rank'].sum()
+    output_gen_country_dataframe['inverse_rank'] = output_gen_country_dataframe.groupby(by=["country"], as_index=False, group_keys=False).apply(invert_rank_lambda, include_groups=False)
+    output_gen_country_dataframe['probability'] = output_gen_country_dataframe.groupby(by=["country"], as_index=False, group_keys=False).apply(conv_proba_lambda, include_groups=False)
     # sort and deduplicate output data
     sort_dedup_cols = ["country",data_point]
     output_gen_country_dataframe = output_gen_country_dataframe.drop_duplicates(subset=sort_dedup_cols).sort_values(by=sort_dedup_cols)
