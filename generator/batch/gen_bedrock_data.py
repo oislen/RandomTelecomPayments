@@ -201,7 +201,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     gen_country_dataframe_list, error_countries = [], []
     # set countries list
     countries_list = countrieseurope['name'].to_list()
-    countries_list = ['Spain']
+    #countries_list = ['Ireland']
     # iterate over countries list
     for country in countries_list:
         logging.info(f"country:{country} ...")
