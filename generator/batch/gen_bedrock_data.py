@@ -247,7 +247,7 @@ def main(bedrock, model_id, data_point, fpath_dict, run_bedrock=False):
     output_gen_country_dataframe = pd.concat(gen_country_dataframe_list, axis=0, ignore_index=True)
     # invert the index ranks and then convert to probability weightings within countries
     invert_rank_lambda = lambda group: group['rank'].max() - group['rank']
-    conv_proba_lambda = lambda group: group['inverse_rank'] / group['inverse_rank'].sum()
+    conv_proba_lambda = lambda group: (group['inverse_rank'] + 1) / (group['inverse_rank'].sum() + 1)
     output_gen_country_dataframe['inverse_rank'] = output_gen_country_dataframe.groupby(by=["country"], as_index=False, group_keys=False).apply(invert_rank_lambda, include_groups=False)
     output_gen_country_dataframe['probability'] = output_gen_country_dataframe.groupby(by=["country"], as_index=False, group_keys=False).apply(conv_proba_lambda, include_groups=False)
     # sort and deduplicate output data
