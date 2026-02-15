@@ -24,13 +24,13 @@ exp_user_ids_props_dict = {
 exp_user_ids_first_name_dict = {
     "6374692674377254": "Edoardo",
     "1751409580926382": "Eleonora",
-    "4264861381989413": "Daniela",
+    "4264861381989413": "Cristina",
     "6720317315593519": "Alexander",
 }
 exp_user_ids_last_name_dict = {
     "6374692674377254": "Gentile",
     "1751409580926382": "Gallo",
-    "4264861381989413": "Dima",
+    "4264861381989413": "Donos",
     "6720317315593519": "Allen",
 }
 exp_user_ids_country_code_dict = {
