@@ -41,8 +41,8 @@ exp_user_ids_country_code_dict = {
 }
 exp_user_ids_email_domain_dict = {
     "6374692674377254": "gmail.com",
-    "1751409580926382": "tin.it",
-    "4264861381989413": "unite.md",
+    "1751409580926382": "tiscali.it",
+    "4264861381989413": "yahoo.com",
     "6720317315593519": "outlook.com",
 }
 exp_user_ids_dates_dict = {
