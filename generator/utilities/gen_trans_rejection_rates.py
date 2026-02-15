@@ -42,9 +42,9 @@ def gen_trans_rejection_rates(
     rejection_rates_dict["country_code_trans_reject_rate_dict"] = country_code_trans_reject_rate_dict
     
     # generate domain email rejection based rates
-    domain_email = pd.read_csv(fpath_email_domain, usecols=["domain", "proportion"])
-    domain_email["trans_reject_rate"] = (1 - domain_email["proportion"]) / (1 - domain_email["proportion"]).sum()
-    domain_email_trans_reject_rate_dict = domain_email.set_index("domain")["trans_reject_rate"].to_dict()
+    domain_email = pd.read_csv(fpath_email_domain, encoding="utf-8").groupby(by=["email_domains"], as_index=False).agg({"probability":"mean"})
+    domain_email["trans_reject_rate"] = domain_email["probability"] / domain_email["probability"].sum()
+    domain_email_trans_reject_rate_dict = domain_email.set_index("email_domains")["trans_reject_rate"].to_dict()
     rejection_rates_dict["domain_email_trans_reject_rate_dict"] = domain_email_trans_reject_rate_dict
     
     # generate shared entities with rejection rates dictionary
