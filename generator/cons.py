@@ -14,7 +14,7 @@ subdir_creds = os.path.join(fpath_repo_dir, '.creds')
 # set data files
 fpath_randomtelecomtransdata = os.path.join(subdir_data,'RandomTelecomPayments.csv')
 fpath_randomtelecomusersdata = os.path.join(subdir_data,'RandomTelecomUsers.parquet')
-fpath_arch_randomtelecomdata = os.path.join(subdir_data, 'arch', 'RandomTelecomPaymentsV1.2.csv')
+fpath_arch_randomtelecomdata = os.path.join(subdir_data, 'arch', 'RandomTelecomPaymentsV0.3.csv')
 fpath_temp_llama_first_names = os.path.join(subdir_data, 'temp', 'llama_first_names_{country}.csv')
 fpath_temp_llama_last_names = os.path.join(subdir_data, 'temp', 'llama_last_names_{country}.csv')
 fpath_temp_llama_email_domains = os.path.join(subdir_data, 'temp', 'llama_email_domains_{country}.csv')
