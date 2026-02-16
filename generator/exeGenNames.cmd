@@ -1,1 +1,0 @@
-call uv run utilities\gen_user_names_file.py

@@ -22,16 +22,16 @@ np.random.seed(cons.unittest_seed)
 fpath_first_names = '.' + cons.fpath_llama_first_names.split(cons.fpath_repo_dir)[1]
 fpath_last_names = '.' + cons.fpath_llama_last_names.split(cons.fpath_repo_dir)[1]
 fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
-fpath_email_domain = '.' + cons.fpath_email_domain.split(cons.fpath_repo_dir)[1]
+fpath_email_domain = '.' + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
 user_object = User(n_user_ids=exp_n_user_ids, start_date=exp_start_date, end_date=exp_end_date, fpath_first_names=fpath_first_names, fpath_last_names=fpath_last_names, fpath_countries_europe=fpath_countries_europe, fpath_email_domain=fpath_email_domain)
 
 exp_randomentity_counts_dict = {
-    'uid': ['6374692674377254', '6720317315593519', '4264861381989413', '1751409580926382'], 
+    'uid': ['4264861381989413', '6720317315593519', '1751409580926382', '6374692674377254'],
     'n_devices': [1, 2, 1, 1],
     'n_cards': [1, 1, 1, 1],
-    'n_ips': [3, 5, 5, 1],
-    'n_transactions': [72, 16, 13, 29],
-    'n_applications': [4, 2, 3, 5]
+    'n_ips': [1, 3, 28, 19],
+    'n_transactions': [15, 29, 73, 13],
+    'n_applications': [4, 2, 2, 6]
     }
 
 exp_randomentity_counts_df = pd.DataFrame.from_dict(exp_randomentity_counts_dict)

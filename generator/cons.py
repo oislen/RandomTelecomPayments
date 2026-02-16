@@ -34,7 +34,7 @@ fpath_aws_session_token = os.path.join(subdir_creds,'sessionToken.json')
 llama_data_point_fpaths = {
     "first_names":{"fpath":fpath_llama_first_names, "country_fpath":fpath_temp_llama_first_names},
     "last_names":{"fpath":fpath_llama_last_names, "country_fpath":fpath_temp_llama_last_names},
-    "email_domain":{"fpath":fpath_llama_email_domains, "country_fpath":fpath_temp_llama_email_domains}
+    "email_domains":{"fpath":fpath_llama_email_domains, "country_fpath":fpath_temp_llama_email_domains}
     }
 
 # set url links to files available online
