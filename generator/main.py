@@ -11,6 +11,7 @@ from utilities.commandline_interface import commandline_interface
 from utilities.input_error_handling import input_error_handling
 from utilities.multiprocess import multiprocess
 from app.gen_random_telecom_data import gen_random_telecom_data
+import qa
 
 def main(input_params_dict: dict):
     """
@@ -56,10 +57,11 @@ def main(input_params_dict: dict):
     # order results by userid and transaction date ascending
     user_data = user_data.sort_values(by = 'uid').reset_index(drop = True)
     trans_data = trans_data.sort_values(by = 'transaction_date').reset_index(drop = True)
-    # end timer
-    t1 = time()
-    total_runtime_seconds = round(t1 - t0, 2)
-    logging.info(f'Total Runtime: {total_runtime_seconds} seconds')
+    # initialise QA objects
+    qa.Uids(data=trans_data).run_all()
+    qa.Transactions(data=trans_data).run_all()
+    qa.Cards(data=trans_data).run_all()
+    qa.Ips(data=trans_data).run_all()
     # print out head and shape of data
     logging.info(f'RandomTeleComUsersData.shape: {user_data.shape}')
     logging.info(f'RandomTeleComTransData.shape: {trans_data.shape}')
@@ -73,6 +75,10 @@ def main(input_params_dict: dict):
     logging.info(f'Writing output trans level random telecoms data to: {cons.fpath_randomtelecomtransdata}')
     user_data.to_parquet(cons.fpath_randomtelecomusersdata, engine='fastparquet')
     trans_data.to_csv(cons.fpath_randomtelecomtransdata, index = False)
+    # end timer
+    t1 = time()
+    total_runtime_seconds = round(t1 - t0, 2)
+    logging.info(f'Total Runtime: {total_runtime_seconds} seconds')
     # return dataframes as dictionary
     return {"user_data": user_data, "trans_data": trans_data}
 
