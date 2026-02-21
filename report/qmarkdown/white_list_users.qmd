@@ -73,7 +73,7 @@ high_value_data['hasE901'] = (high_value_data['E901_size'] > 1).astype(int)
 # identiy any high value users with no suspected fraud transaction errors
 high_value_data['white_list_users'] = ((high_value_data['hasE901'] == 0) & (high_value_data['high_value_user'] == 1)).astype(int)
 # subset out white list users
-sub_cols = ['userid', 'customer_value_score_cumsum_pct', 'transaction_week', 'high_value_user', 'hasE901', 'white_list_users']
+sub_cols = ['userid', 'customer_value_score_cum_sum_pct', 'transaction_week', 'high_value_user', 'hasE901', 'white_list_users']
 white_list_users = high_value_data[sub_cols]
 ```
 
