@@ -1,5 +1,6 @@
 import logging
 import seaborn as sns
+import pandas as pd
 
 class Transactions():
     
@@ -31,6 +32,7 @@ class Transactions():
         assert nunique_trans_dates_per_trans['transaction_date'].max() == 1
         assert nunique_trans_dates_per_trans['transaction_date'].min() == 1
         assert not nunique_trans_dates_per_trans['transaction_date'].isnull().any()
+        assert bool((pd.to_datetime(self.data['registration_date']) <= pd.to_datetime(self.data['transaction_date'])).all())
         if self.show_plots:
             # plot distribution
             sns.histplot(data=nunique_trans_dates_per_trans,x='transaction_date', bins = 20)

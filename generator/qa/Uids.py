@@ -1,5 +1,6 @@
 import logging
 import seaborn as sns
+import pandas as pd
 
 class Uids():
     
@@ -45,6 +46,7 @@ class Uids():
         assert nunique_reg_date_per_uid['registration_date'].max() == 1
         assert nunique_reg_date_per_uid['registration_date'].min() == 1
         assert not self.data['registration_date'].isnull().any()
+        assert bool((pd.to_datetime(self.data['registration_date']) <= pd.to_datetime(self.data['transaction_date'])).all())
         if self.show_plots:
             # plot distribution
             sns.histplot(data=nunique_reg_date_per_uid,x='registration_date', bins = 20)
