@@ -1,3 +1,11 @@
+---
+title: "White List Users"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
 ```{python}
 #| label: set-up
 import os
@@ -8,8 +16,13 @@ import sys
 
 sys.path.append(os.getcwd())
 sys.path.append(os.path.dirname(os.getcwd()))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
+from report.qmarkdown.utilities.white_list import gen_white_list
+
+data_dir = os.path.join('..', '..', 'data')
+data_report_dir = os.path.join(data_dir, 'report')
 ```
 
 # Data Load
@@ -18,10 +31,10 @@ import generator.cons as cons
 #| label: data-load
 
 # load user feature data
-user_feat_foath = os.path.join('..', 'data', 'report', 'user_feat_data.csv')
+user_feat_foath = os.path.join(data_report_dir, 'user_feat_data.csv')
 user_feat_data = pd.read_csv(user_feat_foath)
 # load customer value score data
-customer_value_score_foath = os.path.join('..', 'data', 'report', 'customer_value_score.csv')
+customer_value_score_foath = os.path.join(data_report_dir, 'customer_value_score.csv')
 customer_value_score = pd.read_csv(customer_value_score_foath)
 # create the base data by joining user feature data and customer value score
 base_data = pd.merge(left=user_feat_data, right=customer_value_score, on=['userid', 'transaction_week'], how='inner')
@@ -36,14 +49,6 @@ Identify the high value users as the customers with a customer value score in th
 ```{python}
 #| label: high-value-users
 
-def gen_white_list(group):
-    # create the high value user identifier
-    sub_cols = ['userid', 'transaction_week', 'successful_size',  'successful_sum', 'E901_size', 'E901_sum', 'customer_value_score_cumsum']
-    high_value_data = group.loc[:, sub_cols].copy()
-    high_value_data['customer_value_score_cumsum_pct'] = high_value_data['customer_value_score_cumsum'].rank(method='average', ascending=True, pct=True, axis=0)
-    high_value_data['high_value_user'] = (high_value_data['customer_value_score_cumsum_pct'] >= 0.9).astype(int)
-    return high_value_data
-
 # identify white list users for each week
 high_value_data = base_data.groupby(by='transaction_week', group_keys=False, as_index=False).apply(lambda group: gen_white_list(group))
 ```
@@ -53,10 +58,10 @@ high_value_data = base_data.groupby(by='transaction_week', group_keys=False, as_
 ```{python}
 # sum across the 
 groupby_col=['high_value_user']
-agg_dict={'successful_size':'sum', 'successful_sum':'sum', 'customer_value_score_cumsum':'mean', 'customer_value_score_cumsum_pct':'mean'}
+agg_dict={'Successful_size':'sum', 'Successful_sum':'sum', 'customer_value_score_cum_sum':'mean', 'customer_value_score_cum_sum_pct':'mean'}
 high_value_data_agg = high_value_data.groupby(by=groupby_col).agg(agg_dict)
 # add total row
-total_agg={'successful_size':'sum', 'successful_sum':'sum', 'customer_value_score_cumsum':'mean', 'customer_value_score_cumsum_pct':'mean'}
+total_agg={'Successful_size':'sum', 'Successful_sum':'sum', 'customer_value_score_cum_sum':'mean', 'customer_value_score_cum_sum_pct':'mean'}
 total_value_data_agg = high_value_data.agg(agg_dict).rename('total').to_frame().T
 high_value_data_agg = pd.concat(objs=[high_value_data_agg, total_value_data_agg], axis=0)
 high_value_data_agg.head()
@@ -71,7 +76,7 @@ high_value_data['hasE901'] = (high_value_data['E901_size'] > 1).astype(int)
 # identiy any high value users with no suspected fraud transaction errors
 high_value_data['white_list_users'] = ((high_value_data['hasE901'] == 0) & (high_value_data['high_value_user'] == 1)).astype(int)
 # subset out white list users
-sub_cols = ['userid', 'customer_value_score_cumsum_pct', 'transaction_week', 'high_value_user', 'hasE901', 'white_list_users']
+sub_cols = ['userid', 'customer_value_score_cum_sum_pct', 'transaction_week', 'high_value_user', 'hasE901', 'white_list_users']
 white_list_users = high_value_data[sub_cols]
 ```
 
@@ -80,6 +85,6 @@ white_list_users = high_value_data[sub_cols]
 ```{python}
 #| label: write-data
 # save white list users to disk
-white_list_users_fpath=os.path.join('..', 'data', 'report', 'white_list_user_data.csv')
+white_list_users_fpath=os.path.join(data_report_dir, 'white_list_user_data.csv')
 white_list_users.to_csv(white_list_users_fpath, index=False)
 ```

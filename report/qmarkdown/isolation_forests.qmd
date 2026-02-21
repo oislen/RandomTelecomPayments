@@ -1,0 +1,116 @@
+---
+title: "Isolation Forests"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+```{python}
+#| label: set-up
+import os
+import numpy as np
+import pandas as pd
+import sklearn as sk
+import shap
+import os
+import sys
+from datetime import datetime
+
+sys.path.append(os.getcwd())
+sys.path.append(os.path.dirname(os.getcwd()))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
+
+import generator.cons as cons
+from report.qmarkdown.utilities.anomaly_score import IsolationForestsModel, gen_anomaly_score, gen_cumulative_anomaly_score
+
+data_dir = os.path.join('..', '..', 'data')
+data_report_dir = os.path.join(data_dir, 'report')
+```
+
+# Data Load
+
+Load in the engineered feature data and connected user component data for identifying abnormal user behaviour.
+
+```{python}
+#| label: data-load
+
+# load user feature data
+user_feat_fpath = os.path.join(data_report_dir, 'user_feat_data.csv')
+feat_data = pd.read_csv(user_feat_fpath)
+
+# load network data
+comp_data_fpath=os.path.join(data_report_dir, 'user_comp_data.csv')
+comp_data = pd.read_csv(comp_data_fpath)
+
+# join feature and component data
+join_cols = ['userid', 'transaction_week']
+model_data = pd.merge(left=feat_data, right=comp_data, on=join_cols, how='left').fillna(0)
+# order model date by transaction week and user ids
+order_cols = ['transaction_week', 'userid']
+model_data = model_data.sort_values(by=order_cols).reset_index(drop=True)
+```
+
+# Isolation Forests Model
+
+Isolation Forests is an anomaly detection algorithm which applies recursive partitions to isolate abnormal values within a multi-dimensional space.
+
+```{python}
+#| label: isolation forests model
+
+# initiate isolation forest model
+model = IsolationForestsModel(n_estimators=5, random_state=None, n_jobs=2, warm_start=True)
+
+# write load to disk
+model_fpath = os.path.join('..', '..', 'data', 'report', 'isolation_forests_model.pickle')
+model.write(model_fpath)
+```
+
+# Score Data
+
+Score the user behaviour data using the Isolation Forests model.
+
+```{python}
+#| label: score-data
+
+# apply isolation forests model across each transaction week
+score_data = model_data.groupby(by=['transaction_week'], group_keys=False, as_index=False).apply(lambda group: gen_anomaly_score(group, model_fpath=model_fpath))
+# generate anomaly score
+anomaly_data = score_data.groupby(by=['userid'], group_keys=False, as_index=False).apply(lambda group: gen_cumulative_anomaly_score(group))
+# sort data by most anomalous
+sort_cols = ['userid', 'transaction_week']
+anomaly_data = anomaly_data.sort_values(by=sort_cols).reset_index(drop=True)
+anomaly_data['black_list_users'] = (anomaly_data['anomaly_score'] < 0).astype(int)
+```
+
+# Write Anomalous Data
+
+Write the anomalous data to disk.
+
+```{python}
+#| label: write-data
+# save user anomaly data to disk
+score_data_users_fpath=os.path.join('..', '..', 'data', 'report', 'user_anomaly_data.csv')
+anomaly_data.to_csv(score_data_users_fpath, index=False)
+```
+
+# Evaluate Model
+
+Perform a SHAP analysis to understand how the Isolation Forests isolates and identifies abnormal values.
+
+```{python}
+# initiate and load isolation forest model
+model = IsolationForestsModel()
+model_fpath = os.path.join('..', '..', 'data', 'report', 'isolation_forests_model.pickle')
+model = model.read(model_fpath)
+# load scored data
+score_data_users_fpath=os.path.join('..', '..', 'data', 'report', 'user_anomaly_data.csv')
+anomaly_data = pd.read_csv(score_data_users_fpath)
+eval_data = anomaly_data.loc[anomaly_data['transaction_week'] == 52, :].copy()
+# generate shap bee swarm plot
+pred = (eval_data['anomaly_score'] < 0).astype(int)
+explainer = shap.TreeExplainer(model.model)
+X_cols = ['E901_size', 'E901_sum', 'E902_size', 'E902_sum', 'n_comps', 'total_comp_size']
+explanation = explainer(eval_data[X_cols])
+shap.plots.beeswarm(explanation)
+```

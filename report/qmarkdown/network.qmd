@@ -1,0 +1,127 @@
+---
+title: "Networks"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+```{python}
+#| label: set-up
+import os
+import numpy as np
+import pandas as pd
+import sklearn as sk
+import networkx as nx
+import matplotlib.pyplot as plt
+import shap
+import os
+import sys
+from datetime import datetime
+from sklearn.ensemble import IsolationForest
+
+sys.path.append(os.getcwd())
+sys.path.append(os.path.dirname(os.getcwd()))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
+
+import generator.cons as cons
+from report.qmarkdown.utilities.networks import gen_entity_network_data, gen_base_network_data, gen_comp_data
+
+data_dir = os.path.join('..', '..', 'data')
+data_arch_dir = os.path.join(data_dir, 'arch')
+data_report_dir = os.path.join(data_dir, 'report')
+```
+
+# Load Random Telecom Payments Data
+
+```{python}
+#| label: data-load
+# load random telecom payments data
+parse_dates = ['registration_date', 'transaction_date']
+date_parser = lambda x: datetime.strptime(x, '%Y-%m-%d')
+data = pd.read_csv(filepath_or_buffer=cons.fpath_arch_randomtelecomdata,  parse_dates=parse_dates)
+
+# determine the week number for all transaction dates
+data['transaction_week'] = data['transaction_date'].dt.isocalendar().week
+```
+
+# Data Preparation
+
+Generate different networks connecting the various entities to their corresponding users; devices, ips and cards. Combine the networks on the linked users attributing their shared devices, ips and / or cards.
+
+```{python}
+#| label: data-preparation
+
+# generate share user entity networks
+user_device_data, user_device_network_data = gen_entity_network_data(data=data, entity='device_hash', userid = 'userid')
+user_ip_data, user_ip_network_data = gen_entity_network_data(data=data, entity='ip_hash', userid = 'userid')
+user_card_data, user_card_network_data = gen_entity_network_data(data=data, entity='card_hash', userid = 'userid')
+# generate base entity network data
+entity_networks = [user_device_network_data, user_ip_network_data, user_card_network_data]
+base_data = gen_base_network_data(entity_networks=entity_networks, user_cols=['userid_x','userid_y'])
+```
+
+# Network Analysis
+
+Identify the connected components of user groups who share common devices, ips and / or cards.
+
+```{python}
+#| label: network-analysis
+
+# generate components for all entities
+user_device_comp_data = gen_comp_data(network_data=user_device_network_data, entity_data = user_device_data, edge_attr='device_hash')
+user_ip_comp_data = gen_comp_data(network_data=user_ip_network_data, entity_data = user_ip_data, edge_attr='ip_hash')
+user_card_comp_data = gen_comp_data(network_data=user_card_network_data, entity_data = user_card_data, edge_attr='card_hash')
+# concatenate component data together
+concat_objects = [user_device_comp_data, user_ip_comp_data, user_card_comp_data]
+user_entity_comp_data = pd.concat(objs=concat_objects, axis=0, ignore_index=True)
+```
+
+# Graph Connected Component
+
+```{python}
+#| label: connected-component
+type_filter = user_entity_comp_data['type'].isin(['device_hash', 'card_hash', 'ip_hash'])
+trans_week_filter = user_entity_comp_data['transaction_week'].isin([52])
+comp_data = user_entity_comp_data.loc[type_filter & trans_week_filter, :].copy()
+
+# generate graph from component data
+comp_ids = comp_data['comp_id'].unique()
+comp_data = comp_data.loc[comp_data['comp_id'].isin(comp_ids), :]
+G = nx.from_pandas_edgelist(df = comp_data, source = 'userid', target = 'idhashes', edge_attr = ['comp_id', 'comp_size', 'type'])
+
+# define node colours
+idhash_colours = comp_data.drop_duplicates(subset=['idhashes', 'type']).set_index('idhashes')['type'].replace({'device_hash':'orange', 'ip_hash':'yellow', 'card_hash':'red'})
+userid_colours = comp_data.drop_duplicates(subset=['userid']).set_index('userid').assign(colour='blue')['colour']
+colours_df = pd.concat(objs = [userid_colours, idhash_colours], axis=0).rename('colours').to_frame().reset_index().rename(columns={'index':'nodes'})
+# join colour to nodes
+node_colours_df = pd.Series(list(G), name='nodes').to_frame().merge(colours_df, on='nodes', how='left')
+
+# plot network
+fig, ax = plt.subplots()
+nx.draw_networkx(G, pos = nx.spring_layout(G), with_labels = True, node_size = 30, font_size = 1, node_color=node_colours_df['colours'].to_list(), ax=ax)
+ax.set(title="Connected Component")
+plt.show()
+```
+
+# Feature Data
+
+```{python}
+# generate user network feature data
+groupby_cols = ['userid', 'transaction_week']
+agg_dict = {'type':'nunique', 'comp_size':'sum'}
+rename_dict = {'type':'n_comps', 'comp_size':'total_comp_size'}
+feat_data = user_entity_comp_data.groupby(by=groupby_cols, as_index=False).agg(agg_dict).rename(columns=rename_dict)
+# sort by n comps
+feat_data = feat_data.sort_values(by=['transaction_week', 'userid']).reset_index(drop=True)
+```
+
+# Write Data
+
+Write the user component data to disk.
+
+```{python}
+#| label: write data
+feat_data_fpath=os.path.join(data_report_dir, 'user_comp_data.csv')
+feat_data.to_csv(feat_data_fpath, index=False)
+```
