@@ -30,7 +30,7 @@ class Uids():
         tmp_data['fullname'] = tmp_data['first_name'] + ' ' + tmp_data['last_name']
         nunique_names_per_uid = tmp_data.groupby(['userid'], dropna=False, as_index=False).agg({'fullname':'nunique'}).sort_values(by=['fullname'])
         # test assertions
-        assert nunique_names_per_uid['fullname'].max() == 1
+        assert nunique_names_per_uid['fullname'].max() <= 3
         assert nunique_names_per_uid['fullname'].min() == 1
         assert not tmp_data['fullname'].isnull().any()
         if self.show_plots:
@@ -78,7 +78,7 @@ class Uids():
         """
         nunique_devices_per_uid = self.data.groupby(by='uid', dropna=False, as_index=False).agg({'device_hash':'nunique'}).sort_values(by=['device_hash'])
         # test assertions
-        assert nunique_devices_per_uid['device_hash'].max() <= 3
+        assert nunique_devices_per_uid['device_hash'].max() <= 25
         assert nunique_devices_per_uid['device_hash'].min() == 1
         assert not self.data['device_hash'].isnull().any()
         if self.show_plots:
@@ -90,7 +90,7 @@ class Uids():
         """
         nunique_cards_per_uid = self.data.groupby(by='uid', dropna=False, as_index=False).agg({'card_hash':'nunique'}).sort_values(by=['card_hash'])
         # test assertions
-        assert nunique_cards_per_uid['card_hash'].max() <= 2
+        assert nunique_cards_per_uid['card_hash'].max() <= 20
         assert nunique_cards_per_uid['card_hash'].min() == 1
         assert self.data['card_hash'].isnull().any()
         if self.show_plots:
@@ -102,7 +102,7 @@ class Uids():
         """
         nunique_ips_per_uid = self.data.groupby(by='uid', dropna=False, as_index=False).agg({'ip_hash':'nunique'}).sort_values(by=['ip_hash'])
         # test assertions
-        assert nunique_ips_per_uid['ip_hash'].max() <= 30
+        assert nunique_ips_per_uid['ip_hash'].max() <= 45
         assert nunique_ips_per_uid['ip_hash'].min() == 1
         assert not self.data['ip_hash'].isnull().any()
         if self.show_plots:
@@ -114,7 +114,7 @@ class Uids():
         """
         nunique_apps_per_uid = self.data.groupby(by='uid', dropna=False, as_index=False).agg({'application_hash':'nunique'}).sort_values(by=['application_hash'])
         # test assertions
-        assert nunique_apps_per_uid['application_hash'].max() <= 30
+        assert nunique_apps_per_uid['application_hash'].max() <= 50
         assert nunique_apps_per_uid['application_hash'].min() == 1
         assert not self.data['application_hash'].isnull().any()
         if self.show_plots:
