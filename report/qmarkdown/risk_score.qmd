@@ -26,6 +26,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
 from report.qmarkdown.utilities.plotting import lift_plot
+
+data_dir = os.path.join('..', '..', 'data')
+data_arch_dir = os.path.join(data_dir, 'arch')
+data_report_dir = os.path.join(data_dir, 'report')
 ```
 
 # Data Prep
@@ -35,19 +39,19 @@ from report.qmarkdown.utilities.plotting import lift_plot
 ```{python}
 #| label: data-load
 # load random telecom payments data
-user_feat_foath = os.path.join('..', '..', 'data', 'report', 'user_feat_data.csv')
+user_feat_foath = os.path.join(data_report_dir, 'user_feat_data.csv')
 feat_data = pd.read_csv(user_feat_foath)
 # load component data
-user_comp_data_fpath=os.path.join('..', '..', 'data', 'report', 'user_comp_data.csv')
+user_comp_data_fpath=os.path.join(data_report_dir, 'user_comp_data.csv')
 user_comp_data = pd.read_csv(user_comp_data_fpath)
 # load customer value score
-customer_value_score_foath = os.path.join('..', '..', 'data', 'report', 'customer_value_score.csv')
+customer_value_score_foath = os.path.join(data_report_dir, 'customer_value_score.csv')
 customer_value_score = pd.read_csv(customer_value_score_foath)
 # load white list users
-white_list_users_fpath=os.path.join('..', '..', 'data', 'report', 'white_list_user_data.csv')
+white_list_users_fpath=os.path.join(data_report_dir, 'white_list_user_data.csv')
 white_list_users = pd.read_csv(white_list_users_fpath)
 # load anomaly scored data
-anomaly_data_users_fpath=os.path.join('..', '..', 'data', 'report', 'user_anomaly_data.csv')
+anomaly_data_users_fpath=os.path.join(data_report_dir, 'user_anomaly_data.csv')
 usecols =['userid', 'transaction_week', 'score', 'anomaly_score', 'black_list_users']
 anomaly_data = pd.read_csv(anomaly_data_users_fpath, usecols=usecols)
 ```

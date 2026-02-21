@@ -55,10 +55,10 @@ high_value_data = base_data.groupby(by='transaction_week', group_keys=False, as_
 ```{python}
 # sum across the 
 groupby_col=['high_value_user']
-agg_dict={'successful_size':'sum', 'successful_sum':'sum', 'customer_value_score_cumsum':'mean', 'customer_value_score_cumsum_pct':'mean'}
+agg_dict={'Successful_size':'sum', 'Successful_sum':'sum', 'customer_value_score_cum_sum':'mean', 'customer_value_score_cum_sum_pct':'mean'}
 high_value_data_agg = high_value_data.groupby(by=groupby_col).agg(agg_dict)
 # add total row
-total_agg={'successful_size':'sum', 'successful_sum':'sum', 'customer_value_score_cumsum':'mean', 'customer_value_score_cumsum_pct':'mean'}
+total_agg={'Successful_size':'sum', 'Successful_sum':'sum', 'customer_value_score_cum_sum':'mean', 'customer_value_score_cum_sum_pct':'mean'}
 total_value_data_agg = high_value_data.agg(agg_dict).rename('total').to_frame().T
 high_value_data_agg = pd.concat(objs=[high_value_data_agg, total_value_data_agg], axis=0)
 high_value_data_agg.head()

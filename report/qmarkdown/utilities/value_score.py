@@ -1,4 +1,4 @@
-def week_pct_score(group, score_cols = ['successful_size','successful_sum']):
+def week_pct_score(group, score_cols = ['Successful_size','Successful_sum']):
     """
     """
     # percentile rank the score columns
@@ -6,7 +6,7 @@ def week_pct_score(group, score_cols = ['successful_size','successful_sum']):
     group_score.columns = group_score.columns + '_pct'
     return group_score
 
-def gen_weekly_user_scores(group, score_cols=['successful_size_pct', 'successful_sum_pct']):
+def gen_weekly_user_scores(group, score_cols=['Successful_size_pct', 'Successful_sum_pct']):
     """
     """
     # calculate the customer value score
