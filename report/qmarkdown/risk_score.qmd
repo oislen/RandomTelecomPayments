@@ -1,3 +1,10 @@
+---
+title: "Risk Score"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
 
 ```{python}
 #| label: set-up
@@ -15,8 +22,13 @@ from sklearn.ensemble import RandomForestClassifier
 
 sys.path.append(os.getcwd())
 sys.path.append(os.path.dirname(os.getcwd()))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
+from report.qmarkdown.utilities.plotting import lift_plot
+
+data_dir = os.path.join('..', '..', 'data')
+data_report_dir = os.path.join(data_dir, 'report')
 ```
 
 # Data Prep
@@ -26,19 +38,19 @@ import generator.cons as cons
 ```{python}
 #| label: data-load
 # load random telecom payments data
-user_feat_foath = os.path.join('..', 'data', 'report', 'user_feat_data.csv')
+user_feat_foath = os.path.join(data_report_dir, 'user_feat_data.csv')
 feat_data = pd.read_csv(user_feat_foath)
 # load component data
-user_comp_data_fpath=os.path.join('..', 'data', 'report', 'user_comp_data.csv')
+user_comp_data_fpath=os.path.join(data_report_dir, 'user_comp_data.csv')
 user_comp_data = pd.read_csv(user_comp_data_fpath)
 # load customer value score
-customer_value_score_foath = os.path.join('..', 'data', 'report', 'customer_value_score.csv')
+customer_value_score_foath = os.path.join(data_report_dir, 'customer_value_score.csv')
 customer_value_score = pd.read_csv(customer_value_score_foath)
 # load white list users
-white_list_users_fpath=os.path.join('..', 'data', 'report', 'white_list_user_data.csv')
+white_list_users_fpath=os.path.join(data_report_dir, 'white_list_user_data.csv')
 white_list_users = pd.read_csv(white_list_users_fpath)
 # load anomaly scored data
-anomaly_data_users_fpath=os.path.join('..', 'data', 'report', 'user_anomaly_data.csv')
+anomaly_data_users_fpath=os.path.join(data_report_dir, 'user_anomaly_data.csv')
 usecols =['userid', 'transaction_week', 'score', 'anomaly_score', 'black_list_users']
 anomaly_data = pd.read_csv(anomaly_data_users_fpath, usecols=usecols)
 ```
@@ -79,7 +91,7 @@ test_data = model_data.loc[model_data['transaction_week'].isin(range(46, 53)), :
 #| label: score-data
 # train isolation forests
 id_cols = ['userid', 'transaction_week']
-X_cols = ['device_hash_size', 'card_hash_size', 'ip_hash_size', 'successful_size', 'E900_size', 'E901_size', 'E902_size', 'E903_size', 'E904_size', 'n_comps', 'total_comp_size', 'customer_value_score', 'score']
+X_cols = ['device_hash_size', 'card_hash_size', 'ip_hash_size', 'Successful_size', 'E900_size', 'E901_size', 'E902_size', 'E903_size', 'E904_size', 'n_comps', 'total_comp_size', 'customer_value_score', 'score']
 y_col = 'black_list_users'
 X_data = train_data[X_cols]
 y_data = train_data[y_col]
@@ -90,42 +102,9 @@ clf.fit(X_data, y_data)
 ## Evaluate
 
 ```{python}
-def liftplot(col, target, data, order = 'default', cut = None):
-    """
-    Plot a bar chart of the target variable against a given predictor
-    """
-    # take deep cut of data for temporary storage
-    tmp_data = data.copy()
-    # calculate the avergae rate of taking out a loan
-    mean_y_yes = tmp_data[target].mean()
-    # if quantile cutting col
-    if cut != None:
-        tmp_data[col] = pd.cut(x = tmp_data[col], bins = cut)
-    # determine plot order based on bin height
-    if order == 'default':
-        plot_order = tmp_data.groupby(col)[target].mean().sort_values(ascending=False).index.values
-    else:
-        plot_order = order
-    # set figure size
-    plt.figure(figsize=(8, 6))
-    # create bar plot
-    sns.barplot(data = tmp_data, x = col, y = target, estimator = np.mean, errorbar = None, color = 'royalblue', order = plot_order)
-    # format plot title, ticks and labels
-    plt.title(f'{col} vs {target}', size = 20)
-    plt.yticks(size = 15)
-    plt.xticks(rotation = 45, size = 15)
-    plt.xlabel(col, size = 18)
-    plt.ylabel(target, size = 18)
-    # red line indicates average rate of taking out a loan
-    plt.axhline(y=mean_y_yes, color = 'red', linestyle = '--', linewidth = 3)
-    # show and close plot
-    plt.show()
-    plt.close()
-    return 0
-
 # make valid and test predictions
 valid_data['predict_proba'] = clf.predict_proba(valid_data[X_cols])[:, 1]
 valid_data.sort_values(by=['predict_proba'])
 
-liftplot(col='predict_proba', target='black_list_users', data=valid_data, order = None, cut = 10)
+lift_plot(col='predict_proba', target='black_list_users', data=valid_data, order = None, cut = 10)
 ```

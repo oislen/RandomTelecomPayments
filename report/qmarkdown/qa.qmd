@@ -1,0 +1,254 @@
+---
+title: "QA Report"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+# Random Telecom Payments QA Report
+
+```{python}
+#| label: data-load
+
+import logging
+import os
+import sys
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# set up logging
+lgr = logging.getLogger()
+lgr.setLevel(logging.INFO)
+
+# set file path for custom python modules
+root_dir = os.path.dirname(os.path.dirname(os.path.join(os.getcwd())))
+sys.path.append(os.path.join(root_dir, 'generator'))
+
+import cons
+import generator.qa as qa
+
+# load data
+pd.set_option('display.max_columns', None)
+parse_dates = ['registration_date', 'transaction_date']
+date_parser = lambda x: datetime.strptime(x, '%Y-%m-%d')
+data = pd.read_csv(cons.fpath_randomtelecomtransdata,  parse_dates=parse_dates)
+userdata = pd.read_parquet(cons.fpath_randomtelecomusersdata)
+
+# show head of data
+data.info()
+
+# initialise QA object
+qaUids = qa.Uids(data=data, show_logs=True, show_plots=True)
+qaTransactions = qa.Transactions(data=data, show_logs=True, show_plots=True)
+qaCards = qa.Cards(data=data, show_logs=True, show_plots=True)
+qaIps = qa.Ips(data=data, show_logs=True, show_plots=True)
+```
+
+## Users
+
+Check that the data makes sense and there are no anomalies at a user level.
+
+### Unique UserIds per UID
+
+There should be exactly one unique userid for every UID.
+
+```{python}
+#| label: nunique-user-ids-per-uid
+qaUids.unique_user_ids()
+```
+
+### Unique Full Names per UID
+
+There should be exactly one unique fullname for every UID.
+
+```{python}
+#| label: nunique-names-per-uid
+qaUids.unique_names()
+```
+
+### Unique Registration Dates per UID
+
+A user should register only on a single date.
+
+```{python}
+#| label: nunique-reg-dates-per-uid
+qaUids.unique_reg_dates()
+```
+
+### Unique Registration Countries per UID
+
+When registering the user should set their country code of residence.
+
+```{python}
+#| label: nunique-reg-countries-per-uid
+qaUids.nunique_reg_countries()
+```
+
+### Unique Email Domains per UID
+
+A user should register with a single email address corresponding to a single email domain.
+
+```{python}
+#| label: nunique-email-domains-per-uid
+qaUids.unique_email_domains()
+```
+
+### Unique Device Hash per UID
+
+A UID should have 1 to 3 devices.
+
+```{python}
+#| label: nunique-devices-per-uid
+qaUids.unique_devices()
+```
+
+### Unique Card Hash per UID
+
+A UID should have 1 to 2 cards, with an overall distribution less than the corresponding device hash distribution.
+
+```{python}
+#| label: nunique-cards-per-uid
+qaUids.unique_cards()
+```
+
+### Unique IP Hash per UID
+
+A UID should have between 1 and 10 ips.
+
+```{python}
+#| label: nunique-ips-per-uid
+qaUids.unique_ips()
+```
+
+### Unique Application Hash per UID
+
+```{python}
+#| label: nunique-apps-per-uid
+qaUids.unique_apps()
+```
+
+### Unique Transaction Hash per UID
+
+```{python}
+#| label: nunique-transactions-per-uid
+qaUids.unique_transactions()
+```
+
+## Transaction
+
+### Unique Transaction Hash
+
+```{python}
+#| label: nunique-trans-hash
+qaTransactions.unique_trans_hash()
+```
+
+### Unique Date per Transaction Hash
+
+Each transaction hash should have a single date associated with it
+
+```{python}
+#| label: nunique-dates-per-trans
+qaTransactions.unique_dates()
+```
+
+### Unique Amount per Transaction Hash
+
+Each transaction hash should have a single transaction amount associated with it
+
+```{python}
+#| label: nunique-trans-amount-per-trans
+qaTransactions.unique_trans_amount()
+```
+
+### Unique Payment Method per Transaction Hash
+
+Each transaction hash should have a single transaction payment method associated with it. Note, in some circumstances the payment method is missing as the transaction amount was 0.
+
+```{python}
+#| label: nunique-payment-method-per-trans
+qaTransactions.unique_payment_method()
+```
+
+### Unique Payment Channel per Transaction Hash
+
+Each transaction hash should have a single transaction payment channel with it. Note in some circumstances the payment channel is missing when the transaction amount is 0, or the payment method is wallet or points.
+
+```{python}
+#| label: nunique-payment-channel-per-trans
+qaTransactions.unique_payment_channel()
+```
+
+### Unique Transaction Status per Transaction Hash
+
+Each transaction hash should have a single unique payment status associated with it.
+
+```{python}
+#| label: nunique-trans-status-per-trans
+qaTransactions.unique_trans_status()
+```
+
+### Unique Error Codes Status per Transaction Hash
+
+An error code should only be associated with transaction hashes with a failed payment status.
+
+```{python}
+#| label: nunique-errorcodes-per-trans
+qaTransactions.unique_error_codes()
+```
+
+### UIDs with High Device Hash Counts
+
+```{python}
+#| label: uid-max-device-trans-error-counts
+qaTransactions.uid_max_device_trans_error_counts()
+```
+
+### UIDs with High Card Hash Counts
+
+```{python}
+#| label: uid-max-card-trans-error-counts
+qaTransactions.uid_max_card_trans_error_counts()
+```
+
+
+### UIDs with High IP Hash Counts
+
+```{python}
+#| label: uid-max-ip-trans-error-counts
+qaTransactions.uid_max_ip_trans_error_counts()
+```
+
+## Card
+
+### Unique Card Types per Card Hashes
+
+Each card should have a single card type associated with it.
+
+```{python}
+#| label: nunique-card-types-per-card
+qaCards.unique_card_types()
+```
+
+
+### Unique Country Code per Card Hashes
+
+Each card should have a single country code associated with it.
+
+```{python}
+#| label: nunique-country-codes-per-card
+qaCards.unique_country_codes()
+```
+
+## IP
+
+### Unique Country Codes per IP Hashes
+
+Each IP should have a single country code associated with it.
+
+```{python}
+#| label: nunique-country-codes-per-ip
+qaIps.unique_country_codes()
+```
