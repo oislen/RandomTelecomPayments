@@ -46,11 +46,11 @@ Percentile score / rank the users across each week number based on their success
 #| label: weekly-score-data
 
 # only consider users who made at least one transaction in any given week
-score_data_week = feat_data.loc[feat_data['successful_size'] > 0, :].copy()
+score_data_week = feat_data.loc[feat_data['Successful_size'] > 0, :].copy()
 # score each user across each week for their percentile score in number of successfully transactions counts and accounts
-score_data_week = score_data_week.join(score_data_week.groupby(by=['transaction_week'], group_keys=False)[['successful_size','successful_sum']].apply(lambda group: week_pct_score(group)))
+score_data_week = score_data_week.join(score_data_week.groupby(by=['transaction_week'], group_keys=False)[['Successful_size','Successful_sum']].apply(lambda group: week_pct_score(group)))
 # group by each user and apply a cumulative sum to determine weekly values scores over time
-score_data_week = score_data_week.join(score_data_week.groupby(by=['userid'], group_keys=False)[['successful_size_pct', 'successful_sum_pct']].apply(lambda group: gen_weekly_user_scores(group)))
+score_data_week = score_data_week.join(score_data_week.groupby(by=['userid'], group_keys=False)[['Successful_size_pct', 'Successful_sum_pct']].apply(lambda group: gen_weekly_user_scores(group)))
 score_data_week.head(10)
 ```
 
@@ -78,7 +78,7 @@ base_score_data = pd.merge(left=feat_data, right=score_data_week, on=['userid','
 # fill missing pct and score values as 0
 base_score_data = base_score_data.fillna(0)
 # subset out required columns
-sub_cols = ["userid", "transaction_week", "successful_size_pct", "successful_sum_pct", "customer_value_score", "customer_value_score_cum_sum"]
+sub_cols = ["userid", "transaction_week", "Successful_size_pct", "Successful_sum_pct", "customer_value_score", "customer_value_score_cum_sum"]
 base_score_data = base_score_data[sub_cols]
 base_score_data.head(10)
 ```
