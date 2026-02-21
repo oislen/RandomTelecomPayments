@@ -28,7 +28,6 @@ import generator.cons as cons
 from report.qmarkdown.utilities.plotting import lift_plot
 
 data_dir = os.path.join('..', '..', 'data')
-data_arch_dir = os.path.join(data_dir, 'arch')
 data_report_dir = os.path.join(data_dir, 'report')
 ```
 

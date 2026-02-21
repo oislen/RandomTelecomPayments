@@ -20,6 +20,9 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.join(os.getcwd()))))
 
 import generator.cons as cons
 from report.qmarkdown.utilities.white_list import gen_white_list
+
+data_dir = os.path.join('..', '..', 'data')
+data_report_dir = os.path.join(data_dir, 'report')
 ```
 
 # Data Load
@@ -28,10 +31,10 @@ from report.qmarkdown.utilities.white_list import gen_white_list
 #| label: data-load
 
 # load user feature data
-user_feat_foath = os.path.join('..', '..', 'data', 'report', 'user_feat_data.csv')
+user_feat_foath = os.path.join(data_report_dir, 'user_feat_data.csv')
 user_feat_data = pd.read_csv(user_feat_foath)
 # load customer value score data
-customer_value_score_foath = os.path.join('..', '..', 'data', 'report', 'customer_value_score.csv')
+customer_value_score_foath = os.path.join(data_report_dir, 'customer_value_score.csv')
 customer_value_score = pd.read_csv(customer_value_score_foath)
 # create the base data by joining user feature data and customer value score
 base_data = pd.merge(left=user_feat_data, right=customer_value_score, on=['userid', 'transaction_week'], how='inner')
@@ -82,6 +85,6 @@ white_list_users = high_value_data[sub_cols]
 ```{python}
 #| label: write-data
 # save white list users to disk
-white_list_users_fpath=os.path.join('..', '..', 'data', 'report', 'white_list_user_data.csv')
+white_list_users_fpath=os.path.join(data_report_dir, 'white_list_user_data.csv')
 white_list_users.to_csv(white_list_users_fpath, index=False)
 ```
