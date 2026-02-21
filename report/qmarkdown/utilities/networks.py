@@ -14,7 +14,7 @@ def gen_base_network_data(entity_networks, user_cols=['userid_x','userid_y']):
 def gen_entity_network_data(data, entity, userid = 'userid', trans_week = 'transaction_week'):
     """
     """
-    # extract out the unique userids and device hashes
+    # extract out the unique user ids and device hashes
     user_entity_data = data[[userid, entity, trans_week]].dropna().drop_duplicates()
     # inner join users to users based on shared device hash
     user_entity_network_data = pd.merge(left = user_entity_data, right = user_entity_data, on = [entity, trans_week], how = 'inner')
@@ -31,15 +31,15 @@ def gen_comp_data(network_data, entity_data, edge_attr):
     # apply graphs for each week
     trans_week_graphs = network_data.groupby(by='transaction_week').apply(lambda group: nx.from_pandas_edgelist(df = group, source = 'userid_x', target = 'userid_y', edge_attr = [edge_attr])).rename('G').reset_index()
     # extract connected components for each week
-    trans_week_comps = trans_week_graphs.apply(lambda series: pd.DataFrame([{'transaction_week':series['transaction_week'], 'compid':i, 'userid':cc} for i, cc in enumerate(nx.connected_components(series['G']))]).explode('userid').reset_index(drop = True), axis=1).to_list()
+    trans_week_comps = trans_week_graphs.apply(lambda series: pd.DataFrame([{'transaction_week':series['transaction_week'], 'comp_id':i, 'userid':cc} for i, cc in enumerate(nx.connected_components(series['G']))]).explode('userid').reset_index(drop = True), axis=1).to_list()
     trans_week_comps = pd.concat(trans_week_comps, axis=0)
-    # calculate compid sizes across each week
-    trans_week_comps_size = trans_week_comps.groupby(by = ['transaction_week', 'compid'], as_index = False).agg({'userid':'nunique'}).rename(columns={'userid':'compsize'})
+    # calculate comp id sizes across each week
+    trans_week_comps_size = trans_week_comps.groupby(by = ['transaction_week', 'comp_id'], as_index = False).agg({'userid':'nunique'}).rename(columns={'userid':'comp_size'})
     # generate the component data
     comp_data = pd.merge(left = entity_data, right = trans_week_comps, left_on = ['transaction_week', 'userid'], right_on = ['transaction_week', 'userid'], how = 'inner')
-    comp_data = pd.merge(left = comp_data, right = trans_week_comps_size, on = ['transaction_week', 'compid'], how = 'inner')
+    comp_data = pd.merge(left = comp_data, right = trans_week_comps_size, on = ['transaction_week', 'comp_id'], how = 'inner')
     # order by comp size
-    comp_data = comp_data.sort_values(by = ['transaction_week', 'compid', 'userid', edge_attr]).reset_index(drop=True)
+    comp_data = comp_data.sort_values(by = ['transaction_week', 'comp_id', 'userid', edge_attr]).reset_index(drop=True)
     # normalise data with respect to edge attribute
     comp_data = comp_data.rename(columns={edge_attr:'idhashes'})
     comp_data['type'] = edge_attr
