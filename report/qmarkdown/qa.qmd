@@ -10,12 +10,17 @@ jupyter: python3
 
 ```{python}
 #| label: data-load
-#|
+
+import logging
 import os
 import sys
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+# set up logging
+lgr = logging.getLogger()
+lgr.setLevel(logging.INFO)
 
 # set file path for custom python modules
 root_dir = os.path.dirname(os.path.dirname(os.path.join(os.getcwd())))
@@ -35,10 +40,10 @@ userdata = pd.read_parquet(cons.fpath_randomtelecomusersdata)
 data.info()
 
 # initialise QA object
-qaUids = qa.Uids(data=data)
-qaTransactions = qa.Transactions(data=data)
-qaCards = qa.Cards(data=data)
-qaIps = qa.Ips(data=data)
+qaUids = qa.Uids(data=data, show_logs=True, show_plots=True)
+qaTransactions = qa.Transactions(data=data, show_logs=True, show_plots=True)
+qaCards = qa.Cards(data=data, show_logs=True, show_plots=True)
+qaIps = qa.Ips(data=data, show_logs=True, show_plots=True)
 ```
 
 ## Users
