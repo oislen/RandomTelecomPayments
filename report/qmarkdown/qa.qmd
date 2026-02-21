@@ -36,6 +36,9 @@ data.info()
 
 # initialise QA object
 qaUids = qa.Uids(data=data)
+qaTransactions = qa.Transactions(data=data)
+qaCards = qa.Cards(data=data)
+qaIps = qa.Ips(data=data)
 ```
 
 ## Users
@@ -133,11 +136,8 @@ qaUids.unique_transactions()
 ### Unique Transaction Hash
 
 ```{python}
-unique_trans_hash_cnt = data['transaction_hash'].value_counts().sort_values(ascending=False).head()
-sns.histplot(data=unique_trans_hash_cnt.to_frame(),x='count', bins = 10)
-assert unique_trans_hash_cnt.max() == 1
-assert unique_trans_hash_cnt.min() == 1
-assert not unique_trans_hash_cnt.isnull().any()
+#| label: nunique-trans-hash
+qaTransactions.unique_trans_hash()
 ```
 
 ### Unique Date per Transaction Hash
@@ -146,11 +146,7 @@ Each transaction hash should have a single date associated with it
 
 ```{python}
 #| label: nunique-dates-per-trans
-nunique_trans_dates_per_trans = data.groupby(by=['transaction_hash'], dropna=False, as_index=False).agg({'transaction_date':'nunique'})
-sns.histplot(data=nunique_trans_dates_per_trans,x='transaction_date', bins = 20)
-assert nunique_trans_dates_per_trans['transaction_date'].max() == 1
-assert nunique_trans_dates_per_trans['transaction_date'].min() == 1
-assert not nunique_trans_dates_per_trans['transaction_date'].isnull().any()
+qaTransactions.unique_dates()
 ```
 
 ### Unique Amount per Transaction Hash
@@ -159,11 +155,7 @@ Each transaction hash should have a single transaction amount associated with it
 
 ```{python}
 #| label: nunique-trans-amount-per-trans
-nunique_trans_amounts_per_trans = data.groupby(by=['transaction_hash'], dropna=False, as_index=False).agg({'transaction_amount':'nunique'})
-sns.histplot(data=nunique_trans_amounts_per_trans,x='transaction_amount', bins = 20)
-assert nunique_trans_amounts_per_trans['transaction_amount'].max() == 1
-assert nunique_trans_amounts_per_trans['transaction_amount'].min() == 1
-assert not nunique_trans_amounts_per_trans['transaction_amount'].isnull().any()
+qaTransactions.unique_trans_amount()
 ```
 
 ### Unique Payment Method per Transaction Hash
@@ -172,21 +164,7 @@ Each transaction hash should have a single transaction payment method associated
 
 ```{python}
 #| label: nunique-payment-method-per-trans
-nunique_payment_method_per_trans = data.groupby(by=['transaction_hash'], dropna=False, as_index=False).agg({'transaction_payment_method':'nunique'}).sort_values('transaction_payment_method')
-unique_payment_method_per_trans_hash = data.groupby(by=['card_type', 'transaction_payment_method'], as_index=False, dropna=False).agg({'transaction_hash':'size', 'transaction_amount':'sum'})
-sns.histplot(data=nunique_payment_method_per_trans,x='transaction_payment_method', bins = 20)
-assert nunique_payment_method_per_trans['transaction_payment_method'].max() == 1
-assert nunique_payment_method_per_trans['transaction_payment_method'].min() == 0
-assert not nunique_payment_method_per_trans['transaction_payment_method'].isnull().any()
-assert unique_payment_method_per_trans_hash['card_type'].isnull().any()
-assert unique_payment_method_per_trans_hash['card_type'].dropna().isin(['Mastercard', 'Visa']).all()
-assert unique_payment_method_per_trans_hash['transaction_payment_method'].isnull().any()
-assert unique_payment_method_per_trans_hash['transaction_payment_method'].dropna().isin(['Card', 'Points', 'Wallet']).all()
-assert (unique_payment_method_per_trans_hash.loc[unique_payment_method_per_trans_hash['transaction_payment_method'].isnull(), 'transaction_amount'] == 0).all()
-assert (unique_payment_method_per_trans_hash.loc[unique_payment_method_per_trans_hash['transaction_payment_method'].notnull(), 'transaction_amount'] > 0).all()
-assert unique_payment_method_per_trans_hash.loc[unique_payment_method_per_trans_hash['transaction_payment_method'] == 'Card', 'card_type'].isin(['Mastercard', 'Visa']).all()
-assert unique_payment_method_per_trans_hash.loc[unique_payment_method_per_trans_hash['transaction_payment_method'] != 'Card', 'card_type'].isnull().all()
-print(unique_payment_method_per_trans_hash.to_markdown())
+qaTransactions.unique_payment_method()
 ```
 
 ### Unique Payment Channel per Transaction Hash
@@ -195,21 +173,7 @@ Each transaction hash should have a single transaction payment channel with it. 
 
 ```{python}
 #| label: nunique-payment-channel-per-trans
-nunique_payment_channel_per_trans = data.groupby(by=['transaction_hash'], as_index=False).agg({'card_payment_channel':'nunique'}, dropna=False).sort_values('card_payment_channel')
-unique_payment_channel_per_trans_hash = data.groupby(by=['transaction_payment_method', 'card_payment_channel'], as_index=False, dropna=False).agg({'transaction_hash':'size', 'transaction_amount':'sum'})
-sns.histplot(data=nunique_payment_channel_per_trans,x='card_payment_channel', bins = 20)
-assert nunique_payment_channel_per_trans['card_payment_channel'].max() == 1
-assert nunique_payment_channel_per_trans['card_payment_channel'].min() == 0
-assert not nunique_payment_channel_per_trans['card_payment_channel'].isnull().any()
-assert unique_payment_channel_per_trans_hash['transaction_payment_method'].isnull().any()
-assert unique_payment_channel_per_trans_hash['transaction_payment_method'].dropna().isin(['Card', 'Points', 'Wallet']).all()
-assert unique_payment_channel_per_trans_hash['card_payment_channel'].isnull().any()
-assert unique_payment_channel_per_trans_hash['card_payment_channel'].dropna().isin(['Adyen', 'AppStore', 'Docomo', 'PayPal', 'WorldPay']).all()
-assert (unique_payment_channel_per_trans_hash.loc[unique_payment_channel_per_trans_hash['transaction_payment_method'].isnull(), 'transaction_amount'] == 0).all()
-assert (unique_payment_channel_per_trans_hash.loc[unique_payment_channel_per_trans_hash['transaction_payment_method'].notnull(), 'transaction_amount'] > 0).all()
-assert unique_payment_channel_per_trans_hash.loc[unique_payment_channel_per_trans_hash['transaction_payment_method'] == 'Card', 'card_payment_channel'].isin(['Adyen', 'AppStore', 'Docomo', 'PayPal', 'WorldPay']).all()
-assert unique_payment_channel_per_trans_hash.loc[unique_payment_channel_per_trans_hash['transaction_payment_method'] != 'Card', 'card_payment_channel'].isnull().all()
-print(unique_payment_channel_per_trans_hash.to_markdown())
+qaTransactions.unique_payment_channel()
 ```
 
 ### Unique Transaction Status per Transaction Hash
@@ -218,19 +182,7 @@ Each transaction hash should have a single unique payment status associated with
 
 ```{python}
 #| label: nunique-trans-status-per-trans
-nunique_trans_status_per_trans = data.groupby(by=['transaction_hash'], as_index=False).agg({'transaction_status':'nunique'})
-unique_trans_status_per_trans_hash = data.groupby(by=['transaction_error_code', 'transaction_status'], as_index=False, dropna=False).size()
-sns.histplot(data=nunique_trans_status_per_trans,x='transaction_status', bins = 20)
-assert nunique_trans_status_per_trans['transaction_status'].max() == 1
-assert nunique_trans_status_per_trans['transaction_status'].min() == 1
-assert not nunique_trans_status_per_trans['transaction_status'].isnull().any()
-assert unique_trans_status_per_trans_hash['transaction_error_code'].isnull().any()
-assert unique_trans_status_per_trans_hash['transaction_error_code'].dropna().isin(['E900:ConnectionTimeout', 'E901:SuspectedFraud', 'E902:AuthenicationFailure', 'E903:UserCancelled', 'E904:InsufficientFunds']).all()
-assert unique_trans_status_per_trans_hash['transaction_status'].notnull().all()
-assert unique_trans_status_per_trans_hash['transaction_status'].dropna().isin(['Rejected', 'Pending', 'Successful']).all()
-assert unique_trans_status_per_trans_hash.loc[unique_trans_status_per_trans_hash['transaction_error_code'].notnull(), 'transaction_status'].isin(['Rejected']).all()
-assert unique_trans_status_per_trans_hash.loc[unique_trans_status_per_trans_hash['transaction_error_code'].isnull(), 'transaction_status'].isin(['Pending', 'Successful']).all()
-print(unique_trans_status_per_trans_hash.to_markdown())
+qaTransactions.unique_trans_status()
 ```
 
 ### Unique Error Codes Status per Transaction Hash
@@ -239,43 +191,21 @@ An error code should only be associated with transaction hashes with a failed pa
 
 ```{python}
 #| label: nunique-errorcodes-per-trans
-nunique_errorcodes_per_trans = data.groupby(by=['transaction_hash']).agg({'transaction_error_code':'nunique'}, dropna=False, as_index=False)
-unique_error_codes_statuses_per_trans_hash = data.groupby(by=['transaction_error_code', 'transaction_status'], as_index=False, dropna=False).size()
-sns.histplot(data=nunique_errorcodes_per_trans,x='transaction_error_code', bins = 20)
-assert nunique_errorcodes_per_trans['transaction_error_code'].max() == 1
-assert nunique_errorcodes_per_trans['transaction_error_code'].min() == 0
-assert not nunique_errorcodes_per_trans['transaction_error_code'].isnull().any()
-assert unique_error_codes_statuses_per_trans_hash['transaction_error_code'].isnull().any()
-assert unique_error_codes_statuses_per_trans_hash['transaction_error_code'].dropna().isin(['E900:ConnectionTimeout', 'E901:SuspectedFraud', 'E902:AuthenicationFailure', 'E903:UserCancelled', 'E904:InsufficientFunds']).all()
-assert unique_error_codes_statuses_per_trans_hash['transaction_status'].notnull().all()
-assert unique_error_codes_statuses_per_trans_hash['transaction_status'].dropna().isin(['Rejected', 'Pending', 'Successful']).all()
-assert unique_error_codes_statuses_per_trans_hash.loc[unique_error_codes_statuses_per_trans_hash['transaction_error_code'].notnull(), 'transaction_status'].isin(['Rejected']).all()
-assert unique_error_codes_statuses_per_trans_hash.loc[unique_error_codes_statuses_per_trans_hash['transaction_error_code'].isnull(), 'transaction_status'].isin(['Pending', 'Successful']).all()
-print(unique_error_codes_statuses_per_trans_hash.to_markdown())
+qaTransactions.unique_error_codes()
 ```
 
 ### UIDs with High Device Hash Counts
 
 ```{python}
 #| label: uid-max-device-trans-error-counts
-nunique_devices_per_uid = data.groupby(by='uid', as_index=False).agg({'device_hash':'nunique'}).sort_values(by='device_hash')
-uids_max_devices = data.loc[data['uid'].isin(nunique_devices_per_uid['uid'].tail()), :].sort_values(by=['uid', 'device_hash', 'transaction_date'])
-uids_with_high_device_hash_counts = uids_max_devices.groupby(by=['userid'], as_index=False).agg({'device_hash':'nunique', 'transaction_hash':'count', 'transaction_error_code':'count'})
-uids_with_high_device_hash_counts_error_codes = uids_max_devices.groupby(by=['transaction_error_code'], as_index=False).size().sort_values(by='size', ascending=False)
-print(uids_with_high_device_hash_counts.to_markdown())
-print(uids_with_high_device_hash_counts_error_codes.to_markdown())
+qaTransactions.uid_max_device_trans_error_counts()
 ```
 
 ### UIDs with High Card Hash Counts
 
 ```{python}
 #| label: uid-max-card-trans-error-counts
-nunique_cards_per_uid = data.groupby(by='uid', as_index=False).agg({'card_hash':'nunique'}).sort_values(by='card_hash')
-uids_max_cards = data.loc[data['uid'].isin(nunique_cards_per_uid['uid'].tail()), :].sort_values(by=['uid', 'card_hash', 'transaction_date'])
-uids_with_high_card_hash_counts = uids_max_cards.groupby(by=['userid'], as_index=False).agg({'card_hash':'nunique', 'transaction_hash':'count', 'transaction_error_code':'count'})
-uids_with_high_card_hash_counts_error_codes = uids_max_cards.groupby(by=['transaction_error_code'], as_index=False).size().sort_values(by='size', ascending=False)
-print(uids_with_high_card_hash_counts.to_markdown())
-print(uids_with_high_card_hash_counts_error_codes.to_markdown())
+qaTransactions.uid_max_card_trans_error_counts()
 ```
 
 
@@ -283,12 +213,7 @@ print(uids_with_high_card_hash_counts_error_codes.to_markdown())
 
 ```{python}
 #| label: uid-max-ip-trans-error-counts
-nunique_ips_per_uid = data.groupby(by='uid', as_index=False, dropna=False).agg({'ip_hash':'nunique'}).sort_values(by='ip_hash')
-uids_max_ips = data.loc[data['uid'].isin(nunique_ips_per_uid['uid'].tail()), :].sort_values(by=['uid', 'ip_hash', 'transaction_date'])
-uids_with_high_ip_hash_counts = uids_max_ips.groupby(by=['userid'], as_index=False).agg({'ip_hash':'nunique', 'transaction_hash':'count', 'transaction_error_code':'count'})
-uids_with_high_ip_hash_counts_error_codes = uids_max_ips.groupby(by=['transaction_error_code'], as_index=False).size().sort_values(by='size', ascending=False)
-print(uids_with_high_ip_hash_counts.to_markdown())
-print(uids_with_high_ip_hash_counts_error_codes.to_markdown())
+qaTransactions.uid_max_ip_trans_error_counts()
 ```
 
 ## Card
@@ -299,12 +224,7 @@ Each card should have a single card type associated with it.
 
 ```{python}
 #| label: nunique-card-types-per-card
-nunique_card_types_per_card = data.groupby(by=['card_hash'], as_index=False, dropna=False).agg({'card_type':'nunique'})
-sns.histplot(data=nunique_card_types_per_card,x='card_type', bins = 20)
-data.groupby(by=['card_type', 'transaction_payment_method'], as_index=False, dropna=False).agg({'transaction_hash':'size', 'transaction_amount':'sum'})
-assert nunique_card_types_per_card['card_type'].max() == 1
-assert nunique_card_types_per_card['card_type'].min() == 0
-assert not nunique_card_types_per_card['card_type'].isnull().any()
+qaCards.unique_card_types()
 ```
 
 
@@ -314,12 +234,7 @@ Each card should have a single country code associated with it.
 
 ```{python}
 #| label: nunique-country-codes-per-card
-nunique_country_codes_per_card = data.groupby(by=['card_hash'], as_index=False, dropna=False).agg({'card_country_code':'nunique'})
-sns.histplot(data=nunique_country_codes_per_card,x='card_country_code', bins = 20)
-data.assign(card_country_code=data['card_country_code'].notnull().astype(int)).groupby(by=['card_country_code', 'transaction_payment_method'], as_index=False, dropna=False).agg({'transaction_hash':'size', 'transaction_amount':'sum'})
-assert nunique_country_codes_per_card['card_country_code'].max() == 1
-assert nunique_country_codes_per_card['card_country_code'].min() == 0
-assert not nunique_country_codes_per_card['card_country_code'].isnull().any()
+qaCards.unique_country_codes()
 ```
 
 ## IP
@@ -330,10 +245,5 @@ Each IP should have a single country code associated with it.
 
 ```{python}
 #| label: nunique-country-codes-per-ip
-nunique_country_codes_per_ip = data.groupby(by=['ip_hash'], as_index=False, dropna=False).agg({'ip_country_code':'nunique'})
-sns.histplot(data=nunique_country_codes_per_ip,x='ip_country_code', bins = 20)
-data.groupby(by=['ip_country_code'], as_index=False, dropna=False).size()
-assert nunique_country_codes_per_ip['ip_country_code'].max() == 1
-assert nunique_country_codes_per_ip['ip_country_code'].min() == 1
-assert not nunique_country_codes_per_ip['ip_country_code'].isnull().any()
+qaIps.unique_country_codes()
 ```
