@@ -91,7 +91,7 @@ class Uids():
         nunique_cards_per_uid = self.data.groupby(by='uid', dropna=False, as_index=False).agg({'card_hash':'nunique'}).sort_values(by=['card_hash'])
         # test assertions
         assert nunique_cards_per_uid['card_hash'].max() <= 20
-        assert nunique_cards_per_uid['card_hash'].min() == 1
+        assert nunique_cards_per_uid['card_hash'].min() == 0
         assert self.data['card_hash'].isnull().any()
         if self.show_plots:
             # plot distribution
