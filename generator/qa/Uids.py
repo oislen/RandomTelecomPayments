@@ -2,11 +2,14 @@ import logging
 import seaborn as sns
 
 class Uids():
-
-    def __init__(self, data):
+    
+    def __init__(self, data, show_logs=False, show_plots=False):
         """
         """
+        logging.info("Initialising Uids QA")
         self.data = data
+        self.show_logs = show_logs
+        self.show_plots = show_plots
     
     def unique_user_ids(self):
         """
@@ -16,8 +19,9 @@ class Uids():
         assert nunique_user_ids_per_uid['userid'].max() == 1
         assert nunique_user_ids_per_uid['userid'].min() == 1
         assert not self.data['userid'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_user_ids_per_uid,x='userid', bins = 20)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_user_ids_per_uid,x='userid', bins = 20)
     
     def unique_names(self):
         """
@@ -29,8 +33,9 @@ class Uids():
         assert nunique_names_per_uid['fullname'].max() == 1
         assert nunique_names_per_uid['fullname'].min() == 1
         assert not tmp_data['fullname'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_names_per_uid,x='fullname', bins = 20)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_names_per_uid,x='fullname', bins = 20)
     
     def unique_reg_dates(self):
         """
@@ -40,8 +45,9 @@ class Uids():
         assert nunique_reg_date_per_uid['registration_date'].max() == 1
         assert nunique_reg_date_per_uid['registration_date'].min() == 1
         assert not self.data['registration_date'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_reg_date_per_uid,x='registration_date', bins = 20)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_reg_date_per_uid,x='registration_date', bins = 20)
     
     def nunique_reg_countries(self):
         """
@@ -51,8 +57,9 @@ class Uids():
         assert nunique_reg_country_per_uid['registration_country_code'].max() == 1
         assert nunique_reg_country_per_uid['registration_country_code'].min() == 1
         assert not self.data['registration_country_code'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_reg_country_per_uid,x='registration_country_code', bins = 20)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_reg_country_per_uid,x='registration_country_code', bins = 20)
     
     def unique_email_domains(self):
         """
@@ -62,8 +69,9 @@ class Uids():
         assert nunique_email_domains_per_uid['email_domain'].max() == 1
         assert nunique_email_domains_per_uid['email_domain'].min() == 1
         assert not self.data['email_domain'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_email_domains_per_uid,x='email_domain', bins = 20)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_email_domains_per_uid,x='email_domain', bins = 20)
     
     def unique_devices(self):
         """
@@ -73,9 +81,10 @@ class Uids():
         assert nunique_devices_per_uid['device_hash'].max() <= 3
         assert nunique_devices_per_uid['device_hash'].min() == 1
         assert not self.data['device_hash'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_devices_per_uid,x='device_hash', bins = 20)
-
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_devices_per_uid,x='device_hash', bins = 20)
+    
     def unique_cards(self):
         """
         """
@@ -84,8 +93,9 @@ class Uids():
         assert nunique_cards_per_uid['card_hash'].max() <= 2
         assert nunique_cards_per_uid['card_hash'].min() == 1
         assert self.data['card_hash'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_cards_per_uid,x='card_hash', bins = 20)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_cards_per_uid,x='card_hash', bins = 20)
     
     def unique_ips(self):
         """
@@ -95,9 +105,10 @@ class Uids():
         assert nunique_ips_per_uid['ip_hash'].max() <= 30
         assert nunique_ips_per_uid['ip_hash'].min() == 1
         assert not self.data['ip_hash'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_ips_per_uid,x='ip_hash', bins = 10)
-
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_ips_per_uid,x='ip_hash', bins = 10)
+    
     def unique_apps(self):
         """
         """
@@ -106,9 +117,10 @@ class Uids():
         assert nunique_apps_per_uid['application_hash'].max() <= 30
         assert nunique_apps_per_uid['application_hash'].min() == 1
         assert not self.data['application_hash'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_apps_per_uid,x='application_hash', bins = 10)
-
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_apps_per_uid,x='application_hash', bins = 10)
+    
     def unique_transactions(self):
         """
         """
@@ -121,6 +133,23 @@ class Uids():
         assert transaction_payment_rel.loc[transaction_payment_rel['transaction_payment_method'] == "Points", "transaction_amount"].iloc[0] > 0
         assert transaction_payment_rel.loc[transaction_payment_rel['transaction_payment_method'] == "Wallet", "transaction_amount"].iloc[0] > 0
         assert transaction_payment_rel.loc[transaction_payment_rel['transaction_payment_method'].isnull(), "transaction_amount"].iloc[0] == 0
-        # plot distribution
-        sns.histplot(data=nunique_ips_per_uid,x='transaction_hash', bins=10)
-        logging.info(transaction_payment_rel.to_markdown())
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_ips_per_uid,x='transaction_hash', bins=10)
+        if self.show_logs:
+            logging.info(transaction_payment_rel.to_markdown())
+    
+    def run_all(self):
+        """
+        """
+        self.unique_user_ids()
+        self.unique_names()
+        self.unique_reg_dates()
+        self.nunique_reg_countries()
+        self.unique_email_domains()
+        self.unique_devices()
+        self.unique_cards()
+        self.unique_ips()
+        self.unique_apps()
+        self.unique_transactions()
+        logging.info("All Uids QA checks passed.")

@@ -3,10 +3,13 @@ import seaborn as sns
 
 class Cards():
     
-    def __init__(self, data):
+    def __init__(self, data, show_logs=False, show_plots=False):
         """
         """
+        logging.info("Initialising Cards QA")
         self.data = data
+        self.show_logs = show_logs
+        self.show_plots = show_plots
     
     def unique_card_types(self):
         """
@@ -17,9 +20,12 @@ class Cards():
         assert nunique_card_types_per_card['card_type'].max() == 1
         assert nunique_card_types_per_card['card_type'].min() == 0
         assert not nunique_card_types_per_card['card_type'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_card_types_per_card,x='card_type', bins = 20)
-        logging.info(card_type_payment_totals)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_card_types_per_card,x='card_type', bins = 20)
+        if self.show_logs:
+            # show logs
+            logging.info(card_type_payment_totals)
     
     def unique_country_codes(self):
         """
@@ -30,6 +36,16 @@ class Cards():
         assert nunique_country_codes_per_card['card_country_code'].max() == 1
         assert nunique_country_codes_per_card['card_country_code'].min() == 0
         assert not nunique_country_codes_per_card['card_country_code'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_country_codes_per_card,x='card_country_code', bins = 20)
-        logging.info(card_country_code_payment_totals)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_country_codes_per_card,x='card_country_code', bins = 20)
+        if self.show_logs:
+            # show logs
+            logging.info(card_country_code_payment_totals)
+    
+    def run_all(self):
+        """
+        """
+        self.unique_card_types()
+        self.unique_country_codes()
+        logging.info("All Cards QA checks passed.")

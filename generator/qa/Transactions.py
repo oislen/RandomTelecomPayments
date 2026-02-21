@@ -3,10 +3,13 @@ import seaborn as sns
 
 class Transactions():
     
-    def __init__(self, data):
+    def __init__(self, data, show_logs=False, show_plots=False):
         """
         """
+        logging.info("Initialising Transactions QA")
         self.data = data
+        self.show_logs = show_logs
+        self.show_plots = show_plots
     
     def unique_trans_hash(self):
         """
@@ -16,8 +19,9 @@ class Transactions():
         assert unique_trans_hash_cnt.max() == 1
         assert unique_trans_hash_cnt.min() == 1
         assert not unique_trans_hash_cnt.isnull().any()
-        # plot distribution
-        sns.histplot(data=unique_trans_hash_cnt.to_frame(),x='count', bins = 10)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=unique_trans_hash_cnt.to_frame(),x='count', bins = 10)
     
     def unique_dates(self):
         """
@@ -27,8 +31,9 @@ class Transactions():
         assert nunique_trans_dates_per_trans['transaction_date'].max() == 1
         assert nunique_trans_dates_per_trans['transaction_date'].min() == 1
         assert not nunique_trans_dates_per_trans['transaction_date'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_trans_dates_per_trans,x='transaction_date', bins = 20)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_trans_dates_per_trans,x='transaction_date', bins = 20)
     
     def unique_trans_amount(self):
         """
@@ -38,8 +43,9 @@ class Transactions():
         assert nunique_trans_amounts_per_trans['transaction_amount'].max() == 1
         assert nunique_trans_amounts_per_trans['transaction_amount'].min() == 1
         assert not nunique_trans_amounts_per_trans['transaction_amount'].isnull().any()
-        # plot distribution
-        sns.histplot(data=nunique_trans_amounts_per_trans,x='transaction_amount', bins = 20)
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_trans_amounts_per_trans,x='transaction_amount', bins = 20)
     
     def unique_payment_method(self):
         """
@@ -58,9 +64,12 @@ class Transactions():
         assert (unique_payment_method_per_trans_hash.loc[unique_payment_method_per_trans_hash['transaction_payment_method'].notnull(), 'transaction_amount'] > 0).all()
         assert unique_payment_method_per_trans_hash.loc[unique_payment_method_per_trans_hash['transaction_payment_method'] == 'Card', 'card_type'].isin(['Mastercard', 'Visa']).all()
         assert unique_payment_method_per_trans_hash.loc[unique_payment_method_per_trans_hash['transaction_payment_method'] != 'Card', 'card_type'].isnull().all()
-        # plot distribution
-        sns.histplot(data=nunique_payment_method_per_trans,x='transaction_payment_method', bins = 20)
-        logging.info(unique_payment_method_per_trans_hash.to_markdown())
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_payment_method_per_trans,x='transaction_payment_method', bins = 20)
+        if self.show_logs:
+            # show logs
+            logging.info(unique_payment_method_per_trans_hash.to_markdown())
     
     def unique_payment_channel(self):
         """
@@ -79,9 +88,12 @@ class Transactions():
         assert (unique_payment_channel_per_trans_hash.loc[unique_payment_channel_per_trans_hash['transaction_payment_method'].notnull(), 'transaction_amount'] > 0).all()
         assert unique_payment_channel_per_trans_hash.loc[unique_payment_channel_per_trans_hash['transaction_payment_method'] == 'Card', 'card_payment_channel'].isin(['Adyen', 'AppStore', 'Docomo', 'PayPal', 'WorldPay']).all()
         assert unique_payment_channel_per_trans_hash.loc[unique_payment_channel_per_trans_hash['transaction_payment_method'] != 'Card', 'card_payment_channel'].isnull().all()
-        # plot distribution
-        sns.histplot(data=nunique_payment_channel_per_trans,x='card_payment_channel', bins = 20)
-        logging.info(unique_payment_channel_per_trans_hash.to_markdown())
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_payment_channel_per_trans,x='card_payment_channel', bins = 20)
+        if self.show_logs:
+            # show logs
+            logging.info(unique_payment_channel_per_trans_hash.to_markdown())
     
     def unique_trans_status(self):
         """
@@ -98,9 +110,12 @@ class Transactions():
         assert unique_trans_status_per_trans_hash['transaction_status'].dropna().isin(['Rejected', 'Pending', 'Successful']).all()
         assert unique_trans_status_per_trans_hash.loc[unique_trans_status_per_trans_hash['transaction_error_code'].notnull(), 'transaction_status'].isin(['Rejected']).all()
         assert unique_trans_status_per_trans_hash.loc[unique_trans_status_per_trans_hash['transaction_error_code'].isnull(), 'transaction_status'].isin(['Pending', 'Successful']).all()
-        # plot distribution
-        sns.histplot(data=nunique_trans_status_per_trans,x='transaction_status', bins = 20)
-        logging.info(unique_trans_status_per_trans_hash.to_markdown())
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_trans_status_per_trans,x='transaction_status', bins = 20)
+        if self.show_logs:
+            # show logs
+            logging.info(unique_trans_status_per_trans_hash.to_markdown())
     
     def unique_error_codes(self):
         """
@@ -117,9 +132,12 @@ class Transactions():
         assert unique_error_codes_statuses_per_trans_hash['transaction_status'].dropna().isin(['Rejected', 'Pending', 'Successful']).all()
         assert unique_error_codes_statuses_per_trans_hash.loc[unique_error_codes_statuses_per_trans_hash['transaction_error_code'].notnull(), 'transaction_status'].isin(['Rejected']).all()
         assert unique_error_codes_statuses_per_trans_hash.loc[unique_error_codes_statuses_per_trans_hash['transaction_error_code'].isnull(), 'transaction_status'].isin(['Pending', 'Successful']).all()
-        # plot distribution
-        sns.histplot(data=nunique_errorcodes_per_trans,x='transaction_error_code', bins = 20)
-        logging.info(unique_error_codes_statuses_per_trans_hash.to_markdown())
+        if self.show_plots:
+            # plot distribution
+            sns.histplot(data=nunique_errorcodes_per_trans,x='transaction_error_code', bins = 20)
+        if self.show_logs:
+            # show logs
+            logging.info(unique_error_codes_statuses_per_trans_hash.to_markdown())
     
     def uid_max_device_trans_error_counts(self):
         """
@@ -128,9 +146,10 @@ class Transactions():
         uids_max_devices = self.data.loc[self.data['uid'].isin(nunique_devices_per_uid['uid'].tail()), :].sort_values(by=['uid', 'device_hash', 'transaction_date'])
         uids_with_high_device_hash_counts = uids_max_devices.groupby(by=['userid'], as_index=False).agg({'device_hash':'nunique', 'transaction_hash':'count', 'transaction_error_code':'count'})
         uids_with_high_device_hash_counts_error_codes = uids_max_devices.groupby(by=['transaction_error_code'], as_index=False).size().sort_values(by='size', ascending=False)
-        # plot distribution
-        logging.info(uids_with_high_device_hash_counts.to_markdown())
-        logging.info(uids_with_high_device_hash_counts_error_codes.to_markdown())
+        if self.show_logs:
+            # show logs
+            logging.info(uids_with_high_device_hash_counts.to_markdown())
+            logging.info(uids_with_high_device_hash_counts_error_codes.to_markdown())
     
     def uid_max_card_trans_error_counts(self):
         """
@@ -139,10 +158,11 @@ class Transactions():
         uids_max_cards = self.data.loc[self.data['uid'].isin(nunique_cards_per_uid['uid'].tail()), :].sort_values(by=['uid', 'card_hash', 'transaction_date'])
         uids_with_high_card_hash_counts = uids_max_cards.groupby(by=['userid'], as_index=False).agg({'card_hash':'nunique', 'transaction_hash':'count', 'transaction_error_code':'count'})
         uids_with_high_card_hash_counts_error_codes = uids_max_cards.groupby(by=['transaction_error_code'], as_index=False).size().sort_values(by='size', ascending=False)
-        # plot distribution
-        logging.info(uids_with_high_card_hash_counts.to_markdown())
-        logging.info(uids_with_high_card_hash_counts_error_codes.to_markdown())
-
+        if self.show_logs:
+            # show logs
+            logging.info(uids_with_high_card_hash_counts.to_markdown())
+            logging.info(uids_with_high_card_hash_counts_error_codes.to_markdown())
+    
     def uid_max_ip_trans_error_counts(self):
         """
         """
@@ -150,6 +170,22 @@ class Transactions():
         uids_max_ips = self.data.loc[self.data['uid'].isin(nunique_ips_per_uid['uid'].tail()), :].sort_values(by=['uid', 'ip_hash', 'transaction_date'])
         uids_with_high_ip_hash_counts = uids_max_ips.groupby(by=['userid'], as_index=False).agg({'ip_hash':'nunique', 'transaction_hash':'count', 'transaction_error_code':'count'})
         uids_with_high_ip_hash_counts_error_codes = uids_max_ips.groupby(by=['transaction_error_code'], as_index=False).size().sort_values(by='size', ascending=False)
-        # plot distribution
-        logging.info(uids_with_high_ip_hash_counts.to_markdown())
-        logging.info(uids_with_high_ip_hash_counts_error_codes.to_markdown())
+        if self.show_logs:
+            # show logs
+            logging.info(uids_with_high_ip_hash_counts.to_markdown())
+            logging.info(uids_with_high_ip_hash_counts_error_codes.to_markdown())
+    
+    def run_all(self):
+        """
+        """
+        self.unique_trans_hash()
+        self.unique_dates()
+        self.unique_trans_amount()
+        self.unique_payment_method()
+        self.unique_payment_channel()
+        self.unique_trans_status()
+        self.unique_error_codes()
+        self.uid_max_device_trans_error_counts()
+        self.uid_max_card_trans_error_counts()
+        self.uid_max_ip_trans_error_counts()
+        logging.info("All Transactions QA checks passed.")
