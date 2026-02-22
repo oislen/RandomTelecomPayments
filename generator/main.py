@@ -57,6 +57,10 @@ def main(input_params_dict: dict):
     # order results by userid and transaction date ascending
     user_data = user_data.sort_values(by = 'uid').reset_index(drop = True)
     trans_data = trans_data.sort_values(by = 'transaction_date').reset_index(drop = True)
+    # if data is for release drop itr_hash column
+    if input_params_dict['is_release']:
+        user_data = user_data.drop(columns=['itr_hash'])
+        trans_data = trans_data.drop(columns=['itr_hash'])
     # print out head and shape of data
     logging.info(f'RandomTeleComUsersData.shape: {user_data.shape}')
     logging.info(f'RandomTeleComTransData.shape: {trans_data.shape}')

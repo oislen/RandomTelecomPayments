@@ -31,6 +31,8 @@ def commandline_interface() -> Dict[str, object]:
         The start date for transactions.
     transaction_end_date : str
         The end date for transactions.
+    is_release : bool
+        Whether the data being generated is for release
     
     Returns
     -------
@@ -48,6 +50,7 @@ def commandline_interface() -> Dict[str, object]:
     parser.add_argument("--registration_end_date", action="store", dest="registration_end_date", type=str, default=cons.default_registration_end_date, help="String, the end date for registrations",)
     parser.add_argument("--transaction_start_date", action="store", dest="transaction_start_date", type=str, default=cons.default_transaction_start_date, help="String, the start date for transactions",)
     parser.add_argument("--transaction_end_date", action="store", dest="transaction_end_date", type=str, default=cons.default_transaction_end_date, help="String, the end date for transactions",)
+    parser.add_argument("--is_release", action="store_true", dest="is_release", default=cons.default_is_release, help="Bool, whether the data being generated is for release",)
     # create an output dictionary to hold the results
     input_params_dict = cons.default_input_params_dict.copy()
     # extract input arguments
@@ -61,4 +64,5 @@ def commandline_interface() -> Dict[str, object]:
     input_params_dict["registration_end_date"] = args.registration_end_date
     input_params_dict["transaction_start_date"] = args.transaction_start_date
     input_params_dict["transaction_end_date"] = args.transaction_end_date
+    input_params_dict["is_release"] = args.is_release
     return input_params_dict
