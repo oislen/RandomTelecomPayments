@@ -1,7 +1,7 @@
 ﻿Column Name,Data Type,Nullable,Example,Description
 userid,Integer,FALSE,2021010138044459,"A 16 digit unique user identifier number; constructed from registration date, registration iso numeric country code, and uid."
-firstname,String,FALSE,kellen,The registered user firstname.
-lastname,String,FALSE,mcgregor,The registered user lastname.
+first_name,String,FALSE,kellen,The registered user first name.
+last_name,String,FALSE,mcgregor,The registered user last name.
 registration_date,Date,FALSE,2021-01-13,The date the user registered on.
 registration_country_code,String,FALSE,FR,The user registered country code of residence.
 uid,Integer,FALSE,2127333684657263,A unique incremental id for the user.
@@ -9,7 +9,7 @@ email_domain,String,FALSE,gmail.com,The domain of the registered user email addr
 device_hash,String,FALSE,5b386290c91e553e,The hashed device id the user used in the transaction.
 device_type,String,FALSE,Samsung Galaxy A32,The device type of the hashed device id the user used in the transaction.
 card_hash,String,TRUE,e00643bdd845feba,The hashed card id the user used in the transaction.
-card_type,String,TRUE,visa,The card type of the hashed card id the user used in the transaction.
+card_type,String,TRUE,Visa,"The card type of the hashed card id the user used in the transaction; one of ['Visa', 'Mastercard']."
 card_country_code,String,TRUE,ES,The card country code of the hashed card id the user used in the transaction.
 ip_hash,String,FALSE,1775d41b3788a941,The hashed ip address the user used in the transaction.
 ip_country_code,String,FALSE,PL,The ip address country code of the hashed ip address the user used in the transaction.
@@ -17,7 +17,7 @@ application_hash,String,FALSE,a726fea0a21cfb47,The hashed application id the tra
 transaction_hash,String,FALSE,ced72c91695a15c6,The hashed id of the transaction.
 transaction_date,Date,FALSE,2021-01-20,The date of the transaction.
 transaction_amount,Float,FALSE,1.44,The transaction amount.
-transaction_payment_method,String,TRUE,card,"The payment method used to complete the transaction; one of ['card', 'wallet', 'points']"
-card_payment_channel,String,TRUE,paypal,"The payment channel the user used to complete the transaction; one of ['paypal', 'adyen', 'appstore', 'worldpay', 'docomo']."
-transaction_status,String,FALSE,successful,"The status of the transaction; one of ['successful', 'pending',  'rejected']."
+transaction_payment_method,String,TRUE,Card,"The payment method used to complete the transaction; one of ['Card', 'Wallet', 'Points']"
+card_payment_channel,String,TRUE,PayPal,"The payment channel the user used to complete the transaction; one of ['PayPal', 'Adyen', 'AppStore', 'Worldpay', 'Docomo']."
+transaction_status,String,FALSE,Successful,"The status of the transaction; one of ['Successful', 'Pending',  'Rejected']."
 transaction_error_code,String,TRUE,E902:AuthenicationFailure,"The associated error code if the transaction was rejected; one of ['E900:ConnectionTimeout', 'E901:SuspectedFraud', 'E902:AuthenicationFailure', 'E903:UserCancelled', 'E904:InsufficientFunds']."
