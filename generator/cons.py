@@ -56,6 +56,7 @@ default_registration_start_date = (date_today - datetime.timedelta(days=731)).st
 default_registration_end_date = (date_today - datetime.timedelta(days=366)).strftime(date_date_strftime)
 default_transaction_start_date = (date_today - datetime.timedelta(days=365)).strftime(date_date_strftime)
 default_transaction_end_date = date_today.strftime(date_date_strftime)
+default_is_release = False
 # define default input parameters dictionary
 default_input_params_dict = {
     "n_users": default_n_users,
