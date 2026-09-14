@@ -138,10 +138,9 @@ class Test_ProgrammeParams(unittest.TestCase):
     # ------------------------------------------------------------------
 
     def test_random_seed_none_accepted(self):
-        """random_seed=None is a valid input and is stored as None."""
+        """random_seed defaults to None when not supplied."""
         p = ProgrammeParams(
             n_users=10,
-            random_seed=None,
             registration_start_date=cons.unittest_registration_start_date,
             registration_end_date=cons.unittest_registration_end_date,
             transaction_start_date=cons.unittest_transaction_start_date,

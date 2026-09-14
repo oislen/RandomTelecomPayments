@@ -29,7 +29,10 @@ _trans_data = pd.DataFrame({
 
 fpath_countries_europe  = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
 fpath_countrycrimeindex = '.' + cons.fpath_countrycrimeindex.split(cons.fpath_repo_dir)[1]
-fpath_email_domain      = '.' + cons.fpath_email_domain.split(cons.fpath_repo_dir)[1]
+# gen_trans_rejection_rates reads 'email_domains' and 'probability' columns,
+# which are present in llama_email_domains.csv, not in email-domains.csv.
+# Pass the file that matches the column names the function actually uses.
+fpath_email_domain      = '.' + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
 
 obs_rejection_rates_dict = gen_trans_rejection_rates(
     trans_data=_trans_data,

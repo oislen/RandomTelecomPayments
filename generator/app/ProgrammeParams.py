@@ -1,5 +1,4 @@
 from datetime import datetime
-from typing import Optional
 from beartype import beartype
 
 import cons
@@ -52,7 +51,7 @@ class ProgrammeParams():
     def __init__(
         self,
         n_users:int=100,
-        random_seed:Optional[int]=None,
+        random_seed:int=None,
         n_applications:int=20000,
         registration_start_date:str=cons.default_registration_start_date,
         registration_end_date:str=cons.default_registration_end_date,
