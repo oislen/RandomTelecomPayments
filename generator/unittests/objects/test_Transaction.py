@@ -55,7 +55,13 @@ obs_lam = transaction_object.lam
 
 
 class Test_Transaction(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the Transaction data-model object.
+
+    Verifies that transaction hash counts, proportions, statuses, amounts,
+    dates, and associated scalar attributes have the expected types, lengths,
+    keys, and values when constructed with a fixed random seed.
+    """
 
     def setUp(self):
         self.exp_transaction_hashes_cnts_dict = exp_transaction_hashes_cnts_dict

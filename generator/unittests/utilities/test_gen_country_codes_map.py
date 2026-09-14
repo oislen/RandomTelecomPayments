@@ -22,7 +22,12 @@ fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo
 obs_country_codes_map = gen_country_codes_map(fpath_countries_europe=fpath_countries_europe)
 
 class Test_gen_country_codes_map(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the gen_country_codes_map utility function.
+
+    Verifies that the function returns the complete mapping of ISO numeric
+    country codes to ISO alpha-2 codes for all European countries.
+    """
 
     def setUp(self):
         self.exp_country_codes_map = exp_country_codes_map

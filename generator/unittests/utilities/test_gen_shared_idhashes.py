@@ -19,7 +19,12 @@ obs_shared_idhashes = gen_shared_idhashes(idhashes=idhashes, prop_shared_idhashe
 exp_shared_idhashes = {}
 
 class Test_gen_shared_idhashes(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the gen_shared_idhashes utility function.
+
+    Verifies that the function returns an empty mapping when the sharing
+    proportion is too small to share any of the supplied idhashes.
+    """
 
     def setUp(self):
         self.exp_shared_idhashes = exp_shared_idhashes

@@ -96,7 +96,13 @@ exp_user_data = pd.read_parquet(fpath_unittest_user_data)
 exp_trans_data = pd.read_parquet(fpath_unittest_transaction_data)
 
 class Test_gen_user_trans_data(unittest.TestCase):
-    """"""
+    """
+    Integration tests for the gen_user_data and gen_trans_data pipeline.
+
+    Runs the full user-and-transaction generation pipeline with a fixed seed
+    and compares every column, shape, dtype, and null-pattern against stored
+    parquet fixture files, ensuring output is deterministic and correct.
+    """
 
     def setUp(self):
         self.obs_user_data = obs_user_data

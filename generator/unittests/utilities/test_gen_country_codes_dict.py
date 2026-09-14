@@ -16,7 +16,12 @@ fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo
 obs_prop_dict = gen_country_codes_dict(idhashes=idhashes, fpath_countries_europe=fpath_countries_europe)
 
 class Test_gen_country_codes_dict(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the gen_country_codes_dict utility function.
+
+    Verifies that each idhash is mapped to a valid ISO numeric European
+    country code, with deterministic results when a seed is fixed.
+    """
 
     def setUp(self):
         self.idhashes = idhashes

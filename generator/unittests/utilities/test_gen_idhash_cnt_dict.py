@@ -29,7 +29,12 @@ obs_hash_dict = gen_idhash_cnt_dict(idhash_type="hash", n=4, lam=1, nbytes=16)
 
 
 class Test_gen_idhash_cnt_dict(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the gen_idhash_cnt_dict utility function.
+
+    Verifies that random id and hash dictionaries with associated Poisson-power
+    counts are generated with the correct keys and values when a seed is fixed.
+    """
 
     def setUp(self):
         self.obs_id_dict = obs_id_dict

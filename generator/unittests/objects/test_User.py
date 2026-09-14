@@ -88,7 +88,13 @@ obs_lam = user_object.lam
 
 
 class Test_User(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the User data-model object.
+
+    Verifies that user ID counts, proportions, first names, last names,
+    country codes, email domains, and registration dates have the expected
+    types, lengths, keys, and values when constructed with a fixed random seed.
+    """
 
     def setUp(self):
         self.exp_user_ids_cnts_dict = exp_user_ids_cnts_dict
