@@ -18,7 +18,12 @@ exp_amount = np.array([0.99, 1, 2.59])
 
 
 class Test_round_trans_amount(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the round_trans_amount utility function.
+
+    Verifies that transaction amounts are rounded to common store-price-like
+    endings (e.g. .99, .50, .45) in a deterministic manner when seeded.
+    """
 
     def setUp(self):
         self.obs_amount = obs_amount

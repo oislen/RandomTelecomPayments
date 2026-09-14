@@ -57,7 +57,13 @@ obs_n_card_hashes = card_object.n_card_hashes
 
 
 class Test_Card(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the Card data-model object.
+
+    Verifies that card hash counts, proportions, types, country codes, and
+    shared-idhash mappings have the expected types, lengths, keys, and values
+    when constructed with a fixed random seed.
+    """
 
     def setUp(self):
         self.exp_card_hashes_cnts_dict = exp_card_hashes_cnts_dict

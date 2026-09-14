@@ -2,12 +2,22 @@
 **Table of Contents**
 
 - [New Hire Tasks](#new-hire-tasks)
+  - [0. Onboarding](#0-onboarding)
   - [1. Feature Engineering](#1-feature-engineering)
   - [2. Network Analysis](#2-network-analysis)
   - [3. Anomaly Detection](#3-anomaly-detection)
   - [4. Predictive Modelling](#4-predictive-modelling)
 
 # New Hire Tasks
+
+## 0. Onboarding
+
+Before starting the tasks below, review the following documentation to understand the project structure, data model, and development workflow:
+
+* [`CLAUDE.md`](../CLAUDE.md) — full project overview, repository structure, development setup, running instructions, coding conventions, and common agent tasks
+* [`README.md`](../README.md) — public-facing project documentation
+* [`doc/data_dictionary.csv`](data_dictionary.csv) — column-level descriptions for the generated dataset
+* [`doc/entity_relationship_diagram.jpg`](entity_relationship_diagram.jpg) — visual data model
 
 ## 1. Feature Engineering
 

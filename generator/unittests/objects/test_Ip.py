@@ -48,7 +48,13 @@ obs_n_ip_hashes = ip_object.n_ip_hashes
 
 
 class Test_Ip(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the Ip data-model object.
+
+    Verifies that IP hash counts, proportions, country codes, and
+    shared-idhash mappings have the expected types, lengths, keys, and values
+    when constructed with a fixed random seed.
+    """
 
     def setUp(self):
         self.exp_ip_hashes_cnts_dict = exp_ip_hashes_cnts_dict

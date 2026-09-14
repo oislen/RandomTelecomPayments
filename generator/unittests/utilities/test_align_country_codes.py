@@ -69,7 +69,13 @@ obs_data_df = input_data_df.apply(
 
 
 class Test_align_country_codes(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the align_country_codes utility function.
+
+    Verifies that registration, IP, and card country codes are aligned
+    according to the configured probabilities, including correct handling
+    of null card country codes.
+    """
 
     def setUp(self):
         self.input_data_df = input_data_df

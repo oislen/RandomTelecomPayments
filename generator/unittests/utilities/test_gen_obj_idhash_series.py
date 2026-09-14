@@ -40,8 +40,13 @@ user_data = random_entity_counts.copy()
 obs_obj_idhash_series = gen_obj_idhash_series(idhashes=device_obj.device_hashes, n_counts_series=user_data['n_devices'])
 exp_obj_idhash_series = pd.Series([['bf9f83b010fdb44f'], ['a68822ff23757073', 'a073573d2fd828c1'], ['fd1152fc83030d4f'], ['37f7620f0fba2565']])
 
-class Test_gen_idhash_cnt_dict(unittest.TestCase):
-    """"""
+class Test_gen_obj_idhash_series(unittest.TestCase):
+    """
+    Unit tests for the gen_obj_idhash_series utility function.
+
+    Verifies that the function correctly expands a list of entity idhashes
+    into a per-user Series of lists, given per-user entity count information.
+    """
 
     def setUp(self):
         self.obs_obj_idhash_series = obs_obj_idhash_series

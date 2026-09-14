@@ -20,7 +20,12 @@ obs_random_hash = gen_random_hash(size=4, nbytes=16)
 
 
 class Test_gen_random_hash(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the gen_random_hash utility function.
+
+    Verifies that a list of random hex-style hash strings of the requested
+    size is produced deterministically when a random seed is fixed.
+    """
 
     def setUp(self):
         self.obs_random_hash = obs_random_hash

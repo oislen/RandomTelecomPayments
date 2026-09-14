@@ -49,7 +49,13 @@ obs_lam = device_object.lam
 
 
 class Test_Device(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the Device data-model object.
+
+    Verifies that device hash counts, proportions, device types, and
+    shared-idhash mappings have the expected types, lengths, keys, and values
+    when constructed with a fixed random seed.
+    """
 
     def setUp(self):
         self.exp_device_hashes_cnts_dict = exp_device_hashes_cnts_dict

@@ -21,7 +21,12 @@ exp_random_duplicate_idhashes_dict = {'idhashes':[['63cea7c46926aa74'], ['377254
 exp_random_duplicate_idhashes = pd.DataFrame.from_dict(exp_random_duplicate_idhashes_dict, orient='columns')
 
 class Test_remove_duplicate_idhashes(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the remove_duplicate_idhashes utility function.
+
+    Verifies that duplicate idhash values across rows are removed, retaining
+    the first occurrence in the correct row.
+    """
 
     def setUp(self):
         self.exp_random_duplicate_idhashes = exp_random_duplicate_idhashes

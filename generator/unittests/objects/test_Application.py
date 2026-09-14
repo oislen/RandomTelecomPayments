@@ -50,7 +50,13 @@ obs_payment_channels = application_object.payment_channels
 
 
 class Test_Application(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the Application data-model object.
+
+    Verifies that all attributes (hash counts, proportions, payment channels)
+    have the expected types, lengths, keys, values, and exact objects when
+    constructed with a fixed random seed.
+    """
 
     def setUp(self):
         self.exp_application_hashes_cnts_dict = exp_application_hashes_cnts_dict

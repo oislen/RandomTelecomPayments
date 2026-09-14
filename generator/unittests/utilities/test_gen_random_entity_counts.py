@@ -38,7 +38,12 @@ exp_randomentity_counts_df = pd.DataFrame.from_dict(exp_randomentity_counts_dict
 obs_random_entity_counts_df = gen_random_entity_counts(user_object)
 
 class Test_gen_random_entity_counts(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the gen_random_entity_counts utility function.
+
+    Verifies that the output DataFrame has the correct shape, columns, and
+    per-user entity count values when generated with a fixed random seed.
+    """
 
     def setUp(self):
         self.exp_randomentity_counts_df = exp_randomentity_counts_df
