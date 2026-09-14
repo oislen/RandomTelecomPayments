@@ -18,6 +18,7 @@ transaction_hash,String,FALSE,ced72c91695a15c6,The hashed id of the transaction.
 transaction_date,Date,FALSE,2021-01-20,The date of the transaction.
 transaction_amount,Float,FALSE,1.44,The transaction amount.
 transaction_payment_method,String,TRUE,Card,"The payment method used to complete the transaction; one of ['Card', 'Wallet', 'Points']"
-card_payment_channel,String,TRUE,PayPal,"The payment channel the user used to complete the transaction; one of ['PayPal', 'Adyen', 'AppStore', 'Worldpay', 'Docomo']."
+card_payment_channel,String,TRUE,PayPal,"The payment channel the user used to complete the transaction; one of ['PayPal', 'Adyen', 'AppStore', 'WorldPay', 'Docomo']."
 transaction_status,String,FALSE,Successful,"The status of the transaction; one of ['Successful', 'Pending',  'Rejected']."
 transaction_error_code,String,TRUE,E902:AuthenicationFailure,"The associated error code if the transaction was rejected; one of ['E900:ConnectionTimeout', 'E901:SuspectedFraud', 'E902:AuthenicationFailure', 'E903:UserCancelled', 'E904:InsufficientFunds']."
+itr_hash,String,FALSE,63cea7c46926aa74,A random hex hash identifying the data generation iteration batch that produced this row; used to distinguish between multiple parallel generation runs.
