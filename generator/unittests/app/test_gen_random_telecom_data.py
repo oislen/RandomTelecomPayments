@@ -25,7 +25,7 @@ _result = gen_random_telecom_data(
     transaction_end_date=cons.unittest_transaction_end_date,
 )
 
-_EXPECTED_USER_COLS = set(cons.user_cols)
+_EXPECTED_USER_COLS = set(cons.user_cols) - {"registration_country_code"} | {"registration_country_code_alpha"}
 _EXPECTED_TRANS_COLS = set(
     cons.user_cols + cons.device_cols + cons.card_cols +
     cons.ip_cols + cons.app_cols + cons.trans_cols + cons.itr_cols
