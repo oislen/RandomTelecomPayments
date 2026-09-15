@@ -6,6 +6,16 @@ on:
 
 jobs:
 
+  ruff-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run Ruff Checks
+        uses: astral-sh/ruff-action@v3
+        with:
+          version: "0.15.15"
+
   trivy-fs-scan:
     runs-on: ubuntu-latest
     steps:
