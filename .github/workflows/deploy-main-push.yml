@@ -101,7 +101,16 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-    - name: Run Trivy vulnerability scanner
+    - name: Run Trivy vulnerability scanner to show all vulnerabilities
+      uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
+      with:
+        image-ref: ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKERHUB_REPO }}:${{ vars.DOCKERHUB_TAG }}
+        format: 'table'
+        exit-code: '0'
+        ignore-unfixed: true
+        vuln-type: 'os,library'
+        severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
+    - name: Fail build on High or Critical vulnerabilities
       uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
       with:
         image-ref: ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKERHUB_REPO }}:${{ vars.DOCKERHUB_TAG }}
