@@ -7,10 +7,9 @@
   "runArgs": [
     "--name", "rtp",
     "--memory", "7GB",
-    "--entrypoint", "fastapi",
-    "--volume", "E:\\GitHub\\RandomTelecomPayments\\data:/home/user/RandomTelecomPayments/data",
-    "--run", "generator/api.py"
+    "--volume", "E:\\GitHub\\RandomTelecomPayments\\data:/home/user/RandomTelecomPayments/data"
   ],
+  "postStartCommand": "uv run fastapi run generator/api.py",
   "forwardPorts": [8000],
   "customizations": {
     "vscode": {
