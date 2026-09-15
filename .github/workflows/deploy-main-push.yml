@@ -1,6 +1,6 @@
 name: Deployment Workflow
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 on:
@@ -19,19 +19,22 @@ jobs:
         with:
           version: "0.15.15"
 
-  release-tag:
+  release-please:
     needs: ruff-linter
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
     steps:
-      - name: Tag Repo
-        uses: richardsimko/update-tag@24fe62c216198eb57283429200e63a06f62afe5b
+      - uses: google-github-actions/release-please-action@e4dc86ba9405554aeba3c6bb2d169500e7d3b4ee
+        id: release
         with:
-          tag_name: ${{ vars.REPO_TAG }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+          release-type: python
 
   trivy-fs-scan:
-    needs: release-tag
+    needs: release-please
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
