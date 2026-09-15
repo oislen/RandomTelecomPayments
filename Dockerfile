@@ -11,6 +11,11 @@ ENV PYTHON_VERSION=${PYTHON_VERSION}
 # install required software and programmes for development environment
 RUN apt-get update
 RUN apt-get install -y apt-utils vim curl wget unzip tree htop adduser
+# install trivy image vulnerability patches
+RUN apt-get install -y gzip=1.13-1+deb13u1
+RUN apt-get install -y libpcre2-8-0=10.46-1~deb13u2
+RUN apt-get install -y libsqlite3-0=3.46.1-7+deb13u2
+RUN apt-get install -y perl-base=5.40.1-6+deb13u1
 
 # set up home environment
 RUN adduser ${user}
