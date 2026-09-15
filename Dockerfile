@@ -1,5 +1,5 @@
 # get base image
-FROM python:3.12
+FROM python:3.12-slim@sha256:d8d180357dcaec499f108ee47742b076a52e9885830389d15acc9a58a283ac24
 
 # set environment variables
 ENV user=user
