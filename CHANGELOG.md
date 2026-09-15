@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.1](https://github.com/oislen/RandomTelecomPayments/compare/v0.3.0...v0.3.1) (2026-09-15)
+
+
+### Bug Fixes
+
+* **#74:** added patches to medium severity trivy image vulnerabilities ([a5d1926](https://github.com/oislen/RandomTelecomPayments/commit/a5d1926049e48094771381f34a6a90303e573c18))
+* **#74:** added patches to medium severity trivy image vulnerabilities ([9bc1dfd](https://github.com/oislen/RandomTelecomPayments/commit/9bc1dfd49d19c164ad6ab0fd202fa07b3bfbbb38))
+* **#74:** added patches to medium severity trivy image vulnerabilities ([7dd0d39](https://github.com/oislen/RandomTelecomPayments/commit/7dd0d391065b0e3a5407fa7b18c9df3f73e6c010))
+
 ## [0.3.0](https://github.com/oislen/RandomTelecomPayments/compare/v0.2.0...v0.3.0) (2026-09-15)
 
 
