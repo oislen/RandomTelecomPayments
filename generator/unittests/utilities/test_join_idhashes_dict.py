@@ -1,13 +1,12 @@
-import unittest
 import os
 import sys
+import unittest
 
-import numpy as np
 import pandas as pd
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
-from utilities.join_idhashes_dict import join_idhashes_dict
+from utilities import join_idhashes_dict
 
 
 class Test_join_idhashes_dict(unittest.TestCase):
@@ -21,10 +20,12 @@ class Test_join_idhashes_dict(unittest.TestCase):
 
     def setUp(self):
         """Create reusable fixtures shared across tests."""
-        self.base_df = pd.DataFrame({
-            "device_hash": ["aaa", "bbb", "ccc", "ddd"],
-            "userid": [1, 2, 3, 4],
-        })
+        self.base_df = pd.DataFrame(
+            {
+                "device_hash": ["aaa", "bbb", "ccc", "ddd"],
+                "userid": [1, 2, 3, 4],
+            }
+        )
         self.device_type_dict = {
             "aaa": "Samsung Galaxy S21",
             "bbb": "Pixel 6",
@@ -83,7 +84,9 @@ class Test_join_idhashes_dict(unittest.TestCase):
             idhash_val_name="device_type",
         )
         for _, row in result.iterrows():
-            self.assertEqual(row["device_type"], self.device_type_dict[row["device_hash"]])
+            self.assertEqual(
+                row["device_type"], self.device_type_dict[row["device_hash"]]
+            )
 
     def test_no_nulls_when_all_keys_present(self):
         """No NaN values in the new column when every key is in the dict."""
@@ -119,7 +122,9 @@ class Test_join_idhashes_dict(unittest.TestCase):
             idhash_key_name="device_hash",
             idhash_val_name="device_type",
         )
-        pd.testing.assert_series_equal(result["device_hash"], self.base_df["device_hash"])
+        pd.testing.assert_series_equal(
+            result["device_hash"], self.base_df["device_hash"]
+        )
         pd.testing.assert_series_equal(result["userid"], self.base_df["userid"])
 
     # ------------------------------------------------------------------

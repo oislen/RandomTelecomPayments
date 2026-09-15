@@ -1,0 +1,44 @@
+{
+  "name": "Random Telecom Payments",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "runArgs": [
+    "--name", "rtp",
+    "--memory", "7GB",
+    "--volume", "E:\\GitHub\\RandomTelecomPayments\\data:/home/user/RandomTelecomPayments/data"
+  ],
+  "postStartCommand": "uv run fastapi run generator/api.py",
+  "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-toolsai.jupyter",
+        "ms-vscode.makefile-tools",
+        "mechatroner.rainbow-csv",
+        "charliermarsh.ruff",
+        "eamodio.gitlens",
+        "quarto.quarto"
+      ],
+      "settings": {
+        "python.languageServer": "Pylance",
+        "editor.formatOnSave": true,
+        "[python]": {
+            "editor.defaultFormatter": "charliermarsh.ruff",
+            "editor.formatOnSave": true,
+            "editor.codeActionsOnSave": {
+                "source.organizeImports": "explicit"
+          }
+        },
+        "ruff.fixAll": true,
+        "python.defaultInterpreterPath": "/home/user/RandomTelecomPayments/.venv/bin/python",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "postCreateCommand": "uv tool install ruff && git config core.hooksPath .githooks"
+}

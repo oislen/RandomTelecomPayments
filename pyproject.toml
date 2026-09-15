@@ -32,3 +32,34 @@ dependencies = [
     "unidecode==1.3.8",
     "urllib3==2.7.0",
 ]
+
+[tool.uv]
+exclude-newer = "7 days"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes (basic syntax/runtime errors)
+    "I",   # isort (import sorting)
+    "B",   # flake8-bugbear (common design flaws)
+    "C4",  # flake8-comprehensions (better list/dict comprehensions)
+    "UP",  # pyupgrade (upgrades syntax to newer Python versions)
+]
+ignore = [
+    "E402",
+    "E501",
+    "B018",
+    "B006",
+    "B904",
+    "B008",
+    "B017"
+]
+per-file-ignores = { }
+
+[tool.ruff.format]
+preview = false

@@ -1,14 +1,14 @@
 import json
-import unittest
 import os
 import sys
+import unittest
 
 import numpy as np
 import pandas as pd
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
-from utilities.JsonEncoder import JsonEncoder
+from utilities import JsonEncoder
 
 
 class Test_JsonEncoder(unittest.TestCase):
@@ -133,6 +133,7 @@ class Test_JsonEncoder(unittest.TestCase):
 
     def test_unsupported_type_raises(self):
         """Objects not handled by JsonEncoder raise TypeError."""
+
         class _Unsupported:
             pass
 

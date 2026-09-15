@@ -1,24 +1,24 @@
-from beartype import beartype
 import numpy as np
-from typing import Dict, Union
+from beartype import beartype
+
 
 @beartype
 def cnt2prop_dict(
-    idhashes_cnts_dict:Dict[Union[str, int], Union[int,np.int64]],
-    ) -> Dict[Union[str, int], float]:
+    idhashes_cnts_dict: dict[str | int, int | np.int64],
+) -> dict[str | int, float]:
     """
     Converts a dictionary of counts to a dictionary of proportions.
-    
+
     Parameters
     ----------
     idhashes_cnts_dict : Dict[Union[str, int], Union[int,np.int64]
         A dictionary of key, value pairs where the value indicates a count.
-    
+
     Returns
     -------
     Dict[Union[str, int], float]
         A dictionary of key, value pairs where the value indicates a proportion.
-    
+
     Examples
     --------
     ```
@@ -32,5 +32,7 @@ def cnt2prop_dict(
         # sum of dictionary counts
         cnt_total = sum(idhashes_cnts_dict.values())
         # iterate over input dictionary and convert counts to proportions
-        prop_dict = {idhash: cnt / cnt_total for idhash, cnt in idhashes_cnts_dict.items()}
+        prop_dict = {
+            idhash: cnt / cnt_total for idhash, cnt in idhashes_cnts_dict.items()
+        }
     return prop_dict

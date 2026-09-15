@@ -1,32 +1,33 @@
-import cons
-from utilities.cnt2prop_dict import cnt2prop_dict
-
 import os
+
+import cons
 import numpy as np
 import pandas as pd
 from beartype import beartype
-from typing import Dict, Union, List
+
+from .cnt2prop_dict import cnt2prop_dict
+
 
 @beartype
 def gen_country_codes_dict(
-    idhashes:List[str],
-    fpath_countries_europe:str=cons.fpath_countries_europe,
-    ) -> Dict[str, Union[int, np.int64]]:
+    idhashes: list[str],
+    fpath_countries_europe: str = cons.fpath_countries_europe,
+) -> dict[str, int | np.int64]:
     """
     Generates a dictionary of randomLy sampled country codes for an input list of idhashes.
-    
+
     Parameters
     ----------
     idhashes : List[str]
         A list of idhashes.
     fpath_countries_europe : str
         The file path to the european countries reference file, default is cons.fpath_countries_europe.
-    
+
     Returns
     -------
     Dict[str, Union[int, np.int64]]
         A dictionary of idhashes country codes.
-    
+
     Examples
     --------
     ```
@@ -38,16 +39,21 @@ def gen_country_codes_dict(
     ```
     """
     # check file path exists
-    if os.path.exists(fpath_countries_europe) == False:
+    if not os.path.exists(fpath_countries_europe):
         raise FileNotFoundError(f"File not found: {fpath_countries_europe}")
     # load population data of european countries
-    european_populations_cnt_data = pd.read_csv(filepath_or_buffer=fpath_countries_europe, usecols=["ISO numeric", "population"],)
+    european_populations_cnt_data = pd.read_csv(
+        filepath_or_buffer=fpath_countries_europe,
+        usecols=["ISO numeric", "population"],
+    )
     # convert to a dictionary of ISO country codes with population counts
-    european_populations_cnt_dict = european_populations_cnt_data.set_index("ISO numeric")["population"].to_dict()
+    european_populations_cnt_dict = european_populations_cnt_data.set_index(
+        "ISO numeric"
+    )["population"].to_dict()
     # convert dictionary of population counts to dictionary of population proportions
     european_populations_props_dict = cnt2prop_dict(european_populations_cnt_dict)
     # check population proportions sum to 1.0
-    if np.isclose(sum(european_populations_props_dict.values()), 1.0) == False:
+    if not np.isclose(sum(european_populations_props_dict.values()), 1.0):
         raise ValueError("Population proportions do not sum to 1.0")
     # randomly generate country codes for all idhashes based on population proportions
     country_codes_list = list(
@@ -59,5 +65,5 @@ def gen_country_codes_dict(
         )
     )
     # return a dictionary of idhashes and country codes
-    idhashes_country_codes = dict(zip(idhashes, country_codes_list))
+    idhashes_country_codes = dict(zip(idhashes, country_codes_list, strict=False))
     return idhashes_country_codes

@@ -1,17 +1,19 @@
 import random
+
 import numpy as np
 import pandas as pd
 from beartype import beartype
 
+
 @beartype
 def align_country_codes(
-    series:pd.Series,
-    proba_comm_ip:float=0.05,
-    proba_comm_card:float=0.01,
-    ) -> pd.Series:
+    series: pd.Series,
+    proba_comm_ip: float = 0.05,
+    proba_comm_card: float = 0.01,
+) -> pd.Series:
     """
     Aligns inconsistent registration, ip and card country codes to have mostly common values; with a random chance of inconsistencies.
-    
+
     Parameters
     ----------
     series : pandas.Series
@@ -20,12 +22,12 @@ def align_country_codes(
         The probability of a common / shared registration country code and ip country code, default is 0.05.
     proba_comm_card : float
         The probability of a common / shared registration country code and card country code, default is 0.01.
-    
+
     Returns
     -------
     pandas.Series
         A pandas series containing only the aligned country codes; registration, ip and card.
-    
+
     Examples
     --------
     ```

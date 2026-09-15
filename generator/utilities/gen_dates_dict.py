@@ -1,15 +1,16 @@
-import pandas as pd
-import numpy as np
 from datetime import datetime
+
+import numpy as np
+import pandas as pd
 from beartype import beartype
-from typing import Dict, Union, List
+
 
 @beartype
 def gen_dates_dict(
-    idhashes:List[str],
-    start_date:str,
-    end_date:str,
-    ) -> Dict[str, Union[pd.Timestamp, np.datetime64]]:
+    idhashes: list[str],
+    start_date: str,
+    end_date: str,
+) -> dict[str, pd.Timestamp | np.datetime64]:
     """
     Generates a dictionary of random dates for an input list of idhashes.
 
@@ -26,7 +27,7 @@ def gen_dates_dict(
     -------
     Dict[str, Union[pd.Timestamp,int, np.datetime64]]
         A dictionary of idhashes dates.
-    
+
     Examples
     --------
     ```
@@ -35,9 +36,14 @@ def gen_dates_dict(
     ```
     """
     # generate a range of dates between the given input start and end dates
-    dates = pd.date_range(start=datetime.strptime(start_date, "%Y-%m-%d"), end=datetime.strptime(end_date, "%Y-%m-%d"), freq="d", inclusive="both",)
+    dates = pd.date_range(
+        start=datetime.strptime(start_date, "%Y-%m-%d"),
+        end=datetime.strptime(end_date, "%Y-%m-%d"),
+        freq="d",
+        inclusive="both",
+    )
     # randomly sample dates for each of the idhashes
     dates_list = list(np.random.choice(a=dates, replace=True, size=len(idhashes)))
     # return a dictionary of idhashes and dates
-    idhashes_dates_dict = dict(zip(idhashes, dates_list))
+    idhashes_dates_dict = dict(zip(idhashes, dates_list, strict=False))
     return idhashes_dates_dict

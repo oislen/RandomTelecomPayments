@@ -1,13 +1,14 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from objects.Device import Device
+from objects import Device
 
 exp_device_hashes_cnts_dict = {
     "63cea7c46926aa74": 1,
@@ -36,13 +37,13 @@ exp_lam = cons.data_model_poisson_params["device"]["lambda"]
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
 
-fpath_smartphones = '.' + cons.fpath_smartphones.split(cons.fpath_repo_dir)[1]
+fpath_smartphones = "." + cons.fpath_smartphones.split(cons.fpath_repo_dir)[1]
 device_object = Device(exp_n_device_hashes, fpath_smartphones=fpath_smartphones)
 
 obs_device_hashes_cnts_dict = device_object.device_hashes_cnts_dict
 obs_device_hashes_props_dict = device_object.device_hashes_props_dict
 obs_device_hashes_type_dict = device_object.device_hashes_type_dict
-obs_device_shared_idhash_map_dict= device_object.device_shared_idhash_map_dict
+obs_device_shared_idhash_map_dict = device_object.device_shared_idhash_map_dict
 obs_prop_shared_device_hashes = device_object.prop_shared_device_hashes
 obs_n_device_hashes = device_object.n_device_hashes
 obs_lam = device_object.lam
@@ -75,38 +76,98 @@ class Test_Device(unittest.TestCase):
         self.obs_lam = obs_lam
 
     def test_type(self):
-        self.assertEqual(type(self.obs_device_hashes_cnts_dict),type(self.exp_device_hashes_cnts_dict),)
-        self.assertEqual(type(self.obs_device_hashes_props_dict),type(self.exp_device_hashes_props_dict),)
-        self.assertEqual(type(self.obs_device_hashes_type_dict),type(self.exp_device_hashes_type_dict),)
-        self.assertEqual(type(self.obs_device_shared_idhash_map_dict),type(self.exp_device_shared_idhash_map_dict),)
-        self.assertEqual(type(self.obs_prop_shared_device_hashes),type(self.exp_prop_shared_device_hashes),)
+        self.assertEqual(
+            type(self.obs_device_hashes_cnts_dict),
+            type(self.exp_device_hashes_cnts_dict),
+        )
+        self.assertEqual(
+            type(self.obs_device_hashes_props_dict),
+            type(self.exp_device_hashes_props_dict),
+        )
+        self.assertEqual(
+            type(self.obs_device_hashes_type_dict),
+            type(self.exp_device_hashes_type_dict),
+        )
+        self.assertEqual(
+            type(self.obs_device_shared_idhash_map_dict),
+            type(self.exp_device_shared_idhash_map_dict),
+        )
+        self.assertEqual(
+            type(self.obs_prop_shared_device_hashes),
+            type(self.exp_prop_shared_device_hashes),
+        )
         self.assertEqual(type(self.obs_n_device_hashes), type(self.exp_n_device_hashes))
         self.assertEqual(type(self.obs_lam), type(self.exp_lam))
 
     def test_len(self):
-        self.assertEqual(len(self.obs_device_hashes_cnts_dict), len(self.exp_device_hashes_cnts_dict))
-        self.assertEqual(len(self.obs_device_hashes_props_dict),len(self.exp_device_hashes_props_dict),)
-        self.assertEqual(len(self.obs_device_hashes_type_dict), len(self.exp_device_hashes_type_dict))
-        self.assertEqual(len(self.obs_device_shared_idhash_map_dict),len(self.exp_device_shared_idhash_map_dict),)
+        self.assertEqual(
+            len(self.obs_device_hashes_cnts_dict), len(self.exp_device_hashes_cnts_dict)
+        )
+        self.assertEqual(
+            len(self.obs_device_hashes_props_dict),
+            len(self.exp_device_hashes_props_dict),
+        )
+        self.assertEqual(
+            len(self.obs_device_hashes_type_dict), len(self.exp_device_hashes_type_dict)
+        )
+        self.assertEqual(
+            len(self.obs_device_shared_idhash_map_dict),
+            len(self.exp_device_shared_idhash_map_dict),
+        )
 
     def test_keys(self):
-        self.assertEqual(list(self.obs_device_hashes_cnts_dict.keys()),list(self.exp_device_hashes_cnts_dict.keys()),)
-        self.assertEqual(list(self.obs_device_hashes_props_dict.keys()),list(self.exp_device_hashes_props_dict.keys()),)
-        self.assertEqual(list(self.obs_device_hashes_type_dict.keys()),list(self.exp_device_hashes_type_dict.keys()),)
-        self.assertEqual(list(self.obs_device_shared_idhash_map_dict.keys()),list(self.exp_device_shared_idhash_map_dict.keys()),)
+        self.assertEqual(
+            list(self.obs_device_hashes_cnts_dict.keys()),
+            list(self.exp_device_hashes_cnts_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_device_hashes_props_dict.keys()),
+            list(self.exp_device_hashes_props_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_device_hashes_type_dict.keys()),
+            list(self.exp_device_hashes_type_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_device_shared_idhash_map_dict.keys()),
+            list(self.exp_device_shared_idhash_map_dict.keys()),
+        )
 
     def test_values(self):
-        self.assertEqual(list(self.obs_device_hashes_cnts_dict.values()),list(self.exp_device_hashes_cnts_dict.values()),)
-        self.assertEqual(list(self.obs_device_hashes_props_dict.values()),list(self.exp_device_hashes_props_dict.values()),)
-        self.assertEqual(list(self.obs_device_hashes_type_dict.values()),list(self.exp_device_hashes_type_dict.values()),)
-        self.assertEqual(list(self.obs_device_shared_idhash_map_dict.values()),list(self.exp_device_shared_idhash_map_dict.values()),)
+        self.assertEqual(
+            list(self.obs_device_hashes_cnts_dict.values()),
+            list(self.exp_device_hashes_cnts_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_device_hashes_props_dict.values()),
+            list(self.exp_device_hashes_props_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_device_hashes_type_dict.values()),
+            list(self.exp_device_hashes_type_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_device_shared_idhash_map_dict.values()),
+            list(self.exp_device_shared_idhash_map_dict.values()),
+        )
 
     def test_object(self):
-        self.assertEqual(self.obs_device_hashes_cnts_dict, self.exp_device_hashes_cnts_dict)
-        self.assertEqual(self.obs_device_hashes_props_dict, self.exp_device_hashes_props_dict)
-        self.assertEqual(self.obs_device_hashes_type_dict, self.exp_device_hashes_type_dict)
-        self.assertEqual(self.obs_device_shared_idhash_map_dict,self.exp_device_shared_idhash_map_dict,)
-        self.assertEqual(self.obs_prop_shared_device_hashes, self.exp_prop_shared_device_hashes)
+        self.assertEqual(
+            self.obs_device_hashes_cnts_dict, self.exp_device_hashes_cnts_dict
+        )
+        self.assertEqual(
+            self.obs_device_hashes_props_dict, self.exp_device_hashes_props_dict
+        )
+        self.assertEqual(
+            self.obs_device_hashes_type_dict, self.exp_device_hashes_type_dict
+        )
+        self.assertEqual(
+            self.obs_device_shared_idhash_map_dict,
+            self.exp_device_shared_idhash_map_dict,
+        )
+        self.assertEqual(
+            self.obs_prop_shared_device_hashes, self.exp_prop_shared_device_hashes
+        )
         self.assertEqual(self.obs_n_device_hashes, self.exp_n_device_hashes)
         self.assertEqual(self.obs_lam, self.exp_lam)
 

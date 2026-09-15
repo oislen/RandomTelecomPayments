@@ -1,4 +1,5 @@
-from fastapi import  HTTPException
+from fastapi import HTTPException
+
 
 def check_message_body(body: dict):
     if not body.get("n_users"):

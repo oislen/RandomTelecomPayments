@@ -1,13 +1,14 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from objects.Application import Application
+from objects import Application
 
 exp_application_hashes_cnts_dict = {
     "63cea7c46926aa74": 1,
@@ -45,7 +46,9 @@ obs_application_hashes_cnts_dict = application_object.application_hashes_cnts_di
 obs_application_hashes_props_dict = application_object.application_hashes_props_dict
 obs_lam = application_object.lam
 obs_n_application_hashes = application_object.n_application_hashes
-obs_application_hashes_payment_channel_dict = application_object.application_hashes_payment_channel_dict
+obs_application_hashes_payment_channel_dict = (
+    application_object.application_hashes_payment_channel_dict
+)
 obs_payment_channels = application_object.payment_channels
 
 
@@ -68,43 +71,101 @@ class Test_Application(unittest.TestCase):
         self.obs_n_application_hashes = obs_n_application_hashes
         self.exp_lam = exp_lam
         self.obs_lam = obs_lam
-        self.exp_application_hashes_payment_channel_dict = exp_application_hashes_payment_channel_dict
-        self.obs_application_hashes_payment_channel_dict = obs_application_hashes_payment_channel_dict
+        self.exp_application_hashes_payment_channel_dict = (
+            exp_application_hashes_payment_channel_dict
+        )
+        self.obs_application_hashes_payment_channel_dict = (
+            obs_application_hashes_payment_channel_dict
+        )
         self.exp_payment_channels = exp_payment_channels
         self.obs_payment_channels = obs_payment_channels
 
     def test_type(self):
-        self.assertEqual(type(self.obs_application_hashes_cnts_dict),type(self.exp_application_hashes_cnts_dict),)
-        self.assertEqual(type(self.obs_application_hashes_props_dict),type(self.exp_application_hashes_props_dict),)
-        self.assertEqual(type(self.obs_n_application_hashes), type(self.exp_n_application_hashes))
+        self.assertEqual(
+            type(self.obs_application_hashes_cnts_dict),
+            type(self.exp_application_hashes_cnts_dict),
+        )
+        self.assertEqual(
+            type(self.obs_application_hashes_props_dict),
+            type(self.exp_application_hashes_props_dict),
+        )
+        self.assertEqual(
+            type(self.obs_n_application_hashes), type(self.exp_n_application_hashes)
+        )
         self.assertEqual(type(self.obs_lam), type(self.exp_lam))
-        self.assertEqual(type(self.obs_application_hashes_payment_channel_dict),type(self.exp_application_hashes_payment_channel_dict),)
-        self.assertEqual(type(self.obs_payment_channels), type(self.exp_payment_channels))
+        self.assertEqual(
+            type(self.obs_application_hashes_payment_channel_dict),
+            type(self.exp_application_hashes_payment_channel_dict),
+        )
+        self.assertEqual(
+            type(self.obs_payment_channels), type(self.exp_payment_channels)
+        )
 
     def test_len(self):
-        self.assertEqual(len(self.obs_application_hashes_props_dict),len(self.exp_application_hashes_props_dict),)
-        self.assertEqual(len(self.obs_application_hashes_cnts_dict),len(self.exp_application_hashes_cnts_dict),)
-        self.assertEqual(len(self.obs_application_hashes_payment_channel_dict),len(self.exp_application_hashes_payment_channel_dict),)
+        self.assertEqual(
+            len(self.obs_application_hashes_props_dict),
+            len(self.exp_application_hashes_props_dict),
+        )
+        self.assertEqual(
+            len(self.obs_application_hashes_cnts_dict),
+            len(self.exp_application_hashes_cnts_dict),
+        )
+        self.assertEqual(
+            len(self.obs_application_hashes_payment_channel_dict),
+            len(self.exp_application_hashes_payment_channel_dict),
+        )
         self.assertEqual(len(self.obs_payment_channels), len(self.exp_payment_channels))
 
     def test_keys(self):
-        self.assertEqual(list(self.obs_application_hashes_props_dict.keys()),list(self.exp_application_hashes_props_dict.keys()),)
-        self.assertEqual(list(self.obs_application_hashes_cnts_dict.keys()),list(self.exp_application_hashes_cnts_dict.keys()),)
-        self.assertEqual(list(self.obs_application_hashes_payment_channel_dict.keys()),list(self.exp_application_hashes_payment_channel_dict.keys()),)
-        self.assertEqual(list(self.obs_payment_channels.keys()),list(self.exp_payment_channels.keys()),)
+        self.assertEqual(
+            list(self.obs_application_hashes_props_dict.keys()),
+            list(self.exp_application_hashes_props_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_application_hashes_cnts_dict.keys()),
+            list(self.exp_application_hashes_cnts_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_application_hashes_payment_channel_dict.keys()),
+            list(self.exp_application_hashes_payment_channel_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_payment_channels.keys()),
+            list(self.exp_payment_channels.keys()),
+        )
 
     def test_values(self):
-        self.assertEqual(list(self.obs_application_hashes_props_dict.values()),list(self.exp_application_hashes_props_dict.values()),)
-        self.assertEqual(list(self.obs_application_hashes_cnts_dict.values()),list(self.exp_application_hashes_cnts_dict.values()),)
-        self.assertEqual(list(self.obs_application_hashes_payment_channel_dict.values()),list(self.exp_application_hashes_payment_channel_dict.values()),)
-        self.assertEqual(list(self.obs_payment_channels.values()),list(self.exp_payment_channels.values()),)
+        self.assertEqual(
+            list(self.obs_application_hashes_props_dict.values()),
+            list(self.exp_application_hashes_props_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_application_hashes_cnts_dict.values()),
+            list(self.exp_application_hashes_cnts_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_application_hashes_payment_channel_dict.values()),
+            list(self.exp_application_hashes_payment_channel_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_payment_channels.values()),
+            list(self.exp_payment_channels.values()),
+        )
 
     def test_object(self):
-        self.assertEqual(self.obs_application_hashes_cnts_dict, self.exp_application_hashes_cnts_dict)
-        self.assertEqual(self.obs_application_hashes_props_dict,self.exp_application_hashes_props_dict,)
+        self.assertEqual(
+            self.obs_application_hashes_cnts_dict, self.exp_application_hashes_cnts_dict
+        )
+        self.assertEqual(
+            self.obs_application_hashes_props_dict,
+            self.exp_application_hashes_props_dict,
+        )
         self.assertEqual(self.obs_n_application_hashes, self.exp_n_application_hashes)
         self.assertEqual(self.obs_lam, self.exp_lam)
-        self.assertEqual(self.obs_application_hashes_payment_channel_dict,self.exp_application_hashes_payment_channel_dict,)
+        self.assertEqual(
+            self.obs_application_hashes_payment_channel_dict,
+            self.exp_application_hashes_payment_channel_dict,
+        )
         self.assertEqual(self.obs_payment_channels, self.exp_payment_channels)
 
 

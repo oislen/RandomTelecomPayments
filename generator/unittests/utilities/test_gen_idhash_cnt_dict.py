@@ -1,13 +1,14 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_idhash_cnt_dict import gen_idhash_cnt_dict
+from utilities import gen_idhash_cnt_dict
 
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
