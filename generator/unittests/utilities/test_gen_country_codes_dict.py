@@ -1,22 +1,31 @@
-import unittest
 import os
 import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_country_codes_dict import gen_country_codes_dict
+from utilities import gen_country_codes_dict
 
 np.random.seed(cons.unittest_seed)
 
 idhashes = ["a", "b", "c", "d"]
 exp_prop_dict = {"a": 276, "b": 756, "c": 642, "d": 826}
-fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
-obs_prop_dict = gen_country_codes_dict(idhashes=idhashes, fpath_countries_europe=fpath_countries_europe)
+fpath_countries_europe = "." + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+obs_prop_dict = gen_country_codes_dict(
+    idhashes=idhashes, fpath_countries_europe=fpath_countries_europe
+)
+
 
 class Test_gen_country_codes_dict(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the gen_country_codes_dict utility function.
+
+    Verifies that each idhash is mapped to a valid ISO numeric European
+    country code, with deterministic results when a seed is fixed.
+    """
 
     def setUp(self):
         self.idhashes = idhashes

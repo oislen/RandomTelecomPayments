@@ -32,7 +32,7 @@ def gen_trans_error_codes(trans_data, trans_status_col, rejection_codes):
         replace=True,
     )
     # assign the rejection codes to the transaction error code column
-    tmp_data.loc[
-        failed_transactions_filter, "transaction_error_code"
-    ] = random_error_codes
+    tmp_data.loc[failed_transactions_filter, "transaction_error_code"] = (
+        random_error_codes
+    )
     return tmp_data["transaction_error_code"]

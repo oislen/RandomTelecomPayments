@@ -1,12 +1,13 @@
-import unittest
 import os
 import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_dates_dict import gen_dates_dict
+from utilities import gen_dates_dict
 
 np.random.seed(cons.unittest_seed)
 
@@ -21,7 +22,12 @@ obs_prop_dict = gen_dates_dict(idhashes, start_date="2020-01-01", end_date="2021
 
 
 class Test_gen_dates_dict(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the gen_dates_dict utility function.
+
+    Verifies that each idhash is assigned a random date within the specified
+    date range, with deterministic results when a seed is fixed.
+    """
 
     def setUp(self):
         self.idhashes = idhashes

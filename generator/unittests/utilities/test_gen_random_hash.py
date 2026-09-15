@@ -1,12 +1,13 @@
-import unittest
 import os
 import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_random_hash import gen_random_hash
+from utilities import gen_random_hash
 
 np.random.seed(cons.unittest_seed)
 
@@ -20,7 +21,12 @@ obs_random_hash = gen_random_hash(size=4, nbytes=16)
 
 
 class Test_gen_random_hash(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the gen_random_hash utility function.
+
+    Verifies that a list of random hex-style hash strings of the requested
+    size is produced deterministically when a random seed is fixed.
+    """
 
     def setUp(self):
         self.obs_random_hash = obs_random_hash

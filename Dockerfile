@@ -1,5 +1,5 @@
 # get base image
-FROM python:3.12
+FROM python:3.12-slim@sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79
 
 # set environment variables
 ENV user=user
@@ -11,12 +11,6 @@ ENV PYTHON_VERSION=${PYTHON_VERSION}
 # install required software and programmes for development environment
 RUN apt-get update
 RUN apt-get install -y apt-utils vim curl wget unzip tree htop adduser
-# install trivy image vulnerability patches
-RUN apt-get install -y imagemagick=8:7.1.1.43+dfsg1-1+deb13u5
-RUN apt-get install -y libssl-dev=3.5.4-1~deb13u2
-RUN apt-get install -y libpq-dev=17.8-0+deb13u1
-RUN apt-get install -y libpng-dev=1.6.48-1+deb13u3 libpng16-16t64=1.6.48-1+deb13u3
-RUN apt-get install -y linux-libc-dev=6.12.73-1
 
 # set up home environment
 RUN adduser ${user}
@@ -29,7 +23,7 @@ COPY . /home/${user}/RandomTelecomPayments
 WORKDIR /home/${user}/RandomTelecomPayments
 
 # install required python packages
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv@sha256:68224c7eb575bc13e4723f8831331db68555125fac3939fdde78cdb6000667ad /uv /uvx /bin/
 RUN uv sync
 
 EXPOSE 8000

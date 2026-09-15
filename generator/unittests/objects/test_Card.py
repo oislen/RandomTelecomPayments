@@ -1,13 +1,14 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from objects.Card import Card
+from objects import Card
 
 exp_card_hashes_cnts_dict = {
     "63cea7c46926aa74": 1,
@@ -42,8 +43,10 @@ exp_lam = cons.data_model_poisson_params["card"]["lambda"]
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
 
-fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
-card_object = Card(n_card_hashes=exp_n_card_hashes, fpath_countries_europe=fpath_countries_europe)
+fpath_countries_europe = "." + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+card_object = Card(
+    n_card_hashes=exp_n_card_hashes, fpath_countries_europe=fpath_countries_europe
+)
 
 obs_card_hashes_cnts_dict = card_object.card_hashes_cnts_dict
 obs_card_types_dict = card_object.card_types_dict
@@ -57,7 +60,13 @@ obs_n_card_hashes = card_object.n_card_hashes
 
 
 class Test_Card(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the Card data-model object.
+
+    Verifies that card hash counts, proportions, types, country codes, and
+    shared-idhash mappings have the expected types, lengths, keys, and values
+    when constructed with a fixed random seed.
+    """
 
     def setUp(self):
         self.exp_card_hashes_cnts_dict = exp_card_hashes_cnts_dict
@@ -80,48 +89,120 @@ class Test_Card(unittest.TestCase):
         self.obs_n_card_hashes = obs_n_card_hashes
 
     def test_type(self):
-        self.assertEqual(type(self.obs_card_hashes_cnts_dict), type(self.exp_card_hashes_cnts_dict))
+        self.assertEqual(
+            type(self.obs_card_hashes_cnts_dict), type(self.exp_card_hashes_cnts_dict)
+        )
         self.assertEqual(type(self.obs_card_types_dict), type(self.exp_card_types_dict))
-        self.assertEqual(type(self.obs_card_hashes_type_dict), type(self.exp_card_hashes_type_dict))
-        self.assertEqual(type(self.obs_card_hashes_props_dict), type(self.exp_card_hashes_props_dict))
-        self.assertEqual(type(self.obs_prop_shared_card_hashes),type(self.exp_prop_shared_card_hashes),)
-        self.assertEqual(type(self.obs_card_hashes_country_code_dict),type(self.exp_card_hashes_country_code_dict),)
-        self.assertEqual(type(self.obs_card_shared_idhash_map_dict),type(self.exp_card_shared_idhash_map_dic),)
+        self.assertEqual(
+            type(self.obs_card_hashes_type_dict), type(self.exp_card_hashes_type_dict)
+        )
+        self.assertEqual(
+            type(self.obs_card_hashes_props_dict), type(self.exp_card_hashes_props_dict)
+        )
+        self.assertEqual(
+            type(self.obs_prop_shared_card_hashes),
+            type(self.exp_prop_shared_card_hashes),
+        )
+        self.assertEqual(
+            type(self.obs_card_hashes_country_code_dict),
+            type(self.exp_card_hashes_country_code_dict),
+        )
+        self.assertEqual(
+            type(self.obs_card_shared_idhash_map_dict),
+            type(self.exp_card_shared_idhash_map_dic),
+        )
         self.assertEqual(type(self.obs_lam), type(self.exp_lam))
         self.assertEqual(type(self.obs_n_card_hashes), type(self.exp_n_card_hashes))
 
     def test_len(self):
-        self.assertEqual(len(self.obs_card_hashes_cnts_dict), len(self.exp_card_hashes_cnts_dict))
+        self.assertEqual(
+            len(self.obs_card_hashes_cnts_dict), len(self.exp_card_hashes_cnts_dict)
+        )
         self.assertEqual(len(self.obs_card_types_dict), len(self.exp_card_types_dict))
-        self.assertEqual(len(self.obs_card_hashes_type_dict), len(self.exp_card_hashes_type_dict))
-        self.assertEqual(len(self.obs_card_hashes_props_dict), len(self.exp_card_hashes_props_dict))
-        self.assertEqual(len(self.obs_card_hashes_country_code_dict),len(self.exp_card_hashes_country_code_dict),)
-        self.assertEqual(len(self.obs_card_shared_idhash_map_dict),len(self.exp_card_shared_idhash_map_dic),)
+        self.assertEqual(
+            len(self.obs_card_hashes_type_dict), len(self.exp_card_hashes_type_dict)
+        )
+        self.assertEqual(
+            len(self.obs_card_hashes_props_dict), len(self.exp_card_hashes_props_dict)
+        )
+        self.assertEqual(
+            len(self.obs_card_hashes_country_code_dict),
+            len(self.exp_card_hashes_country_code_dict),
+        )
+        self.assertEqual(
+            len(self.obs_card_shared_idhash_map_dict),
+            len(self.exp_card_shared_idhash_map_dic),
+        )
 
     def test_keys(self):
-        self.assertEqual(list(self.obs_card_hashes_cnts_dict.keys()),list(self.exp_card_hashes_cnts_dict.keys()),)
-        self.assertEqual(list(self.obs_card_types_dict.keys()), list(self.exp_card_types_dict.keys()))
-        self.assertEqual(list(self.obs_card_hashes_type_dict.keys()),list(self.exp_card_hashes_type_dict.keys()),)
-        self.assertEqual(list(self.obs_card_hashes_props_dict.keys()),list(self.exp_card_hashes_props_dict.keys()),)
-        self.assertEqual(list(self.obs_card_hashes_country_code_dict.keys()),list(self.exp_card_hashes_country_code_dict.keys()),)
-        self.assertEqual(list(self.obs_card_shared_idhash_map_dict.keys()),list(self.exp_card_shared_idhash_map_dic.keys()),)
+        self.assertEqual(
+            list(self.obs_card_hashes_cnts_dict.keys()),
+            list(self.exp_card_hashes_cnts_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_card_types_dict.keys()), list(self.exp_card_types_dict.keys())
+        )
+        self.assertEqual(
+            list(self.obs_card_hashes_type_dict.keys()),
+            list(self.exp_card_hashes_type_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_card_hashes_props_dict.keys()),
+            list(self.exp_card_hashes_props_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_card_hashes_country_code_dict.keys()),
+            list(self.exp_card_hashes_country_code_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_card_shared_idhash_map_dict.keys()),
+            list(self.exp_card_shared_idhash_map_dic.keys()),
+        )
 
     def test_values(self):
-        self.assertEqual(list(self.obs_card_hashes_cnts_dict.values()),list(self.exp_card_hashes_cnts_dict.values()),)
-        self.assertEqual(list(self.obs_card_types_dict.values()),list(self.exp_card_types_dict.values()),)
-        self.assertEqual(list(self.obs_card_hashes_type_dict.values()),list(self.exp_card_hashes_type_dict.values()),)
-        self.assertEqual(list(self.obs_card_hashes_props_dict.values()),list(self.exp_card_hashes_props_dict.values()),)
-        self.assertEqual(list(self.obs_card_hashes_country_code_dict.values()),list(self.exp_card_hashes_country_code_dict.values()),)
-        self.assertEqual(list(self.obs_card_shared_idhash_map_dict.values()),list(self.exp_card_shared_idhash_map_dic.values()),)
+        self.assertEqual(
+            list(self.obs_card_hashes_cnts_dict.values()),
+            list(self.exp_card_hashes_cnts_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_card_types_dict.values()),
+            list(self.exp_card_types_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_card_hashes_type_dict.values()),
+            list(self.exp_card_hashes_type_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_card_hashes_props_dict.values()),
+            list(self.exp_card_hashes_props_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_card_hashes_country_code_dict.values()),
+            list(self.exp_card_hashes_country_code_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_card_shared_idhash_map_dict.values()),
+            list(self.exp_card_shared_idhash_map_dic.values()),
+        )
 
     def test_object(self):
         self.assertEqual(self.obs_card_hashes_cnts_dict, self.exp_card_hashes_cnts_dict)
         self.assertEqual(self.obs_card_types_dict, self.exp_card_types_dict)
         self.assertEqual(self.obs_card_hashes_type_dict, self.exp_card_hashes_type_dict)
-        self.assertEqual(self.obs_card_hashes_props_dict, self.exp_card_hashes_props_dict)
-        self.assertEqual(self.obs_prop_shared_card_hashes, self.exp_prop_shared_card_hashes)
-        self.assertEqual(self.obs_card_hashes_country_code_dict,self.exp_card_hashes_country_code_dict,)
-        self.assertEqual(self.obs_card_shared_idhash_map_dict,self.exp_card_shared_idhash_map_dic,)
+        self.assertEqual(
+            self.obs_card_hashes_props_dict, self.exp_card_hashes_props_dict
+        )
+        self.assertEqual(
+            self.obs_prop_shared_card_hashes, self.exp_prop_shared_card_hashes
+        )
+        self.assertEqual(
+            self.obs_card_hashes_country_code_dict,
+            self.exp_card_hashes_country_code_dict,
+        )
+        self.assertEqual(
+            self.obs_card_shared_idhash_map_dict,
+            self.exp_card_shared_idhash_map_dic,
+        )
         self.assertEqual(self.obs_lam, self.exp_lam)
         self.assertEqual(self.obs_n_card_hashes, self.exp_n_card_hashes)
 

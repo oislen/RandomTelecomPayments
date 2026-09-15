@@ -1,13 +1,14 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from objects.User import User
+from objects import User
 
 exp_user_ids_cnts_dict = {
     "6374692674377254": 20,
@@ -59,10 +60,10 @@ exp_lam = cons.data_model_poisson_params["user"]["lambda"]
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
 
-fpath_first_names = '.' + cons.fpath_llama_first_names.split(cons.fpath_repo_dir)[1]
-fpath_last_names = '.' + cons.fpath_llama_last_names.split(cons.fpath_repo_dir)[1]
-fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
-fpath_email_domain = '.' + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
+fpath_first_names = "." + cons.fpath_llama_first_names.split(cons.fpath_repo_dir)[1]
+fpath_last_names = "." + cons.fpath_llama_last_names.split(cons.fpath_repo_dir)[1]
+fpath_countries_europe = "." + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+fpath_email_domain = "." + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
 
 user_object = User(
     n_user_ids=exp_n_user_ids,
@@ -72,7 +73,7 @@ user_object = User(
     fpath_last_names=fpath_last_names,
     fpath_countries_europe=fpath_countries_europe,
     fpath_email_domain=fpath_email_domain,
-    )
+)
 
 obs_user_ids_cnts_dict = user_object.user_ids_cnts_dict
 obs_user_ids_props_dict = user_object.user_ids_props_dict
@@ -88,7 +89,13 @@ obs_lam = user_object.lam
 
 
 class Test_User(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the User data-model object.
+
+    Verifies that user ID counts, proportions, first names, last names,
+    country codes, email domains, and registration dates have the expected
+    types, lengths, keys, and values when constructed with a fixed random seed.
+    """
 
     def setUp(self):
         self.exp_user_ids_cnts_dict = exp_user_ids_cnts_dict
@@ -115,52 +122,137 @@ class Test_User(unittest.TestCase):
         self.obs_lam = obs_lam
 
     def test_type(self):
-        self.assertEqual(type(self.obs_user_ids_cnts_dict), type(self.exp_user_ids_cnts_dict))
-        self.assertEqual(type(self.obs_user_ids_props_dict), type(self.exp_user_ids_props_dict))
-        self.assertEqual(type(self.obs_user_ids_first_name_dict),type(self.exp_user_ids_first_name_dict),)
-        self.assertEqual(type(self.obs_user_ids_last_name_dict), type(self.exp_user_ids_last_name_dict))
-        self.assertEqual(type(self.obs_user_ids_country_code_dict),type(self.exp_user_ids_country_code_dict),)
-        self.assertEqual(type(self.obs_user_ids_email_domain_dict),type(self.exp_user_ids_email_domain_dict),)
-        self.assertEqual(type(self.obs_user_ids_dates_dict), type(self.exp_user_ids_dates_dict))
+        self.assertEqual(
+            type(self.obs_user_ids_cnts_dict), type(self.exp_user_ids_cnts_dict)
+        )
+        self.assertEqual(
+            type(self.obs_user_ids_props_dict), type(self.exp_user_ids_props_dict)
+        )
+        self.assertEqual(
+            type(self.obs_user_ids_first_name_dict),
+            type(self.exp_user_ids_first_name_dict),
+        )
+        self.assertEqual(
+            type(self.obs_user_ids_last_name_dict),
+            type(self.exp_user_ids_last_name_dict),
+        )
+        self.assertEqual(
+            type(self.obs_user_ids_country_code_dict),
+            type(self.exp_user_ids_country_code_dict),
+        )
+        self.assertEqual(
+            type(self.obs_user_ids_email_domain_dict),
+            type(self.exp_user_ids_email_domain_dict),
+        )
+        self.assertEqual(
+            type(self.obs_user_ids_dates_dict), type(self.exp_user_ids_dates_dict)
+        )
         self.assertEqual(type(self.obs_start_date), type(self.exp_start_date))
         self.assertEqual(type(self.obs_end_date), type(self.exp_end_date))
         self.assertEqual(type(self.obs_n_user_ids), type(self.exp_n_user_ids))
         self.assertEqual(type(self.obs_lam), type(self.exp_lam))
 
     def test_len(self):
-        self.assertEqual(len(self.obs_user_ids_cnts_dict), len(self.exp_user_ids_cnts_dict))
-        self.assertEqual(len(self.obs_user_ids_props_dict), len(self.exp_user_ids_props_dict))
-        self.assertEqual(len(self.obs_user_ids_first_name_dict), len(self.exp_user_ids_first_name_dict))
-        self.assertEqual(len(self.obs_user_ids_last_name_dict), len(self.exp_user_ids_last_name_dict))
-        self.assertEqual(len(self.obs_user_ids_country_code_dict),len(self.exp_user_ids_country_code_dict),)
-        self.assertEqual(len(self.obs_user_ids_email_domain_dict),len(self.exp_user_ids_email_domain_dict),)
-        self.assertEqual(len(self.obs_user_ids_dates_dict), len(self.exp_user_ids_dates_dict))
+        self.assertEqual(
+            len(self.obs_user_ids_cnts_dict), len(self.exp_user_ids_cnts_dict)
+        )
+        self.assertEqual(
+            len(self.obs_user_ids_props_dict), len(self.exp_user_ids_props_dict)
+        )
+        self.assertEqual(
+            len(self.obs_user_ids_first_name_dict),
+            len(self.exp_user_ids_first_name_dict),
+        )
+        self.assertEqual(
+            len(self.obs_user_ids_last_name_dict), len(self.exp_user_ids_last_name_dict)
+        )
+        self.assertEqual(
+            len(self.obs_user_ids_country_code_dict),
+            len(self.exp_user_ids_country_code_dict),
+        )
+        self.assertEqual(
+            len(self.obs_user_ids_email_domain_dict),
+            len(self.exp_user_ids_email_domain_dict),
+        )
+        self.assertEqual(
+            len(self.obs_user_ids_dates_dict), len(self.exp_user_ids_dates_dict)
+        )
 
     def test_keys(self):
-        self.assertEqual(list(self.obs_user_ids_cnts_dict.keys()),list(self.exp_user_ids_cnts_dict.keys()),)
-        self.assertEqual(list(self.obs_user_ids_props_dict.keys()),list(self.exp_user_ids_props_dict.keys()),)
-        self.assertEqual(list(self.obs_user_ids_first_name_dict.keys()),list(self.exp_user_ids_first_name_dict.keys()),)
-        self.assertEqual(list(self.obs_user_ids_last_name_dict.keys()),list(self.exp_user_ids_last_name_dict.keys()),)
-        self.assertEqual(list(self.obs_user_ids_country_code_dict.keys()),list(self.exp_user_ids_country_code_dict.keys()),)
-        self.assertEqual(list(self.obs_user_ids_email_domain_dict.keys()),list(self.exp_user_ids_email_domain_dict.keys()),)
-        self.assertEqual(list(self.obs_user_ids_dates_dict.keys()),list(self.exp_user_ids_dates_dict.keys()),)
+        self.assertEqual(
+            list(self.obs_user_ids_cnts_dict.keys()),
+            list(self.exp_user_ids_cnts_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_props_dict.keys()),
+            list(self.exp_user_ids_props_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_first_name_dict.keys()),
+            list(self.exp_user_ids_first_name_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_last_name_dict.keys()),
+            list(self.exp_user_ids_last_name_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_country_code_dict.keys()),
+            list(self.exp_user_ids_country_code_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_email_domain_dict.keys()),
+            list(self.exp_user_ids_email_domain_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_dates_dict.keys()),
+            list(self.exp_user_ids_dates_dict.keys()),
+        )
 
     def test_values(self):
-        self.assertEqual(list(self.obs_user_ids_cnts_dict.values()),list(self.exp_user_ids_cnts_dict.values()),)
-        self.assertEqual(list(self.obs_user_ids_props_dict.values()),list(self.exp_user_ids_props_dict.values()),)
-        self.assertEqual(list(self.obs_user_ids_first_name_dict.values()),list(self.exp_user_ids_first_name_dict.values()),)
-        self.assertEqual(list(self.obs_user_ids_last_name_dict.values()),list(self.exp_user_ids_last_name_dict.values()),)
-        self.assertEqual(list(self.obs_user_ids_country_code_dict.values()),list(self.exp_user_ids_country_code_dict.values()),)
-        self.assertEqual(list(self.obs_user_ids_email_domain_dict.values()),list(self.exp_user_ids_email_domain_dict.values()),)
-        self.assertEqual(list(self.obs_user_ids_dates_dict.values()),list(self.exp_user_ids_dates_dict.values()),)
+        self.assertEqual(
+            list(self.obs_user_ids_cnts_dict.values()),
+            list(self.exp_user_ids_cnts_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_props_dict.values()),
+            list(self.exp_user_ids_props_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_first_name_dict.values()),
+            list(self.exp_user_ids_first_name_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_last_name_dict.values()),
+            list(self.exp_user_ids_last_name_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_country_code_dict.values()),
+            list(self.exp_user_ids_country_code_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_email_domain_dict.values()),
+            list(self.exp_user_ids_email_domain_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_user_ids_dates_dict.values()),
+            list(self.exp_user_ids_dates_dict.values()),
+        )
 
     def test_object(self):
         self.assertEqual(self.obs_user_ids_cnts_dict, self.exp_user_ids_cnts_dict)
         self.assertEqual(self.obs_user_ids_props_dict, self.exp_user_ids_props_dict)
-        self.assertEqual(self.obs_user_ids_first_name_dict, self.exp_user_ids_first_name_dict)
-        self.assertEqual(self.obs_user_ids_last_name_dict, self.exp_user_ids_last_name_dict)
-        self.assertEqual(self.obs_user_ids_country_code_dict, self.exp_user_ids_country_code_dict)
-        self.assertEqual(self.obs_user_ids_email_domain_dict, self.exp_user_ids_email_domain_dict)
+        self.assertEqual(
+            self.obs_user_ids_first_name_dict, self.exp_user_ids_first_name_dict
+        )
+        self.assertEqual(
+            self.obs_user_ids_last_name_dict, self.exp_user_ids_last_name_dict
+        )
+        self.assertEqual(
+            self.obs_user_ids_country_code_dict, self.exp_user_ids_country_code_dict
+        )
+        self.assertEqual(
+            self.obs_user_ids_email_domain_dict, self.exp_user_ids_email_domain_dict
+        )
         self.assertEqual(self.obs_user_ids_dates_dict, self.exp_user_ids_dates_dict)
         self.assertEqual(self.obs_start_date, self.exp_start_date)
         self.assertEqual(self.obs_end_date, self.exp_end_date)

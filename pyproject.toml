@@ -7,20 +7,59 @@ requires-python = ">=3.12"
 dependencies = [
     "beartype==0.19.0",
     "boto3==1.36.12",
-    "fastapi[standard]==0.128.0",
+    "fastapi[standard]==0.141.1",
     "fastparquet==2024.11.0",
+    "idna==3.15",
     "ipykernel==6.29.5",
     "nbclient==0.10.4",
     "nbformat==5.10.4",
     "networkx==3.4.2",
     "numpy==2.0.2",
     "pandas==2.2.3",
-    "pillow==12.1.1",
-    "pyarrow==18.1.0",
+    "pillow==12.3.0",
+    "pyarrow==23.0.1",
+    "pydantic-settings==2.14.2",
+    "pygments==2.20.0",
+    "python-dotenv==1.2.2",
+    "python-multipart==0.0.31",
     "scikit-learn==1.6.1",
     "scipy==1.15.1",
     "seaborn==0.13.2",
     "shap==0.46.0",
+    "starlette==1.3.1",
     "tabulate==0.9.0",
+    "tornado==6.5.8",
     "unidecode==1.3.8",
+    "urllib3==2.7.0",
 ]
+
+[tool.uv]
+exclude-newer = "7 days"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes (basic syntax/runtime errors)
+    "I",   # isort (import sorting)
+    "B",   # flake8-bugbear (common design flaws)
+    "C4",  # flake8-comprehensions (better list/dict comprehensions)
+    "UP",  # pyupgrade (upgrades syntax to newer Python versions)
+]
+ignore = [
+    "E402",
+    "E501",
+    "B018",
+    "B006",
+    "B904",
+    "B008",
+    "B017"
+]
+per-file-ignores = { }
+
+[tool.ruff.format]
+preview = false

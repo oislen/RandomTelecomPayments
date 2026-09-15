@@ -1,22 +1,22 @@
-from utilities.gen_random_hash import gen_random_hash
-from utilities.gen_random_id import gen_random_id
-from utilities.gen_random_poisson_power import gen_random_poisson_power
-
 import numpy as np
 from beartype import beartype
-from typing import Union, Dict
+
+from .gen_random_hash import gen_random_hash
+from .gen_random_id import gen_random_id
+from .gen_random_poisson_power import gen_random_poisson_power
+
 
 @beartype
 def gen_idhash_cnt_dict(
-    idhash_type:str,
-    n:Union[int,np.int64],
-    lam:Union[int,float],
-    nbytes:int=16,
-    power:int=2,
-    ) -> Dict[str, Union[str, int, np.int64]]:
+    idhash_type: str,
+    n: int | np.int64,
+    lam: int | float,
+    nbytes: int = 16,
+    power: int = 2,
+) -> dict[str, str | int | np.int64]:
     """
     Generates a dictionary of n random idhashes and associated counts.
-    
+
     Parameters
     ----------
     idhash_type : str
@@ -29,12 +29,12 @@ def gen_idhash_cnt_dict(
         The number bytes to include in the idhash value, default is 16.
     power : int
         The power of the polynomial random poisson variable, default is 2.
-    
+
     Returns
     -------
     Dict[str, Union[str, int, np.int64]]
         A dictionary of idhashes counts.
-    
+
     Examples
     --------
     ```
@@ -60,6 +60,8 @@ def gen_idhash_cnt_dict(
     cnts_list = gen_random_poisson_power(lam=lam, size=n, power=power).tolist()
     # return a dictionary of idhashes and counts
     if len(idhash_list) != len(set(idhash_list)):
-        raise ValueError("Generated idhash values are not unique, please increase nbytes value")
-    idhash_dict = dict(zip(idhash_list, cnts_list))
+        raise ValueError(
+            "Generated idhash values are not unique, please increase nbytes value"
+        )
+    idhash_dict = dict(zip(idhash_list, cnts_list, strict=False))
     return idhash_dict

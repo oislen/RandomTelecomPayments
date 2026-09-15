@@ -1,14 +1,19 @@
-import unittest
 import os
 import sys
+import unittest
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
-from utilities.cnt2prop_dict import cnt2prop_dict
+from utilities import cnt2prop_dict
 
 
 class Test_cnt2prop_dict(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the cnt2prop_dict utility function.
+
+    Verifies that a counts dictionary is correctly converted to a proportions
+    dictionary where all values sum to 1.0.
+    """
 
     def setUp(self):
         self.cnt_data = {"a": 1, "b": 2, "c": 3, "d": 4}

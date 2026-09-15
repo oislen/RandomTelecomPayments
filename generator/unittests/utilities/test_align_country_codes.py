@@ -1,14 +1,15 @@
-import unittest
 import os
+import random
 import sys
+import unittest
+
 import numpy as np
 import pandas as pd
-import random
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.align_country_codes import align_country_codes
+from utilities import align_country_codes
 
 random.seed(cons.unittest_seed)
 
@@ -69,7 +70,13 @@ obs_data_df = input_data_df.apply(
 
 
 class Test_align_country_codes(unittest.TestCase):
-    """"""
+    """
+    Unit tests for the align_country_codes utility function.
+
+    Verifies that registration, IP, and card country codes are aligned
+    according to the configured probabilities, including correct handling
+    of null card country codes.
+    """
 
     def setUp(self):
         self.input_data_df = input_data_df
