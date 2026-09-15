@@ -1,9 +1,10 @@
-import unittest
 import os
+import random
 import sys
+import unittest
+
 import numpy as np
 import pandas as pd
-import random
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 

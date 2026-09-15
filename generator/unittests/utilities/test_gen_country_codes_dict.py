@@ -1,6 +1,7 @@
-import unittest
 import os
 import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
@@ -12,8 +13,11 @@ np.random.seed(cons.unittest_seed)
 
 idhashes = ["a", "b", "c", "d"]
 exp_prop_dict = {"a": 276, "b": 756, "c": 642, "d": 826}
-fpath_countries_europe = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
-obs_prop_dict = gen_country_codes_dict(idhashes=idhashes, fpath_countries_europe=fpath_countries_europe)
+fpath_countries_europe = "." + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+obs_prop_dict = gen_country_codes_dict(
+    idhashes=idhashes, fpath_countries_europe=fpath_countries_europe
+)
+
 
 class Test_gen_country_codes_dict(unittest.TestCase):
     """

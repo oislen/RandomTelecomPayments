@@ -1,26 +1,24 @@
 import cons
-from utilities.gen_idhash_cnt_dict import gen_idhash_cnt_dict
-from utilities.cnt2prop_dict import cnt2prop_dict
-
 import numpy as np
 from beartype import beartype
-from typing import List, Dict
+from utilities.cnt2prop_dict import cnt2prop_dict
+from utilities.gen_idhash_cnt_dict import gen_idhash_cnt_dict
+
 
 class Application:
-    
     @beartype
     def __init__(
         self,
-        n_application_hashes:int,
-        ):
+        n_application_hashes: int,
+    ):
         """
         Initialize the Application object with randomly generated data model.
-        
+
         Parameters
         ----------
         n_application_hashes : int
             The number of application hashes to generate.
-        
+
         Attributes
         ----------
         n_application_hashes : int
@@ -42,27 +40,36 @@ class Application:
         self.lam = cons.data_model_poisson_params["application"]["lambda"]
         self.power = cons.data_model_poisson_params["application"]["power"]
         self.payment_channels = cons.data_model_payment_channels
-        self.application_hashes_cnts_dict = gen_idhash_cnt_dict(idhash_type="hash", n=self.n_application_hashes, lam=self.lam)
+        self.application_hashes_cnts_dict = gen_idhash_cnt_dict(
+            idhash_type="hash", n=self.n_application_hashes, lam=self.lam
+        )
         self.application_hashes = list(self.application_hashes_cnts_dict.keys())
-        self.application_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.application_hashes_cnts_dict)
-        self.application_hashes_payment_channel_dict = self.gen_transaction_payment_channel(application_hashes=self.application_hashes, payment_channels=self.payment_channels)
-    
+        self.application_hashes_props_dict = cnt2prop_dict(
+            idhashes_cnts_dict=self.application_hashes_cnts_dict
+        )
+        self.application_hashes_payment_channel_dict = (
+            self.gen_transaction_payment_channel(
+                application_hashes=self.application_hashes,
+                payment_channels=self.payment_channels,
+            )
+        )
+
     @beartype
     def gen_transaction_payment_channel(
         self,
-        application_hashes:List[str],
-        payment_channels:Dict[str, float],
-        ) -> Dict[str, str]:
+        application_hashes: list[str],
+        payment_channels: dict[str, float],
+    ) -> dict[str, str]:
         """
         Generates a dictionary of random application payment channels.
-        
+
         Parameters
         ----------
         application_hashes : List[str]
             The application hashes.
         payment_channels : Dict[str, float]
             The population proportion of payment channels.
-        
+
         Returns
         -------
         Dict[str, str]
@@ -78,5 +85,7 @@ class Application:
             )
         )
         # return payment channels and application hashes
-        application_hashes_payment_channels_dict = dict(zip(application_hashes, transaction_payment_channels))
+        application_hashes_payment_channels_dict = dict(
+            zip(application_hashes, transaction_payment_channels, strict=False)
+        )
         return application_hashes_payment_channels_dict

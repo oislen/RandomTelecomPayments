@@ -1,7 +1,7 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
 
 import numpy as np
 import pandas as pd
@@ -20,56 +20,62 @@ from utilities.gen_trans_status import gen_trans_status
 _REJECTION_RATES_DICT = {
     "country_code_trans_reject_rate_dict": {"IE": 0.0, "DE": 0.0, "FR": 0.0},
     "domain_email_trans_reject_rate_dict": {"gmail.com": 0.0},
-    "shared_devices_reject_rate_dict":     {"d1": 0.0},
-    "shared_ips_reject_rate_dict":         {"i1": 0.0},
-    "shared_cards_reject_rate_dict":       {"c1": 0.0},
-    "count_devices_reject_rate_dict":      {"u001": 0.0},
-    "count_ips_reject_rate_dict":          {"u001": 0.0},
-    "count_cards_reject_rate_dict":        {"u001": 0.0},
+    "shared_devices_reject_rate_dict": {"d1": 0.0},
+    "shared_ips_reject_rate_dict": {"i1": 0.0},
+    "shared_cards_reject_rate_dict": {"c1": 0.0},
+    "count_devices_reject_rate_dict": {"u001": 0.0},
+    "count_ips_reject_rate_dict": {"u001": 0.0},
+    "count_cards_reject_rate_dict": {"u001": 0.0},
 }
 
 # A rejection-rate dict where every rate is maximum – forces a "Rejected" path.
 _HIGH_REJECTION_RATES_DICT = {
     "country_code_trans_reject_rate_dict": {"IE": 1.0, "DE": 1.0},
     "domain_email_trans_reject_rate_dict": {"gmail.com": 1.0},
-    "shared_devices_reject_rate_dict":     {"d1": 1.0},
-    "shared_ips_reject_rate_dict":         {"i1": 1.0},
-    "shared_cards_reject_rate_dict":       {"c1": 1.0},
-    "count_devices_reject_rate_dict":      {"u001": 1.0},
-    "count_ips_reject_rate_dict":          {"u001": 1.0},
-    "count_cards_reject_rate_dict":        {"u001": 1.0},
+    "shared_devices_reject_rate_dict": {"d1": 1.0},
+    "shared_ips_reject_rate_dict": {"i1": 1.0},
+    "shared_cards_reject_rate_dict": {"c1": 1.0},
+    "count_devices_reject_rate_dict": {"u001": 1.0},
+    "count_ips_reject_rate_dict": {"u001": 1.0},
+    "count_cards_reject_rate_dict": {"u001": 1.0},
 }
 
 # Canonical "card-present" row (all fields populated)
-_CARD_PRESENT_ROW = pd.Series({
-    "userid":                    "u001",
-    "card_hash":                 "c1",
-    "device_hash":               "d1",
-    "ip_hash":                   "i1",
-    "email_domain":              "gmail.com",
-    "registration_country_code": "IE",
-    "ip_country_code":           "IE",
-    "card_country_code":         "IE",
-})
+_CARD_PRESENT_ROW = pd.Series(
+    {
+        "userid": "u001",
+        "card_hash": "c1",
+        "device_hash": "d1",
+        "ip_hash": "i1",
+        "email_domain": "gmail.com",
+        "registration_country_code": "IE",
+        "ip_country_code": "IE",
+        "card_country_code": "IE",
+    }
+)
 
 # Canonical "card-absent" row (card_hash is NaN)
-_CARD_ABSENT_ROW = pd.Series({
-    "userid":                    "u001",
-    "card_hash":                 np.nan,
-    "device_hash":               "d1",
-    "ip_hash":                   "i1",
-    "email_domain":              "gmail.com",
-    "registration_country_code": "IE",
-    "ip_country_code":           "IE",
-    "card_country_code":         np.nan,
-})
+_CARD_ABSENT_ROW = pd.Series(
+    {
+        "userid": "u001",
+        "card_hash": np.nan,
+        "device_hash": "d1",
+        "ip_hash": "i1",
+        "email_domain": "gmail.com",
+        "registration_country_code": "IE",
+        "ip_country_code": "IE",
+        "card_country_code": np.nan,
+    }
+)
 
 _VALID_STATUSES = {"Successful", "Pending", "Rejected"}
-_VALID_ERROR_CODES = set(cons.data_model_rejection_codes_fraud.keys()) | \
-                     set(cons.data_model_rejection_codes_connection.keys()) | \
-                     set(cons.data_model_rejection_codes_user.keys()) | \
-                     set(cons.data_model_rejection_codes_funds.keys()) | \
-                     set(cons.data_model_rejection_codes_authentication.keys())
+_VALID_ERROR_CODES = (
+    set(cons.data_model_rejection_codes_fraud.keys())
+    | set(cons.data_model_rejection_codes_connection.keys())
+    | set(cons.data_model_rejection_codes_user.keys())
+    | set(cons.data_model_rejection_codes_funds.keys())
+    | set(cons.data_model_rejection_codes_authentication.keys())
+)
 
 
 class Test_gen_trans_status(unittest.TestCase):

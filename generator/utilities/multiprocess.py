@@ -1,14 +1,16 @@
 import os
 from multiprocessing import Pool
+from typing import Any
+
 from beartype import beartype
-from typing import List, Any
+
 
 @beartype
 def multiprocess(
     func,
-    args:List[tuple],
-    ncpu:int=None,
-    ) -> List[Any]:
+    args: list[tuple],
+    ncpu: int = None,
+) -> list[Any]:
     """
     Generates a dictionary of random dates for an input dictionary of idhashes counts by utilizing multiprocessing.
 

@@ -1,6 +1,6 @@
-import unittest
 import os
 import sys
+import unittest
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
@@ -23,15 +23,15 @@ class Test_ProgrammeParams(unittest.TestCase):
 
     def _make_params(self, **kwargs):
         """Convenience factory with sensible defaults."""
-        defaults = dict(
-            n_users=cons.unittest_n_users,
-            random_seed=cons.unittest_seed,
-            n_applications=cons.default_n_applications,
-            registration_start_date=cons.unittest_registration_start_date,
-            registration_end_date=cons.unittest_registration_end_date,
-            transaction_start_date=cons.unittest_transaction_start_date,
-            transaction_end_date=cons.unittest_transaction_end_date,
-        )
+        defaults = {
+            "n_users": cons.unittest_n_users,
+            "random_seed": cons.unittest_seed,
+            "n_applications": cons.default_n_applications,
+            "registration_start_date": cons.unittest_registration_start_date,
+            "registration_end_date": cons.unittest_registration_end_date,
+            "transaction_start_date": cons.unittest_transaction_start_date,
+            "transaction_end_date": cons.unittest_transaction_end_date,
+        }
         defaults.update(kwargs)
         return ProgrammeParams(**defaults)
 
@@ -101,10 +101,12 @@ class Test_ProgrammeParams(unittest.TestCase):
     def test_date_strings_stored_verbatim(self):
         """All four date strings are stored exactly as supplied."""
         p = self._make_params()
-        self.assertEqual(p.registration_start_date, cons.unittest_registration_start_date)
-        self.assertEqual(p.registration_end_date,   cons.unittest_registration_end_date)
-        self.assertEqual(p.transaction_start_date,  cons.unittest_transaction_start_date)
-        self.assertEqual(p.transaction_end_date,    cons.unittest_transaction_end_date)
+        self.assertEqual(
+            p.registration_start_date, cons.unittest_registration_start_date
+        )
+        self.assertEqual(p.registration_end_date, cons.unittest_registration_end_date)
+        self.assertEqual(p.transaction_start_date, cons.unittest_transaction_start_date)
+        self.assertEqual(p.transaction_end_date, cons.unittest_transaction_end_date)
 
     # ------------------------------------------------------------------
     # transaction_timescale computation

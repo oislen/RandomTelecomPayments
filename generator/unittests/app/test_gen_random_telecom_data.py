@@ -1,7 +1,7 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
 
 import numpy as np
 import pandas as pd
@@ -25,10 +25,17 @@ _result = gen_random_telecom_data(
     transaction_end_date=cons.unittest_transaction_end_date,
 )
 
-_EXPECTED_USER_COLS = set(cons.user_cols) - {"registration_country_code"} | {"registration_country_code_alpha"}
+_EXPECTED_USER_COLS = set(cons.user_cols) - {"registration_country_code"} | {
+    "registration_country_code_alpha"
+}
 _EXPECTED_TRANS_COLS = set(
-    cons.user_cols + cons.device_cols + cons.card_cols +
-    cons.ip_cols + cons.app_cols + cons.trans_cols + cons.itr_cols
+    cons.user_cols
+    + cons.device_cols
+    + cons.card_cols
+    + cons.ip_cols
+    + cons.app_cols
+    + cons.trans_cols
+    + cons.itr_cols
 )
 
 
@@ -107,7 +114,9 @@ class Test_gen_random_telecom_data(unittest.TestCase):
         """All non-null transaction_status values are within the valid set."""
         valid = set(cons.data_model_transaction_status.keys())
         actual = set(self.trans_data["transaction_status"].dropna().unique())
-        self.assertTrue(actual.issubset(valid), msg=f"Unexpected statuses: {actual - valid}")
+        self.assertTrue(
+            actual.issubset(valid), msg=f"Unexpected statuses: {actual - valid}"
+        )
 
     def test_trans_data_sorted_by_transaction_date(self):
         """trans_data is sorted ascending by transaction_date."""

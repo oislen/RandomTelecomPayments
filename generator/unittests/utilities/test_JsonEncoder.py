@@ -1,7 +1,7 @@
 import json
-import unittest
 import os
 import sys
+import unittest
 
 import numpy as np
 import pandas as pd
@@ -133,6 +133,7 @@ class Test_JsonEncoder(unittest.TestCase):
 
     def test_unsupported_type_raises(self):
         """Objects not handled by JsonEncoder raise TypeError."""
+
         class _Unsupported:
             pass
 

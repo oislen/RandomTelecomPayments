@@ -1,9 +1,9 @@
-import unittest
 import os
-import sys
-import numpy as np
-import pandas as pd
 import random
+import sys
+import unittest
+
+import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
@@ -30,15 +30,20 @@ class Test_round_trans_amount(unittest.TestCase):
         self.exp_amount = exp_amount
 
     def test_type(self):
-        self.assertEqual(type(self.obs_amount),type(self.exp_amount),)
+        self.assertEqual(
+            type(self.obs_amount),
+            type(self.exp_amount),
+        )
 
     def test_shape(self):
-        self.assertEqual(type(self.obs_amount.shape),type(self.exp_amount.shape),)
+        self.assertEqual(
+            type(self.obs_amount.shape),
+            type(self.exp_amount.shape),
+        )
 
     def test_object(self):
         self.assertTrue((self.obs_amount == self.exp_amount).all())
 
 
 if __name__ == "__main__":
-
     unittest.main()

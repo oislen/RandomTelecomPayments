@@ -1,31 +1,29 @@
 import cons
-from utilities.gen_idhash_cnt_dict import gen_idhash_cnt_dict
-from utilities.cnt2prop_dict import cnt2prop_dict
-from utilities.gen_country_codes_dict import gen_country_codes_dict
-from utilities.gen_shared_idhashes import gen_shared_idhashes
-
 import numpy as np
 from beartype import beartype
-from typing import List, Dict, Union
+from utilities.cnt2prop_dict import cnt2prop_dict
+from utilities.gen_country_codes_dict import gen_country_codes_dict
+from utilities.gen_idhash_cnt_dict import gen_idhash_cnt_dict
+from utilities.gen_shared_idhashes import gen_shared_idhashes
+
 
 class Card:
-    
     @beartype
     def __init__(
         self,
-        n_card_hashes:Union[int,np.int64],
-        fpath_countries_europe:str=cons.fpath_countries_europe,
-        ):
+        n_card_hashes: int | np.int64,
+        fpath_countries_europe: str = cons.fpath_countries_europe,
+    ):
         """
         The randomly generated card data model object.
-        
+
         Parameters
         ----------
         n_card_hashes : int
             The number of card hashes to generate.
         fpath_countries_europe : str
             The file path to the european countries reference file, default is cons.fpath_countries_europe.
-        
+
         Attributes
         ----------
         n_card_hashes : int
@@ -55,29 +53,40 @@ class Card:
         self.lam = cons.data_model_poisson_params["card"]["lambda"]
         self.power = cons.data_model_poisson_params["card"]["power"]
         self.prop_shared_card_hashes = cons.data_model_shared_entities_dict["card"]
-        self.card_hashes_cnts_dict = gen_idhash_cnt_dict(idhash_type="hash", n=self.n_card_hashes, lam=self.lam, power=self.power)
+        self.card_hashes_cnts_dict = gen_idhash_cnt_dict(
+            idhash_type="hash", n=self.n_card_hashes, lam=self.lam, power=self.power
+        )
         self.card_hashes = list(self.card_hashes_cnts_dict.keys())
-        self.card_hashes_props_dict = cnt2prop_dict(idhashes_cnts_dict=self.card_hashes_cnts_dict)
-        self.card_hashes_type_dict = self.gen_card_type(card_hashes=self.card_hashes, card_types_dict=self.card_types_dict)
-        self.card_hashes_country_code_dict = gen_country_codes_dict(idhashes=self.card_hashes, fpath_countries_europe=self.fpath_countries_europe)
-        self.card_shared_idhash_map_dict = gen_shared_idhashes(idhashes=self.card_hashes, prop_shared_idhashes=self.prop_shared_card_hashes)
-    
+        self.card_hashes_props_dict = cnt2prop_dict(
+            idhashes_cnts_dict=self.card_hashes_cnts_dict
+        )
+        self.card_hashes_type_dict = self.gen_card_type(
+            card_hashes=self.card_hashes, card_types_dict=self.card_types_dict
+        )
+        self.card_hashes_country_code_dict = gen_country_codes_dict(
+            idhashes=self.card_hashes,
+            fpath_countries_europe=self.fpath_countries_europe,
+        )
+        self.card_shared_idhash_map_dict = gen_shared_idhashes(
+            idhashes=self.card_hashes, prop_shared_idhashes=self.prop_shared_card_hashes
+        )
+
     @beartype
     def gen_card_type(
         self,
-        card_hashes:List[str],
-        card_types_dict:Dict[str, float],
-        ) -> Dict[str, str]:
+        card_hashes: list[str],
+        card_types_dict: dict[str, float],
+    ) -> dict[str, str]:
         """
         Generates a dictionary of random card types.
-        
+
         Parameters
         ----------
         card_hashes : List[str]
             The card hashes.
         card_types_dict : Dict[str, float]
             The population proportions of card types.
-        
+
         Returns
         -------
         Dict[str, str]
@@ -91,5 +100,5 @@ class Card:
             replace=True,
         )
         # return the card hashes and card types
-        card_hashes_type_dict = dict(zip(card_hashes, card_types))
+        card_hashes_type_dict = dict(zip(card_hashes, card_types, strict=False))
         return card_hashes_type_dict

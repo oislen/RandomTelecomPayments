@@ -1,7 +1,7 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
 
 import numpy as np
 import pandas as pd
@@ -16,23 +16,33 @@ from utilities.gen_trans_rejection_rates import gen_trans_rejection_rates
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
 
-_trans_data = pd.DataFrame({
-    "userid":       ["u001", "u001", "u002", "u002", "u003"],
-    "device_hash":  ["d1",   "d1",   "d2",   "d3",   "d2"],
-    "ip_hash":      ["i1",   "i2",   "i1",   "i3",   "i3"],
-    "card_hash":    ["c1",   "c2",   "c2",   None,   "c3"],
-    "email_domain": ["gmail.com", "gmail.com", "yahoo.com", "yahoo.com", "hotmail.com"],
-    "registration_country_code": ["IE", "IE", "DE", "DE", "FR"],
-    "ip_country_code":           ["IE", "IE", "DE", "DE", "FR"],
-    "card_country_code":         ["IE", "IE", "DE",  None, "FR"],
-})
+_trans_data = pd.DataFrame(
+    {
+        "userid": ["u001", "u001", "u002", "u002", "u003"],
+        "device_hash": ["d1", "d1", "d2", "d3", "d2"],
+        "ip_hash": ["i1", "i2", "i1", "i3", "i3"],
+        "card_hash": ["c1", "c2", "c2", None, "c3"],
+        "email_domain": [
+            "gmail.com",
+            "gmail.com",
+            "yahoo.com",
+            "yahoo.com",
+            "hotmail.com",
+        ],
+        "registration_country_code": ["IE", "IE", "DE", "DE", "FR"],
+        "ip_country_code": ["IE", "IE", "DE", "DE", "FR"],
+        "card_country_code": ["IE", "IE", "DE", None, "FR"],
+    }
+)
 
-fpath_countries_europe  = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
-fpath_countrycrimeindex = '.' + cons.fpath_countrycrimeindex.split(cons.fpath_repo_dir)[1]
+fpath_countries_europe = "." + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+fpath_countrycrimeindex = (
+    "." + cons.fpath_countrycrimeindex.split(cons.fpath_repo_dir)[1]
+)
 # gen_trans_rejection_rates reads 'email_domains' and 'probability' columns,
 # which are present in llama_email_domains.csv, not in email-domains.csv.
 # Pass the file that matches the column names the function actually uses.
-fpath_email_domain      = '.' + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
+fpath_email_domain = "." + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
 
 obs_rejection_rates_dict = gen_trans_rejection_rates(
     trans_data=_trans_data,
@@ -95,7 +105,8 @@ class Test_gen_trans_rejection_rates(unittest.TestCase):
         for outer_key, inner_dict in self.result.items():
             for inner_key, rate in inner_dict.items():
                 self.assertIsInstance(
-                    rate, float,
+                    rate,
+                    float,
                     msg=f"Non-float at result['{outer_key}']['{inner_key}'] = {rate!r}",
                 )
 
@@ -169,15 +180,21 @@ class Test_gen_trans_rejection_rates(unittest.TestCase):
 
     def test_shared_rates_non_negative(self):
         """All entity sharing rejection rates are >= 0."""
-        for key in ("shared_devices_reject_rate_dict", "shared_ips_reject_rate_dict",
-                    "shared_cards_reject_rate_dict"):
+        for key in (
+            "shared_devices_reject_rate_dict",
+            "shared_ips_reject_rate_dict",
+            "shared_cards_reject_rate_dict",
+        ):
             for rate in self.result[key].values():
                 self.assertGreaterEqual(rate, 0.0, msg=f"Negative rate in {key}")
 
     def test_count_rates_non_negative(self):
         """All entity count rejection rates are >= 0."""
-        for key in ("count_devices_reject_rate_dict", "count_ips_reject_rate_dict",
-                    "count_cards_reject_rate_dict"):
+        for key in (
+            "count_devices_reject_rate_dict",
+            "count_ips_reject_rate_dict",
+            "count_cards_reject_rate_dict",
+        ):
             for rate in self.result[key].values():
                 self.assertGreaterEqual(rate, 0.0, msg=f"Negative rate in {key}")
 

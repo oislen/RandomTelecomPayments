@@ -1,6 +1,6 @@
-import unittest
 import os
 import sys
+import unittest
 from unittest.mock import patch
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
@@ -72,12 +72,18 @@ class Test_commandline_interface(unittest.TestCase):
 
     def test_date_overrides(self):
         """Date string flags are stored verbatim in the returned dict."""
-        result = self._call_with_args([
-            "--registration_start_date", "2021-01-01",
-            "--registration_end_date", "2021-12-31",
-            "--transaction_start_date", "2022-01-01",
-            "--transaction_end_date", "2022-12-31",
-        ])
+        result = self._call_with_args(
+            [
+                "--registration_start_date",
+                "2021-01-01",
+                "--registration_end_date",
+                "2021-12-31",
+                "--transaction_start_date",
+                "2022-01-01",
+                "--transaction_end_date",
+                "2022-12-31",
+            ]
+        )
         self.assertEqual(result["registration_start_date"], "2021-01-01")
         self.assertEqual(result["registration_end_date"], "2021-12-31")
         self.assertEqual(result["transaction_start_date"], "2022-01-01")

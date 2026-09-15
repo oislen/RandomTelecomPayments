@@ -1,7 +1,7 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
 
 import numpy as np
 import pandas as pd
@@ -9,8 +9,8 @@ import pandas as pd
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from app.ProgrammeParams import ProgrammeParams
 from app.gen_user_data import gen_user_data
+from app.ProgrammeParams import ProgrammeParams
 from objects.Application import Application
 from objects.Card import Card
 from objects.Device import Device
@@ -26,11 +26,13 @@ from utilities.gen_random_entity_counts import gen_random_entity_counts
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
 
-_fpath_first_names       = '.' + cons.fpath_llama_first_names.split(cons.fpath_repo_dir)[1]
-_fpath_last_names        = '.' + cons.fpath_llama_last_names.split(cons.fpath_repo_dir)[1]
-_fpath_countries_europe  = '.' + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
-_fpath_email_domain      = '.' + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
-_fpath_smartphones       = '.' + cons.fpath_smartphones.split(cons.fpath_repo_dir)[1]
+_fpath_first_names = "." + cons.fpath_llama_first_names.split(cons.fpath_repo_dir)[1]
+_fpath_last_names = "." + cons.fpath_llama_last_names.split(cons.fpath_repo_dir)[1]
+_fpath_countries_europe = (
+    "." + cons.fpath_countries_europe.split(cons.fpath_repo_dir)[1]
+)
+_fpath_email_domain = "." + cons.fpath_llama_email_domains.split(cons.fpath_repo_dir)[1]
+_fpath_smartphones = "." + cons.fpath_smartphones.split(cons.fpath_repo_dir)[1]
 
 _params = ProgrammeParams(
     n_users=cons.unittest_n_users,
@@ -50,10 +52,21 @@ _user_obj = User(
     fpath_countries_europe=_fpath_countries_europe,
     fpath_email_domain=_fpath_email_domain,
 )
-_entity_counts = gen_random_entity_counts(user_obj=_user_obj, transaction_timescale=_params.transaction_timescale)
-_device_obj     = Device(n_device_hashes=_entity_counts["n_devices"].sum(), fpath_smartphones=_fpath_smartphones)
-_card_obj       = Card(n_card_hashes=_entity_counts["n_cards"].sum(), fpath_countries_europe=_fpath_countries_europe)
-_ip_obj         = Ip(n_ip_hashes=_entity_counts["n_ips"].sum(), fpath_countries_europe=_fpath_countries_europe)
+_entity_counts = gen_random_entity_counts(
+    user_obj=_user_obj, transaction_timescale=_params.transaction_timescale
+)
+_device_obj = Device(
+    n_device_hashes=_entity_counts["n_devices"].sum(),
+    fpath_smartphones=_fpath_smartphones,
+)
+_card_obj = Card(
+    n_card_hashes=_entity_counts["n_cards"].sum(),
+    fpath_countries_europe=_fpath_countries_europe,
+)
+_ip_obj = Ip(
+    n_ip_hashes=_entity_counts["n_ips"].sum(),
+    fpath_countries_europe=_fpath_countries_europe,
+)
 _transaction_obj = Transaction(
     n_transaction_hashes=_entity_counts["n_transactions"].sum(),
     start_date=_params.transaction_start_date,
@@ -72,12 +85,27 @@ _user_data = gen_user_data(
 )
 
 _EXPECTED_COLS = {
-    "uid", "userid", "first_name", "last_name",
-    "registration_date", "registration_country_code_alpha", "email_domain",
-    "device_hash", "card_hash", "ip_hash", "transaction_hash",
-    "application_hash", "itr_hash",
+    "uid",
+    "userid",
+    "first_name",
+    "last_name",
+    "registration_date",
+    "registration_country_code_alpha",
+    "email_domain",
+    "device_hash",
+    "card_hash",
+    "ip_hash",
+    "transaction_hash",
+    "application_hash",
+    "itr_hash",
 }
-_LIST_COLS = ["device_hash", "card_hash", "ip_hash", "transaction_hash", "application_hash"]
+_LIST_COLS = [
+    "device_hash",
+    "card_hash",
+    "ip_hash",
+    "transaction_hash",
+    "application_hash",
+]
 
 
 class Test_gen_user_data(unittest.TestCase):
@@ -118,8 +146,16 @@ class Test_gen_user_data(unittest.TestCase):
 
     def test_count_columns_dropped(self):
         """Intermediate n_* count columns are removed from the output."""
-        for col in ["n_devices", "n_cards", "n_ips", "n_transactions", "n_applications"]:
-            self.assertNotIn(col, self.user_data.columns, msg=f"Count column not dropped: {col}")
+        for col in [
+            "n_devices",
+            "n_cards",
+            "n_ips",
+            "n_transactions",
+            "n_applications",
+        ]:
+            self.assertNotIn(
+                col, self.user_data.columns, msg=f"Count column not dropped: {col}"
+            )
 
     # ------------------------------------------------------------------
     # Key columns – nullability
@@ -169,7 +205,9 @@ class Test_gen_user_data(unittest.TestCase):
         """Entity-hash columns contain Python lists, not scalars."""
         for col in _LIST_COLS:
             sample = self.user_data[col].dropna().iloc[0]
-            self.assertIsInstance(sample, list, msg=f"Column '{col}' is not list-valued")
+            self.assertIsInstance(
+                sample, list, msg=f"Column '{col}' is not list-valued"
+            )
 
     # ------------------------------------------------------------------
     # registration_date is within the configured window
@@ -178,7 +216,7 @@ class Test_gen_user_data(unittest.TestCase):
     def test_registration_dates_within_range(self):
         """All registration_date values fall within the registration date window."""
         start = pd.Timestamp(cons.unittest_registration_start_date)
-        end   = pd.Timestamp(cons.unittest_registration_end_date)
+        end = pd.Timestamp(cons.unittest_registration_end_date)
         dates = pd.to_datetime(self.user_data["registration_date"])
         self.assertTrue((dates >= start).all())
         self.assertTrue((dates <= end).all())

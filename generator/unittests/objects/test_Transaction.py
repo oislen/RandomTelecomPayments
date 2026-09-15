@@ -1,7 +1,8 @@
-import unittest
 import os
-import sys
 import random
+import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
@@ -84,42 +85,113 @@ class Test_Transaction(unittest.TestCase):
         self.obs_lam = obs_lam
 
     def test_type(self):
-        self.assertEqual(type(self.obs_transaction_hashes_cnts_dict),type(self.exp_transaction_hashes_cnts_dict),)
-        self.assertEqual(type(self.obs_transaction_hashes_props_dict),type(self.exp_transaction_hashes_props_dict),)
-        self.assertEqual(type(self.obs_transaction_hashes_status_dict),type(self.exp_transaction_hashes_status_dict),)
-        self.assertEqual(type(self.obs_transaction_hashes_amounts_dict),type(self.exp_transaction_hashes_amounts_dict),)
-        self.assertEqual(type(self.obs_transaction_status), type(self.exp_transaction_status))
+        self.assertEqual(
+            type(self.obs_transaction_hashes_cnts_dict),
+            type(self.exp_transaction_hashes_cnts_dict),
+        )
+        self.assertEqual(
+            type(self.obs_transaction_hashes_props_dict),
+            type(self.exp_transaction_hashes_props_dict),
+        )
+        self.assertEqual(
+            type(self.obs_transaction_hashes_status_dict),
+            type(self.exp_transaction_hashes_status_dict),
+        )
+        self.assertEqual(
+            type(self.obs_transaction_hashes_amounts_dict),
+            type(self.exp_transaction_hashes_amounts_dict),
+        )
+        self.assertEqual(
+            type(self.obs_transaction_status), type(self.exp_transaction_status)
+        )
         self.assertEqual(type(self.obs_start_date), type(self.exp_start_date))
         self.assertEqual(type(self.obs_end_date), type(self.exp_end_date))
-        self.assertEqual(type(self.obs_n_transaction_hashes), type(self.exp_n_transaction_hashes))
+        self.assertEqual(
+            type(self.obs_n_transaction_hashes), type(self.exp_n_transaction_hashes)
+        )
         self.assertEqual(type(self.obs_lam), type(self.exp_lam))
 
     def test_len(self):
-        self.assertEqual(len(self.obs_transaction_hashes_cnts_dict),len(self.exp_transaction_hashes_cnts_dict),)
-        self.assertEqual(len(self.obs_transaction_hashes_props_dict),len(self.exp_transaction_hashes_props_dict),)
-        self.assertEqual(len(self.obs_transaction_hashes_status_dict),len(self.exp_transaction_hashes_status_dict),)
-        self.assertEqual(len(self.obs_transaction_hashes_amounts_dict),len(self.exp_transaction_hashes_amounts_dict),)
-        self.assertEqual(len(self.obs_transaction_status), len(self.exp_transaction_status))
+        self.assertEqual(
+            len(self.obs_transaction_hashes_cnts_dict),
+            len(self.exp_transaction_hashes_cnts_dict),
+        )
+        self.assertEqual(
+            len(self.obs_transaction_hashes_props_dict),
+            len(self.exp_transaction_hashes_props_dict),
+        )
+        self.assertEqual(
+            len(self.obs_transaction_hashes_status_dict),
+            len(self.exp_transaction_hashes_status_dict),
+        )
+        self.assertEqual(
+            len(self.obs_transaction_hashes_amounts_dict),
+            len(self.exp_transaction_hashes_amounts_dict),
+        )
+        self.assertEqual(
+            len(self.obs_transaction_status), len(self.exp_transaction_status)
+        )
 
     def test_keys(self):
-        self.assertEqual(list(self.obs_transaction_hashes_cnts_dict.keys()),list(self.exp_transaction_hashes_cnts_dict.keys()),)
-        self.assertEqual(list(self.obs_transaction_hashes_props_dict.keys()),list(self.exp_transaction_hashes_props_dict.keys()),)
-        self.assertEqual(list(self.obs_transaction_hashes_status_dict.keys()),list(self.exp_transaction_hashes_status_dict.keys()),)
-        self.assertEqual(list(self.obs_transaction_status.keys()),list(self.exp_transaction_status.keys()),)
-        self.assertEqual(list(self.obs_transaction_hashes_amounts_dict.keys()),list(self.exp_transaction_hashes_amounts_dict.keys()),)
+        self.assertEqual(
+            list(self.obs_transaction_hashes_cnts_dict.keys()),
+            list(self.exp_transaction_hashes_cnts_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_transaction_hashes_props_dict.keys()),
+            list(self.exp_transaction_hashes_props_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_transaction_hashes_status_dict.keys()),
+            list(self.exp_transaction_hashes_status_dict.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_transaction_status.keys()),
+            list(self.exp_transaction_status.keys()),
+        )
+        self.assertEqual(
+            list(self.obs_transaction_hashes_amounts_dict.keys()),
+            list(self.exp_transaction_hashes_amounts_dict.keys()),
+        )
 
     def test_values(self):
-        self.assertEqual(list(self.obs_transaction_hashes_cnts_dict.values()),list(self.exp_transaction_hashes_cnts_dict.values()),)
-        self.assertEqual(list(self.obs_transaction_hashes_props_dict.values()),list(self.exp_transaction_hashes_props_dict.values()),)
-        self.assertEqual(list(self.obs_transaction_hashes_status_dict.values()),list(self.exp_transaction_hashes_status_dict.values()),)
-        self.assertEqual(list(self.obs_transaction_status.values()),list(self.exp_transaction_status.values()),)
-        self.assertEqual(list(self.obs_transaction_hashes_amounts_dict.values()),list(self.exp_transaction_hashes_amounts_dict.values()),)
+        self.assertEqual(
+            list(self.obs_transaction_hashes_cnts_dict.values()),
+            list(self.exp_transaction_hashes_cnts_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_transaction_hashes_props_dict.values()),
+            list(self.exp_transaction_hashes_props_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_transaction_hashes_status_dict.values()),
+            list(self.exp_transaction_hashes_status_dict.values()),
+        )
+        self.assertEqual(
+            list(self.obs_transaction_status.values()),
+            list(self.exp_transaction_status.values()),
+        )
+        self.assertEqual(
+            list(self.obs_transaction_hashes_amounts_dict.values()),
+            list(self.exp_transaction_hashes_amounts_dict.values()),
+        )
 
     def test_object(self):
-        self.assertEqual(self.obs_transaction_hashes_cnts_dict, self.exp_transaction_hashes_cnts_dict)
-        self.assertEqual(self.obs_transaction_hashes_props_dict,self.exp_transaction_hashes_props_dict,)
-        self.assertEqual(self.obs_transaction_hashes_status_dict,self.exp_transaction_hashes_status_dict,)
-        self.assertEqual(self.obs_transaction_hashes_amounts_dict,self.exp_transaction_hashes_amounts_dict,)
+        self.assertEqual(
+            self.obs_transaction_hashes_cnts_dict, self.exp_transaction_hashes_cnts_dict
+        )
+        self.assertEqual(
+            self.obs_transaction_hashes_props_dict,
+            self.exp_transaction_hashes_props_dict,
+        )
+        self.assertEqual(
+            self.obs_transaction_hashes_status_dict,
+            self.exp_transaction_hashes_status_dict,
+        )
+        self.assertEqual(
+            self.obs_transaction_hashes_amounts_dict,
+            self.exp_transaction_hashes_amounts_dict,
+        )
         self.assertEqual(self.obs_transaction_status, self.exp_transaction_status)
         self.assertEqual(self.obs_start_date, self.exp_start_date)
         self.assertEqual(self.obs_end_date, self.exp_end_date)

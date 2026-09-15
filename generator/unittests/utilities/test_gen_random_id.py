@@ -1,6 +1,7 @@
-import unittest
 import os
 import sys
+import unittest
+
 import numpy as np
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
