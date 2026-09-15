@@ -19,43 +19,7 @@ jobs:
         with:
           version: "0.15.15"
 
-  release-please:
-    needs: ruff-linter
-    runs-on: ubuntu-latest
-    outputs:
-      release_created: ${{ steps.release.outputs.release_created }}
-      tag_name: ${{ steps.release.outputs.tag_name }}
-    steps:
-      - uses: google-github-actions/release-please-action@e4dc86ba9405554aeba3c6bb2d169500e7d3b4ee
-        id: release
-        with:
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
-          release-type: python
-
-  trivy-fs-scan:
-    needs: release-please
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-    - name: Run Trivy to show all vulnerabilities
-      uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
-      with:
-        scan-type: 'fs'
-        scan-ref: '.'
-        severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
-        exit-code: '0'
-    - name: Fail build on High or Critical vulnerabilities
-      uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
-      with:
-        scan-type: 'fs'
-        scan-ref: '.'
-        severity: 'HIGH,CRITICAL'
-        exit-code: '1'
-
   python-unittests:
-    needs: release-tag
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -80,8 +44,42 @@ jobs:
         uv run python -m unittest discover ./generator/unittests/objects
         uv run python -m unittest discover ./generator/unittests/app
 
+  trivy-fs-scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+    - name: Run Trivy to show all vulnerabilities
+      uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
+      with:
+        scan-type: 'fs'
+        scan-ref: '.'
+        severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
+        exit-code: '0'
+    - name: Fail build on High or Critical vulnerabilities
+      uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
+      with:
+        scan-type: 'fs'
+        scan-ref: '.'
+        severity: 'HIGH,CRITICAL'
+        exit-code: '1'
+
+  release-please:
+    needs: [trivy-fs-scan, python-unittests, ruff-linter]
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: google-github-actions/release-please-action@e4dc86ba9405554aeba3c6bb2d169500e7d3b4ee
+        id: release
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+          release-type: python
+
   dockerhub-image-push:
-    needs: [trivy-fs-scan, python-unittests]
+    needs: release-please
     runs-on: ubuntu-latest
     steps:
       - name: Login to Docker Hub
