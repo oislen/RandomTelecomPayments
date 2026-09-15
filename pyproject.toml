@@ -33,6 +33,8 @@ dependencies = [
     "urllib3==2.7.0",
 ]
 
+[tool.uv]
+exclude-newer = "7 days"
 
 [tool.ruff]
 target-version = "py312"
