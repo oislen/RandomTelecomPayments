@@ -9,7 +9,7 @@ import pandas as pd
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_trans_rejection_rates import gen_trans_rejection_rates
+from utilities import gen_trans_rejection_rates
 
 # Build a minimal but realistic transaction DataFrame with the columns
 # that gen_trans_rejection_rates reads.

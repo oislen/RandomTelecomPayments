@@ -8,7 +8,7 @@ import numpy as np
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from objects.Ip import Ip
+from objects import Ip
 
 exp_ip_hashes_cnts_dict = {
     "63cea7c46926aa74": 2,

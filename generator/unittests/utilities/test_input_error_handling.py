@@ -4,7 +4,7 @@ import unittest
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
-from utilities.input_error_handling import input_error_handling
+from utilities import input_error_handling
 
 
 class Test_input_error_handling(unittest.TestCase):

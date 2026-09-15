@@ -9,7 +9,7 @@ import pandas as pd
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_trans_status import gen_trans_status
+from utilities import gen_trans_status
 
 # ---------------------------------------------------------------------------
 # Shared rejection-rate fixtures

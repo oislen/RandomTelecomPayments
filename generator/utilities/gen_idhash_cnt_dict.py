@@ -1,8 +1,8 @@
 import numpy as np
 from beartype import beartype
-from utilities.gen_random_hash import gen_random_hash
-from utilities.gen_random_id import gen_random_id
-from utilities.gen_random_poisson_power import gen_random_poisson_power
+from .gen_random_hash import gen_random_hash
+from .gen_random_id import gen_random_id
+from .gen_random_poisson_power import gen_random_poisson_power
 
 
 @beartype

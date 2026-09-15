@@ -9,7 +9,7 @@ import pandas as pd
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.align_country_codes import align_country_codes
+from utilities import align_country_codes
 
 random.seed(cons.unittest_seed)
 

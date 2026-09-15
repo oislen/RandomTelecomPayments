@@ -9,7 +9,7 @@ import pandas as pd
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from objects.User import User
+from objects import User
 from utilities.gen_random_entity_counts import gen_random_entity_counts
 
 exp_start_date = cons.unittest_registration_start_date

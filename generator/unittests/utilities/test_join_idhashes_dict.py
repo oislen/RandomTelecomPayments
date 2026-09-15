@@ -6,7 +6,7 @@ import pandas as pd
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
-from utilities.join_idhashes_dict import join_idhashes_dict
+from utilities import join_idhashes_dict
 
 
 class Test_join_idhashes_dict(unittest.TestCase):

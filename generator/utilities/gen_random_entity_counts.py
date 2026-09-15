@@ -2,8 +2,8 @@ import cons
 import numpy as np
 import pandas as pd
 from beartype import beartype
-from objects.User import User
-from utilities.gen_random_poisson_power import gen_random_poisson_power
+from objects import User
+from .gen_random_poisson_power import gen_random_poisson_power
 
 
 @beartype

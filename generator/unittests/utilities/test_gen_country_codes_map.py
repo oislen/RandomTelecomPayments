@@ -7,7 +7,7 @@ import numpy as np
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_country_codes_map import gen_country_codes_map
+from utilities import gen_country_codes_map
 
 np.random.seed(cons.unittest_seed)
 

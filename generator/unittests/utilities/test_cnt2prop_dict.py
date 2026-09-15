@@ -4,7 +4,7 @@ import unittest
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
-from utilities.cnt2prop_dict import cnt2prop_dict
+from utilities import cnt2prop_dict
 
 
 class Test_cnt2prop_dict(unittest.TestCase):

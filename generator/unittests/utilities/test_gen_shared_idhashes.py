@@ -8,8 +8,7 @@ import numpy as np
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_idhash_cnt_dict import gen_idhash_cnt_dict
-from utilities.gen_shared_idhashes import gen_shared_idhashes
+from utilities import gen_idhash_cnt_dict, gen_shared_idhashes
 
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)

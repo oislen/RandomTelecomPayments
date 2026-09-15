@@ -7,7 +7,7 @@ import numpy as np
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_random_id import gen_random_id
+from utilities import gen_random_id
 
 np.random.seed(cons.unittest_seed)
 

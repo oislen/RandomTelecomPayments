@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
-from utilities.commandline_interface import commandline_interface
+from utilities import commandline_interface
 
 
 class Test_commandline_interface(unittest.TestCase):

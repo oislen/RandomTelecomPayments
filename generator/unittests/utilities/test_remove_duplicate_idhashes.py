@@ -9,7 +9,7 @@ import pandas as pd
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.remove_duplicate_idhashes import remove_duplicate_idhashes
+from utilities import remove_duplicate_idhashes
 
 random.seed(cons.unittest_seed)
 np.random.seed(seed=cons.unittest_seed)

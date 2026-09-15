@@ -13,9 +13,8 @@ import cons
 random.seed(cons.unittest_seed)
 np.random.seed(cons.unittest_seed)
 
-from objects.Device import Device
-from objects.User import User
-from utilities.gen_obj_idhash_series import gen_obj_idhash_series
+from objects import Device, User
+from utilities import gen_obj_idhash_series
 from utilities.gen_random_entity_counts import gen_random_entity_counts
 
 start_date = cons.unittest_registration_start_date

@@ -5,7 +5,7 @@ import unittest
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from app.ProgrammeParams import ProgrammeParams
+from app import ProgrammeParams
 
 
 class Test_ProgrammeParams(unittest.TestCase):

@@ -4,7 +4,7 @@ from typing import Annotated
 import cons
 from fastapi import FastAPI, Query
 from main import main
-from utilities.JsonEncoder import JsonEncoder as JsonEncoder
+from utilities import JsonEncoder as JsonEncoder
 
 tags_metadata = [
     {

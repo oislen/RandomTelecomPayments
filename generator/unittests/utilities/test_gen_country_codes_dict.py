@@ -7,7 +7,7 @@ import numpy as np
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_country_codes_dict import gen_country_codes_dict
+from utilities import gen_country_codes_dict
 
 np.random.seed(cons.unittest_seed)
 

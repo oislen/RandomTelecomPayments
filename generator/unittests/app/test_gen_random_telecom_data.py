@@ -9,7 +9,7 @@ import pandas as pd
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from app.gen_random_telecom_data import gen_random_telecom_data
+from app import gen_random_telecom_data
 
 # Run once at module load with a fixed seed so the test is deterministic.
 random.seed(cons.unittest_seed)

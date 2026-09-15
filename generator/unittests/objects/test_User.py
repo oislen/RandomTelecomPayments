@@ -8,7 +8,7 @@ import numpy as np
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from objects.User import User
+from objects import User
 
 exp_user_ids_cnts_dict = {
     "6374692674377254": 20,

@@ -4,17 +4,14 @@ import cons
 import numpy as np
 import pandas as pd
 from beartype import beartype
-from objects.Application import Application
-from objects.Card import Card
-from objects.Device import Device
-from objects.Ip import Ip
-from objects.Transaction import Transaction
-from objects.User import User
-from utilities.align_country_codes import align_country_codes
-from utilities.gen_country_codes_map import gen_country_codes_map
-from utilities.gen_trans_rejection_rates import gen_trans_rejection_rates
-from utilities.gen_trans_status import gen_trans_status
-from utilities.join_idhashes_dict import join_idhashes_dict
+from objects import Application, Card, Device, Ip, Transaction, User
+from utilities import (
+    align_country_codes,
+    gen_country_codes_map,
+    gen_trans_rejection_rates,
+    gen_trans_status,
+    join_idhashes_dict,
+)
 
 
 @beartype

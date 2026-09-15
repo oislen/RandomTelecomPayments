@@ -8,7 +8,7 @@ import numpy as np
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from objects.Transaction import Transaction
+from objects import Transaction
 
 exp_transaction_hashes_cnts_dict = {
     "63cea7c46926aa74": 10,

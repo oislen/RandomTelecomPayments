@@ -7,7 +7,7 @@ import numpy as np
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.gen_random_poisson_power import gen_random_poisson_power
+from utilities import gen_random_poisson_power
 
 np.random.seed(cons.unittest_seed)
 

@@ -9,15 +9,8 @@ import pandas as pd
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from app.gen_trans_data import gen_trans_data
-from app.gen_user_data import gen_user_data
-from app.ProgrammeParams import ProgrammeParams
-from objects.Application import Application
-from objects.Card import Card
-from objects.Device import Device
-from objects.Ip import Ip
-from objects.Transaction import Transaction
-from objects.User import User
+from app import gen_trans_data, gen_user_data, ProgrammeParams
+from objects import Application, Card, Device, Ip, Transaction, User
 from utilities.gen_random_entity_counts import gen_random_entity_counts
 
 # initalise programme parameters

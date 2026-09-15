@@ -8,7 +8,7 @@ import pandas as pd
 
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
-from utilities.JsonEncoder import JsonEncoder
+from utilities import JsonEncoder
 
 
 class Test_JsonEncoder(unittest.TestCase):

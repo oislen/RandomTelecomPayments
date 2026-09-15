@@ -6,7 +6,6 @@ import argparse
 import json
 import logging
 import os
-import sys
 import time
 
 import boto3
@@ -15,10 +14,8 @@ import pandas as pd
 import unidecode
 from botocore.config import Config
 
-sys.path.append("E:\\GitHub\\RandomTelecomPayments\\generator")
-
 import cons
-from utilities.Bedrock import Bedrock
+from utilities import Bedrock
 
 system_name_prompt = """# Task
 

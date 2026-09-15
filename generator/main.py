@@ -9,10 +9,8 @@ sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
 import qa
-from app.gen_random_telecom_data import gen_random_telecom_data
-from utilities.commandline_interface import commandline_interface
-from utilities.input_error_handling import input_error_handling
-from utilities.multiprocess import multiprocess
+from app import gen_random_telecom_data
+from utilities import commandline_interface, input_error_handling, multiprocess
 
 
 def main(input_params_dict: dict):

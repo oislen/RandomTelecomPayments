@@ -1,10 +1,7 @@
 import cons
 import numpy as np
 from beartype import beartype
-from utilities.cnt2prop_dict import cnt2prop_dict
-from utilities.gen_country_codes_dict import gen_country_codes_dict
-from utilities.gen_idhash_cnt_dict import gen_idhash_cnt_dict
-from utilities.gen_shared_idhashes import gen_shared_idhashes
+from utilities import cnt2prop_dict, gen_country_codes_dict, gen_idhash_cnt_dict, gen_shared_idhashes
 
 
 class Card:

@@ -8,7 +8,7 @@ import numpy as np
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from utilities.round_trans_amount import round_trans_amount
+from utilities import round_trans_amount
 
 random.seed(cons.unittest_seed)
 np.random.seed(seed=cons.unittest_seed)
