@@ -1,5 +1,5 @@
 # get base image
-FROM python:3.12-slim@sha256:d8d180357dcaec499f108ee47742b076a52e9885830389d15acc9a58a283ac24
+FROM python:3.12-slim@sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79
 
 # set environment variables
 ENV user=user
@@ -23,7 +23,7 @@ COPY . /home/${user}/RandomTelecomPayments
 WORKDIR /home/${user}/RandomTelecomPayments
 
 # install required python packages
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv@sha256:68224c7eb575bc13e4723f8831331db68555125fac3939fdde78cdb6000667ad /uv /uvx /bin/
 RUN uv sync
 
 EXPOSE 8000
