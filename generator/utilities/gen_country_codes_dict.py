@@ -4,6 +4,7 @@ import cons
 import numpy as np
 import pandas as pd
 from beartype import beartype
+
 from .cnt2prop_dict import cnt2prop_dict
 
 

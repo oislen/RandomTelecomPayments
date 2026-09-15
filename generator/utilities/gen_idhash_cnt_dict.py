@@ -1,5 +1,6 @@
 import numpy as np
 from beartype import beartype
+
 from .gen_random_hash import gen_random_hash
 from .gen_random_id import gen_random_id
 from .gen_random_poisson_power import gen_random_poisson_power

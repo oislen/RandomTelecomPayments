@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from beartype import beartype
 from objects import User
+
 from .gen_random_poisson_power import gen_random_poisson_power
 
 

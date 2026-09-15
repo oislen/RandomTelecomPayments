@@ -9,12 +9,11 @@ import os
 import time
 
 import boto3
+import cons
 import numpy as np
 import pandas as pd
 import unidecode
 from botocore.config import Config
-
-import cons
 from utilities import Bedrock
 
 system_name_prompt = """# Task

@@ -9,7 +9,7 @@ import pandas as pd
 sys.path.append(os.path.join(os.getcwd(), "generator"))
 
 import cons
-from app import gen_user_data, ProgrammeParams
+from app import ProgrammeParams, gen_user_data
 from objects import Application, Card, Device, Ip, Transaction, User
 from utilities.gen_random_entity_counts import gen_random_entity_counts
 

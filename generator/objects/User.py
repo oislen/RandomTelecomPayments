@@ -1,7 +1,12 @@
 import cons
 import pandas as pd
 from beartype import beartype
-from utilities import cnt2prop_dict, gen_country_codes_dict, gen_dates_dict, gen_idhash_cnt_dict
+from utilities import (
+    cnt2prop_dict,
+    gen_country_codes_dict,
+    gen_dates_dict,
+    gen_idhash_cnt_dict,
+)
 
 
 class User:
