@@ -40,5 +40,5 @@
       }
     }
   },
-  "postCreateCommand": "uv tool install ruff"
+  "postCreateCommand": "uv tool install ruff && git config core.hooksPath .githooks"
 }
