@@ -42,7 +42,7 @@ exp_random_duplicate_idhashes = pd.DataFrame.from_dict(
 )
 
 
-class Test_remove_duplicate_idhashes(unittest.TestCase):
+class TestRemoveDuplicateIdhashes(unittest.TestCase):
     """
     Unit tests for the remove_duplicate_idhashes utility function.
 

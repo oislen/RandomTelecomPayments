@@ -67,7 +67,7 @@ obs_country_codes_map = gen_country_codes_map(
 )
 
 
-class Test_gen_country_codes_map(unittest.TestCase):
+class TestGenCountryCodesMap(unittest.TestCase):
     """
     Unit tests for the gen_country_codes_map utility function.
 

@@ -69,7 +69,7 @@ obs_data_df = input_data_df.apply(
 )
 
 
-class Test_align_country_codes(unittest.TestCase):
+class TestAlignCountryCodes(unittest.TestCase):
     """
     Unit tests for the align_country_codes utility function.
 

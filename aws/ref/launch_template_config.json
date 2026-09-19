@@ -1,6 +1,6 @@
 {
     "DryRun": false,
-    "LaunchTemplateName": "randomtelecompayments",
+    "launch_template_name": "randomtelecompayments",
     "VersionDescription": "Initial version",
     "LaunchTemplateData": {
         "BlockDeviceMappings": [

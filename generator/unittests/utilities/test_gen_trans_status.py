@@ -78,7 +78,7 @@ _VALID_ERROR_CODES = (
 )
 
 
-class Test_gen_trans_status(unittest.TestCase):
+class TestGenTransStatus(unittest.TestCase):
     """
     Unit tests for the gen_trans_status utility function.
 

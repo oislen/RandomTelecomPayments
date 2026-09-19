@@ -52,7 +52,7 @@ obs_application_hashes_payment_channel_dict = (
 obs_payment_channels = application_object.payment_channels
 
 
-class Test_Application(unittest.TestCase):
+class TestApplication(unittest.TestCase):
     """
     Unit tests for the Application data-model object.
 

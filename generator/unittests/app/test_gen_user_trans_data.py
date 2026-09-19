@@ -109,7 +109,7 @@ exp_user_data = pd.read_parquet(fpath_unittest_user_data)
 exp_trans_data = pd.read_parquet(fpath_unittest_transaction_data)
 
 
-class Test_gen_user_trans_data(unittest.TestCase):
+class TestGenUserTransData(unittest.TestCase):
     """
     Integration tests for the gen_user_data and gen_trans_data pipeline.
 

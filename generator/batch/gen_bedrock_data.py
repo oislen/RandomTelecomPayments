@@ -167,7 +167,7 @@ def invoke_bedrock(
     messages = [{"role": "user", "content": [{"text": formatted_prompt}]}]
     logging.info(messages)
     model_response = model.converse(
-        modelId=model_id,
+        model_id=model_id,
         messages=messages,
         system=system,
         inference_config=inferenceConfig,

@@ -63,7 +63,7 @@ _EXPECTED_TOP_KEYS = {
 }
 
 
-class Test_gen_trans_rejection_rates(unittest.TestCase):
+class TestGenTransRejectionRates(unittest.TestCase):
     """
     Unit tests for the gen_trans_rejection_rates utility function.
 

@@ -29,7 +29,7 @@ obs_id_dict = gen_idhash_cnt_dict(idhash_type="id", n=4, lam=1, nbytes=16)
 obs_hash_dict = gen_idhash_cnt_dict(idhash_type="hash", n=4, lam=1, nbytes=16)
 
 
-class Test_gen_idhash_cnt_dict(unittest.TestCase):
+class TestGenIdhashCntDict(unittest.TestCase):
     """
     Unit tests for the gen_idhash_cnt_dict utility function.
 
