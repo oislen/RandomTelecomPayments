@@ -19,6 +19,23 @@ jobs:
         with:
           version: "0.15.15"
 
+  sonarqube-scan:
+    runs-on: ubuntu-latest # cite: 2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # cite: 2
+        with:
+          fetch-depth: 0 # Required by SonarQube to calculate blame/git history
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v3.1.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        with:
+          args: >
+            -Dsonar.projectKey=my-project-key
+            -Dsonar.sources=.
+
   trivy-fs-scan:
     runs-on: ubuntu-latest
     steps:
