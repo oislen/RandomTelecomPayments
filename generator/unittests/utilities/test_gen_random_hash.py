@@ -20,7 +20,7 @@ exp_random_hash = [
 obs_random_hash = gen_random_hash(size=4, nbytes=16)
 
 
-class Test_gen_random_hash(unittest.TestCase):
+class TestGenRandomHash(unittest.TestCase):
     """
     Unit tests for the gen_random_hash utility function.
 

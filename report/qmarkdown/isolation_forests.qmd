@@ -110,7 +110,7 @@ eval_data = anomaly_data.loc[anomaly_data['transaction_week'] == 52, :].copy()
 # generate shap bee swarm plot
 pred = (eval_data['anomaly_score'] < 0).astype(int)
 explainer = shap.TreeExplainer(model.model)
-X_cols = ['E901_size', 'E901_sum', 'E902_size', 'E902_sum', 'n_comps', 'total_comp_size']
-explanation = explainer(eval_data[X_cols])
+x_cols = ['E901_size', 'E901_sum', 'E902_size', 'E902_sum', 'n_comps', 'total_comp_size']
+explanation = explainer(eval_data[x_cols])
 shap.plots.beeswarm(explanation)
 ```

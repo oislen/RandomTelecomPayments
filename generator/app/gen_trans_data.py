@@ -163,7 +163,6 @@ def gen_trans_data(
         idhash_val_name="card_payment_channel",
     )
 
-    # TODO: wrap this logic up into a separate function
     # align payment channel with missing card hashes and 0 transaction amounts
     zero_transaction_amount_filter = trans_data["transaction_amount"] == 0.0
     missing_card_hash_filter = trans_data["card_hash"].isnull()

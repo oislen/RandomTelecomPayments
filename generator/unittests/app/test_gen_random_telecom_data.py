@@ -39,7 +39,7 @@ _EXPECTED_TRANS_COLS = set(
 )
 
 
-class Test_gen_random_telecom_data(unittest.TestCase):
+class TestGenRandomTelecomData(unittest.TestCase):
     """
     Unit tests for the gen_random_telecom_data top-level orchestration function.
 

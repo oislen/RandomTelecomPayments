@@ -15,7 +15,7 @@ exp_random_poisson = np.array([11, 7, 1, 1])
 obs_random_poisson = gen_random_poisson_power(lam=1, size=4, power=2)
 
 
-class Test_gen_random_poisson_power(unittest.TestCase):
+class TestGenRandomPoissonPower(unittest.TestCase):
     """
     Unit tests for the gen_random_poisson_power utility function.
 

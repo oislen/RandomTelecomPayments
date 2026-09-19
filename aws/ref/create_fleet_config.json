@@ -7,7 +7,7 @@
     "LaunchTemplateConfigs": [
         {
             "LaunchTemplateSpecification": {
-                "LaunchTemplateName": "randomtelecompayments",
+                "launch_template_name": "randomtelecompayments",
                 "Version": "$Latest"
             },
             "Overrides": [

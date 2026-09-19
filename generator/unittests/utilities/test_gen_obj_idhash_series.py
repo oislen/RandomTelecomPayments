@@ -61,7 +61,7 @@ exp_obj_idhash_series = pd.Series(
 )
 
 
-class Test_gen_obj_idhash_series(unittest.TestCase):
+class TestGenObjIdhashSeries(unittest.TestCase):
     """
     Unit tests for the gen_obj_idhash_series utility function.
 

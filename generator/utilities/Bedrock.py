@@ -94,7 +94,9 @@ class Bedrock:
         # call bedrock model
         try:
             # Invoke the model with the request.
-            response = self.bedrock_runtime.invoke_model(modelId=model_id, body=request)
+            response = self.bedrock_runtime.invoke_model(
+                model_id=model_id, body=request
+            )
         except Exception as e:
             raise Exception(f"ERROR: Can't invoke '{model_id}'. Reason: {e}")
         # Decode and extract the response
@@ -105,7 +107,7 @@ class Bedrock:
     @beartype
     def converse(
         self,
-        modelId: str,
+        model_id: str,
         messages: list,
         system: list,
         inference_config: dict = {
@@ -138,7 +140,7 @@ class Bedrock:
         ----------
         https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-runtime/client/converse.html
         """
-        payload = {"modelId": modelId, "messages": messages, "system": system}
+        payload = {"model_id": model_id, "messages": messages, "system": system}
         if inference_config:
             payload["inferenceConfig"] = inference_config
         if tools_config:

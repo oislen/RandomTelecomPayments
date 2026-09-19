@@ -9,7 +9,7 @@ sys.path.append(os.path.join(os.getcwd(), "generator"))
 from utilities import join_idhashes_dict
 
 
-class Test_join_idhashes_dict(unittest.TestCase):
+class TestJoinIdhashesDict(unittest.TestCase):
     """
     Unit tests for the join_idhashes_dict utility function.
 

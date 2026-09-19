@@ -49,7 +49,7 @@ obs_n_device_hashes = device_object.n_device_hashes
 obs_lam = device_object.lam
 
 
-class Test_Device(unittest.TestCase):
+class TestDevice(unittest.TestCase):
     """
     Unit tests for the Device data-model object.
 

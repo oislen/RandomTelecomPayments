@@ -1,7 +1,7 @@
 {
     "DryRun": false,
     "LaunchTemplate": {
-        "LaunchTemplateName": "randomtelecompayments",
+        "launch_template_name": "randomtelecompayments",
         "Version": "$Latest"
     },
     "InstanceMarketOptions": {

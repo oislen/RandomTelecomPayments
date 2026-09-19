@@ -10,7 +10,7 @@ def gen_anomaly_score(group, model_fpath):
     model = model.read(model_fpath)
     # split data
     id_cols = ["userid", "transaction_week"]
-    X_cols = [
+    x_cols = [
         "E901_size",
         "E901_sum",
         "E902_size",
@@ -18,8 +18,8 @@ def gen_anomaly_score(group, model_fpath):
         "n_comps",
         "total_comp_size",
     ]
-    train_group = group[X_cols]
-    score_group = group[id_cols + X_cols]
+    train_group = group[x_cols]
+    score_group = group[id_cols + x_cols]
     # train isolation forests and score data
     model = model.fit(train_group)
     score_group["score"] = model.decision_function(train_group)
@@ -44,14 +44,14 @@ class IsolationForestsModel:
         )
         self.n_estimators = n_estimators
 
-    def fit(self, X):
+    def fit(self, x):
         if self.model.warm_start:
             self.model.n_estimators += self.n_estimators
-        self.model = self.model.fit(X)
+        self.model = self.model.fit(x)
         return self
 
-    def decision_function(self, X):
-        return self.model.decision_function(X)
+    def decision_function(self, x):
+        return self.model.decision_function(x)
 
     def write(self, model_fpath):
         with open(model_fpath, "wb") as f:

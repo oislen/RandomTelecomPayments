@@ -102,7 +102,7 @@ _LIST_COLS = [
 ]
 
 
-class Test_gen_user_data(unittest.TestCase):
+class TestGenUserData(unittest.TestCase):
     """
     Unit tests for the gen_user_data app-level function.
 

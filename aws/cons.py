@@ -12,7 +12,7 @@ sys.path.append(root_dir)
 # set directories
 creds_data = os.path.join(root_dir, ".creds")
 ec2_ref_data_dir = os.path.join(root_dir, "aws", "ref")
-session_token_fpath = os.path.join(creds_data, "sessionToken.json")
+session_token_fpath = os.path.join(creds_data, "session_token.json")
 launch_template_config_fpath = os.path.join(
     ec2_ref_data_dir, "launch_template_config.json"
 )
