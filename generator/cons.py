@@ -111,6 +111,13 @@ unittest_registration_end_date = "2020-12-31"
 unittest_transaction_start_date = "2021-01-01"
 unittest_transaction_end_date = "2021-12-31"
 
+# set error codes
+e900_code = "E900:ConnectionTimeout"
+e901_code = "E901:SuspectedFraud"
+e902_code = "E902:AuthenticationFailure"
+e903_code = "E903:UserCancelled"
+e904_code = "E904:InsufficientFunds"
+
 # set data model constants
 data_model_entity_user_ratios = {
     "card": 1.3,
@@ -140,39 +147,39 @@ data_model_transaction_status = {"Successful": 0.94, "Pending": 0.03, "Rejected"
 data_model_inconsistent_country_codes_rejection_rate = {1: 0.001, 2: 0.005, 3: 0.01}
 data_model_non_card_trans_methods = {"Wallet": 0.85, "Points": 0.15}
 data_model_rejection_codes_fraud = {
-    "E900:ConnectionTimeout": 0.1,
-    "E901:SuspectedFraud": 0.55,
-    "E902:AuthenicationFailure": 0.2,
-    "E903:UserCancelled": 0.05,
-    "E904:InsufficientFunds": 0.1,
+    e900_code: 0.1,
+    e901_code: 0.55,
+    e902_code: 0.2,
+    e903_code: 0.05,
+    e904_code: 0.1,
 }
 data_model_rejection_codes_connection = {
-    "E900:ConnectionTimeout": 0.45,
-    "E901:SuspectedFraud": 0.1,
-    "E902:AuthenicationFailure": 0.2,
-    "E903:UserCancelled": 0.15,
-    "E904:InsufficientFunds": 0.1,
+    e900_code: 0.45,
+    e901_code: 0.1,
+    e902_code: 0.2,
+    e903_code: 0.15,
+    e904_code: 0.1,
 }
 data_model_rejection_codes_user = {
-    "E900:ConnectionTimeout": 0.05,
-    "E901:SuspectedFraud": 0.1,
-    "E902:AuthenicationFailure": 0.1,
-    "E903:UserCancelled": 0.45,
-    "E904:InsufficientFunds": 0.3,
+    e900_code: 0.05,
+    e901_code: 0.1,
+    e902_code: 0.1,
+    e903_code: 0.45,
+    e904_code: 0.3,
 }
 data_model_rejection_codes_funds = {
-    "E900:ConnectionTimeout": 0.1,
-    "E901:SuspectedFraud": 0.1,
-    "E902:AuthenicationFailure": 0.1,
-    "E903:UserCancelled": 0.25,
-    "E904:InsufficientFunds": 0.45,
+    e900_code: 0.1,
+    e901_code: 0.1,
+    e902_code: 0.1,
+    e903_code: 0.25,
+    e904_code: 0.45,
 }
 data_model_rejection_codes_authentication = {
-    "E900:ConnectionTimeout": 0.25,
-    "E901:SuspectedFraud": 0.05,
-    "E902:AuthenicationFailure": 0.45,
-    "E903:UserCancelled": 0.15,
-    "E904:InsufficientFunds": 0.1,
+    e900_code: 0.25,
+    e901_code: 0.05,
+    e902_code: 0.45,
+    e903_code: 0.15,
+    e904_code: 0.1,
 }
 
 # set lists of generator object types

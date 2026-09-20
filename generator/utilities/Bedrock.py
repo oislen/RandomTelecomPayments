@@ -1,6 +1,7 @@
 import json
 
 from beartype import beartype
+from botocore.exceptions import ClientError
 
 
 class Bedrock:
@@ -97,8 +98,12 @@ class Bedrock:
             response = self.bedrock_runtime.invoke_model(
                 model_id=model_id, body=request
             )
-        except Exception as e:
-            raise Exception(f"ERROR: Can't invoke '{model_id}'. Reason: {e}")
+        except ClientError as e:
+            error_code = e.response["Error"]["Code"]
+            error_message = e.response["Error"]["Message"]
+            raise RuntimeError(
+                f"Bedrock invocation failed for '{model_id}' [{error_code}]: {error_message}"
+            ) from e
         # Decode and extract the response
         model_response = json.loads(response["body"].read())
         response_text = model_response["generation"]
