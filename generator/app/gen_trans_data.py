@@ -229,12 +229,14 @@ def gen_trans_data(
     )
     # align registration and transaction dates
     date_columns = ["registration_date", "transaction_date"]
-    if datetime.strptime(user_obj.end_date, "%Y-%m-%d") > datetime.strptime(
-        transaction_obj.start_date, "%Y-%m-%d"
-    ):
+    if datetime.strptime(
+        user_obj.end_date, cons.date_date_strftime
+    ) > datetime.strptime(transaction_obj.start_date, cons.date_date_strftime):
         dates_series = pd.date_range(
-            start=datetime.strptime(transaction_obj.start_date, "%Y-%m-%d"),
-            end=datetime.strptime(transaction_obj.end_date, "%Y-%m-%d")
+            start=datetime.strptime(
+                transaction_obj.start_date, cons.date_date_strftime
+            ),
+            end=datetime.strptime(transaction_obj.end_date, cons.date_date_strftime)
             - pd.Timedelta(days=1),
             freq="d",
         )

@@ -1,5 +1,6 @@
 from datetime import datetime
 
+import cons
 import numpy as np
 import pandas as pd
 from beartype import beartype
@@ -37,8 +38,8 @@ def gen_dates_dict(
     """
     # generate a range of dates between the given input start and end dates
     dates = pd.date_range(
-        start=datetime.strptime(start_date, "%Y-%m-%d"),
-        end=datetime.strptime(end_date, "%Y-%m-%d"),
+        start=datetime.strptime(start_date, cons.date_date_strftime),
+        end=datetime.strptime(end_date, cons.date_date_strftime),
         freq="d",
         inclusive="both",
     )
