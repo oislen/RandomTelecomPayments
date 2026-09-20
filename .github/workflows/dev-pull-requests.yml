@@ -28,6 +28,7 @@ jobs:
           fetch-depth: 0
       - name: Run SonarQube Scan
         env:
+          SONAR_TOKEN: ${{ secrets.SONAR_PROJECT_KEY }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         shell: cmd
