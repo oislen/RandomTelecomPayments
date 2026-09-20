@@ -28,13 +28,19 @@ jobs:
           fetch-depth: 0
       - name: Check if SonarQube is Online
         id: check-sonar
+        shell: powershell
         run: |
-          if curl --output /dev/null --silent --head --fail --connect-timeout 5 "${{ secrets.SONAR_HOST_URL }}/api/system/status"; then
-            echo "online=true" >> $GITHUB_OUTPUT
-          else
-            echo "SonarQube server is offline or unreachable."
-            echo "online=false" >> $GITHUB_OUTPUT
-          fi
+          try {
+              $response = Invoke-WebRequest -Uri "${{ secrets.SONAR_HOST_URL }}/api/system/status" -TimeoutSec 5 -UseBasicParsing -ErrorAction Stop
+              if ($response.StatusCode -eq 200) {
+                  echo "online=true" >> $env:GITHUB_OUTPUT
+              } else {
+                  echo "online=false" >> $env:GITHUB_OUTPUT
+              }
+          } catch {
+              Write-Host "SonarQube server is offline or unreachable."
+              echo "online=false" >> $env:GITHUB_OUTPUT
+          }
       - name: Run SonarQube Scan
         if: steps.check-sonar.outputs.online == 'true'
         timeout-minutes: 3
