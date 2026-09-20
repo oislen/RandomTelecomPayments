@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 from beartype import beartype
 
@@ -32,7 +31,6 @@ def remove_duplicate_idhashes(
         lambda series: series.to_list()
     )
     # overwrite series with empty lists
-    tmp_data[idhash_col] = np.nan
     tmp_data[idhash_col] = tmp_deduplicate_series
     tmp_data[idhash_col] = tmp_data[idhash_col].apply(
         lambda x: x if pd.notnull(x) else []

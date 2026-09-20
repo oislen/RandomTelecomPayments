@@ -90,7 +90,7 @@ def gen_trans_status(
                 size=1,
             )[0]
         elif (
-            series["ip_hash"] == series["ip_hash"]
+            pd.notna(series["ip_hash"])
             and rejection_rates_dict["shared_ips_reject_rate_dict"][series["ip_hash"]]
             >= random.uniform(0, 1) / rejection_scaling_factor
         ):
@@ -100,7 +100,7 @@ def gen_trans_status(
                 size=1,
             )[0]
         elif (
-            series["card_hash"] == series["card_hash"]
+            pd.notna(series["card_hash"])
             and rejection_rates_dict["shared_cards_reject_rate_dict"][
                 series["card_hash"]
             ]
