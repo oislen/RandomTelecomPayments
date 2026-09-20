@@ -182,7 +182,7 @@ def invoke_bedrock(
     try:
         gen_data_list = json.loads(text)
     except json.JSONDecodeError as e:
-        raise Exception(f"Error parsing JSON: {e}")
+        raise ValueError(f"Error parsing JSON: {e}")
     logging.info("Processing results ...")
     # generate pandas dataframe
     gen_dataframe = (
