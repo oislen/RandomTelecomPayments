@@ -56,17 +56,22 @@ jobs:
         id: check-sonar
         shell: powershell
         run: |
+          $ErrorActionPreference = 'SilentlyContinue'
           try {
-              $response = Invoke-WebRequest -Uri "${{ secrets.SONAR_HOST_URL }}/api/system/status" -TimeoutSec 5 -UseBasicParsing -ErrorAction Stop
-              if ($response.StatusCode -eq 200) {
+              $response = Invoke-WebRequest -Uri "${{ secrets.SONAR_HOST_URL }}/api/system/status" -TimeoutSec 5 -UseBasicParsing
+              if ($response -and $response.StatusCode -eq 200) {
+                  Write-Host "SonarQube is online."
                   echo "online=true" >> $env:GITHUB_OUTPUT
               } else {
+                  Write-Host "SonarQube returned non-200 status."
                   echo "online=false" >> $env:GITHUB_OUTPUT
               }
           } catch {
               Write-Host "SonarQube server is offline or unreachable."
               echo "online=false" >> $env:GITHUB_OUTPUT
           }
+          # Force the step to exit successfully so downstream steps can evaluate the output flag
+          exit 0
       - name: Run SonarQube Scan
         if: steps.check-sonar.outputs.online == 'true'
         timeout-minutes: 3
