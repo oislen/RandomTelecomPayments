@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.2](https://github.com/oislen/RandomTelecomPayments/compare/v0.3.1...v0.3.2) (2026-09-22)
+
+
+### Bug Fixes
+
+* **#85:** fixed SONAR_PROJECT_KEY environment variable name ([ebf74f1](https://github.com/oislen/RandomTelecomPayments/commit/ebf74f161bac6aeb0addea1e22030491ffb381ae))
+* **#91:** updated github action time out setting for both sonar check and sonar run steps within the sonarqube action ([5b7f8e6](https://github.com/oislen/RandomTelecomPayments/commit/5b7f8e6c427787d6bdb94a5fd7b75ddb1291d1e7))
+* **#91:** updated sonarqube init check logic to catch when local service is down and pass through ([b89ab65](https://github.com/oislen/RandomTelecomPayments/commit/b89ab65664f2e626ae8fa4502caba1e1803528f7))
+
 ## [0.3.1](https://github.com/oislen/RandomTelecomPayments/compare/v0.3.0...v0.3.1) (2026-09-15)
 
 
