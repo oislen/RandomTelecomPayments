@@ -54,6 +54,7 @@ jobs:
           fetch-depth: 0
       - name: Check if SonarQube is Online
         id: check-sonar
+        timeout-minutes: 1
         shell: powershell
         run: |
           $ErrorActionPreference = 'SilentlyContinue'
@@ -74,7 +75,7 @@ jobs:
           exit 0
       - name: Run SonarQube Scan
         if: steps.check-sonar.outputs.online == 'true'
-        timeout-minutes: 3
+        timeout-minutes: 5
         env:
           SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
