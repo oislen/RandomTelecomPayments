@@ -17,7 +17,7 @@ obs_amount = round_trans_amount(amounts=np.array([1, 2, 3]))
 exp_amount = np.array([0.99, 1, 2.59])
 
 
-class Test_round_trans_amount(unittest.TestCase):
+class TestRoundTransAmount(unittest.TestCase):
     """
     Unit tests for the round_trans_amount utility function.
 

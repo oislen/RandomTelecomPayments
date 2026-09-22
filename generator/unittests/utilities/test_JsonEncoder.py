@@ -11,7 +11,7 @@ sys.path.append(os.path.join(os.getcwd(), "generator"))
 from utilities import JsonEncoder
 
 
-class Test_JsonEncoder(unittest.TestCase):
+class TestJsonEncoder(unittest.TestCase):
     """
     Unit tests for the JsonEncoder custom JSON encoder.
 

@@ -19,7 +19,7 @@ obs_prop_dict = gen_country_codes_dict(
 )
 
 
-class Test_gen_country_codes_dict(unittest.TestCase):
+class TestGenCountryCodesDict(unittest.TestCase):
     """
     Unit tests for the gen_country_codes_dict utility function.
 

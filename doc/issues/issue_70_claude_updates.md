@@ -148,7 +148,7 @@ This document (`doc/issues/issue_70_claude_updates.md`) serves as the complete r
 | File | Change |
 |---|---|
 | `unittests/utilities/test_commandline_interface.py` | Rewrote entirely — removed dead `if False and __name__ == "__main__":` guard; replaced with a proper `unittest.TestCase` using `unittest.mock.patch` to inject `sys.argv`, covering defaults, all overrides, return type, and expected keys |
-| `unittests/utilities/test_gen_obj_idhash_series.py` | Renamed misnamed class `Test_gen_idhash_cnt_dict` → `Test_gen_obj_idhash_series` |
+| `unittests/utilities/test_gen_obj_idhash_series.py` | Renamed misnamed class `TestGenIdhashCntDict` → `TestGenObjIdhashSeries` |
 
 #### 4.2 New test files created
 

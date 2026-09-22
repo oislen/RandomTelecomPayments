@@ -50,7 +50,7 @@ obs_lam = ip_object.lam
 obs_n_ip_hashes = ip_object.n_ip_hashes
 
 
-class Test_Ip(unittest.TestCase):
+class TestIp(unittest.TestCase):
     """
     Unit tests for the Ip data-model object.
 

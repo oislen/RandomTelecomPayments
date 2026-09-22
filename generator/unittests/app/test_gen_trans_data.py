@@ -113,7 +113,7 @@ _VALID_CARD_TYPES = set(cons.data_model_card_types_dict.keys())
 _VALID_CHANNELS = set(cons.data_model_payment_channels.keys())
 
 
-class Test_gen_trans_data(unittest.TestCase):
+class TestGenTransData(unittest.TestCase):
     """
     Unit tests for the gen_trans_data app-level function.
 

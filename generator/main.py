@@ -60,7 +60,6 @@ def main(input_params_dict: dict):
     trans_data = pd.concat(
         objs=[result["trans_data"] for result in results], axis=0, ignore_index=True
     )
-    # TODO: add addition post processing if running multi-processing due to random duplicates between iterations
     # order results by userid and transaction date ascending
     user_data = user_data.sort_values(by="uid").reset_index(drop=True)
     trans_data = trans_data.sort_values(by="transaction_date").reset_index(drop=True)

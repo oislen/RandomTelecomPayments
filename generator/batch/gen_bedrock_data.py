@@ -167,7 +167,7 @@ def invoke_bedrock(
     messages = [{"role": "user", "content": [{"text": formatted_prompt}]}]
     logging.info(messages)
     model_response = model.converse(
-        modelId=model_id,
+        model_id=model_id,
         messages=messages,
         system=system,
         inference_config=inferenceConfig,
@@ -182,7 +182,7 @@ def invoke_bedrock(
     try:
         gen_data_list = json.loads(text)
     except json.JSONDecodeError as e:
-        raise Exception(f"Error parsing JSON: {e}")
+        raise ValueError(f"Error parsing JSON: {e}")
     logging.info("Processing results ...")
     # generate pandas dataframe
     gen_dataframe = (

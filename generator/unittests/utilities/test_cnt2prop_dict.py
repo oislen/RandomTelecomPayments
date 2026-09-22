@@ -7,7 +7,7 @@ sys.path.append(os.path.join(os.getcwd(), "generator"))
 from utilities import cnt2prop_dict
 
 
-class Test_cnt2prop_dict(unittest.TestCase):
+class TestCnt2PropDict(unittest.TestCase):
     """
     Unit tests for the cnt2prop_dict utility function.
 

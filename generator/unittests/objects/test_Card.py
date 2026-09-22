@@ -59,7 +59,7 @@ obs_lam = card_object.lam
 obs_n_card_hashes = card_object.n_card_hashes
 
 
-class Test_Card(unittest.TestCase):
+class TestCard(unittest.TestCase):
     """
     Unit tests for the Card data-model object.
 

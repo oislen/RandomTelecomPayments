@@ -20,7 +20,7 @@ exp_random_id = [
 obs_random_id = gen_random_id(size=4, nbytes=16)
 
 
-class Test_gen_random_id(unittest.TestCase):
+class TestGenRandomId(unittest.TestCase):
     """
     Unit tests for the gen_random_id utility function.
 

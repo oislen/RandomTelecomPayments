@@ -3,4 +3,9 @@ data/report
 data/RandomTelecomPayments.csv
 data/RandomTelecomUsers.parquet
 data/temp
+actions-runner
 .creds
+.kilo
+.ruff_cache
+.scannerwork
+.venv

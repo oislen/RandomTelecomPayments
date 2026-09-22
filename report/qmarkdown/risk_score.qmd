@@ -91,9 +91,9 @@ test_data = model_data.loc[model_data['transaction_week'].isin(range(46, 53)), :
 #| label: score-data
 # train isolation forests
 id_cols = ['userid', 'transaction_week']
-X_cols = ['device_hash_size', 'card_hash_size', 'ip_hash_size', 'Successful_size', 'E900_size', 'E901_size', 'E902_size', 'E903_size', 'E904_size', 'n_comps', 'total_comp_size', 'customer_value_score', 'score']
+x_cols = ['device_hash_size', 'card_hash_size', 'ip_hash_size', 'Successful_size', 'E900_size', 'E901_size', 'E902_size', 'E903_size', 'E904_size', 'n_comps', 'total_comp_size', 'customer_value_score', 'score']
 y_col = 'black_list_users'
-X_data = train_data[X_cols]
+X_data = train_data[x_cols]
 y_data = train_data[y_col]
 clf = RandomForestClassifier(max_depth=2, random_state=0)
 clf.fit(X_data, y_data)
@@ -103,7 +103,7 @@ clf.fit(X_data, y_data)
 
 ```{python}
 # make valid and test predictions
-valid_data['predict_proba'] = clf.predict_proba(valid_data[X_cols])[:, 1]
+valid_data['predict_proba'] = clf.predict_proba(valid_data[x_cols])[:, 1]
 valid_data.sort_values(by=['predict_proba'])
 
 lift_plot(col='predict_proba', target='black_list_users', data=valid_data, order = None, cut = 10)

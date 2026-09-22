@@ -3,7 +3,7 @@
 # Usage:
 #    make test                     # run the whole unittest suite (discovery)
 #    make test T=generator.unittests.utilities.test_align_country_codes.py
-#    make test T=...test_align_country_codes.Test_align_country_codes   # a single case
+#    make test T=...test_align_country_codes.TestAlignCountryCodes   # a single case
 
 UV := uv run --active
 

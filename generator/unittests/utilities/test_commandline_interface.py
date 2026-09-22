@@ -8,7 +8,7 @@ sys.path.append(os.path.join(os.getcwd(), "generator"))
 from utilities import commandline_interface
 
 
-class Test_commandline_interface(unittest.TestCase):
+class TestCommandlineInterface(unittest.TestCase):
     """
     Unit tests for the commandline_interface utility function.
 

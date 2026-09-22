@@ -88,7 +88,7 @@ obs_n_user_ids = user_object.n_user_ids
 obs_lam = user_object.lam
 
 
-class Test_User(unittest.TestCase):
+class TestUser(unittest.TestCase):
     """
     Unit tests for the User data-model object.
 

@@ -8,7 +8,7 @@ import cons
 from app import ProgrammeParams
 
 
-class Test_ProgrammeParams(unittest.TestCase):
+class TestProgrammeParams(unittest.TestCase):
     """
     Unit tests for the ProgrammeParams application-parameter class.
 

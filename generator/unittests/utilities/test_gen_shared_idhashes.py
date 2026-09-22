@@ -21,7 +21,7 @@ obs_shared_idhashes = gen_shared_idhashes(
 exp_shared_idhashes = {}
 
 
-class Test_gen_shared_idhashes(unittest.TestCase):
+class TestGenSharedIdhashes(unittest.TestCase):
     """
     Unit tests for the gen_shared_idhashes utility function.
 

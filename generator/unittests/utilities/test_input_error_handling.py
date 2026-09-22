@@ -7,7 +7,7 @@ sys.path.append(os.path.join(os.getcwd(), "generator"))
 from utilities import input_error_handling
 
 
-class Test_input_error_handling(unittest.TestCase):
+class TestInputErrorHandling(unittest.TestCase):
     """
     Unit tests for the input_error_handling utility function.
 

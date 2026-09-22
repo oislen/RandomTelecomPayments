@@ -55,7 +55,7 @@ obs_n_transaction_hashes = transaction_object.n_transaction_hashes
 obs_lam = transaction_object.lam
 
 
-class Test_Transaction(unittest.TestCase):
+class TestTransaction(unittest.TestCase):
     """
     Unit tests for the Transaction data-model object.
 
