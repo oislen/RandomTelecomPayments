@@ -5,9 +5,35 @@ permissions:
 
 on:
   pull_request:
-    branches: [ dev, main ]
+    branches: [ main ]
+
+# Cancel outdated runs on the same branch when new commits are pushed
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
+
+  validate-pr-title:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Match your regex pattern: type(#issue): description
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            chore
+            revert
 
   ruff-linter:
     runs-on: ubuntu-latest
@@ -28,22 +54,28 @@ jobs:
           fetch-depth: 0
       - name: Check if SonarQube is Online
         id: check-sonar
+        timeout-minutes: 1
         shell: powershell
         run: |
+          $ErrorActionPreference = 'SilentlyContinue'
           try {
-              $response = Invoke-WebRequest -Uri "${{ secrets.SONAR_HOST_URL }}/api/system/status" -TimeoutSec 5 -UseBasicParsing -ErrorAction Stop
-              if ($response.StatusCode -eq 200) {
+              $response = Invoke-WebRequest -Uri "${{ secrets.SONAR_HOST_URL }}/api/system/status" -TimeoutSec 5 -UseBasicParsing
+              if ($response -and $response.StatusCode -eq 200) {
+                  Write-Host "SonarQube is online."
                   echo "online=true" >> $env:GITHUB_OUTPUT
               } else {
+                  Write-Host "SonarQube returned non-200 status."
                   echo "online=false" >> $env:GITHUB_OUTPUT
               }
           } catch {
               Write-Host "SonarQube server is offline or unreachable."
               echo "online=false" >> $env:GITHUB_OUTPUT
           }
+          # Force the step to exit successfully so downstream steps can evaluate the output flag
+          exit 0
       - name: Run SonarQube Scan
         if: steps.check-sonar.outputs.online == 'true'
-        timeout-minutes: 3
+        timeout-minutes: 5
         env:
           SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
