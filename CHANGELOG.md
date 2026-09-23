@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/oislen/RandomTelecomPayments/compare/v0.3.2...v0.3.3) (2026-09-23)
+
+
+### Bug Fixes
+
+* **#95:** trigger release build ([853cda9](https://github.com/oislen/RandomTelecomPayments/commit/853cda9db5822f5322ada1d7b86b4a2bd672e0a1))
+
 ## [0.3.2](https://github.com/oislen/RandomTelecomPayments/compare/v0.3.1...v0.3.2) (2026-09-22)
 
 
