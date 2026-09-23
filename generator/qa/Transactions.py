@@ -1,5 +1,6 @@
 import logging
 
+import cons
 import pandas as pd
 import seaborn as sns
 
@@ -251,11 +252,11 @@ class Transactions:
             .dropna()
             .isin(
                 [
-                    "E900:ConnectionTimeout",
-                    "E901:SuspectedFraud",
-                    "E902:AuthenicationFailure",
-                    "E903:UserCancelled",
-                    "E904:InsufficientFunds",
+                    cons.e900_code,
+                    cons.e901_code,
+                    cons.e902_code,
+                    cons.e903_code,
+                    cons.e904_code,
                 ]
             )
             .all()
@@ -316,11 +317,11 @@ class Transactions:
             .dropna()
             .isin(
                 [
-                    "E900:ConnectionTimeout",
-                    "E901:SuspectedFraud",
-                    "E902:AuthenicationFailure",
-                    "E903:UserCancelled",
-                    "E904:InsufficientFunds",
+                    cons.e900_code,
+                    cons.e901_code,
+                    cons.e902_code,
+                    cons.e903_code,
+                    cons.e904_code,
                 ]
             )
             .all()
